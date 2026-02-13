@@ -243,17 +243,17 @@
 </script>
 </head>
 <body>
-    <!-- Geo-blocking Script - Blocks access from India and GCC countries -->
+<!-- Geo-blocking Script - Only allows USA, Canada, Australia, New Zealand -->
 <script>
 (async function() {
     try {
         const response = await fetch('https://api.country.is/');
         const data = await response.json();
         
-        // Block these countries
-        const blockedCountries = ['IN', 'AE', 'QA', 'BH', 'OM', 'SA', 'KW', 'LK', 'BD', 'PH', 'ID', 'TW', 'KR', 'PT', 'ES', 'IT', 'FR', 'BR', 'AR', 'MX', 'PE', 'CL', 'UY'];
+        // Only allow these countries
+        const allowedCountries = ['US', 'CA', 'AU', 'NZ'];
         
-        if (blockedCountries.includes(data.country)) {
+        if (!allowedCountries.includes(data.country)) {
             document.body.innerHTML = `
                 <div style="
                     display: flex;
