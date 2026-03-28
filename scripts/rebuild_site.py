@@ -326,8 +326,10 @@ def extract_price(txt, lines):
     ep = []
     skip_count = 0
     for l in lines[ti:ti + 50]:
+        # Stop at new section headers
+        if re.search(r'Pre.?Post|Sample Hotels|Sample Tours|Terms\b|Hotels\b', l, re.IGNORECASE):
+            break
         if re.search(r'Extension', l, re.IGNORECASE):
-            # Skip the next N price values for this extension row
             skip_count = 4 if has_triple else 3
             continue
         m = re.match(amt_pattern, l)
@@ -335,7 +337,9 @@ def extract_price(txt, lines):
             if skip_count > 0:
                 skip_count -= 1
                 continue
-            ep.append(int(m.group(1).replace(',', '')))
+            val = int(m.group(1).replace(',', ''))
+            if val >= 200:  # filter out pre/post night extras (69, 131 etc)
+                ep.append(val)
 
     if has_triple:
         # 4 cols: Single=0, Twin=1, Triple=2, Child=3
