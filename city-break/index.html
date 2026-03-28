@@ -1,504 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City Breaks Packages</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            background: #f5f5f5;
-            color: #212121;
-            line-height: 1.6;
-            padding-top: 80px;
-        }
-        
-        /* Fixed Top Navigation */
-        .top-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            z-index: 1000;
-            padding: 16px 0;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-        
-        .logo {
-            height: 48px;
-            width: auto;
-        }
-        
-        .logo:hover {
-            opacity: 0.8;
-        }
-        
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            flex: 1;
-            justify-content: flex-end;
-        }
-        
-        .site-title-group {
-            text-align: right;
-        }
-        
-        .site-title-main {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #212121;
-            line-height: 1.3;
-        }
-        
-        .site-title-sub {
-            font-size: 0.9em;
-            font-weight: 400;
-            color: #757575;
-        }
-        
-        .contact-info {
-            text-align: right;
-            padding-left: 32px;
-            border-left: 1px solid #e0e0e0;
-        }
-        
-        .contact-prompt {
-            font-size: 0.85em;
-            color: #757575;
-            margin-bottom: 4px;
-        }
-        
-        .contact-email {
-            font-size: 0.9em;
-            color: #2196F3;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .contact-email:hover {
-            text-decoration: underline;
-        }
-        
-        .search-box {
-            width: 100%;
-            max-width: 350px;
-            padding: 10px 18px;
-            font-size: 0.95em;
-            border: 1px solid #e0e0e0;
-            border-radius: 24px;
-            transition: all 0.2s;
-            background: #fafafa;
-        }
-        
-        .search-box::placeholder {
-            text-align: center;
-        }
-        
-        .search-box:focus {
-            outline: none;
-            border-color: #2196F3;
-            background: white;
-            box-shadow: 0 2px 8px rgba(33,150,243,0.15);
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px 24px 0;
-            font-size: 0.9em;
-            color: #757575;
-        }
-        
-        .breadcrumb a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 32px 24px 48px;
-        }
-        
-        h1 {
-            font-size: 2.2em;
-            font-weight: 600;
-            color: #212121;
-            margin-bottom: 40px;
-            letter-spacing: -0.5px;
-        }
-        
-        /* Brochure Cards */
-        .brochures {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        .brochure-card {
-            background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            border: 1px solid #f5f5f5;
-        }
-        
-        .brochure-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-            border-color: #e0e0e0;
-        }
-        
-        .brochure-card h3 {
-            font-size: 1.15em;
-            color: #212121;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .pdf-icon {
-            color: #d32f2f;
-            font-size: 0.85em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 180px;
-            }
-            
-            .nav-container {
-                flex-wrap: wrap;
-                gap: 16px;
-            }
-            
-            .header-right {
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                order: 3;
-                gap: 16px;
-            }
-            
-            .site-title-group {
-                text-align: center;
-            }
-            
-            .contact-info {
-                text-align: center;
-                border-left: none;
-                border-top: 1px solid #e0e0e0;
-                padding-left: 0;
-                padding-top: 16px;
-            }
-            
-            .search-box {
-                max-width: 100%;
-            }
-            
-            .brochures {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Breaks Packages | Europe Incoming</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#212121;line-height:1.6;padding-top:80px;}
+.top-nav{position:fixed;top:0;left:0;right:0;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.08);z-index:1000;padding:16px 0;}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;}
+.logo{height:48px;width:auto;}.logo:hover{opacity:0.8;}
+.header-right{display:flex;align-items:center;gap:32px;flex:1;justify-content:flex-end;}
+.site-title-group{text-align:right;}
+.site-title-main{font-size:1.1em;font-weight:600;color:#212121;}
+.site-title-sub{font-size:0.9em;color:#757575;}
+.contact-info{text-align:right;padding-left:32px;border-left:1px solid #e0e0e0;}
+.contact-prompt{font-size:0.85em;color:#757575;margin-bottom:4px;}
+.contact-email{font-size:0.9em;color:#2196F3;text-decoration:none;font-weight:500;}
+.contact-email:hover{text-decoration:underline;}
+.search-box{width:100%;max-width:350px;padding:10px 18px;font-size:0.95em;border:1px solid #e0e0e0;border-radius:24px;background:#fafafa;transition:all 0.2s;}
+.search-box::placeholder{text-align:center;}
+.search-box:focus{outline:none;border-color:#2196F3;background:white;box-shadow:0 2px 8px rgba(33,150,243,0.15);}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:24px 24px 0;font-size:0.9em;color:#757575;}
+.breadcrumb a{color:#2196F3;text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+.container{max-width:1200px;margin:0 auto;padding:32px 24px 48px;}
+h1{font-size:2.2em;font-weight:600;color:#212121;margin-bottom:32px;letter-spacing:-0.5px;}
+footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:0.9em;border-top:1px solid #e8e8e8;}
+@media(max-width:768px){body{padding-top:180px;}.nav-container{flex-wrap:wrap;gap:16px;}.header-right{width:100%;flex-direction:column;align-items:center;order:3;gap:16px;}.site-title-group{text-align:center;}.contact-info{text-align:center;border-left:none;border-top:1px solid #e0e0e0;padding-left:0;padding-top:16px;}.search-box{max-width:100%;}}
 
-  gtag('config', 'G-04BZKH6574');
-</script>
+.brochures{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.brochure-card{background:white;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-decoration:none;color:inherit;display:flex;flex-direction:row;border:1px solid #ebebeb;overflow:hidden;min-height:210px;}
+.brochure-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.11);border-color:#d0d0d0;}
+.brochure-card.expired{opacity:0.75;border-color:#ffcc80;}
+.card-info{flex:1;padding:20px 20px 16px;display:flex;flex-direction:column;gap:5px;min-width:0;}
+.card-title{font-size:1.0em;font-weight:700;color:#1a1a1a;line-height:1.3;}
+.tour-type{font-size:0.72em;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#c62828;}
+.card-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px;}
+.pill{font-size:0.71em;font-weight:600;padding:3px 9px;border-radius:20px;}
+.pill-duration{background:#f3f3f3;color:#444;}
+.pill-summer{background:#fff8e1;color:#e65100;}
+.pill-winter{background:#e8f4fd;color:#0277bd;}
+.pill-allyear{background:#e8f5e9;color:#2e7d32;}
+.pill-valid{background:#e8f5e9;color:#2e7d32;}
+.pill-expired{background:#fff3e0;color:#e65100;}
+.card-description{font-size:0.81em;color:#666;font-style:italic;line-height:1.4;}
+.cities-list{font-size:0.79em;color:#555;}
+.price-tag{font-size:0.88em;color:#2e7d32;font-weight:700;margin-top:auto;padding-top:6px;}
+.pdf-badge{display:inline-block;font-size:0.65em;font-weight:700;color:#d32f2f;border:1.5px solid #d32f2f;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;}
+.card-map{width:200px;min-width:200px;border-left:1px solid #ebebeb;position:relative;overflow:hidden;}
+.map-inner{width:100%;height:100%;min-height:210px;}
+.leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-size:9px;font-weight:700;color:#1a1a2e;white-space:nowrap;padding:0;text-shadow:-1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;}
+.leaflet-tooltip.city-tip::before{display:none!important;}
+@media(max-width:900px){.brochures{grid-template-columns:1fr;}.card-map{width:160px;min-width:160px;}}
+@media(max-width:768px){.brochure-card{flex-direction:column;}.card-map{width:100%;min-width:100%;height:180px;border-left:none;border-top:1px solid #ebebeb;}.map-inner{min-height:180px;}}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04BZKH6574');</script>
 </head>
 <body>
-<!-- Geo-blocking Script - Only allows USA, Canada, Australia, New Zealand -->
 <script>
-(async function() {
-    try {
-        const response = await fetch('https://api.country.is/');
-        const data = await response.json();
-        
-        // Only allow these countries
-        const allowedCountries = ['US', 'CA', 'AU', 'NZ'];
-        
-        if (!allowedCountries.includes(data.country)) {
-            document.body.innerHTML = `
-                <div style="
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100vh;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-                    background: #f5f5f5;
-                    color: #212121;
-                    text-align: center;
-                    padding: 20px;
-                ">
-                    <h1 style="font-size: 48px; margin-bottom: 16px;">🌍</h1>
-                    <h2 style="font-size: 32px; font-weight: 600; margin-bottom: 12px;">
-                        Service Not Available
-                    </h2>
-                    <p style="font-size: 18px; color: #757575;">
-                        Visit <a href="https://www.europeincoming.com" style="color: #2196F3; text-decoration: none;">www.europeincoming.com</a>
-                    </p>
-                </div>
-            `;
-        }
-    } catch (error) {
-        console.log('Geolocation check failed, allowing access');
-    }
+(async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
+if(!['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">Visit <a href="https://www.europeincoming.com" style="color:#2196F3;text-decoration:none;">www.europeincoming.com</a></p></div>';}
+}catch(e){}}
+)();</script><nav class="top-nav"><div class="nav-container">
+<a href="../"><img src="../logo.png" alt="Europe Incoming" class="logo"></a>
+<input type="text" class="search-box" placeholder="Search packages - type city or country" id="searchBox">
+<div class="header-right">
+  <div class="site-title-group"><div class="site-title-main">Europe Incoming</div><div class="site-title-sub">FIT Packages</div></div>
+  <div class="contact-info"><div class="contact-prompt">Can't find what you're looking for? Email us at:</div>
+  <a href="mailto:fitsales@europeincoming.com" class="contact-email">fitsales@europeincoming.com</a></div>
+</div></div></nav>
+<div class="breadcrumb"><a href="../">Home</a> › City Breaks</div>
+<div class="container">
+<h1>City Breaks Packages</h1>
+<div class="brochures" id="brochuresList">
+<a href="3 Days_Amsterdam_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Amsterdam <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €32 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Athens_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Athens <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €22 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Barcelona_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Barcelona <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €27 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Bergen_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Bergen <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €30 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Berlin_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Berlin <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €19 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Brussels_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Brussels <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €24 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Budapest_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Budapest <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €17 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Copenhagen_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Copenhagen <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €27 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Dublin_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Dublin <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €38 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Dusseldorf_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Dusseldorf <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €17 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Edinburgh_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Edinburgh <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From £46 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Florence_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Florence <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €32 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Frankfurt_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Frankfurt <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €19 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Geneva_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Geneva <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €30 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Glasgow_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Glasgow <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">The best of Glasgow, curated and ready to explore.</div>
+    <div class="cities-list">📍 Glasgow</div>
+    <div class="price-tag">From £19 pp (twin)</div>
+  </div>
+  <div class="card-map"><div id="map_3_days_glasgow_202_14" class="map-inner"></div></div>
+</a>
+<a href="3 Days_Helsinki_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Helsinki <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €19 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Innsbruck_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Innsbruck <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €25 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Interlaken_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Interlaken <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €39 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Inverness_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Inverness <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">The best of Inverness, curated and ready to explore.</div>
+    <div class="cities-list">📍 Inverness</div>
+    <div class="price-tag">From £22 pp (twin)</div>
+  </div>
+  <div class="card-map"><div id="map_3_days_inverness_2_18" class="map-inner"></div></div>
+</a>
+<a href="3 Days_Lisbon_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Lisbon <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €25 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_London_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days London <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From £27 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Lucerne_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Lucerne <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €45 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Madrid_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Madrid <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €22 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Milan_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Milan <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €21 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Munich_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Munich <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €27 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Mykonos_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Mykonos <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €28 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Nice_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Nice <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €53 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Oslo_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Oslo <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €36 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Paris_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Paris <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €42 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Prague_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Prague <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €35 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Rome_2024-25_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Rome <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €32 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Salzburg_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Salzburg <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €48 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Santorini_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Santorini <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €52 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Stockholm_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Stockholm <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €40 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Venice_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Venice <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €39 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Vienna_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Vienna <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €32 pp (twin)</div>
+  </div>
+  
+</a>
+<a href="3 Days_Zurich_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">3 days Zurich <span class="pdf-badge">PDF</span></div>
+    
+    <div class="card-pills"><span class="pill pill-duration">🕐 3 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
+    <div class="card-description">Curated City Break package with handpicked experiences.</div>
+    
+    <div class="price-tag">From €51 pp (twin)</div>
+  </div>
+  
+</a>
+</div>
+<footer><p>All packages are available for download in PDF format</p></footer>
+</div>
+<script src="../global-search.js"></script>
+<script>window.addEventListener('load',function(){(function(){
+  var pts=[[55.8642, -4.2518, "Glasgow"]];
+  if(!pts.length) return;
+  var lats=pts.map(function(p){return p[0];});
+  var lngs=pts.map(function(p){return p[1];});
+  var pad=0.4;
+  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
+  var map=L.map('map_3_days_glasgow_202_14',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:13}).addTo(map);
+  map.fitBounds(bounds,{padding:[10,10]});
+  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  pts.forEach(function(p,i){
+    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+  });
 })();
-</script>
-    <!-- Fixed Top Navigation -->
-    <nav class="top-nav">
-        <div class="nav-container">
-            <a href="../">
-                <img src="../logo.png" alt="Europe Incoming" class="logo">
-            </a>
-            <input type="text" class="search-box" placeholder="Search packages - type city or country" id="searchBox">
-            <div class="header-right">
-                <div class="site-title-group">
-                    <div class="site-title-main">Europe Incoming</div>
-                    <div class="site-title-sub">FIT Packages - Premium</div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-prompt">Can't find what you're looking for? Email us at:</div>
-                    <a href="mailto:fitsales@europeincoming.com" class="contact-email">fitsales@europeincoming.com</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="../">Home</a> > City Breaks
-    </div>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <h1>City Breaks Packages</h1>
-        
-        <div class="brochures" id="brochuresList">
-            <a href="3 Days_Amsterdam_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Amsterdam</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Athens_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Athens</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Barcelona_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Barcelona</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Bergen_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Bergen</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Berlin_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Berlin</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Brussels_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Brussels</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Budapest_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Budapest</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Copenhagen_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Copenhagen</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Dublin_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Dublin</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Dusseldorf_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Dusseldorf</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Edinburgh_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Edinburgh</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Florence_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Florence</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Frankfurt_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Frankfurt</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Geneva_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Geneva</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Glasgow_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Glasgow</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Helsinki_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Helsinki</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Innsbruck_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Innsbruck</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Interlaken_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Interlaken</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Inverness_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Inverness</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Lisbon_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Lisbon</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_London_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days London</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Lucerne_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Lucerne</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Madrid_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Madrid</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Milan_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Milan</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Munich_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Munich</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Mykonos_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Mykonos</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Nice_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Nice</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Oslo_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Oslo</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Paris_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Paris</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Prague_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Prague</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Rome_2024-25_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Rome</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Salzburg_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Salzburg</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Santorini_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Santorini</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Stockholm_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Stockholm</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Venice_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Venice</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Vienna_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Vienna</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-    
-    <a href="3 Days_Zurich_2025-26_Europe Incoming.pdf" class="brochure-card" target="_blank">
-        <h3>3 Days Zurich</h3>
-        <span class="pdf-icon">PDF</span>
-    </a>
-        </div>
-    </div>
-    
-    <script src="../global-search.js"></script>
-</body>
-</html>
+(function(){
+  var pts=[[57.4778, -4.2247, "Inverness"]];
+  if(!pts.length) return;
+  var lats=pts.map(function(p){return p[0];});
+  var lngs=pts.map(function(p){return p[1];});
+  var pad=0.4;
+  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
+  var map=L.map('map_3_days_inverness_2_18',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:13}).addTo(map);
+  map.fitBounds(bounds,{padding:[10,10]});
+  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  pts.forEach(function(p,i){
+    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+  });
+})();});</script>
+</body></html>

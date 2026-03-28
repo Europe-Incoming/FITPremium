@@ -1,312 +1,22 @@
 {
   "packages": [
     {
-      "id": "uk-001",
-      "name": "3 Nights, 4 Days London - Private",
-      "filename": "3 nights 4 days London_Private.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["London"],
-      "duration": "3 nights, 4 days",
-      "type": "Private",
-      "tags": ["England", "City Break", "Thames"]
-    },
-    {
-      "id": "uk-002",
-      "name": "10 Nights, 11 Days England-Scotland - Regular",
-      "filename": "10 Nights 11 Days England-Scotland_ Regular.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["London", "Manchester", "Edinburgh", "Inverness", "Glasgow"],
-      "duration": "10 nights, 11 days",
-      "type": "Regular",
-      "tags": ["England", "Scotland", "Scottish Highlands", "Multi-city"]
-    },
-    {
-      "id": "uk-003",
-      "name": "9 Nights, 10 Days England-Scotland - Private",
-      "filename": "9 Nights 10 Days England-Scotland_ Private.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["London", "Manchester", "Edinburgh", "Inverness", "Glasgow"],
-      "duration": "9 nights, 10 days",
-      "type": "Private",
-      "tags": ["England", "Scotland", "Scottish Highlands", "Multi-city"]
-    },
-    {
-      "id": "uk-004",
-      "name": "8 Nights, 9 Days London Scotland - Regular",
-      "filename": "8 Nights 9 Days London Scotland_Regular.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["London", "Glasgow", "Inverness", "Edinburgh"],
-      "duration": "8 nights, 9 days",
-      "type": "Regular",
-      "tags": ["England", "Scotland", "Scottish Highlands"]
-    },
-    {
-      "id": "uk-005",
-      "name": "6 Nights, 7 Days Scotland - Self Drive",
-      "filename": "6 nights, 7 days Scotland_Self Drive.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Edinburgh", "Inverness", "Fort William"],
-      "duration": "6 nights, 7 days",
-      "type": "Self Drive",
-      "tags": ["Scotland", "Scottish Highlands", "Self Drive"]
-    },
-    {
-      "id": "uk-006",
-      "name": "6 Nights, 7 Days Scotland - Regular",
-      "filename": "6 nights, 7 days Scotland_Regular.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Edinburgh", "Inverness", "Fort William"],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": ["Scotland", "Scottish Highlands"]
-    },
-    {
-      "id": "uk-007",
-      "name": "6 Nights, 7 Days Scotland - Private",
-      "filename": "6 nights, 7 days Scotland_Private.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Edinburgh", "Inverness", "Fort William"],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": ["Scotland", "Scottish Highlands"]
-    },
-    {
-      "id": "uk-008",
-      "name": "6 Nights, 7 Days Ireland - Self Drive",
-      "filename": "6 nights, 7 days Ireland_Self Drive.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Dublin", "Limerick"],
-      "duration": "6 nights, 7 days",
-      "type": "Self Drive",
-      "tags": ["Ireland", "Self Drive"]
-    },
-    {
-      "id": "uk-009",
-      "name": "6 Nights, 7 Days Ireland - Regular",
-      "filename": "6 nights, 7 days Ireland_Regular.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Dublin", "Limerick"],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": ["Ireland"]
-    },
-    {
-      "id": "uk-010",
-      "name": "6 Nights, 7 Days Ireland - Private",
-      "filename": "6 nights, 7 days Ireland_Private.pdf",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": ["Dublin", "Limerick"],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": ["Ireland"]
-    },
-    {
-      "id": "wce-001",
-      "name": "7 Nights, 8 Days Paris Switzerland - Private",
-      "filename": "7 nights, 8 days Paris Switzerland_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Zurich"],
-      "duration": "7 nights, 8 days",
-      "type": "Private",
-      "tags": ["France", "Switzerland", "Alps", "Seine"]
-    },
-    {
-      "id": "wce-002",
-      "name": "7 Nights, 8 Days Paris Switzerland - Regular",
-      "filename": "7 nights, 8 days Paris Switzerland_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Zurich"],
-      "duration": "7 nights, 8 days",
-      "type": "Regular",
-      "tags": ["France", "Switzerland", "Alps", "Seine"]
-    },
-    {
-      "id": "wce-003",
-      "name": "9 Nights, 10 Days Paris Switzerland Austria - Private",
-      "filename": "9 nights, 10 days Paris Switzerland Austria_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Innsbruck", "Vienna"],
-      "duration": "9 nights, 10 days",
-      "type": "Private",
-      "tags": ["France", "Switzerland", "Austria", "Alps", "Danube"]
-    },
-    {
-      "id": "wce-004",
-      "name": "9 Nights, 10 Days Paris Switzerland Austria - Regular",
-      "filename": "9 nights, 10 days Paris Switzerland Austria_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Innsbruck", "Vienna"],
-      "duration": "9 nights, 10 days",
-      "type": "Regular",
-      "tags": ["France", "Switzerland", "Austria", "Alps", "Danube"]
-    },
-    {
-      "id": "wce-005",
-      "name": "10 Nights, 11 Days Paris Switzerland Italy - Private",
-      "filename": "10 nights, 11 days Paris Switzerland Italy_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Venice", "Florence", "Rome"],
-      "duration": "10 nights, 11 days",
-      "type": "Private",
-      "tags": ["France", "Switzerland", "Italy", "Alps", "Tuscany"]
-    },
-    {
-      "id": "wce-006",
-      "name": "10 Nights, 11 Days Paris Switzerland Italy - Regular",
-      "filename": "10 nights, 11 days Paris Switzerland Italy_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Paris", "Lucerne", "Venice", "Florence", "Rome"],
-      "duration": "10 nights, 11 days",
-      "type": "Regular",
-      "tags": ["France", "Switzerland", "Italy", "Alps", "Tuscany"]
-    },
-    {
-      "id": "wce-007",
-      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Regular",
-      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Amsterdam", "Paris", "Lucerne", "Zurich"],
-      "duration": "8 nights, 9 days",
-      "type": "Regular",
-      "tags": ["Netherlands", "France", "Switzerland", "Alps", "Canals"]
-    },
-    {
-      "id": "wce-008",
-      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Private",
-      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": ["Amsterdam", "Paris", "Lucerne", "Zurich"],
-      "duration": "8 nights, 9 days",
-      "type": "Private",
-      "tags": ["Netherlands", "France", "Switzerland", "Alps", "Canals"]
-    },
-    {
-      "id": "italy-001",
-      "name": "6 Nights, 7 Days Italy - Private",
-      "filename": "6 nights, 7 days Italy_Private.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": ["Venice", "Florence"],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": ["Italy", "Tuscany", "Canals"]
-    },
-    {
-      "id": "italy-002",
-      "name": "6 Nights, 7 Days Italy - Regular",
-      "filename": "6 nights, 7 days Italy_Regular.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": ["Venice", "Florence"],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": ["Italy", "Tuscany", "Canals"]
-    },
-    {
-      "id": "italy-003",
-      "name": "10 Nights, 11 Days Italy - Private",
-      "filename": "10 nights, 11 days Italy_Private.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": ["Rome", "Naples", "Florence", "Venice", "Milan"],
-      "duration": "10 nights, 11 days",
-      "type": "Private",
-      "tags": ["Italy", "Tuscany", "Amalfi Coast", "Canals"]
-    },
-    {
-      "id": "italy-004",
-      "name": "10 Nights, 11 Days Italy - Regular",
-      "filename": "10 nights, 11 days Italy_Regular.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": ["Rome", "Naples", "Florence", "Venice", "Milan"],
-      "duration": "10 nights, 11 days",
-      "type": "Regular",
-      "tags": ["Italy", "Tuscany", "Amalfi Coast", "Canals"]
-    },
-    {
-      "id": "switz-001",
-      "name": "5 Nights, 6 Days Switzerland - Regular",
-      "filename": "5 nights, 6 days Switzerland_Regular.pdf",
-      "region": "Switzerland",
-      "folder": "multi-country/switzerland",
-      "cities": ["Lucerne", "Interlaken", "Zurich"],
-      "duration": "5 nights, 6 days",
-      "type": "Regular",
-      "tags": ["Switzerland", "Alps", "Jungfrau"]
-    },
-    {
-      "id": "switz-002",
-      "name": "7 Nights, 8 Days Switzerland - Private",
-      "filename": "7 nights, 8 days Switzerland_Private.pdf",
-      "region": "Switzerland",
-      "folder": "multi-country/switzerland",
-      "cities": ["Lucerne", "Interlaken", "Montreux", "Zurich"],
-      "duration": "7 nights, 8 days",
-      "type": "Private",
-      "tags": ["Switzerland", "Alps", "Jungfrau", "Lake Geneva"]
-    },
-    {
-      "id": "switz-003",
-      "name": "7 Nights, 8 Days Switzerland - Regular",
-      "filename": "7 nights, 8 days Switzerland_Regular.pdf",
-      "region": "Switzerland",
-      "folder": "multi-country/switzerland",
-      "cities": ["Lucerne", "Interlaken", "Montreux", "Zurich"],
-      "duration": "7 nights, 8 days",
-      "type": "Regular",
-      "tags": ["Switzerland", "Alps", "Jungfrau", "Lake Geneva"]
-    },
-    {
-      "id": "ee-001",
-      "name": "6 Nights, 7 Days East Europe - Private",
-      "filename": "6 nights, 7 days East Europe_Private.pdf",
-      "region": "Eastern Europe",
-      "folder": "multi-country/eastern-europe",
-      "cities": ["Prague", "Vienna", "Budapest"],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": ["Czech Republic", "Austria", "Hungary", "Danube"]
-    },
-    {
-      "id": "ee-002",
-      "name": "6 Nights, 7 Days East Europe - Regular",
-      "filename": "6 nights, 7 days East Europe_Regular.pdf",
-      "region": "Eastern Europe",
-      "folder": "multi-country/eastern-europe",
-      "cities": ["Prague", "Vienna", "Budapest"],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": ["Czech Republic", "Austria", "Hungary", "Danube"]
-    },
-    {
       "id": "city-001",
       "name": "3 Days Amsterdam",
       "filename": "3 Days_Amsterdam_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Amsterdam"],
+      "cities": [
+        "Amsterdam"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Netherlands", "Canals", "Museums"]
+      "tags": [
+        "Netherlands",
+        "Canals",
+        "Museums"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-002",
@@ -314,10 +24,17 @@
       "filename": "3 Days_Athens_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Athens"],
+      "cities": [
+        "Athens"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Greece", "Ancient History", "Acropolis"]
+      "tags": [
+        "Greece",
+        "Ancient History",
+        "Acropolis"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-003",
@@ -325,10 +42,17 @@
       "filename": "3 Days_Barcelona_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Barcelona"],
+      "cities": [
+        "Barcelona"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Spain", "Mediterranean", "Gaudi"]
+      "tags": [
+        "Spain",
+        "Mediterranean",
+        "Gaudi"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-004",
@@ -336,10 +60,16 @@
       "filename": "3 Days_Bergen_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Bergen"],
+      "cities": [
+        "Bergen"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Norway", "Fjords"]
+      "tags": [
+        "Norway",
+        "Fjords"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-005",
@@ -347,10 +77,16 @@
       "filename": "3 Days_Berlin_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Berlin"],
+      "cities": [
+        "Berlin"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Germany", "History"]
+      "tags": [
+        "Germany",
+        "History"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-006",
@@ -358,10 +94,16 @@
       "filename": "3 Days_Brussels_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Brussels"],
+      "cities": [
+        "Brussels"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Belgium", "Grand Place"]
+      "tags": [
+        "Belgium",
+        "Grand Place"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-007",
@@ -369,10 +111,17 @@
       "filename": "3 Days_Budapest_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Budapest"],
+      "cities": [
+        "Budapest"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Hungary", "Danube", "Thermal Baths"]
+      "tags": [
+        "Hungary",
+        "Danube",
+        "Thermal Baths"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-008",
@@ -380,10 +129,16 @@
       "filename": "3 Days_Copenhagen_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Copenhagen"],
+      "cities": [
+        "Copenhagen"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Denmark", "Nordic"]
+      "tags": [
+        "Denmark",
+        "Nordic"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-009",
@@ -391,10 +146,15 @@
       "filename": "3 Days_Dublin_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Dublin"],
+      "cities": [
+        "Dublin"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Ireland"]
+      "tags": [
+        "Ireland"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-010",
@@ -402,10 +162,16 @@
       "filename": "3 Days_Dusseldorf_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Dusseldorf"],
+      "cities": [
+        "Dusseldorf"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Germany", "Rhine"]
+      "tags": [
+        "Germany",
+        "Rhine"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-011",
@@ -413,10 +179,16 @@
       "filename": "3 Days_Edinburgh_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Edinburgh"],
+      "cities": [
+        "Edinburgh"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Scotland", "Castle"]
+      "tags": [
+        "Scotland",
+        "Castle"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-012",
@@ -424,10 +196,17 @@
       "filename": "3 Days_Florence_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Florence"],
+      "cities": [
+        "Florence"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Italy", "Tuscany", "Renaissance"]
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Renaissance"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-013",
@@ -435,10 +214,16 @@
       "filename": "3 Days_Frankfurt_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Frankfurt"],
+      "cities": [
+        "Frankfurt"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Germany", "Financial Hub"]
+      "tags": [
+        "Germany",
+        "Financial Hub"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-014",
@@ -446,10 +231,16 @@
       "filename": "3 Days_Geneva_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Geneva"],
+      "cities": [
+        "Geneva"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Switzerland", "Lake Geneva"]
+      "tags": [
+        "Switzerland",
+        "Lake Geneva"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-015",
@@ -457,10 +248,15 @@
       "filename": "3 Days_Glasgow_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Glasgow"],
+      "cities": [
+        "Glasgow"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Scotland"]
+      "tags": [
+        "Scotland"
+      ],
+      "description": "The best of Glasgow, curated and ready to explore."
     },
     {
       "id": "city-016",
@@ -468,10 +264,16 @@
       "filename": "3 Days_Helsinki_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Helsinki"],
+      "cities": [
+        "Helsinki"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Finland", "Nordic"]
+      "tags": [
+        "Finland",
+        "Nordic"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-017",
@@ -479,10 +281,16 @@
       "filename": "3 Days_Innsbruck_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Innsbruck"],
+      "cities": [
+        "Innsbruck"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Austria", "Alps"]
+      "tags": [
+        "Austria",
+        "Alps"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-018",
@@ -490,10 +298,17 @@
       "filename": "3 Days_Interlaken_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Interlaken"],
+      "cities": [
+        "Interlaken"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Switzerland", "Alps", "Jungfrau"]
+      "tags": [
+        "Switzerland",
+        "Alps",
+        "Jungfrau"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-019",
@@ -501,10 +316,17 @@
       "filename": "3 Days_Inverness_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Inverness"],
+      "cities": [
+        "Inverness"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Scotland", "Scottish Highlands", "Loch Ness"]
+      "tags": [
+        "Scotland",
+        "Scottish Highlands",
+        "Loch Ness"
+      ],
+      "description": "The best of Inverness, curated and ready to explore."
     },
     {
       "id": "city-020",
@@ -512,10 +334,16 @@
       "filename": "3 Days_Lisbon_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Lisbon"],
+      "cities": [
+        "Lisbon"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Portugal", "Atlantic"]
+      "tags": [
+        "Portugal",
+        "Atlantic"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-021",
@@ -523,10 +351,17 @@
       "filename": "3 Days_London_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["London"],
+      "cities": [
+        "London"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["England", "Thames", "Royal"]
+      "tags": [
+        "England",
+        "Thames",
+        "Royal"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-022",
@@ -534,10 +369,17 @@
       "filename": "3 Days_Lucerne_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Lucerne"],
+      "cities": [
+        "Lucerne"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Switzerland", "Alps", "Lake"]
+      "tags": [
+        "Switzerland",
+        "Alps",
+        "Lake"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-023",
@@ -545,10 +387,16 @@
       "filename": "3 Days_Madrid_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Madrid"],
+      "cities": [
+        "Madrid"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Spain", "Museums"]
+      "tags": [
+        "Spain",
+        "Museums"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-024",
@@ -556,10 +404,17 @@
       "filename": "3 Days_Milan_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Milan"],
+      "cities": [
+        "Milan"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Italy", "Fashion", "Duomo"]
+      "tags": [
+        "Italy",
+        "Fashion",
+        "Duomo"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-025",
@@ -567,10 +422,17 @@
       "filename": "3 Days_Munich_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Munich"],
+      "cities": [
+        "Munich"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Germany", "Bavaria", "Beer"]
+      "tags": [
+        "Germany",
+        "Bavaria",
+        "Beer"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-026",
@@ -578,10 +440,17 @@
       "filename": "3 Days_Mykonos_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Mykonos"],
+      "cities": [
+        "Mykonos"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Greece", "Islands", "Beaches"]
+      "tags": [
+        "Greece",
+        "Islands",
+        "Beaches"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-027",
@@ -589,10 +458,17 @@
       "filename": "3 Days_Nice_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Nice"],
+      "cities": [
+        "Nice"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["France", "French Riviera", "Mediterranean"]
+      "tags": [
+        "France",
+        "French Riviera",
+        "Mediterranean"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-028",
@@ -600,10 +476,17 @@
       "filename": "3 Days_Oslo_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Oslo"],
+      "cities": [
+        "Oslo"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Norway", "Nordic", "Fjords"]
+      "tags": [
+        "Norway",
+        "Nordic",
+        "Fjords"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-029",
@@ -611,10 +494,17 @@
       "filename": "3 Days_Paris_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Paris"],
+      "cities": [
+        "Paris"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["France", "Seine", "Eiffel Tower"]
+      "tags": [
+        "France",
+        "Seine",
+        "Eiffel Tower"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-030",
@@ -622,10 +512,16 @@
       "filename": "3 Days_Prague_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Prague"],
+      "cities": [
+        "Prague"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Czech Republic", "Historic"]
+      "tags": [
+        "Czech Republic",
+        "Historic"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-031",
@@ -633,10 +529,18 @@
       "filename": "3 Days_Rome_2024-25_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Rome"],
+      "cities": [
+        "Rome"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Italy", "Ancient History", "Colosseum", "Vatican"]
+      "tags": [
+        "Italy",
+        "Ancient History",
+        "Colosseum",
+        "Vatican"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-032",
@@ -644,10 +548,17 @@
       "filename": "3 Days_Salzburg_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Salzburg"],
+      "cities": [
+        "Salzburg"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Austria", "Mozart", "Alps"]
+      "tags": [
+        "Austria",
+        "Mozart",
+        "Alps"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-033",
@@ -655,10 +566,18 @@
       "filename": "3 Days_Santorini_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Santorini"],
+      "cities": [
+        "Santorini"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Greece", "Islands", "Beaches", "Sunset"]
+      "tags": [
+        "Greece",
+        "Islands",
+        "Beaches",
+        "Sunset"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-034",
@@ -666,10 +585,16 @@
       "filename": "3 Days_Stockholm_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Stockholm"],
+      "cities": [
+        "Stockholm"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Sweden", "Nordic"]
+      "tags": [
+        "Sweden",
+        "Nordic"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-035",
@@ -677,10 +602,17 @@
       "filename": "3 Days_Venice_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Venice"],
+      "cities": [
+        "Venice"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Italy", "Canals", "Gondola"]
+      "tags": [
+        "Italy",
+        "Canals",
+        "Gondola"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-036",
@@ -688,10 +620,17 @@
       "filename": "3 Days_Vienna_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Vienna"],
+      "cities": [
+        "Vienna"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Austria", "Classical Music", "Danube"]
+      "tags": [
+        "Austria",
+        "Classical Music",
+        "Danube"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
     },
     {
       "id": "city-037",
@@ -699,10 +638,1014 @@
       "filename": "3 Days_Zurich_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
-      "cities": ["Zurich"],
+      "cities": [
+        "Zurich"
+      ],
       "duration": "3 days",
       "type": "City Break",
-      "tags": ["Switzerland", "Lake", "Banking"]
+      "tags": [
+        "Switzerland",
+        "Lake",
+        "Banking"
+      ],
+      "description": "Curated City Break package with handpicked experiences."
+    },
+    {
+      "id": "italy-003",
+      "name": "10 Nights, 11 Days Italy - Private",
+      "filename": "10 nights, 11 days Italy_Private.pdf",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Rome",
+        "Naples",
+        "Florence",
+        "Venice",
+        "Milan"
+      ],
+      "duration": "10 nights, 11 days",
+      "type": "Private",
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Amalfi Coast",
+        "Canals"
+      ],
+      "description": "Naples, Rome and 4 more unmissable stops."
+    },
+    {
+      "id": "italy-004",
+      "name": "10 Nights, 11 Days Italy - Regular",
+      "filename": "10 nights, 11 days Italy_Regular.pdf",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Rome",
+        "Naples",
+        "Florence",
+        "Venice",
+        "Milan"
+      ],
+      "duration": "10 nights, 11 days",
+      "type": "Regular",
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Amalfi Coast",
+        "Canals"
+      ],
+      "description": "Rome, Naples and 2 more unmissable stops."
+    },
+    {
+      "id": "italy-001",
+      "name": "6 Nights, 7 Days Italy - Private",
+      "filename": "6 nights, 7 days Italy_Private.pdf",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Venice",
+        "Florence"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Private",
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Canals"
+      ],
+      "description": "Venice Mestre, Venice and 1 more unmissable stops."
+    },
+    {
+      "id": "italy-002",
+      "name": "6 Nights, 7 Days Italy - Regular",
+      "filename": "6 nights, 7 days Italy_Regular.pdf",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Venice",
+        "Florence"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Regular",
+      "tags": [
+        "Italy",
+        "Tuscany",
+        "Canals"
+      ],
+      "description": "Venice Mestre, Florence and 1 more unmissable stops."
+    },
+    {
+      "id": "7-nights--8-days-sardinia-self",
+      "name": "7 nights, 8 days Sardinia",
+      "filename": "7 nights, 8 days Sardinia_Self-drive.pdf",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Cagliari",
+        "Cala Gonone",
+        "Alghero",
+        "Olbia"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1020,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Cagliari, Cala Gonone and 2 more unmissable stops.",
+      "tags": [
+        "Cagliari",
+        "Cala Gonone",
+        "Alghero",
+        "Olbia"
+      ]
+    },
+    {
+      "id": "ee-001",
+      "name": "6 Nights, 7 Days East Europe - Private",
+      "filename": "6 nights, 7 days East Europe_Private.pdf",
+      "region": "Eastern Europe",
+      "folder": "multi-country/eastern-europe",
+      "cities": [
+        "Prague",
+        "Vienna",
+        "Budapest"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Private",
+      "tags": [
+        "Czech Republic",
+        "Austria",
+        "Hungary",
+        "Danube"
+      ],
+      "description": "Prague, Vienna and 1 more unmissable stops."
+    },
+    {
+      "id": "ee-002",
+      "name": "6 Nights, 7 Days East Europe - Regular",
+      "filename": "6 nights, 7 days East Europe_Regular.pdf",
+      "region": "Eastern Europe",
+      "folder": "multi-country/eastern-europe",
+      "cities": [
+        "Prague",
+        "Vienna",
+        "Budapest"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Regular",
+      "tags": [
+        "Czech Republic",
+        "Austria",
+        "Hungary",
+        "Danube"
+      ],
+      "description": "Prague, Vienna and 1 more unmissable stops."
+    },
+    {
+      "id": "7-nights--8-days-france-norman",
+      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
+      "filename": "7 nights, 8 days France Normandy & Loire Valley_Private.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Private",
+      "season": "all-year",
+      "price_twin": 1306,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Paris, Bayeux and 1 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ]
+    },
+    {
+      "id": "7-nights--8-days-france-norman",
+      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
+      "filename": "7 nights, 8 days France Normandy & Loire Valley_Regular.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1024,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Paris, Bayeux and 1 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ]
+    },
+    {
+      "id": "7-nights--8-days-france-norman",
+      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
+      "filename": "7 nights, 8 days France Normandy & Loire Valley_Self-drive.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1018,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Paris, Bayeux and 1 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-corsica-self-",
+      "name": "8 nights, 9 days Corsica",
+      "filename": "8 nights, 9 days Corsica_Self-drive.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Ajaccio",
+        "Corte",
+        "Bonifacio"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1182,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Ajaccio, Corte and 1 more unmissable stops.",
+      "tags": [
+        "Ajaccio",
+        "Corte",
+        "Bonifacio"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-france-proven",
+      "name": "8 nights, 9 days France, Provence, French & Riviera",
+      "filename": "8 nights, 9 days France Provence & French Riviera_Private.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Private",
+      "season": "all-year",
+      "price_twin": 1558,
+      "currency": "\u20ac",
+      "valid_till": "Nov 2026",
+      "description": "Paris, Avignon and 2 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-france-proven",
+      "name": "8 nights, 9 days France, Provence, French & Riviera",
+      "filename": "8 nights, 9 days France Provence & French Riviera_Regular.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1198,
+      "currency": "\u20ac",
+      "valid_till": "Nov 2026",
+      "description": "Paris, Avignon and 2 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-france-proven",
+      "name": "8 nights, 9 days France, Provence, French & Riviera",
+      "filename": "8 nights, 9 days France Provence & French Riviera_Self drive.pdf",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1420,
+      "currency": "\u20ac",
+      "valid_till": "Nov 2026",
+      "description": "Paris, Avignon and 2 more unmissable stops.",
+      "tags": [
+        "Paris",
+        "Avignon",
+        "Aix en Provence",
+        "Nice"
+      ]
+    },
+    {
+      "id": "4-nights--5-days-tromso-regula",
+      "name": "4 nights, 5 days Tromso",
+      "filename": "4 Nights, 5 Days Tromso_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [],
+      "duration": "4 nights / 5 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 2383,
+      "currency": "\u20ac",
+      "valid_till": "Sep 2026",
+      "description": "Curated Scandinavia & Iceland package with handpicked experiences.",
+      "tags": []
+    },
+    {
+      "id": "4-nights--8-days-kiruna-regula",
+      "name": "4 nights, 8 days Kiruna",
+      "filename": "4 Nights, 8 Days Kiruna_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Kiruna"
+      ],
+      "duration": "4 nights / 8 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1391,
+      "currency": "\u20ac",
+      "valid_till": "Sep 2026",
+      "description": "The best of Kiruna, curated and ready to explore.",
+      "tags": [
+        "Kiruna"
+      ]
+    },
+    {
+      "id": "5-nights--6-days-norway-in-a-n",
+      "name": "5 nights, 6 days Norway, In, a & Nutshell",
+      "filename": "5 nights, 6 days Norway In a Nutshell_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Oslo",
+        "Bergen"
+      ],
+      "duration": "5 nights / 6 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1080,
+      "currency": "\u20ac",
+      "valid_till": "Mar 2026",
+      "description": "Oslo elegance meets Bergen charm.",
+      "tags": [
+        "Oslo",
+        "Bergen"
+      ]
+    },
+    {
+      "id": "6-nights--7-days-nordic-capita",
+      "name": "6 nights, 7 days Nordic & Capitals",
+      "filename": "6 nights, 7 days Nordic Capitals_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Copenhagen",
+        "Oslo",
+        "Stockholm",
+        "Helsinki"
+      ],
+      "duration": "6 nights / 7 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1110,
+      "currency": "\u20ac",
+      "valid_till": "Mar 2027",
+      "description": "Copenhagen, Oslo and 2 more unmissable stops.",
+      "tags": [
+        "Copenhagen",
+        "Oslo",
+        "Stockholm",
+        "Helsinki"
+      ]
+    },
+    {
+      "id": "7-nights--8-days-swedish-lapla",
+      "name": "7 nights, 8 days Swedish & Lapland",
+      "filename": "7 Nights, 8 Days Swedish Lapland_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Kiruna",
+        "Abisko"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 2238,
+      "currency": "\u20ac",
+      "valid_till": "Sep 2026",
+      "description": "Kiruna elegance meets Abisko charm.",
+      "tags": [
+        "Kiruna",
+        "Abisko"
+      ]
+    },
+    {
+      "id": "7-nights--8-days-tromso-regula",
+      "name": "7 nights, 8 days Tromso",
+      "filename": "7 Nights, 8 Days Tromso_Regular.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [],
+      "duration": "7 nights / 8 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 3210,
+      "currency": "\u20ac",
+      "valid_till": "Sep 2026",
+      "description": "Curated Scandinavia & Iceland package with handpicked experiences.",
+      "tags": []
+    },
+    {
+      "id": "7-nights--8-days-iceland-self-",
+      "name": "7 nights, 8 days Iceland",
+      "filename": "7 nights, 8 days Iceland_Self-drive.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Reykjavik",
+        "Akureyri",
+        "Hofn",
+        "Vik"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1932,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Reykjavik, Akureyri and 2 more unmissable stops.",
+      "tags": [
+        "Reykjavik",
+        "Akureyri",
+        "Hofn",
+        "Vik"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-spain-private",
+      "name": "8 nights, 9 days Spain",
+      "filename": "8 nights, 9 days Spain_Private.pdf",
+      "region": "Spain & Portugal",
+      "folder": "multi-country/spain-portugal",
+      "cities": [
+        "Madrid",
+        "Granada",
+        "Seville",
+        "Barcelona"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Private",
+      "season": "all-year",
+      "price_twin": 2050,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Madrid, Granada and 2 more unmissable stops.",
+      "tags": [
+        "Madrid",
+        "Granada",
+        "Seville",
+        "Barcelona"
+      ]
+    },
+    {
+      "id": "8-nights--9-days-spain-regular",
+      "name": "8 nights, 9 days Spain",
+      "filename": "8 nights, 9 days Spain_Regular.pdf",
+      "region": "Spain & Portugal",
+      "folder": "multi-country/spain-portugal",
+      "cities": [
+        "Madrid",
+        "Granada",
+        "Seville",
+        "Barcelona"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "Regular",
+      "season": "all-year",
+      "price_twin": 1527,
+      "currency": "\u20ac",
+      "valid_till": "Oct 2026",
+      "description": "Madrid, Granada and 2 more unmissable stops.",
+      "tags": [
+        "Madrid",
+        "Granada",
+        "Seville",
+        "Barcelona"
+      ]
+    },
+    {
+      "id": "switz-001",
+      "name": "5 Nights, 6 Days Switzerland - Regular",
+      "filename": "5 nights, 6 days Switzerland_Regular.pdf",
+      "region": "Switzerland",
+      "folder": "multi-country/switzerland",
+      "cities": [
+        "Lucerne",
+        "Interlaken",
+        "Zurich"
+      ],
+      "duration": "5 nights, 6 days",
+      "type": "Regular",
+      "tags": [
+        "Switzerland",
+        "Alps",
+        "Jungfrau"
+      ],
+      "description": "Lucerne elegance meets Interlaken charm."
+    },
+    {
+      "id": "switz-002",
+      "name": "7 Nights, 8 Days Switzerland - Private",
+      "filename": "7 nights, 8 days Switzerland_Private.pdf",
+      "region": "Switzerland",
+      "folder": "multi-country/switzerland",
+      "cities": [
+        "Lucerne",
+        "Interlaken",
+        "Montreux",
+        "Zurich"
+      ],
+      "duration": "7 nights, 8 days",
+      "type": "Private",
+      "tags": [
+        "Switzerland",
+        "Alps",
+        "Jungfrau",
+        "Lake Geneva"
+      ],
+      "description": "Lucerne, Interlaken and 2 more unmissable stops."
+    },
+    {
+      "id": "switz-003",
+      "name": "7 Nights, 8 Days Switzerland - Regular",
+      "filename": "7 nights, 8 days Switzerland_Regular.pdf",
+      "region": "Switzerland",
+      "folder": "multi-country/switzerland",
+      "cities": [
+        "Lucerne",
+        "Interlaken",
+        "Montreux",
+        "Zurich"
+      ],
+      "duration": "7 nights, 8 days",
+      "type": "Regular",
+      "tags": [
+        "Switzerland",
+        "Alps",
+        "Jungfrau",
+        "Lake Geneva"
+      ],
+      "description": "Lucerne, Interlaken and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-002",
+      "name": "10 Nights, 11 Days England-Scotland - Regular",
+      "filename": "10 Nights 11 Days England-Scotland_ Regular.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Manchester",
+        "Edinburgh",
+        "Inverness",
+        "Glasgow"
+      ],
+      "duration": "10 nights, 11 days",
+      "type": "Regular",
+      "tags": [
+        "England",
+        "Scotland",
+        "Scottish Highlands",
+        "Multi-city"
+      ],
+      "description": "London, Manchester and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-001",
+      "name": "3 Nights, 4 Days London - Private",
+      "filename": "3 nights 4 days London_Private.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London"
+      ],
+      "duration": "3 nights, 4 days",
+      "type": "Private",
+      "tags": [
+        "England",
+        "City Break",
+        "Thames"
+      ],
+      "description": "The best of London, curated and ready to explore."
+    },
+    {
+      "id": "uk-010",
+      "name": "6 Nights, 7 Days Ireland - Private",
+      "filename": "6 nights, 7 days Ireland_Private.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Dublin",
+        "Limerick"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Private",
+      "tags": [
+        "Ireland"
+      ],
+      "description": "Dublin elegance meets Limerick charm."
+    },
+    {
+      "id": "uk-009",
+      "name": "6 Nights, 7 Days Ireland - Regular",
+      "filename": "6 nights, 7 days Ireland_Regular.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Dublin",
+        "Limerick"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Regular",
+      "tags": [
+        "Ireland"
+      ],
+      "description": "Dublin elegance meets Limerick charm."
+    },
+    {
+      "id": "uk-008",
+      "name": "6 Nights, 7 Days Ireland - Self Drive",
+      "filename": "6 nights, 7 days Ireland_Self Drive.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Dublin",
+        "Limerick"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Self Drive",
+      "tags": [
+        "Ireland",
+        "Self Drive"
+      ],
+      "description": "Dublin elegance meets Limerick charm."
+    },
+    {
+      "id": "uk-007",
+      "name": "6 Nights, 7 Days Scotland - Private",
+      "filename": "6 nights, 7 days Scotland_Private.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Private",
+      "tags": [
+        "Scotland",
+        "Scottish Highlands"
+      ],
+      "description": "Edinburgh, Inverness and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-006",
+      "name": "6 Nights, 7 Days Scotland - Regular",
+      "filename": "6 nights, 7 days Scotland_Regular.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Regular",
+      "tags": [
+        "Scotland",
+        "Scottish Highlands"
+      ],
+      "description": "Edinburgh, Invernes s and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-005",
+      "name": "6 Nights, 7 Days Scotland - Self Drive",
+      "filename": "6 nights, 7 days Scotland_Self Drive.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ],
+      "duration": "6 nights, 7 days",
+      "type": "Self Drive",
+      "tags": [
+        "Scotland",
+        "Scottish Highlands",
+        "Self Drive"
+      ],
+      "description": "Edinburgh, Inverness and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-004",
+      "name": "8 Nights, 9 Days London Scotland - Regular",
+      "filename": "8 Nights 9 Days London Scotland_Regular.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Glasgow",
+        "Inverness",
+        "Edinburgh"
+      ],
+      "duration": "8 nights, 9 days",
+      "type": "Regular",
+      "tags": [
+        "England",
+        "Scotland",
+        "Scottish Highlands"
+      ],
+      "description": "London, Glasgow and 2 more unmissable stops."
+    },
+    {
+      "id": "uk-003",
+      "name": "9 Nights, 10 Days England-Scotland - Private",
+      "filename": "9 Nights 10 Days England-Scotland_ Private.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Manchester",
+        "Edinburgh",
+        "Inverness",
+        "Glasgow"
+      ],
+      "duration": "9 nights, 10 days",
+      "type": "Private",
+      "tags": [
+        "England",
+        "Scotland",
+        "Scottish Highlands",
+        "Multi-city"
+      ],
+      "description": "London, Manchester and 3 more unmissable stops."
+    },
+    {
+      "id": "9-nights--10-days-london-with-",
+      "name": "9 nights, 10 days London, with, Devon & Cornwall",
+      "filename": "9 nights, 10 days London with Devon & Cornwall_Self-drive.pdf",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ],
+      "duration": "9 nights / 10 days",
+      "type": "Self Drive",
+      "season": "all-year",
+      "price_twin": 1332,
+      "currency": "\u00a3",
+      "valid_till": "Oct 2026",
+      "description": "Cheltenham, Barnstaple and 4 more unmissable stops.",
+      "tags": [
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ]
+    },
+    {
+      "id": "wce-005",
+      "name": "10 Nights, 11 Days Paris Switzerland Italy - Private",
+      "filename": "10 nights, 11 days Paris Switzerland Italy_Private.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Venice",
+        "Florence",
+        "Rome"
+      ],
+      "duration": "10 nights, 11 days",
+      "type": "Private",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Italy",
+        "Alps",
+        "Tuscany"
+      ],
+      "description": "Paris, Lucerne and 4 more unmissable stops."
+    },
+    {
+      "id": "wce-006",
+      "name": "10 Nights, 11 Days Paris Switzerland Italy - Regular",
+      "filename": "10 nights, 11 days Paris Switzerland Italy_Regular.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Venice",
+        "Florence",
+        "Rome"
+      ],
+      "duration": "10 nights, 11 days",
+      "type": "Regular",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Italy",
+        "Alps",
+        "Tuscany"
+      ],
+      "description": "Paris, Lucerne and 1 more unmissable stops."
+    },
+    {
+      "id": "wce-001",
+      "name": "7 Nights, 8 Days Paris Switzerland - Private",
+      "filename": "7 nights, 8 days Paris Switzerland_Private.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ],
+      "duration": "7 nights, 8 days",
+      "type": "Private",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Alps",
+        "Seine"
+      ],
+      "description": "Paris, Lucerne and 1 more unmissable stops."
+    },
+    {
+      "id": "wce-002",
+      "name": "7 Nights, 8 Days Paris Switzerland - Regular",
+      "filename": "7 nights, 8 days Paris Switzerland_Regular.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ],
+      "duration": "7 nights, 8 days",
+      "type": "Regular",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Alps",
+        "Seine"
+      ],
+      "description": "Paris elegance meets Lucerne charm."
+    },
+    {
+      "id": "wce-008",
+      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Private",
+      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Private.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Amsterdam",
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ],
+      "duration": "8 nights, 9 days",
+      "type": "Private",
+      "tags": [
+        "Netherlands",
+        "France",
+        "Switzerland",
+        "Alps",
+        "Canals"
+      ],
+      "description": "Amsterdam, Paris and 2 more unmissable stops."
+    },
+    {
+      "id": "wce-007",
+      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Regular",
+      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Regular.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Amsterdam",
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ],
+      "duration": "8 nights, 9 days",
+      "type": "Regular",
+      "tags": [
+        "Netherlands",
+        "France",
+        "Switzerland",
+        "Alps",
+        "Canals"
+      ],
+      "description": "Amsterdam, Paris and 1 more unmissable stops."
+    },
+    {
+      "id": "wce-003",
+      "name": "9 Nights, 10 Days Paris Switzerland Austria - Private",
+      "filename": "9 nights, 10 days Paris Switzerland Austria_Private.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Innsbruck",
+        "Vienna"
+      ],
+      "duration": "9 nights, 10 days",
+      "type": "Private",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Austria",
+        "Alps",
+        "Danube"
+      ],
+      "description": "Paris, Lucerne and 2 more unmissable stops."
+    },
+    {
+      "id": "wce-004",
+      "name": "9 Nights, 10 Days Paris Switzerland Austria - Regular",
+      "filename": "9 nights, 10 days Paris Switzerland Austria_Regular.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Paris",
+        "Lucerne",
+        "Innsbruck",
+        "Vienna"
+      ],
+      "duration": "9 nights, 10 days",
+      "type": "Regular",
+      "tags": [
+        "France",
+        "Switzerland",
+        "Austria",
+        "Alps",
+        "Danube"
+      ],
+      "description": "Paris, Lucerne and 2 more unmissable stops."
     }
   ]
 }
