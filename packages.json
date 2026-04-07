@@ -1873,6 +1873,52 @@
       "season": "all-year"
     },
     {
+      "id": "4-nights--5-days-bavarian---au",
+      "name": "4 nights, 5 days Bavarian, Austrian, Christmas & Markets",
+      "filename": "4 nights, 5 days Bavarian & Austrian Christmas Markets.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Salzburg",
+        "Munich"
+      ],
+      "duration": "4 nights / 5 days",
+      "type": null,
+      "season": "winter",
+      "price_twin": 714,
+      "currency": "€",
+      "valid_till": "Dec 2026",
+      "is_expired": false,
+      "description": "From Salzburg to Munich — landmarks, local character and curated transfers.",
+      "tags": [
+        "Salzburg",
+        "Munich"
+      ]
+    },
+    {
+      "id": "4-nights--5-days-bavarian-chri",
+      "name": "4 nights, 5 days Bavarian, Christmas & Markets",
+      "filename": "4 nights, 5 days Bavarian Christmas Markets.pdf",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Nuremberg",
+        "Munich"
+      ],
+      "duration": "4 nights / 5 days",
+      "type": null,
+      "season": "winter",
+      "price_twin": 714,
+      "currency": "€",
+      "valid_till": "Dec 2026",
+      "is_expired": false,
+      "description": "From Nuremberg to Munich — landmarks, local character and curated transfers.",
+      "tags": [
+        "Nuremberg",
+        "Munich"
+      ]
+    },
+    {
       "id": "wce-001",
       "name": "7 Nights, 8 Days Paris Switzerland - Private",
       "filename": "7 nights, 8 days Paris Switzerland_Private.pdf",
