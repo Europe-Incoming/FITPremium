@@ -1874,7 +1874,7 @@
     },
     {
       "id": "4-nights--5-days-bavarian---au",
-      "name": "4 nights, 5 days Bavarian, Austrian, Christmas & Markets",
+      "name": "4 nights, 5 days Bavarian, Austrian, Christmas Markets",
       "filename": "4 nights, 5 days Bavarian & Austrian Christmas Markets.pdf",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
@@ -1889,7 +1889,7 @@
       "currency": "€",
       "valid_till": "Dec 2026",
       "is_expired": false,
-      "description": "From Salzburg to Munich — landmarks, local character and curated transfers.",
+      "description": "Baroque Salzburg by candlelight, Munich's Christkindlmarkt and glühwein in the shadow of the Frauenkirche.",
       "tags": [
         "Salzburg",
         "Munich"
@@ -1897,7 +1897,7 @@
     },
     {
       "id": "4-nights--5-days-bavarian-chri",
-      "name": "4 nights, 5 days Bavarian, Christmas & Markets",
+      "name": "4 nights, 5 days Bavarian, Christmas Markets",
       "filename": "4 nights, 5 days Bavarian Christmas Markets.pdf",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
@@ -1912,7 +1912,7 @@
       "currency": "€",
       "valid_till": "Dec 2026",
       "is_expired": false,
-      "description": "From Nuremberg to Munich — landmarks, local character and curated transfers.",
+      "description": "Medieval Nuremberg's world-famous Christkindlesmarkt and Munich's festive old town — the definitive Bavarian Christmas double.",
       "tags": [
         "Nuremberg",
         "Munich"
