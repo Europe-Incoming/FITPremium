@@ -7,10 +7,8 @@ let searchResults = [];
 // Load packages data
 async function loadPackages() {
     try {
-        // Determine the correct path to packages.json based on current page depth
         const depth = getPageDepth();
         const jsonPath = depth + 'packages.json';
-        
         const response = await fetch(jsonPath);
         const data = await response.json();
         allPackages = data.packages;
@@ -20,16 +18,15 @@ async function loadPackages() {
 }
 
 // Determine page depth for correct relative paths
+// Works for any repo name — no hardcoded site name
 function getPageDepth() {
     const path = window.location.pathname;
-    
-    // Count slashes after /FITGlobal/
-    const fitGlobalIndex = path.indexOf('/FITGlobal/');
-    if (fitGlobalIndex === -1) return './';
-    
-    const afterFitGlobal = path.substring(fitGlobalIndex + '/FITGlobal/'.length);
-    const depth = (afterFitGlobal.match(/\//g) || []).length;
-    
+    // Remove leading/trailing slashes, split into parts
+    // parts[0] = repo name (e.g. FITStandard, FITPremium)
+    // parts[1+] = subfolders (e.g. multi-country, scandinavia-iceland)
+    const parts = path.replace(/^\//, '').replace(/\/$/, '').split('/');
+    const subParts = parts.slice(1).filter(Boolean);
+    const depth = subParts.length;
     if (depth === 0) return './';
     if (depth === 1) return '../';
     if (depth === 2) return '../../';
@@ -41,54 +38,64 @@ function searchPackages(query) {
     if (!query || query.length < 2) {
         return [];
     }
-    
+
     const searchTerm = query.toLowerCase().trim();
     const results = [];
-    
+
     allPackages.forEach(pkg => {
         let score = 0;
         let matchedFields = [];
-        
+
         // Check package name (highest priority)
-        if (pkg.name.toLowerCase().includes(searchTerm)) {
+        if (pkg.name && pkg.name.toLowerCase().includes(searchTerm)) {
             score += 10;
             matchedFields.push('name');
         }
-        
+
+        // Check description
+        if (pkg.description && pkg.description.toLowerCase().includes(searchTerm)) {
+            score += 7;
+            matchedFields.push('description');
+        }
+
         // Check cities
-        pkg.cities.forEach(city => {
-            if (city.toLowerCase().includes(searchTerm)) {
-                score += 8;
-                if (!matchedFields.includes('city')) matchedFields.push('city');
-            }
-        });
-        
+        if (pkg.cities) {
+            pkg.cities.forEach(city => {
+                if (city.toLowerCase().includes(searchTerm)) {
+                    score += 8;
+                    if (!matchedFields.includes('city')) matchedFields.push('city');
+                }
+            });
+        }
+
         // Check region
-        if (pkg.region.toLowerCase().includes(searchTerm)) {
+        if (pkg.region && pkg.region.toLowerCase().includes(searchTerm)) {
             score += 6;
             matchedFields.push('region');
         }
-        
+
         // Check tags
-        pkg.tags.forEach(tag => {
-            if (tag.toLowerCase().includes(searchTerm)) {
-                score += 5;
-                if (!matchedFields.includes('tag')) matchedFields.push('tag');
-            }
-        });
-        
-        // Check tour type
-        if (pkg.type.toLowerCase().includes(searchTerm)) {
+        if (pkg.tags) {
+            pkg.tags.forEach(tag => {
+                if (tag.toLowerCase().includes(searchTerm)) {
+                    score += 5;
+                    if (!matchedFields.includes('tag')) matchedFields.push('tag');
+                }
+            });
+        }
+
+        // Check tour type — guard against null
+        if (pkg.type && pkg.type.toLowerCase().includes(searchTerm)) {
             score += 4;
             matchedFields.push('type');
         }
-        
-        // Check duration
-        if (pkg.duration.toLowerCase().includes(searchTerm)) {
+
+        // Check duration — guard against null
+        if (pkg.duration && pkg.duration.toLowerCase().includes(searchTerm)) {
             score += 3;
             matchedFields.push('duration');
         }
-        
+
         if (score > 0) {
             results.push({
                 ...pkg,
@@ -97,27 +104,26 @@ function searchPackages(query) {
             });
         }
     });
-    
+
     // Sort by score (highest first)
     results.sort((a, b) => b.score - a.score);
-    
+
     return results;
 }
 
 // Display search results
 function displaySearchResults(results) {
     const depth = getPageDepth();
-    
-    // Create or update results container
+
     let resultsContainer = document.getElementById('globalSearchResults');
-    
+
     if (!resultsContainer) {
         resultsContainer = document.createElement('div');
         resultsContainer.id = 'globalSearchResults';
         resultsContainer.className = 'search-results-overlay';
         document.body.appendChild(resultsContainer);
     }
-    
+
     if (results.length === 0) {
         resultsContainer.innerHTML = `
             <div class="search-results-container">
@@ -133,11 +139,14 @@ function displaySearchResults(results) {
         resultsContainer.style.display = 'block';
         return;
     }
-    
+
     const resultsHTML = results.map(pkg => {
-        const citiesList = pkg.cities.join(', ');
+        const citiesList = pkg.cities && pkg.cities.length ? pkg.cities.join(', ') : '—';
         const pdfUrl = depth + pkg.folder + '/' + pkg.filename;
-        
+        const priceStr = pkg.price_twin ? `From ${pkg.currency || '€'}${pkg.price_twin.toLocaleString()} pp` : '';
+        const typeStr = pkg.type || '';
+        const durationStr = pkg.duration || '';
+
         return `
             <a href="${pdfUrl}" class="search-result-card" target="_blank">
                 <div class="result-header">
@@ -146,18 +155,18 @@ function displaySearchResults(results) {
                 </div>
                 <div class="result-details">
                     <span class="result-region">${pkg.region}</span>
-                    <span class="result-separator">•</span>
-                    <span class="result-duration">${pkg.duration}</span>
-                    <span class="result-separator">•</span>
-                    <span class="result-type">${pkg.type}</span>
+                    ${durationStr ? `<span class="result-separator">•</span><span class="result-duration">${durationStr}</span>` : ''}
+                    ${typeStr ? `<span class="result-separator">•</span><span class="result-type">${typeStr}</span>` : ''}
+                    ${priceStr ? `<span class="result-separator">•</span><span class="result-price">${priceStr}</span>` : ''}
                 </div>
+                ${pkg.description ? `<div class="result-desc">${pkg.description}</div>` : ''}
                 <div class="result-cities">
                     <strong>Cities:</strong> ${citiesList}
                 </div>
             </a>
         `;
     }).join('');
-    
+
     resultsContainer.innerHTML = `
         <div class="search-results-container">
             <div class="search-results-header">
@@ -169,7 +178,7 @@ function displaySearchResults(results) {
             </div>
         </div>
     `;
-    
+
     resultsContainer.style.display = 'block';
 }
 
@@ -184,37 +193,34 @@ function closeSearchResults() {
 // Initialize global search on page load
 document.addEventListener('DOMContentLoaded', async function() {
     await loadPackages();
-    
+
     const searchBox = document.getElementById('searchBox');
     if (searchBox) {
         let searchTimeout;
-        
+
         searchBox.addEventListener('input', function(e) {
             clearTimeout(searchTimeout);
-            
             const query = e.target.value;
-            
             if (query.length < 2) {
                 closeSearchResults();
                 return;
             }
-            
             searchTimeout = setTimeout(() => {
                 const results = searchPackages(query);
                 displaySearchResults(results);
-            }, 300); // Debounce search
+            }, 300);
         });
-        
+
         // Close results when clicking outside
         document.addEventListener('click', function(e) {
             const resultsContainer = document.getElementById('globalSearchResults');
-            if (resultsContainer && 
-                !resultsContainer.contains(e.target) && 
+            if (resultsContainer &&
+                !resultsContainer.contains(e.target) &&
                 e.target !== searchBox) {
                 closeSearchResults();
             }
         });
-        
+
         // Prevent closing when clicking inside results
         document.addEventListener('click', function(e) {
             if (e.target.closest('.search-results-container')) {
@@ -337,6 +343,8 @@ const searchStyles = `
     font-size: 0.75em;
     font-weight: 600;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
+    margin-left: 12px;
 }
 
 .result-details {
@@ -346,10 +354,22 @@ const searchStyles = `
     margin-bottom: 8px;
     font-size: 0.9em;
     color: #757575;
+    flex-wrap: wrap;
 }
 
-.result-separator {
-    color: #bdbdbd;
+.result-separator { color: #bdbdbd; }
+
+.result-price {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.result-desc {
+    font-size: 0.88em;
+    color: #666;
+    font-style: italic;
+    margin: 6px 0;
+    line-height: 1.4;
 }
 
 .result-cities {
@@ -358,9 +378,7 @@ const searchStyles = `
     margin-top: 8px;
 }
 
-.result-cities strong {
-    color: #424242;
-}
+.result-cities strong { color: #424242; }
 
 .no-results {
     padding: 60px 20px;
@@ -377,20 +395,15 @@ const searchStyles = `
         padding: 0;
         top: 140px;
     }
-    
     .search-results-container {
         border-radius: 0;
         min-height: 100%;
     }
-    
     .result-header {
         flex-direction: column;
         gap: 8px;
     }
-    
-    .result-details {
-        flex-wrap: wrap;
-    }
+    .result-details { flex-wrap: wrap; }
 }
 </style>
 `;
