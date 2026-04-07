@@ -107,17 +107,6 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   </div>
   <div class="card-map"><div id="map_4_nights__5_days_b_2" class="map-inner"></div></div>
 </a>
-<a href="4 nights, 5 days Bavarian Christmas Markets.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">4 nights, 5 days Bavarian, Christmas & Markets</div>
-    
-    <div class="card-pills"><span class="pill pill-duration">🕐 4 nights / 5 days</span><span class="pill pill-winter">❄️ Winter</span><span class="pill pill-valid">✓ Valid till Dec 2026</span></div>
-    <div class="card-description">Medieval Nuremberg's world-famous Christkindlesmarkt and Munich's festive old town — the definitive Bavarian Christmas double.</div>
-    <div class="cities-list">📍 Nuremberg · Munich</div>
-    <div class="price-tag">From €714 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_4_nights__5_days_b_3" class="map-inner"></div></div>
-</a>
 <a href="7 nights, 8 days Paris Switzerland_Private.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
     <div class="card-title">7 nights, 8 days Paris & Switzerland</div>
@@ -127,7 +116,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Paris · Lucerne · Zurich</div>
     <div class="price-tag">From €1,376 pp (group rate)</div>
   </div>
-  <div class="card-map"><div id="map_7_nights__8_days_p_4" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_7_nights__8_days_p_3" class="map-inner"></div></div>
 </a>
 <a href="7 nights, 8 days Paris Switzerland_Regular.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -138,7 +127,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Paris · Lucerne</div>
     <div class="price-tag">From €1,436 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_7_nights__8_days_p_5" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_7_nights__8_days_p_4" class="map-inner"></div></div>
 </a>
 <a href="8 nights, 9 days Amsterdam Paris Switzerland_Private.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -149,7 +138,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Amsterdam · Paris · Lucerne · Zurich</div>
     <div class="price-tag">From €1,488 pp (group rate)</div>
   </div>
-  <div class="card-map"><div id="map_8_nights__9_days_a_6" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_8_nights__9_days_a_5" class="map-inner"></div></div>
 </a>
 <a href="8 nights, 9 days Amsterdam Paris Switzerland_Regular.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -160,7 +149,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Amsterdam · Paris · Lucerne</div>
     <div class="price-tag">From €1,635 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_8_nights__9_days_a_7" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_8_nights__9_days_a_6" class="map-inner"></div></div>
 </a>
 <a href="9 nights, 10 days Paris Switzerland Austria_Private.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -171,7 +160,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Paris · Lucerne · Innsbruck · Vienna</div>
     <div class="price-tag">From €1,548 pp (group rate)</div>
   </div>
-  <div class="card-map"><div id="map_9_nights__10_days__8" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_9_nights__10_days__7" class="map-inner"></div></div>
 </a>
 <a href="9 nights, 10 days Paris Switzerland Austria_Regular.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -182,7 +171,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Paris · Lucerne · Innsbruck · Vienna</div>
     <div class="price-tag">From €1,828 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_9_nights__10_days__9" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_9_nights__10_days__8" class="map-inner"></div></div>
 </a>
 </div>
 <footer><p>All packages are available for download in PDF format</p></footer>
@@ -237,29 +226,13 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   });
 })();
 (function(){
-  var pts=[[49.453872, 11.077298, "Nuremberg"], [48.1351, 11.582, "Munich"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_4_nights__5_days_b_3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
-  pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
-  });
-})();
-(function(){
   var pts=[[48.8566, 2.3522, "Paris"], [47.0502, 8.3093, "Lucerne"], [47.3769, 8.5417, "Zurich"]];
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_7_nights__8_days_p_4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_7_nights__8_days_p_3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
@@ -275,7 +248,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_7_nights__8_days_p_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_7_nights__8_days_p_4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
@@ -291,7 +264,7 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_8_nights__9_days_a_6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_8_nights__9_days_a_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
@@ -307,7 +280,23 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_8_nights__9_days_a_7',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_8_nights__9_days_a_6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  map.fitBounds(bounds,{padding:[20,20]});
+  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  pts.forEach(function(p,i){
+    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+  });
+})();
+(function(){
+  var pts=[[48.8566, 2.3522, "Paris"], [47.0502, 8.3093, "Lucerne"], [47.2692, 11.4041, "Innsbruck"], [48.2082, 16.3738, "Vienna"]];
+  if(!pts.length) return;
+  var lats=pts.map(function(p){return p[0];});
+  var lngs=pts.map(function(p){return p[1];});
+  var pad=0.6;
+  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
+  var map=L.map('map_9_nights__10_days__7',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
@@ -324,22 +313,6 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_9_nights__10_days__8',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
-  pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
-  });
-})();
-(function(){
-  var pts=[[48.8566, 2.3522, "Paris"], [47.0502, 8.3093, "Lucerne"], [47.2692, 11.4041, "Innsbruck"], [48.2082, 16.3738, "Vienna"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_9_nights__10_days__9',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
