@@ -105,6 +105,7 @@ COMPOUND_NAMES = {
     'Aix en Provence',
     'Swedish Lapland',
     'Norway Nutshell',
+    'Norway in a Nutshell',
     'Nordic Capitals',
     'Bavarian Christmas Markets',
 }
@@ -115,6 +116,8 @@ DESTINATION_FIXES = {
     'MADBCN': 'Madrid & Barcelona',
     'Tromso': 'Tromsø',
     'Bavarian Austrian Christmas Markets': 'Bavarian & Austrian Christmas Markets',
+    'East Europe': 'Eastern Europe',
+    'Norway In a Nutshell': 'Norway in a Nutshell',
 }
 
 # Full title overrides keyed on "<duration> <dest>" — replace the entire generated title.
@@ -127,6 +130,17 @@ FULL_TITLE_OVERRIDES = {
     '4 nights, 5 days Tromsø':  '4 nights, 5 days Northern Norway, Arctic Gateway',
     '7 nights, 8 days Tromsø':  '7 nights, 8 days Northern Norway, Arctic Gateway',
     '4 nights, 5 days Kiruna':  '4 nights, 5 days Swedish Lapland',
+}
+
+# City list overrides keyed by exact PDF filename — bypasses extract_cities() output.
+# Use when the PDF extraction produces wrong or mis-ordered cities.
+CITY_OVERRIDES = {
+    "10 nights, 11 days Italy_Private.pdf":  ["Rome", "Naples", "Florence", "Venice", "Milan"],
+    "10 nights, 11 days Italy_Regular.pdf":  ["Rome", "Naples", "Florence", "Venice", "Milan"],
+    "6 nights, 7 days Italy_Private.pdf":    ["Rome", "Florence", "Venice"],
+    "6 nights, 7 days Italy_Regular.pdf":    ["Rome", "Florence", "Venice"],
+    "10 nights, 11 days Paris Switzerland Italy_Private.pdf": ["Paris", "Lucerne", "Venice", "Florence", "Rome"],
+    "10 nights, 11 days Paris Switzerland Italy_Regular.pdf": ["Paris", "Lucerne", "Venice", "Florence", "Rome"],
 }
 
 GEO_BLOCK = """<script>
@@ -856,6 +870,8 @@ def main():
             print(f"  {pdf}")
             pkg_key = folder_rel + "/" + pdf
             pdf_data = extract_pdf_data(os.path.join(folder_abs, pdf), pdf)
+            if pdf in CITY_OVERRIDES:
+                pdf_data["cities"] = CITY_OVERRIDES[pdf]
             title = make_title(pdf)
 
             # Use cached description if it's a good one
