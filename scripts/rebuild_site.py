@@ -105,11 +105,33 @@ COMPOUND_NAMES = {
     'Aix en Provence',
     'Swedish Lapland',
     'Norway Nutshell',
+    'Nordic Capitals',
+    'Bavarian Christmas Markets',
+}
+
+# Maps cleaned destination strings to exact final display strings, bypassing smart_destination.
+# Use for abbreviations, spelling corrections, and destinations whose "&" was stripped by cleanup.
+DESTINATION_FIXES = {
+    'MADBCN': 'Madrid & Barcelona',
+    'Tromso': 'Tromsø',
+    'Bavarian Austrian Christmas Markets': 'Bavarian & Austrian Christmas Markets',
+}
+
+# Full title overrides keyed on "<duration> <dest>" — replace the entire generated title.
+FULL_TITLE_OVERRIDES = {
+    '6 nights, 7 days Italy':   '6 nights, 7 days Classic Italy',
+    '10 nights, 11 days Italy': '10 nights, 11 days Italy with Naples',
+    '7 nights, 8 days France':  '7 nights, 8 days Paris with Normandy & Loire Valley',
+    '8 nights, 9 days France':  '8 nights, 9 days Paris with Provence & French Riviera',
+    '4 nights, 5 days Rovaniemi': '4 nights, 5 days Finnish Lapland',
+    '4 nights, 5 days Tromsø':  '4 nights, 5 days Northern Norway, Arctic Gateway',
+    '7 nights, 8 days Tromsø':  '7 nights, 8 days Northern Norway, Arctic Gateway',
+    '4 nights, 5 days Kiruna':  '4 nights, 5 days Swedish Lapland',
 }
 
 GEO_BLOCK = """<script>
 (async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
-if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
+if(['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
 }catch(e){}}
 )();</script>"""
 
@@ -166,7 +188,7 @@ BROCHURE_CSS = """
 .price-tag{font-size:0.88em;color:#2e7d32;font-weight:700;margin-top:auto;padding-top:6px;}
 .card-map{width:200px;min-width:200px;border-left:1px solid #ebebeb;position:relative;overflow:hidden;}
 .map-inner{width:100%;height:100%;min-height:210px;}
-.leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-size:9px;font-weight:700;color:#1a1a2e;white-space:nowrap;padding:0;text-shadow:-1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;}
+.leaflet-tooltip.city-tip{background:rgba(255,255,255,0.92)!important;border:1.5px solid #c62828!important;border-radius:3px!important;box-shadow:0 1px 3px rgba(0,0,0,0.25)!important;font-size:9px;font-weight:700;color:#1a1a1a;white-space:nowrap;padding:1px 5px;}
 .leaflet-tooltip.city-tip::before{display:none!important;}
 @media(max-width:900px){.brochures{grid-template-columns:1fr;}.card-map{width:160px;min-width:160px;}}
 @media(max-width:768px){.brochure-card{flex-direction:column;}.card-map{width:100%;min-width:100%;height:180px;border-left:none;border-top:1px solid #ebebeb;}.map-inner{min-height:180px;}}
@@ -253,6 +275,8 @@ def get_coords(city_name, cache):
 
 def smart_destination(words):
     if not words: return ""
+    full = ' '.join(words)
+    if full in COMPOUND_NAMES: return full   # exact full-phrase match wins
     if len(words) == 1: return words[0]
     two = ' '.join(words[:2])
     if len(words) == 2:
@@ -266,14 +290,14 @@ def smart_destination(words):
 def make_title(filename):
     name = filename.replace('.pdf', '').replace('_', ' ')
     name = re.sub(r'\s+', ' ', name).strip()
-    # Pattern 1: "6 nights, 7 days Destination"
-    m = re.search(r'(\d+)\s*nights?,\s*(\d+)\s*days?\s+(.+)', name, re.IGNORECASE)
+    # Pattern 1: "6 nights, 7 days Destination" — comma optional, handles "6 Nights 7 Days …" too
+    m = re.search(r'(\d+)\s*nights?,?\s+(\d+)\s*days?\s+(.+)', name, re.IGNORECASE)
     if m:
         duration = f"{m.group(1)} nights, {m.group(2)} days"
         rest = m.group(3).strip()
     else:
-        # Pattern 2: "Destination 6 nights, 7 days" or "Destination_6 nights 7 days"
-        m2 = re.search(r'(\d+)\s*nights?,\s*(\d+)\s*days?', name, re.IGNORECASE)
+        # Pattern 2: "Destination 6 nights[,] 7 days" — destination before duration marker
+        m2 = re.search(r'(\d+)\s*nights?,?\s*(\d+)\s*days?', name, re.IGNORECASE)
         if m2:
             duration = f"{m2.group(1)} nights, {m2.group(2)} days"
             before = name[:m2.start()].strip()
@@ -306,8 +330,15 @@ def make_title(filename):
     rest = re.sub(r'\d{4}-\d{2,4}', '', rest)
     rest = re.sub(r'Europe\s+Incoming', '', rest, flags=re.IGNORECASE)
     rest = re.sub(r'\s*&\s*', ' ', rest)
+    rest = re.sub(r'-', ' ', rest)             # "England-Scotland" → "England Scotland"
     rest = re.sub(r'\s+', ' ', rest).strip().strip('-').strip()
-    return f"{duration} {smart_destination(rest.split())}".strip()
+    fixed = DESTINATION_FIXES.get(rest)
+    dest = fixed if fixed is not None else smart_destination(rest.split())
+    base = f"{duration} {dest}".strip()
+    # Apply curated title overrides for specific packages
+    if base in FULL_TITLE_OVERRIDES:
+        return FULL_TITLE_OVERRIDES[base]
+    return base
 
 
 # ── PDF EXTRACTION ────────────────────────────────────────────────────────────
@@ -586,20 +617,43 @@ def make_map_js(map_id, cities, coords_cache):
             points.append([coords[0], coords[1], city])
     if not points: return ""
     coords_js = json.dumps(points)
+    # Dynamic padding: tighter for single/close cities, wider for long-haul routes
+    lat_spread = max(p[0] for p in points) - min(p[0] for p in points)
+    lng_spread = max(p[1] for p in points) - min(p[1] for p in points)
+    spread = max(lat_spread, lng_spread)
+    pad = 1.2 if spread > 5 else (0.6 if spread > 1 else 0.3)
     return f"""(function(){{
   var pts={coords_js};
   if(!pts.length) return;
   var lats=pts.map(function(p){{return p[0];}});
   var lngs=pts.map(function(p){{return p[1];}});
-  var pad=0.6;
+  var pad={pad};
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('{map_id}',{{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false}});
-  L.tileLayer('https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png',{{maxZoom:19,attribution:''}}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:16,attribution:''}}).addTo(map);
   map.fitBounds(bounds,{{padding:[20,20]}});
-  if(pts.length>1){{var ll=pts.map(function(p){{return[p[0],p[1]];}});L.polyline(ll,{{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}}).addTo(map);}}
+  function bezier(p1,p2,n){{
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){{var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}}
+    return r;
+  }}
+  if(pts.length>1){{
+    for(var i=0;i<pts.length-1;i++){{
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{{color:'#c62828',weight:2,opacity:0.9}}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{{icon:L.divIcon({{className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]}})}}).addTo(map);
+    }}
+  }}
   pts.forEach(function(p,i){{
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}}).addTo(map).bindTooltip(p[2],{{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]}});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}}).addTo(map).bindTooltip(p[2],{{permanent:true,direction:dir,className:'city-tip',offset:off}});
   }});
 }})();"""
 
