@@ -48,7 +48,7 @@ footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:
 .price-tag{font-size:0.88em;color:#2e7d32;font-weight:700;margin-top:auto;padding-top:6px;}
 .card-map{width:200px;min-width:200px;border-left:1px solid #ebebeb;position:relative;overflow:hidden;}
 .map-inner{width:100%;height:100%;min-height:210px;}
-.leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-size:9px;font-weight:700;color:#1a1a2e;white-space:nowrap;padding:0;text-shadow:-1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;}
+.leaflet-tooltip.city-tip{background:rgba(255,255,255,0.92)!important;border:1.5px solid #c62828!important;border-radius:3px!important;box-shadow:0 1px 3px rgba(0,0,0,0.25)!important;font-size:9px;font-weight:700;color:#1a1a1a;white-space:nowrap;padding:1px 5px;}
 .leaflet-tooltip.city-tip::before{display:none!important;}
 @media(max-width:900px){.brochures{grid-template-columns:1fr;}.card-map{width:160px;min-width:160px;}}
 @media(max-width:768px){.brochure-card{flex-direction:column;}.card-map{width:100%;min-width:100%;height:180px;border-left:none;border-top:1px solid #ebebeb;}.map-inner{min-height:180px;}}
@@ -60,7 +60,7 @@ footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:
 <body>
 <script>
 (async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
-if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
+if(['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
 }catch(e){}}
 )();</script><nav class="top-nav"><div class="nav-container">
 <a href="../../"><img src="../../logo.png" alt="Europe Incoming" class="logo"></a>
@@ -163,12 +163,30 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_7_nights__8_days_f_0',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -179,12 +197,30 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_7_nights__8_days_f_1',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -195,12 +231,30 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_7_nights__8_days_f_2',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -208,15 +262,33 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
+  var pad=0.3;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_8_nights__9_days_c_3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -224,15 +296,33 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
+  var pad=1.2;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_8_nights__9_days_f_4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -240,15 +330,33 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
+  var pad=1.2;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_8_nights__9_days_f_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
@@ -256,15 +364,33 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
+  var pad=1.2;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
   var map=L.map('map_8_nights__9_days_f_6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:''}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
-  if(pts.length>1){var ll=pts.map(function(p){return[p[0],p[1]];});L.polyline(ll,{color:'#2196F3',weight:2.5,dashArray:'6,4',opacity:0.85}).addTo(map);}
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
   pts.forEach(function(p,i){
-    var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();});</script>
 </body></html>
