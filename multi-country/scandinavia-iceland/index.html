@@ -116,7 +116,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Rovaniemi</div>
     <div class="price-tag">From €2,308 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_finnish_lapland_7n_8" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_finnish_lapland_7n_3" class="map-inner"></div></div>
 </a>
 <a href="Kiruna 4N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -127,7 +127,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Kiruna</div>
     <div class="price-tag">From €1,474 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_kiruna_4n_regular__3" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_kiruna_4n_regular__4" class="map-inner"></div></div>
 </a>
 <a href="Rovaniemi 4N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -138,7 +138,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Rovaniemi</div>
     <div class="price-tag">From €1,296 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_rovaniemi_4n_regul_4" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_rovaniemi_4n_regul_5" class="map-inner"></div></div>
 </a>
 <a href="Swedish Lapland 7N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -149,7 +149,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Kiruna · Abisko</div>
     <div class="price-tag">From €2,277 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_swedish_lapland_7n_5" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_swedish_lapland_7n_6" class="map-inner"></div></div>
 </a>
 <a href="Tromso 4N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -160,7 +160,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Tromsø</div>
     <div class="price-tag">From €1,882 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_tromso_4n_regular__6" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_tromso_4n_regular__7" class="map-inner"></div></div>
 </a>
 <a href="Tromso 7N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
@@ -171,7 +171,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
     <div class="cities-list">📍 Tromsø</div>
     <div class="price-tag">From €2,835 pp (twin)</div>
   </div>
-  <div class="card-map"><div id="map_tromso_7n_regular__7" class="map-inner"></div></div>
+  <div class="card-map"><div id="map_tromso_7n_regular__8" class="map-inner"></div></div>
 </a>
 </div>
 <footer><p>All packages are available for download in PDF format</p></footer>
@@ -280,13 +280,47 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   });
 })();
 (function(){
+  var pts=[[66.5039, 25.7294, "Rovaniemi"]];
+  if(!pts.length) return;
+  var lats=pts.map(function(p){return p[0];});
+  var lngs=pts.map(function(p){return p[1];});
+  var pad=0.3;
+  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
+  var map=L.map('map_finnish_lapland_7n_3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
+  map.fitBounds(bounds,{padding:[20,20]});
+  function bezier(p1,p2,n){
+    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
+    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
+    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
+    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
+    var r=[];
+    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
+    return r;
+  }
+  if(pts.length>1){
+    for(var i=0;i<pts.length-1;i++){
+      var cv=bezier(pts[i],pts[i+1],60);
+      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
+      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
+      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
+      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+    }
+  }
+  pts.forEach(function(p,i){
+    var dir=i===0?'left':(i===pts.length-1?'right':'top');
+    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+  });
+})();
+(function(){
   var pts=[[67.8558, 20.2253, "Kiruna"]];
   if(!pts.length) return;
   var lats=pts.map(function(p){return p[0];});
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.3;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_kiruna_4n_regular__3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_kiruna_4n_regular__4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   function bezier(p1,p2,n){
@@ -320,7 +354,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.3;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_rovaniemi_4n_regul_4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_rovaniemi_4n_regul_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   function bezier(p1,p2,n){
@@ -354,7 +388,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.6;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_swedish_lapland_7n_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_swedish_lapland_7n_6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   function bezier(p1,p2,n){
@@ -388,7 +422,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.3;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_tromso_4n_regular__6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_tromso_4n_regular__7',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   function bezier(p1,p2,n){
@@ -422,7 +456,7 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   var lngs=pts.map(function(p){return p[1];});
   var pad=0.3;
   var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_tromso_7n_regular__7',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var map=L.map('map_tromso_7n_regular__8',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
   map.fitBounds(bounds,{padding:[20,20]});
   function bezier(p1,p2,n){
@@ -446,22 +480,6 @@ if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<di
   pts.forEach(function(p,i){
     var dir=i===0?'left':(i===pts.length-1?'right':'top');
     var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[66.5039, 25.7294, "Rovaniemi"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.3;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_finnish_lapland_7n_8',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  pts.forEach(function(p,i){
-    var dir='left';
-    var off=[-8,0];
     L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();});</script>
