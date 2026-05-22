@@ -104,6 +104,7 @@ COMPOUND_NAMES = {
     'Venice Mestre', 'Isle of Skye', 'Lake District', 'Stratford upon Avon',
     'Aix en Provence',
     'Swedish Lapland',
+    'Finnish Lapland',
     'Norway Nutshell',
     'Nordic Capitals',
     'Bavarian Christmas Markets',
@@ -127,6 +128,7 @@ FULL_TITLE_OVERRIDES = {
     '4 nights, 5 days Tromsø':  '4 nights, 5 days Northern Norway, Arctic Gateway',
     '7 nights, 8 days Tromsø':  '7 nights, 8 days Northern Norway, Arctic Gateway',
     '4 nights, 5 days Kiruna':  '4 nights, 5 days Swedish Lapland',
+    '7 nights, 8 days Finnish Lapland': '7 nights, 8 days Finnish Lapland',
 }
 
 GEO_BLOCK = """<script>

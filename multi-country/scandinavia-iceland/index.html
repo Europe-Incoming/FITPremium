@@ -107,6 +107,17 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   </div>
   <div class="card-map"><div id="map_7_nights__8_days_i_2" class="map-inner"></div></div>
 </a>
+<a href="Finnish Lapland 7N_Regular Winter.pdf" class="brochure-card" target="_blank">
+  <div class="card-info">
+    <div class="card-title">7 nights, 8 days Finnish Lapland</div>
+    <div class="tour-type">Regular</div>
+    <div class="card-pills"><span class="pill pill-duration">🕐 7 nights / 8 days</span><span class="pill pill-winter">❄️ Winter</span><span class="pill pill-valid">✓ Valid till Mar 2027</span></div>
+    <div class="card-description">Seven packed Lapland nights: reindeer farm, husky run, Aurora hunt, Ranua wildlife park, ice fishing on a frozen lake and snowmobiling.</div>
+    <div class="cities-list">📍 Rovaniemi</div>
+    <div class="price-tag">From €2,308 pp (twin)</div>
+  </div>
+  <div class="card-map"><div id="map_finnish_lapland_7n_8" class="map-inner"></div></div>
+</a>
 <a href="Kiruna 4N_Regular Winter.pdf" class="brochure-card" target="_blank">
   <div class="card-info">
     <div class="card-title">4 nights, 5 days Kiruna</div>
@@ -292,6 +303,22 @@ if(!['US','CA','AU','NZ','IT'].includes(d.country)){document.body.innerHTML='<di
   pts.forEach(function(p,i){
     var color=i===0?'#e53935':(i===pts.length-1?'#43a047':'#1565c0');
     L.circleMarker([p[0],p[1]],{radius:5,fillColor:color,color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:'top',className:'city-tip',offset:[0,-5]});
+  });
+})();
+(function(){
+  var pts=[[66.5039, 25.7294, "Rovaniemi"]];
+  if(!pts.length) return;
+  var lats=pts.map(function(p){return p[0];});
+  var lngs=pts.map(function(p){return p[1];});
+  var pad=0.3;
+  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
+  var map=L.map('map_finnish_lapland_7n_8',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
+  map.fitBounds(bounds,{padding:[20,20]});
+  pts.forEach(function(p,i){
+    var dir='left';
+    var off=[-8,0];
+    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();});</script>
 </body></html>

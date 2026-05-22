@@ -2083,6 +2083,27 @@
       "valid_till": "Nov 2026",
       "is_expired": false,
       "season": "all-year"
+    },
+    {
+      "id": "finnish-lapland-7n-regular-wi",
+      "name": "7 nights, 8 days Finnish Lapland",
+      "filename": "Finnish Lapland 7N_Regular Winter.pdf",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Rovaniemi"
+      ],
+      "duration": "7 nights / 8 days",
+      "type": "Regular",
+      "season": "winter",
+      "price_twin": 2308,
+      "currency": "€",
+      "valid_till": "Mar 2027",
+      "is_expired": false,
+      "description": "Seven packed Lapland nights: reindeer farm, husky run, Aurora hunt, Ranua wildlife park, ice fishing on a frozen lake and snowmobiling.",
+      "tags": [
+        "Rovaniemi"
+      ]
     }
   ]
 }
