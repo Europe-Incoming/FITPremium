@@ -1,0 +1,199 @@
+{
+  "id": "2.1",
+  "title": "Paris & Switzerland.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Swiss Travel Pass",
+      "blurb": "Paris by coach tour and Seine cruise, then a Swiss Travel Pass unlocks Mount Titlis, Lake Lucerne and the Bernese Oberland at your own pace.",
+      "nights": "7 nights · 8 days",
+      "route": "Paris (3N) → Lucerne (3N) → Zurich (1N)",
+      "aboutNights": "7 nights across 3 stays",
+      "transport": {
+        "1": "Private transfer from Paris Airport to your hotel.",
+        "4": "Train to Basel or Zurich, then the Swiss Travel Pass for the onward journey to Lucerne.",
+        "7": "Swiss Travel Pass, Lucerne to Zurich.",
+        "8": "Depart from Zurich Airport."
+      },
+      "inclusions": [
+        "7 nights accommodation including breakfast",
+        "Private transfer from Paris Airport to your hotel",
+        "Paris city tour, Seine cruise and Eiffel Tower 2nd floor, 4-hr coach tour",
+        "Paris to Basel or Zurich train ticket, 2nd class",
+        "Swiss Travel Pass, 4 consecutive days, 2nd class",
+        "Mount Titlis ticket (used in conjunction with the Swiss Travel Pass)"
+      ]
+    },
+    "private": {
+      "name": "Private Vehicle",
+      "blurb": "Paris and Switzerland by private vehicle throughout, with a panoramic Paris tour and flexible days to shape Lucerne, Grindelwald and Interlaken around your own pace.",
+      "nights": "7 nights · 8 days",
+      "route": "Paris (3N) → Lucerne (3N) → Zurich (1N)",
+      "aboutNights": "7 nights across 3 stays",
+      "transport": {
+        "1": "Private transfer from Paris Airport to your hotel.",
+        "2": "Private vehicle for 3 hrs, Paris panoramic tour with English-speaking guide.",
+        "3": "Private vehicle at your disposal for the day.",
+        "4": "Private vehicle transfer from Paris to Lucerne.",
+        "7": "Private vehicle to Zurich via the Rhine Falls.",
+        "8": "Private transfer from your Zurich hotel to Zurich Airport."
+      },
+      "inclusions": [
+        "7 nights accommodation including breakfast",
+        "Private transfer from Paris Airport to your hotel",
+        "Paris city tour with local English-speaking guide, 3 hrs",
+        "Seine river cruise, 1 hr",
+        "Mount Titlis cable car ticket",
+        "Private minivan for 3 hrs on Day 2, and on disposal from Day 3 to Day 8 as per programme"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Welcome to the French capital. Transfer to your hotel and dive into Parisian life — the Champs-Élysées for high-end shopping, the artistic vibes of Montmartre, or a stroll along the Seine. Overnight in Paris.",
+      "taste": "Steak-frites and a glass of Bordeaux at Le Procope in the Latin Quarter, reputedly the oldest continuously running café in Paris."
+    },
+    {
+      "num": 2,
+      "title": "Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "A 4-hour tour of Paris includes an hour-long Seine River cruise past iconic landmarks and admission to the Eiffel Tower's 2nd floor for panoramic city views. Overnight in Paris.",
+      "experience": "The Eiffel Tower's 2nd floor sits at 115 metres — high enough for sweeping views without the queues for the summit."
+    },
+    {
+      "num": 3,
+      "title": "Paris — Day at Leisure",
+      "overnight": "Overnight: Paris",
+      "desc": "A day to explore Parisian wonders at your own pace, or head further afield to Disneyland Paris or the opulent Palace of Versailles on an optional excursion. Overnight in Paris.",
+      "shopping": "The Marais district, on the Right Bank, mixes centuries-old buildings with independent boutiques and vintage shops."
+    },
+    {
+      "num": 4,
+      "title": "Paris to Lucerne",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Check out and travel on to Switzerland, arriving in Lucerne, a city framed by mountains and set on the shores of Lake Lucerne. Overnight in Lucerne."
+    },
+    {
+      "num": 5,
+      "title": "Lucerne — Mount Titlis",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Explore Mount Titlis, a genuine Alpine experience with snow activities and the revolving Titlis Rotair gondola. Round off the day with a cruise on Lake Lucerne's calm waters. Overnight in Lucerne.",
+      "experience": "The Titlis Cliff Walk, Europe's highest suspension bridge, crosses a ridge at 3,000 metres with sheer drops on either side."
+    },
+    {
+      "num": 6,
+      "title": "Lucerne — Grindelwald & Interlaken",
+      "overnight": "Overnight: Lucerne",
+      "desc": "A day trip into the Bernese Oberland to see Grindelwald and Interlaken, both known for their dramatic mountain scenery. Overnight in Lucerne.",
+      "experience": "Grindelwald First's cliff walk and First Flyer zipline are optional add-ons for those wanting a more active day among the peaks."
+    },
+    {
+      "num": 7,
+      "title": "Lucerne to Zurich",
+      "overnight": "Overnight: Zurich",
+      "desc": "Travel on to Zurich, a city that blends financial-hub modernity with a well-preserved old town. Overnight in Zurich.",
+      "experience": "An optional side trip to Schaffhausen brings you to the Rhine Falls, Europe's largest waterfall by volume."
+    },
+    {
+      "num": 8,
+      "title": "Departure",
+      "overnight": "Departure day",
+      "desc": "Your Paris-Swiss tour concludes today with onward travel from Zurich Airport."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Paris",
+      "nights": "3 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Marceau Bastille"
+    },
+    {
+      "city": "Lucerne",
+      "nights": "3 Nights",
+      "h3": "Boutique Hotel Karl",
+      "h4": "Altstadt Hotel Krone Apartments Luzern"
+    },
+    {
+      "city": "Zurich",
+      "nights": "1 Night",
+      "h3": "Montana Hotel",
+      "h4": "Züri by Fassbind"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm Paris days and clear Alpine views around Titlis and the Bernese Oberland; winter adds snow sports at Titlis but shorter daylight for sightseeing."
+    },
+    {
+      "title": "Weather",
+      "body": "Paris: temperate, 15–25°C in summer. Switzerland: cooler in the mountains year-round, with Titlis snow-covered even in summer at 3,000m."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "France uses the Euro (€); Switzerland uses the Swiss Franc (CHF) despite being surrounded by the Eurozone. France is a Schengen Area member; Switzerland is Schengen-associated, so no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Swiss Travel Pass",
+      "body": "The pass covers trains, boats, trams and buses across the Swiss Travel System for 4 consecutive days — plan the Titlis, Lake Lucerne and Interlaken days to make full use of it before it expires.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Currency switch",
+      "body": "Cards are widely accepted in both countries, but withdraw some Swiss Francs on arrival in Lucerne — Euros are not usable in Switzerland despite its proximity to France."
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers for the temperature drop at altitude on Mount Titlis, even in summer; comfortable shoes for Paris's cobbled districts and Lucerne's old town."
+    },
+    {
+      "title": "Tipping",
+      "body": "Rounding up is customary in both countries; a service charge is typically already included in Swiss and French restaurant bills."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 3
+      },
+      {
+        "lat": 47.0502,
+        "lng": 8.3093,
+        "label": "Lucerne",
+        "nights": 3
+      },
+      {
+        "lat": 47.3769,
+        "lng": 8.5417,
+        "label": "Zurich",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "pricesFile": "prices/2.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

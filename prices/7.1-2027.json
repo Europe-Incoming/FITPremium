@@ -1,0 +1,112 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1155,
+          "twin": 787,
+          "child": 332
+        },
+        "summer": {
+          "single": 1203,
+          "twin": 820,
+          "child": 346
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1310,
+          "twin": 865,
+          "child": 362
+        },
+        "summer": {
+          "single": 1364,
+          "twin": 901,
+          "child": 377
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 1092,
+            "4star": 1169
+          },
+          {
+            "pax": 10,
+            "3star": 962,
+            "4star": 1039
+          },
+          {
+            "pax": 12,
+            "3star": 876,
+            "4star": 953
+          },
+          {
+            "pax": 14,
+            "3star": 814,
+            "4star": 891
+          },
+          {
+            "pax": 16,
+            "3star": 768,
+            "4star": 845
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 1138,
+            "4star": 1218
+          },
+          {
+            "pax": 10,
+            "3star": 1002,
+            "4star": 1083
+          },
+          {
+            "pax": 12,
+            "3star": 912,
+            "4star": 993
+          },
+          {
+            "pax": 14,
+            "3star": 848,
+            "4star": 928
+          },
+          {
+            "pax": 16,
+            "3star": 800,
+            "4star": 880
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": []
+}

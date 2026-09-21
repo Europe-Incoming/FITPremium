@@ -1,0 +1,232 @@
+{
+  "id": "6.1",
+  "title": "Madrid, Granada, Seville & Barcelona.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled II Class trains link the four cities, with private transfers at each end.",
+      "nights": "8 nights · 9 days",
+      "route": "Madrid (2N) → Granada (2N) → Seville (2N) → Barcelona (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Madrid airport to Madrid hotel, private transfer.",
+        "2": "Madrid city tour with Royal Palace, 4.5 hrs, by regular coach.",
+        "3": "Madrid to Granada train ticket, II Class.",
+        "4": "Guided tour to the Alhambra & Generalife Gardens, 3 hrs walking tour.",
+        "5": "Granada to Seville train ticket, II Class.",
+        "6": "Historic Seville walking tour with Royal Alcazar, 2 hrs.",
+        "7": "Seville to Barcelona train ticket, II Class."
+      },
+      "inclusions": [
+        "Madrid airport to hotel private transfer on arrival",
+        "Madrid city tour with Royal Palace, 4.5 hrs",
+        "Madrid to Granada train ticket, II Class",
+        "Guided tour to the Alhambra & Generalife Gardens",
+        "Granada to Seville train ticket, II Class",
+        "Historic Seville walking tour with Royal Alcazar",
+        "Seville to Barcelona train ticket, II Class",
+        "8 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach with driver stays on disposal for the whole itinerary, from Madrid to Barcelona.",
+      "nights": "8 nights · 9 days",
+      "route": "Madrid (2N) → Granada (2N) → Seville (2N) → Barcelona (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Private coach transfer from Madrid airport to your hotel; the vehicle remains at your disposal from Day 1 through Day 9.",
+        "4": "Private guided visit to the Alhambra & Generalife Gardens, with entrance tickets included.",
+        "7": "Private transfer to the station and Seville to Barcelona train ticket, with station transfers included.",
+        "8": "Private Barcelona city tour with a Montserrat excursion, 8 hrs with guide, including Montserrat admission tickets.",
+        "9": "Private transfer from your Barcelona hotel to the airport for departure, as part of the vehicle on disposal through Day 9."
+      },
+      "inclusions": [
+        "Private coach on disposal from Day 1 through Day 9",
+        "Madrid airport to hotel private transfer on arrival",
+        "Private entrance tickets to the Alhambra & Generalife Gardens",
+        "Private transfer and train ticket, Seville to Barcelona, with station transfers",
+        "Private Barcelona city tour with Montserrat excursion, 8 hrs with guide",
+        "Montserrat admission tickets",
+        "8 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Madrid",
+      "overnight": "Overnight: Madrid",
+      "desc": "Touch down at Madrid airport and experience a seamless private transfer to your hotel. Madrid, the vibrant heart of Spain, is known for its rich history, cultural treasures, and lively atmosphere. Your journey begins in this captivating city, promising an enchanting blend of tradition and modernity. Overnight in Madrid.",
+      "taste": "A first plate of jamón ibérico and a glass of house vermouth at La Casa del Abuelo, pouring the same recipe near Puerta del Sol since 1906, is the classic Madrid welcome."
+    },
+    {
+      "num": 2,
+      "title": "Madrid",
+      "overnight": "Overnight: Madrid",
+      "desc": "Embark on a grand 4.5-hour city tour of Madrid, featuring the opulent Royal Palace. Immerse yourself in the regal history and architectural splendor of this majestic city. Let the allure of Madrid unfold as you explore its iconic landmarks. Overnight in Madrid.",
+      "experience": "Corral de la Morería, the world's longest continuously running flamenco tablao and open since 1956, is the classic way to spend a Madrid evening."
+    },
+    {
+      "num": 3,
+      "title": "Madrid → Granada",
+      "overnight": "Overnight: Granada",
+      "desc": "Bid farewell to Madrid and board a train to the enchanting city of Granada. Nestled at the foothills of the Sierra Nevada, Granada is known as the \"Pearl of Andalusia\" and is celebrated for the iconic Alhambra Palace. Let the allure of Granada captivate you as you step into a realm of Moorish splendor. Overnight in Granada.",
+      "taste": "Granada is one of the few Spanish cities where a free tapa still arrives with every drink — Calle Navas, just off Plaza del Carmen, is the classic street to try it."
+    },
+    {
+      "num": 4,
+      "title": "Alhambra & Generalife",
+      "overnight": "Overnight: Granada",
+      "desc": "Embark on a guided 3-hour walking tour through the awe-inspiring Alhambra and Generalife Gardens. Immerse yourself in the intricate beauty of Moorish architecture and the tranquility of the gardens. Let the tales of Granada's history unfold in this enchanting fortress. Overnight in Granada.",
+      "experience": "Zambra María la Canastera, a cave venue in Sacromonte run by the same family since the 1940s, is a genuine Granada flamenco tradition."
+    },
+    {
+      "num": 5,
+      "title": "Granada → Seville",
+      "overnight": "Overnight: Seville",
+      "desc": "Bid adieu to Granada and journey by train to the vibrant city of Seville. Known as the \"City of Flamenco\" and celebrated for its passionate culture, Seville invites you into a world of lively festivities and architectural wonders. Discover the essence of Seville as you explore its charming streets. Overnight in Seville.",
+      "shopping": "Cerámica Santa Ana, trading in Triana since 1870, is the workshop most associated with Seville's hand-painted azulejo tiles."
+    },
+    {
+      "num": 6,
+      "title": "Seville",
+      "overnight": "Overnight: Seville",
+      "desc": "Embark on a 2-hour walking tour of historic Seville, delving into its rich tapestry of culture and architecture. Explore the magnificent Royal Alcazar, a testament to Moorish and Mudejar craftsmanship. Let Seville's history and beauty captivate your senses. Overnight in Seville.",
+      "taste": "Bar Las Teresas, serving salmorejo and fried fish in Santa Cruz since the 1870s, is among Seville's most celebrated tapas bars."
+    },
+    {
+      "num": 7,
+      "title": "Seville → Barcelona",
+      "overnight": "Overnight: Barcelona",
+      "desc": "Bid farewell to Seville and board a train to the vibrant city of Barcelona. Nestled on the northeastern coast, Barcelona is known as the \"City of Gaudi\" and captivates with its unique architecture and artistic flair. Discover the creative spirit and cultural gems that define Barcelona. Overnight in Barcelona.",
+      "taste": "El Xampanyet, pouring cava and plates of pan con tomate in the Born since 1934, is Barcelona's classic evening ritual."
+    },
+    {
+      "num": 8,
+      "title": "Barcelona",
+      "overnight": "Overnight: Barcelona",
+      "desc": "Savor a day of freedom in Barcelona, exploring the city at your own pace. Alternatively, opt for one of the enticing optional tours to enhance your experience. Whether wandering through iconic neighborhoods or indulging in unique activities, let Barcelona unveil its diverse treasures. Overnight in Barcelona.",
+      "experience": "Gaudí's Park Güell and Casa Batlló showcase the modernist architecture that defines the city.",
+      "shopping": "Passeig de Gràcia is Barcelona's flagship shopping avenue, home to both high fashion and Gaudí landmarks."
+    },
+    {
+      "num": 9,
+      "title": "Depart Barcelona",
+      "overnight": "Departure day",
+      "desc": "Check out and enjoy a private transfer to Barcelona airport. Tour concludes."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Madrid",
+      "nights": "2 Nights",
+      "h3": "Hotel Regente",
+      "h4": "Novotel Madrid City Las Ventas"
+    },
+    {
+      "city": "Granada",
+      "nights": "2 Nights",
+      "h3": "Hotel Comfort Dauro 2",
+      "h4": "Occidental Granada"
+    },
+    {
+      "city": "Seville",
+      "nights": "2 Nights",
+      "h3": "Hotel Derby Sevilla",
+      "h4": "Novotel Sevilla"
+    },
+    {
+      "city": "Barcelona",
+      "nights": "2 Nights",
+      "h3": "Hotel HCC Regente",
+      "h4": "Mercure Barcelona Condor"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–June and September–October offer the mildest touring weather in both Andalusia and Barcelona."
+    },
+    {
+      "title": "Weather",
+      "body": "Madrid and Andalusia can be very hot in July–August (35°C+), while Barcelona stays milder on the coast."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Spain uses the Euro (€); it is a Schengen Area country, so a valid passport (and visa where required) covers entry across the whole itinerary."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Alhambra tickets are strictly limited and must be booked well ahead in peak season — this is arranged as part of your package."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Inter-city trains run frequently between all four cities; seats are reserved in advance and journeys of 2.5–5.5 hours connect Madrid, Granada, Seville and Barcelona.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "The private coach and driver are on disposal for the whole itinerary, so timings can flex around your group's pace, subject to standard driver working-hour limits.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable walking shoes for cobbled old towns, and a hat and sun protection for the Andalusian summer sun."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are widely accepted; a little cash is useful for smaller tapas bars and markets. Tipping is appreciated but not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 40.4168,
+        "lng": -3.7038,
+        "label": "Madrid",
+        "nights": 2
+      },
+      {
+        "lat": 37.1773,
+        "lng": -3.5986,
+        "label": "Granada",
+        "nights": 2
+      },
+      {
+        "lat": 37.3891,
+        "lng": -5.9845,
+        "label": "Seville",
+        "nights": 2
+      },
+      {
+        "lat": 41.3874,
+        "lng": 2.1686,
+        "label": "Barcelona",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "spain-portugal",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/6.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1595787572900-7b5552de22d2?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "10.6",
+  "title": "Swedish Lapland: Kiruna & Abisko Winter Adventure.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Private airport and inter-city transfers linking Arctic Kiruna and aurora-famous Abisko, with guided winter excursions throughout.",
+      "nights": "7 nights · 8 days",
+      "route": "Kiruna (4N) → Abisko (3N)",
+      "aboutNights": "7 nights across 2 stays",
+      "transport": {
+        "1": "Private transfer from Kiruna Airport to hotel on arrival.",
+        "2": "Return transfers included with the Dog Sled Adventure to and from the kennels.",
+        "5": "Private transfer from Kiruna to Abisko, approx. 100km along the E10.",
+        "8": "Private transfer from hotel to Kiruna Airport for departure."
+      },
+      "inclusions": [
+        "Kiruna Airport to hotel private transfer on arrival",
+        "Dog Sled Adventure, 2-3 hours, including transfers",
+        "Northern Lights chase by minibus or snowmobile sleigh (2 pax/snowmobile)",
+        "Tour to the iconic ICEHOTEL & Jukkasjärvi, 3 hours",
+        "Snowmobile safari, 6 hours",
+        "Private transfer from Kiruna to Abisko",
+        "Morning hike in Abisko National Park & Aurora Sky Station Night Visit",
+        "7 nights accommodation with breakfast daily, plus private transfer to Kiruna Airport on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Kiruna",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Welcome to Swedish Lapland! Arrive at Kiruna Airport and enjoy a comfortable transfer to your hotel. Settle in and take your first breath of the crisp Arctic air as you prepare for the snowy adventures ahead. Overnight in Kiruna.",
+      "taste": "A first dinner of renskav (fried reindeer) with lingonberries and mashed potato — the everyday Sami staple on almost every Kiruna menu.",
+      "fallbackIncluded": ""
+    },
+    {
+      "num": 2,
+      "title": "Kiruna – Dog Sledding & Northern Lights",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Begin your day with a serene dog sled ride through the snowy wilderness near Jukkasjärvi. Seated on reindeer skins, glide behind a team of huskies along frozen trails, guided by an experienced musher. After the ride, enjoy Swedish fika by the fire in a traditional tipi. In the evening, gear up for an exhilarating snowmobile ride in pursuit of the Northern Lights. After a safety briefing at the Laxforsen base, set off in pairs across remote Arctic terrain far from city lights. Stop to warm up by an open fire with sandwiches and hot drinks as you scan the skies for a glimpse of the aurora. A thrilling night under Lapland’s stars. Overnight in Kiruna.",
+      "experience": "Driving your own dog sled team through the silent, snow-bound forests of Swedish Lapland is one of the region's signature winter experiences.",
+      "taste": "A flask of hot lingonberry juice and a cinnamon bun (kanelbulle) at the kennels — the classic Swedish trail-break fika, even at -15°C."
+    },
+    {
+      "num": 3,
+      "title": "Kiruna – ICEHOTEL & Jukkasjärvi",
+      "overnight": "Overnight: Kiruna",
+      "desc": "This morning, journey to the iconic ICEHOTEL and the historic village of Jukkasjärvi. Explore the stunning ice art exhibition at your own pace, then visit Sweden’s northernmost church, dating back to 1607. Meet reindeer at the Nutti Sami Siida and learn about Sami culture and Kiruna’s past from your local guide. A perfect mix of art, heritage, and Arctic tradition. Overnight in Kiruna.",
+      "experience": "The ICEHOTEL is the world's first and largest hotel built from ice, with artist-designed suites that are entirely rebuilt every winter.",
+      "taste": "The Icebar serves cocktails in glasses carved from river ice — the cloudberry (hjortron) liqueur, made from Lapland's prized Arctic berry, is the one to try.",
+      "shopping": "Sami handicraft, or duodji — carved reindeer-antler pieces and birchwood knives — is sold in Jukkasjärvi's small craft shops beside the ICEHOTEL."
+    },
+    {
+      "num": 4,
+      "title": "Kiruna – Snowmobile Safari",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Set out on a 6-hour snowmobile safari through the forests and mountains surrounding Kiruna. With your Sami guide, travel along scenic trails near the Kalix River in search of moose, reindeer, grouse, and other Arctic wildlife. Spot animal tracks in the snow and hear stories of traditional reindeer herding and life in the Sámi north. Enjoy a warming lunch of local Sami dishes before returning to town as the polar twilight settles in. Overnight in Kiruna.",
+      "taste": "Lunch is typically grilled over an open fire inside a lavvu, the traditional Sami tent — reindeer sausage and Arctic char are the usual fare on these wilderness stops."
+    },
+    {
+      "num": 5,
+      "title": "Kiruna to Abisko",
+      "overnight": "Overnight: Abisko",
+      "desc": "After breakfast, check out and travel north through the Arctic landscape to the remote village of Abisko. Surrounded by mountains and wilderness, Abisko is one of the best places in the world to witness the Northern Lights. Settle into your new base and enjoy the quiet of Lapland’s high north. Overnight in Abisko."
+    },
+    {
+      "num": 6,
+      "title": "Abisko National Park",
+      "overnight": "Overnight: Abisko",
+      "desc": "Begin your day with a gentle guided hike through Abisko National Park. Walk along frozen river canyons, through birch forests, and past panoramic views of Lake Torneträsk. Your expert guide shares stories of Sámi culture, wildlife tracking, and Arctic life as you explore 3–4km of scenic trails at a relaxed pace. In the evening, ascend Mt. Nuolja by chairlift to the legendary Aurora Sky Station—900m above sea level. From this remote, light-free vantage point, witness the stars above and, if luck is on your side, the Northern Lights dancing across the Arctic sky. Includes guide, lift tickets, warm clothing, and station access. Overnight in Abisko.",
+      "experience": "The Aurora Sky Station sits above Abisko's tree line on Mount Nuolja, reached by chairlift, and is purpose-built for Northern Lights viewing.",
+      "taste": "Warming up afterwards with Arctic char (fjällröding) fresh from Torneträsk's icy waters, a lake-country staple on Abisko menus."
+    },
+    {
+      "num": 7,
+      "title": "Abisko at Leisure",
+      "overnight": "Overnight: Abisko",
+      "desc": "Enjoy a relaxed day at your own pace in Abisko. Explore the village, visit the national park on your own, or simply unwind and soak in the Arctic calm. Optional winter activities such as snowshoeing or cross-country skiing can be arranged locally. Overnight in Abisko.",
+      "fallbackIncluded": "Day at leisure — optional ice fishing or additional aurora tour available."
+    },
+    {
+      "num": 8,
+      "title": "Depart Kiruna",
+      "overnight": "Departure day",
+      "desc": "Check out and enjoy a scenic transfer back to Kiruna Airport. Bid farewell to Swedish Lapland, taking with you memories of snow-covered forests, Arctic skies, and the silence of the far north."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Kiruna",
+      "nights": "4 Nights",
+      "h3": "Camp Ripan",
+      "h4": "Scandic Kiruna"
+    },
+    {
+      "city": "Abisko",
+      "nights": "3 Nights",
+      "h3": "Abisko Mountain Lodge",
+      "h4": "Abisko Mountain Lodge"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "This is a winter-only programme, best enjoyed December to March for reliable snow, dog sledding, snowmobiling and long dark nights for aurora viewing."
+    },
+    {
+      "title": "Weather",
+      "body": "Expect Arctic winter conditions with temperatures typically between -20°C and -5°C, heavy snow cover and short daylight hours — Kiruna sees virtually no daylight at all around the winter solstice."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Sweden uses the Swedish Krona (SEK); Sweden is within the Schengen Area, so EU/EEA nationals need no visa while other visitors should check Schengen visa requirements."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Pack for the Arctic",
+      "body": "Thermal base layers, insulated outerwear, and good winter boots are essential — temperatures regularly drop below -15°C, especially during evening aurora excursions."
+    },
+    {
+      "title": "Aurora viewing",
+      "body": "The Northern Lights are a natural phenomenon and cannot be guaranteed on any single night; multiple viewing opportunities are built into the itinerary to maximise chances."
+    },
+    {
+      "title": "ICEHOTEL tickets",
+      "body": "The ICEHOTEL is rebuilt each winter and is extremely popular — visit early in the day where possible for a quieter experience."
+    },
+    {
+      "title": "Your transfers",
+      "body": "All transfers between Kiruna Airport, Kiruna hotels and Abisko are private and scheduled around your flight times and group activities.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Money & tipping",
+      "body": "Sweden is largely cashless — cards are accepted almost everywhere. Tipping is appreciated but not obligatory, typically rounding up or 5-10% in restaurants."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 67.8558,
+        "lng": 20.2253,
+        "label": "Kiruna",
+        "nights": 4
+      },
+      {
+        "lat": 68.3492,
+        "lng": 18.83,
+        "label": "Abisko",
+        "nights": 3
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "scandinavia-iceland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/10.6-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "2.2",
+  "title": "Paris, Lucerne, Innsbruck & Vienna.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scenic scheduled trains linking four classic cities, with private transfers at each end.",
+      "nights": "9 nights · 10 days",
+      "route": "Paris (2N) → Lucerne (3N) → Innsbruck (2N) → Vienna (2N)",
+      "aboutNights": "9 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "3": "Paris to Lucerne train ticket, II Class.",
+        "6": "Lucerne to Innsbruck train transfer, II Class, through the Alpine foothills.",
+        "8": "Innsbruck to Vienna train transfer, II Class.",
+        "10": "Vienna hotel to Vienna airport private transfer."
+      },
+      "inclusions": [
+        "Paris airport–hotel private transfer on arrival",
+        "Paris City Tour with Seine Cruise and Eiffel Tower 2nd Floor, 4-hr coach tour",
+        "Paris to Lucerne train ticket, II Class",
+        "Swiss Travel Pass, consecutive 4 days, II Class",
+        "Titlis excursion with pass; Lake Lucerne cruise included with pass",
+        "Vienna hotel–airport private transfer on departure",
+        "9 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private vehicle and driver on disposal for the whole journey, with guided city tours in Paris and Vienna.",
+      "nights": "9 nights · 10 days",
+      "route": "Paris (2N) → Lucerne (3N) → Innsbruck (2N) → Vienna (2N)",
+      "aboutNights": "9 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "2": "Paris city tour with English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise. Private vehicle on disposal from Day 3.",
+        "3": "Private transfer Paris to Lucerne with the vehicle on disposal for 8 hrs.",
+        "4": "Titlis and Engelberg excursion by private vehicle.",
+        "6": "Private transfer Lucerne to Innsbruck.",
+        "7": "Swarovski Crystal Worlds entrance and visit by private vehicle.",
+        "8": "Private transfer Innsbruck to Vienna.",
+        "9": "Vienna city tour with English-speaking guide, 3 hrs, including Schönbrunn Palace tickets.",
+        "10": "Vienna hotel to Vienna airport private transfer, concluding the vehicle's disposal."
+      },
+      "inclusions": [
+        "Private coach for 3 hrs on Day 2, then on disposal for 8 hrs daily from Day 3 to Day 10",
+        "Paris airport–hotel and Vienna hotel–airport private transfers",
+        "Paris city tour with English-speaking guide, 3 hrs, and Seine river cruise",
+        "Titlis and Engelberg excursion",
+        "Swarovski Crystal Worlds entrance",
+        "Vienna city tour with English-speaking guide, 3 hrs, and Schönbrunn Palace tickets",
+        "9 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Welcome to the enchanting French capital! Upon arrival at the airport, enjoy a seamless transfer to your hotel. Dive into Parisian life by exploring iconic sites like the Champs-Élysées for high-end shopping, or relishing the artistic vibes of Montmartre. Experience the city's allure with a stroll along the Seine River or indulge in renowned French cuisine. Overnight in Paris",
+      "taste": "Steak-frites and a glass of Bordeaux at a Left Bank brasserie is the classic first evening in Paris — Le Procope, open since 1686 and said to be the oldest café in the world, is the address for it."
+    },
+    {
+      "num": 2,
+      "title": "Paris City Tour, Seine Cruise & Eiffel Tower",
+      "overnight": "Overnight: Paris",
+      "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
+      "shopping": "The grand boulevards around the Opéra Garnier and the Champs-Élysées are Paris's classic shopping mile, from flagship couture houses to department stores like Galeries Lafayette."
+    },
+    {
+      "num": 3,
+      "title": "Paris → Lucerne",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
+      "taste": "Try a hearty plate of Lucerne-style Chügelipastete or a Swiss fondue in one of the old town's lakeside restaurants."
+    },
+    {
+      "num": 4,
+      "title": "Mount Titlis & Lake Lucerne Cruise",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
+      "experience": "Cross the glacier's suspension bridge, the Titlis Cliff Walk, one of the highest of its kind in Europe."
+    },
+    {
+      "num": 5,
+      "title": "Lucerne at Leisure",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
+      "shopping": "Bucherer's flagship on Schwanenplatz, the Swiss watch and jewellery house founded in Lucerne in 1888, is the natural stop for a Swiss timepiece.",
+      "fallbackIncluded": "Day at leisure — optional Mount Pilatus or Interlaken excursion available."
+    },
+    {
+      "num": 6,
+      "title": "Lucerne → Innsbruck",
+      "overnight": "Overnight: Innsbruck",
+      "desc": "Depart from Lucerne via train using the Swiss Travel Pass, connecting through Zurich, and continuing onwards to Innsbruck. Nestled in Tyrol, Austria, Innsbruck boasts stunning Alpine vistas and rich Austrian heritage. Overnight in Innsbruck",
+      "taste": "Tyrolean Knödel and apple strudel at the Goldener Adler, a guesthouse on the Altstadt's main square that has been serving guests since 1390."
+    },
+    {
+      "num": 7,
+      "title": "Innsbruck & Swarovski Crystal Worlds",
+      "overnight": "Overnight: Innsbruck",
+      "desc": "Immerse yourself in the enchanting Swarovski Crystal World, accessible via a convenient shuttle bus. Optionally, indulge in a visit to Nordkette for breathtaking views. Overnight in Innsbruck",
+      "experience": "Swarovski Crystal Worlds in nearby Wattens is one of Austria's most visited attractions, a museum of crystal art and installations built around a giant crystal-faced giant.",
+      "shopping": "Maria-Theresien-Straße, running south from the Altstadt with the Nordkette as a backdrop, is Innsbruck's principal shopping street.",
+      "fallbackIncluded": "Day at leisure — optional Swarovski Crystal Worlds visit available."
+    },
+    {
+      "num": 8,
+      "title": "Innsbruck → Vienna",
+      "overnight": "Overnight: Vienna",
+      "desc": "Bid adieu to Innsbruck and embark on a scenic train journey to Vienna. Discover Vienna's grandeur, steeped in imperial history and musical heritage, as you explore this cultural gem. Overnight in Vienna",
+      "taste": "A slice of Sachertorte with a Wiener Melange is the essential first taste of Vienna — Café Sacher, beside the State Opera, has served the original recipe since 1876."
+    },
+    {
+      "num": 9,
+      "title": "Vienna City Tour & Schönbrunn Palace",
+      "overnight": "Overnight: Vienna",
+      "desc": "Delve into Vienna's landmarks along Ringstrasse via coach, highlighting the State Opera, Hofburg Palace, Parliament, and City Hall. Explore Schönbrunn Palace's historic rooms and gardens. Wrap up at the Vienna State Opera after this 3.5-hour immersive experience. Overnight in Vienna.",
+      "experience": "An evening at the Vienna State Opera or a Strauss concert is a fitting way to experience the city's musical heritage.",
+      "fallbackIncluded": "Day at leisure — optional Vienna city tour and Schönbrunn Palace visit available."
+    },
+    {
+      "num": 10,
+      "title": "Depart Vienna",
+      "overnight": "Departure day",
+      "desc": "Enjoy a private transfer from your Vienna hotel to Vienna airport, marking the conclusion of this captivating tour through Paris, Switzerland, and Austria."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Paris",
+      "nights": "2 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Marceau Bastille"
+    },
+    {
+      "city": "Lucerne",
+      "nights": "3 Nights",
+      "h3": "Boutique Hotel Karl",
+      "h4": "Altstadt Hotel Krone Apartments Luzern"
+    },
+    {
+      "city": "Innsbruck",
+      "nights": "2 Nights",
+      "h3": "Basic hotel Innsbruck",
+      "h4": "Altstadthotel Weisses Kreuz"
+    },
+    {
+      "city": "Vienna",
+      "nights": "2 Nights",
+      "h3": "ibis Styles Wien City Hotel",
+      "h4": "arte Hotel Wien"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm days and long daylight, though winter brings festive markets and snow-capped Alpine views."
+    },
+    {
+      "title": "Weather",
+      "body": "Continental climate throughout — mild summers around 20–26°C, cold winters down to freezing in the Alps, so pack layers year-round."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) is used in France, Switzerland's neighbours and Austria, though Switzerland itself uses the Swiss Franc (CHF); all four countries are within the Schengen Area."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Eiffel Tower and Schönbrunn Palace slots ahead in summer — both sell out days in advance. Titlis cable cars are quietest before 10:00."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the international legs. The Swiss Travel Pass also covers city trams and museum entry in Lucerne.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited to 10 hrs per day by law — day-trip timings are planned around this. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof jacket for the Alps in any season, plus comfortable shoes for cobbled old towns. No formal dress codes apply on this programme."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere; a little Swiss Franc cash is useful in Lucerne, since Switzerland sits outside the Eurozone despite its neighbours. Tipping around 10% in restaurants is customary, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 2
+      },
+      {
+        "lat": 47.0502,
+        "lng": 8.3093,
+        "label": "Lucerne",
+        "nights": 3
+      },
+      {
+        "lat": 47.2692,
+        "lng": 11.3933,
+        "label": "Innsbruck",
+        "nights": 2
+      },
+      {
+        "lat": 48.2082,
+        "lng": 16.3738,
+        "label": "Vienna",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/2.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

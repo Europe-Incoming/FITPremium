@@ -1,0 +1,262 @@
+{
+  "id": "3.2",
+  "title": "Italy with Naples.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled rail journeys linking five of Italy's most iconic cities, with private transfers at each end.",
+      "nights": "10 nights · 11 days",
+      "route": "Rome (2N) → Naples (2N) → Florence (2N) → Venice (2N) → Milan (2N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "Rome Airport to Rome hotel, private transfer.",
+        "2": "Rome - small group walking tour of Imperial Rome with the Colosseum, 2.5 hrs.",
+        "3": "Rome to Naples train ticket, II Class."
+      },
+      "inclusions": [
+        "Rome airport to hotel private transfer on arrival",
+        "Rome small-group walking tour of Imperial Rome & the Colosseum, 2.5 hrs",
+        "Rome to Naples train ticket, II Class",
+        "Naples to Florence train ticket, II Class",
+        "Florence to Venice train ticket, II Class",
+        "Venice to Milan train ticket, II Class",
+        "10 nights accommodation with daily breakfast",
+        "Milan hotel to airport private transfer on departure"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach and driver at your disposal for the whole journey, with guided tours in Rome and Venice.",
+      "nights": "10 nights · 11 days",
+      "route": "Rome (2N) → Naples (2N) → Florence (2N) → Venice (2N) → Milan (2N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "Rome Airport to Rome hotel, private transfer. Private coach at your disposal from Day 1 until Day 11.",
+        "4": "Guided city tour, 3 hrs, with your private vehicle (no entrances included).",
+        "8": "Venice - private guided walking tour, 1.5 hrs."
+      },
+      "inclusions": [
+        "Private coach at your disposal from Day 1 until Day 11",
+        "Rome airport to hotel private transfer on arrival",
+        "Guided city tour, 3 hrs, with your private vehicle (no entrances)",
+        "Private transfer Rome to Naples",
+        "Private transfers linking Naples, Florence, Venice and Milan with your dedicated vehicle",
+        "Venice private guided walking tour, 1.5 hrs",
+        "10 nights accommodation with daily breakfast",
+        "Milan hotel to airport private transfer on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Rome",
+      "overnight": "Overnight: Rome",
+      "desc": "Arrive at Rome Airport and enjoy a private transfer to your hotel. Known as the \"Eternal City,\" Rome is a treasure trove of ancient history, stunning architecture, and vibrant street life. Spend your first evening exploring the charming streets and piazzas of this historic city. Overnight in Rome.",
+      "taste": "An evening in Trastevere for classic Roman cucina povera — cacio e pepe, carbonara and a carafe of house wine, in the cobbled lanes around Piazza Santa Maria."
+    },
+    {
+      "num": 2,
+      "title": "Rome",
+      "overnight": "Overnight: Rome",
+      "desc": "Discover Rome's imperial past with a 2.5-hour small group walking tour. Visit the iconic Colosseum, witness the grandeur of ancient Rome and explore the historical ruins. The afternoon is free for you to stroll through Rome's bustling streets and piazzas. Overnight in Rome.",
+      "experience": "Standing inside the Colosseum's arena-level galleries, imagining the roar of the crowd nearly two thousand years ago.",
+      "fallbackIncluded": "Rome small-group walking tour of Imperial Rome, 2.5 hrs."
+    },
+    {
+      "num": 3,
+      "title": "Rome → Naples",
+      "overnight": "Overnight: Naples",
+      "desc": "Travel to Naples by train. Naples, a city rich in history and culture, is famous for its historic center, vibrant markets, and as the birthplace of pizza. Spend the afternoon exploring Naples' picturesque streets, the famous Spaccanapoli, or the panoramic seafront. Overnight in Naples.",
+      "taste": "Naples is the birthplace of pizza — L'Antica Pizzeria da Michele has served only two varieties, margherita and marinara, from its wood-fired oven since 1870."
+    },
+    {
+      "num": 4,
+      "title": "Naples",
+      "overnight": "Overnight: Naples",
+      "desc": "Enjoy a free day in Naples. Opt for an optional tour or explore the city's renowned attractions like the Royal Palace and the Castel dell'Ovo. Stroll along the Bay of Naples for mesmerizing views and a taste of local street food. Overnight in Naples.",
+      "taste": "Caffè Gambrinus on Piazza Trieste e Trento, a Neapolitan institution since 1860, for an espresso and a sfogliatella pastry.",
+      "fallbackIncluded": "Day at leisure — optional Pompeii or Amalfi Coast excursion available."
+    },
+    {
+      "num": 5,
+      "title": "Naples → Florence",
+      "overnight": "Overnight: Florence",
+      "desc": "Depart Naples for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" boasts an array of Renaissance art and architecture. Wander through its charming streets, visit the iconic Duomo, or explore the historic Ponte Vecchio. Overnight in Florence.",
+      "taste": "A first taste of Tuscan cuisine — ribollita or pappa al pomodoro paired with a glass of Chianti."
+    },
+    {
+      "num": 6,
+      "title": "Florence",
+      "overnight": "Overnight: Florence",
+      "desc": "Travel through Chianti to Siena for a guided tour, highlighting the Piazza del Campo and Gothic Cathedral. Enjoy free time in Siena, then savor a three-course lunch at a San Gimignano wine estate. Explore San Gimignano’s medieval streets and artisan shops. End the day at Pisa's Square of Miracles, with views of the iconic Leaning Tower. Return to Florence at sunset. Overnight in Florence.",
+      "shopping": "The San Lorenzo market and the boutiques of Via de' Tornabuoni for Florentine leather goods.",
+      "taste": "Bistecca alla Fiorentina, the city's celebrated T-bone steak, served simply grilled."
+    },
+    {
+      "num": 7,
+      "title": "Florence → Venice",
+      "overnight": "Overnight: Venice (Mestre)",
+      "desc": "Travel to Venice by train. Venice, known for its enchanting canals and historic architecture, offers a unique experience. Spend the evening exploring the city's narrow alleys, famous bridges, and bustling squares like Piazza San Marco. Overnight in Venice Mestre.",
+      "taste": "Cicchetti and a glass of Prosecco at a Venetian bacaro — Cantina Do Mori, tucked near the Rialto Market and pouring since 1462, is the oldest of its kind."
+    },
+    {
+      "num": 8,
+      "title": "Venice",
+      "overnight": "Overnight: Venice (Mestre)",
+      "desc": "Discover Venice's charm with a 1.5-hour small group walking tour. Visit renowned landmarks and uncover the city's artistic heritage. The afternoon is free for you to explore Venice's myriad of canals, quaint cafes, and artisan shops. Overnight in Venice Mestre.",
+      "experience": "A private guided walking tour through Venice's historic sestieri, away from the busiest routes.",
+      "shopping": "The glass-blowing workshops of Murano, where Venice moved its furnaces in 1291 to protect the city from fire — still the source of the city's finest glassware."
+    },
+    {
+      "num": 9,
+      "title": "Venice → Milan",
+      "overnight": "Overnight: Milan",
+      "desc": "Depart for Milan by train. Milan, Italy's fashion capital, is also renowned for its impressive architecture and art. Spend the afternoon exploring Milan's elegant streets, visiting the iconic Duomo, or enjoying the vibrant Navigli district. Overnight in Milan.",
+      "taste": "An aperitivo in the Navigli district, or a Negroni at Camparino in Galleria, the historic bar beside the Duomo that has poured aperitivi since 1867."
+    },
+    {
+      "num": 10,
+      "title": "Milan",
+      "overnight": "Overnight: Milan",
+      "desc": "Embark on a captivating 10-hour coach excursion to the mesmerizing Lake Como and enchanting Bellagio. Discover the serene beauty of these iconic Italian lake regions, characterized by stunning landscapes and quaint villages. Return to Milan for the evening. Overnight in Milan.",
+      "shopping": "The Quadrilatero della Moda, Milan's designer fashion district around Via Montenapoleone.",
+      "taste": "Risotto alla milanese, coloured gold with saffron and traditionally served alongside ossobuco, is the city's signature dish.",
+      "fallbackIncluded": "Day at leisure — optional Last Supper visit available (advance booking required)."
+    },
+    {
+      "num": 11,
+      "title": "Depart Milan",
+      "overnight": "Departure day",
+      "desc": "Conclude your Italian journey with a private transfer from your Milan hotel to Milan airport. Reflect on the unforgettable experiences and beautiful sights witnessed throughout your tour."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Rome",
+      "nights": "2 Nights",
+      "h3": "Hotel Windrose",
+      "h4": "Palladium Palace"
+    },
+    {
+      "city": "Naples",
+      "nights": "2 Nights",
+      "h3": "ibis Styles Napoli Garibaldi",
+      "h4": "Starhotels Terminus"
+    },
+    {
+      "city": "Florence",
+      "nights": "2 Nights",
+      "h3": "Hotel Delle Nazioni",
+      "h4": "Hotel Grand Hotel Baglioni"
+    },
+    {
+      "city": "Venice (Mestre)",
+      "nights": "2 Nights",
+      "h3": "Venezia Hotel",
+      "h4": "Mestre, Hotel Plaza"
+    },
+    {
+      "city": "Milan",
+      "nights": "2 Nights",
+      "h3": "43 Station Hotel",
+      "h4": "NYX Hotel Milan"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–June and September–October offer the mildest weather and lighter crowds across Rome, Florence and Venice."
+    },
+    {
+      "title": "Weather",
+      "body": "Warm Mediterranean summers, 25–33°C, especially in Rome and Naples; cooler, often damp winters, particularly around Venice and Milan."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) throughout Italy; standard Schengen entry rules apply for non-EU passport holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book the Uffizi Gallery and Doge's Palace ahead in peak season — both routinely sell out days in advance. Visit St Mark's Square before 10:00 to avoid the crowds."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on all inter-city trains; arrive at least 20 minutes before departure as Italian stations can be large and busy.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by EU law to around 9 hours per day, so day-trip timings are planned around this. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable shoes for cobblestones in Rome, Florence and Venice, plus a light rain layer for Venice and Milan in shoulder season."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere; keep some cash for smaller trattorias and markets like Rome's Campo de' Fiori. A 10% tip is appreciated in restaurants, though not obligatory."
+    },
+    {
+      "title": "City taxes",
+      "body": "Most Italian cities levy a small nightly city tax, payable locally at the hotel and not included in the package price."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 41.9028,
+        "lng": 12.4964,
+        "label": "Rome",
+        "nights": 2
+      },
+      {
+        "lat": 40.8518,
+        "lng": 14.2681,
+        "label": "Naples",
+        "nights": 2
+      },
+      {
+        "lat": 43.7696,
+        "lng": 11.2558,
+        "label": "Florence",
+        "nights": 2
+      },
+      {
+        "lat": 45.4408,
+        "lng": 12.3155,
+        "label": "Venice",
+        "nights": 2
+      },
+      {
+        "lat": 45.4642,
+        "lng": 9.19,
+        "label": "Milan",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "italy",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/3.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

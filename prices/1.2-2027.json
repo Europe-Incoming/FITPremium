@@ -1,0 +1,145 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "£",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1979,
+          "twin": 1297,
+          "child": 542
+        },
+        "summer": {
+          "single": 2062,
+          "twin": 1351,
+          "child": 565
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2369,
+          "twin": 1491,
+          "child": 618
+        },
+        "summer": {
+          "single": 2467,
+          "twin": 1553,
+          "child": 644
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2250,
+            "4star": 2445
+          },
+          {
+            "pax": 10,
+            "3star": 2008,
+            "4star": 2203
+          },
+          {
+            "pax": 12,
+            "3star": 1846,
+            "4star": 2041
+          },
+          {
+            "pax": 14,
+            "3star": 1731,
+            "4star": 1925
+          },
+          {
+            "pax": 16,
+            "3star": 1644,
+            "4star": 1839
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2344,
+            "4star": 2547
+          },
+          {
+            "pax": 10,
+            "3star": 2092,
+            "4star": 2294
+          },
+          {
+            "pax": 12,
+            "3star": 1923,
+            "4star": 2126
+          },
+          {
+            "pax": 14,
+            "3star": 1803,
+            "4star": 2006
+          },
+          {
+            "pax": 16,
+            "3star": 1713,
+            "4star": 1915
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "London Eye standard ticket",
+      "price": 31
+    },
+    {
+      "name": "Madam Tussauds ticket",
+      "price": 36
+    },
+    {
+      "name": "Tower of London ticket",
+      "price": 35
+    },
+    {
+      "name": "London - Stonehenge and Bath Tour, 10 hrs regular coach including all entrance tickets",
+      "price": 119
+    },
+    {
+      "name": "Manchester - Windermere & the Lake District, 11 hours coach tour",
+      "price": 72
+    },
+    {
+      "name": "Manchester - Derbyshire & the Peak District, 9 hours coach tour",
+      "price": 67
+    },
+    {
+      "name": "Edinburgh 1 day hop on hop off pass",
+      "price": 21
+    },
+    {
+      "name": "Edinburgh - Loch Lomond, Stirling Castle, 10 hrs coach regular",
+      "price": 64
+    }
+  ]
+}

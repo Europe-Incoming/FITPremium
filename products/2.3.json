@@ -1,0 +1,262 @@
+{
+  "id": "2.3",
+  "title": "Paris, Lucerne, Venice, Florence & Rome.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled trains linking five classic cities, with private transfers at your arrival and departure points.",
+      "nights": "10 nights · 11 days",
+      "route": "Paris (2N) → Lucerne (3N) → Venice/Mestre (2N) → Florence (1N) → Rome (2N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "2": "Paris City Tour with Seine cruise and Eiffel Tower 2nd floor, 4 hrs coach tour.",
+        "3": "Paris to Lucerne train ticket, II Class — start of a 4-day consecutive Swiss Travel Pass.",
+        "4": "Mount Titlis excursion using the Swiss Travel Pass, with a Lake Lucerne cruise also free on the pass.",
+        "6": "Lucerne to Venice (Mestre) train, II Class, on the final day of Swiss Travel Pass validity.",
+        "8": "Venice (Mestre) to Florence train, II Class.",
+        "9": "Florence to Rome train, II Class."
+      },
+      "inclusions": [
+        "Paris airport to hotel private transfer on arrival",
+        "Paris City Tour, Seine Cruise and Eiffel Tower 2nd Floor, 4 hrs coach tour",
+        "Paris to Lucerne train ticket, II Class",
+        "Swiss Travel Pass, 4 consecutive days, II Class",
+        "Mount Titlis excursion and Lake Lucerne cruise, covered by Swiss Travel Pass",
+        "Onward train tickets, II Class, between Lucerne, Venice, Florence and Rome",
+        "10 nights accommodation across 5 cities with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private vehicle on disposal for most of the journey, with guided tours in Paris, Venice and Rome.",
+      "nights": "10 nights · 11 days",
+      "route": "Paris (2N) → Lucerne (3N) → Venice/Mestre (2N) → Florence (1N) → Rome (2N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "2": "Private Paris city tour with English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise.",
+        "3": "Private transfer Paris to Lucerne; vehicle now on disposal for 8 hrs daily through Day 11.",
+        "4": "Private excursion to Titlis and Engelberg.",
+        "6": "Private transfer Lucerne to Venice (Mestre).",
+        "7": "Venice walking tour, 2 hrs with English-speaking guide.",
+        "8": "Private transfer Venice (Mestre) to Florence.",
+        "9": "Private transfer Florence to Rome.",
+        "10": "Rome city tour with English-speaking guide, 3 hrs."
+      },
+      "inclusions": [
+        "Paris airport to hotel private transfer on arrival",
+        "Private vehicle on disposal for 8 hrs daily, Day 3 through Day 11",
+        "Private Paris city tour with English-speaking guide, 3 hrs",
+        "Seine river cruise, 1 hour",
+        "Private excursion to Titlis and Engelberg",
+        "Venice walking tour, 2 hrs with English-speaking guide",
+        "Rome city tour with English-speaking guide, 3 hrs",
+        "10 nights accommodation across 5 cities with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Welcome to the enchanting French capital! Upon arrival at the airport, enjoy a seamless transfer to your hotel. Dive into Parisian life by exploring iconic sites like the Champs-Élysées for high-end shopping, or relishing the artistic vibes of Montmartre. Experience the city's allure with a stroll along the Seine River or indulge in renowned French cuisine. Overnight in Paris",
+      "taste": "A croissant and café crème at a zinc-topped counter, or steak-frites at a classic Left Bank bistro, are the simplest first tastes of Paris."
+    },
+    {
+      "num": 2,
+      "title": "Paris City Tour & Eiffel Tower",
+      "overnight": "Overnight: Paris",
+      "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
+      "shopping": "The Champs-Élysées and the grand department stores of Boulevard Haussmann, Galeries Lafayette and Printemps, are Paris's classic shopping stretches."
+    },
+    {
+      "num": 3,
+      "title": "Paris → Lucerne",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
+      "shopping": "Kapellplatz and the arcaded lanes of the old town are lined with Swiss watch and chocolate specialists, including the long-established Bucherer flagship."
+    },
+    {
+      "num": 4,
+      "title": "Mount Titlis Excursion",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
+      "taste": "Swiss chocolate and a wheel of melted raclette or a pot of cheese fondue are the classic warming treats after a day on the mountain."
+    },
+    {
+      "num": 5,
+      "title": "Lucerne at Leisure",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
+      "fallbackIncluded": "Day at leisure in Lucerne — optional excursions such as Mount Pilatus available."
+    },
+    {
+      "num": 6,
+      "title": "Lucerne → Venice",
+      "overnight": "Overnight: Venice (Mestre)",
+      "desc": "Depart Lucerne by train, with two interchanges, en route to Venice Mestre. Venice is known for picturesque canals, iconic gondolas, and enchanting architecture of St. Mark's Square and the Doge's Palace. Delve into the romantic allure of Italy's floating city. Overnight stay in Venice Mestre."
+    },
+    {
+      "num": 7,
+      "title": "Venice",
+      "overnight": "Overnight: Venice (Mestre)",
+      "desc": "Explore Venice's intricate streets, elegant palaces, and captivating churches with a Small Group Walking Tour. Starting at the iconic Piazza San Marco, uncover the secrets and history of St. Mark's Basilica, the Doge's Palace, and the Bell Tower. Traverse Campo SS. Giovanni e Paolo, Marco Polo’s House, and the Mercerie for a glimpse into Venice's rich history, art, and architecture. Overnight stay in Venice.",
+      "experience": "A gondola glide along the smaller canals away from the crowds is the classic Venetian experience, best taken in the early evening light.",
+      "taste": "The Bellini — prosecco and white peach purée — was invented at Harry's Bar near St Mark's Square in the 1930s and remains Venice's signature aperitif."
+    },
+    {
+      "num": 8,
+      "title": "Venice → Florence",
+      "overnight": "Overnight: Florence",
+      "desc": "Depart Venice for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" is famed for its historic art and cultural richness. Marvel at the iconic Duomo, Ponte Vecchio, and the vibrant streets of Florence. Immerse yourself in its artistry and history. Overnight stay in Florence.",
+      "taste": "A Florentine bistecca alla fiorentina, a thick T-bone steak grilled rare, paired with a glass of Chianti Classico.",
+      "shopping": "Ponte Vecchio's jewellers have traded from the same bridge-top workshops since the 16th century, when the Medici replaced its butchers' stalls with goldsmiths."
+    },
+    {
+      "num": 9,
+      "title": "Florence → Rome",
+      "overnight": "Overnight: Rome",
+      "desc": "Depart Florence for Rome by train. Rome, known as the \"Eternal City,\" boasts iconic landmarks like the Trevi Fountain and the Spanish Steps. Immerse yourself in its rich history, from the Colosseum to Vatican City. Enjoy the timeless allure of Rome's ancient and modern marvels. Overnight stay in Rome."
+    },
+    {
+      "num": 10,
+      "title": "Rome City Tour",
+      "overnight": "Overnight: Rome",
+      "desc": "Embark on an immersive Colosseum and Roman Forum walking tour, delving into the ancient heart of the Eternal City. Unravel the history of Rome with a local guide, uncovering stories of emperors, gladiators, and the city's captivating past. Explore the monumental Colosseum, an emblem of ancient grandeur, and the evocative ruins of the Roman Forum, where echoes of a glorious past linger. Overnight in Rome.",
+      "experience": "Standing inside the Colosseum, where gladiators once fought before 50,000 spectators, remains one of Europe's most powerful historical experiences.",
+      "taste": "Cacio e pepe or carbonara in a Trastevere trattoria, with a carafe of chilled Frascati, is the classic Roman meal after a day among the ruins."
+    },
+    {
+      "num": 11,
+      "title": "Depart Rome",
+      "overnight": "Departure day",
+      "desc": "Enjoy a private transfer from your Rome hotel to Rome airport, marking the conclusion of this captivating tour through Paris, Switzerland, and Italy."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Paris",
+      "nights": "2 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Marceau Bastille"
+    },
+    {
+      "city": "Lucerne",
+      "nights": "3 Nights",
+      "h3": "Boutique Hotel Karl",
+      "h4": "Altstadt Hotel Krone Apartments Luzern"
+    },
+    {
+      "city": "Mestre Venice",
+      "nights": "2 Nights",
+      "h3": "Hotel Venezia Mestre",
+      "h4": "Hotel Plaza"
+    },
+    {
+      "city": "Florence",
+      "nights": "1 Night",
+      "h3": "Hotel Delle Nazioni",
+      "h4": "Grand Hotel Baglioni"
+    },
+    {
+      "city": "Rome",
+      "nights": "2 Nights",
+      "h3": "Hotel Windrose",
+      "h4": "Palladium Palace"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm weather across all five cities; the Alpine cable cars at Titlis operate year-round, snow-dependent for some features."
+    },
+    {
+      "title": "Weather",
+      "body": "Paris and Lucerne are temperate with cooler Alpine air; Venice, Florence and Rome turn hot and humid in summer, so pack layers for the mountain leg."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) in France and Italy, Swiss Franc (CHF) in Switzerland; all three countries lie within the Schengen area with no border checks between them."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book the Eiffel Tower, Titlis cableway and Colosseum well ahead in summer — all three sell out days in advance at peak season."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the international legs. The Swiss Travel Pass also covers local trams and some museum admissions in Lucerne.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by EU law, so day-trip timings are planned around rest breaks. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Warm layers and sturdy shoes for the Titlis excursion, plus lighter clothing for the Italian cities further south."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere, though vaporetto tickets and small trattorias in Venice's backstreets still often prefer cash. A 10% tip in restaurants is customary, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 2
+      },
+      {
+        "lat": 47.0502,
+        "lng": 8.3093,
+        "label": "Lucerne",
+        "nights": 3
+      },
+      {
+        "lat": 45.4903,
+        "lng": 12.2424,
+        "label": "Venice (Mestre)",
+        "nights": 2
+      },
+      {
+        "lat": 43.7696,
+        "lng": 11.2558,
+        "label": "Florence",
+        "nights": 1
+      },
+      {
+        "lat": 41.9028,
+        "lng": 12.4964,
+        "label": "Rome",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/2.3-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

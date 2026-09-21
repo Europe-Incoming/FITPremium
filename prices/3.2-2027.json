@@ -1,0 +1,121 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 2080,
+          "twin": 1446,
+          "child": 613
+        },
+        "summer": {
+          "single": 2166,
+          "twin": 1506,
+          "child": 638
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2722,
+          "twin": 1767,
+          "child": 738
+        },
+        "summer": {
+          "single": 2836,
+          "twin": 1841,
+          "child": 769
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2472,
+            "4star": 2793
+          },
+          {
+            "pax": 10,
+            "3star": 2104,
+            "4star": 2426
+          },
+          {
+            "pax": 12,
+            "3star": 1859,
+            "4star": 2181
+          },
+          {
+            "pax": 14,
+            "3star": 1684,
+            "4star": 2005
+          },
+          {
+            "pax": 16,
+            "3star": 1553,
+            "4star": 1874
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2575,
+            "4star": 2910
+          },
+          {
+            "pax": 10,
+            "3star": 2192,
+            "4star": 2527
+          },
+          {
+            "pax": 12,
+            "3star": 1937,
+            "4star": 2271
+          },
+          {
+            "pax": 14,
+            "3star": 1754,
+            "4star": 2089
+          },
+          {
+            "pax": 16,
+            "3star": 1617,
+            "4star": 1952
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Gondola ride, shared 30 mins",
+      "price": 39
+    },
+    {
+      "name": "Ferrari Museum ticket",
+      "price": 36
+    }
+  ]
+}

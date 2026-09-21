@@ -1,0 +1,261 @@
+{
+  "id": "1.2",
+  "title": "London, Manchester, Edinburgh, Inverness & Glasgow.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled inter-city trains linking each stop, with private transfers on arrival and departure.",
+      "nights": "10 nights · 11 days",
+      "route": "London (3N) → Manchester (2N) → Edinburgh (2N) → Inverness (2N) → Glasgow (1N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "London airport to London hotel private transfer.",
+        "2": "London Hop-on Hop-off 1-day pass with one-way Thames river cruise.",
+        "4": "London to Manchester train, standard class (approx. 2h 10m).",
+        "6": "Manchester to Edinburgh train, standard class (approx. 3h 30m).",
+        "8": "Edinburgh to Inverness train, standard class (approx. 3h 30m) through the Cairngorms.",
+        "10": "Inverness to Glasgow train, standard class (approx. 3h 15m).",
+        "11": "Glasgow hotel to Glasgow airport private transfer."
+      },
+      "inclusions": [
+        "London airport–hotel private transfer on arrival",
+        "London Hop-on Hop-off 1-day ticket with one-way Thames river cruise",
+        "London to Manchester train ticket, standard class",
+        "Manchester to Edinburgh train ticket, standard class",
+        "Edinburgh to Inverness train ticket, standard class",
+        "Inverness to Glasgow train ticket, standard class",
+        "Glasgow hotel–airport private transfer on departure",
+        "10 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private vehicle and driver on disposal for the whole itinerary, with guided touring in London and the Highlands.",
+      "nights": "10 nights · 11 days",
+      "route": "London (3N) → Manchester (2N) → Edinburgh (2N) → Inverness (2N) → Glasgow (1N)",
+      "aboutNights": "10 nights across 5 stays",
+      "transport": {
+        "1": "London airport to London hotel private transfer. Private vehicle on disposal for the full itinerary.",
+        "2": "London city tour, 3 hrs with guide, plus London Eye standard tickets and a one-way Thames river cruise.",
+        "3": "Stonehenge & Bath excursion, with entrances, by private vehicle.",
+        "4": "Private transfer London → Manchester.",
+        "6": "Private transfer Manchester → Edinburgh.",
+        "8": "Private transfer Edinburgh → Inverness, through the Cairngorms.",
+        "10": "Private transfer Inverness → Glasgow, via Loch Ness and Loch Lomond.",
+        "11": "Glasgow hotel to Glasgow airport private transfer."
+      },
+      "inclusions": [
+        "Private vehicle on disposal for the full itinerary",
+        "London airport–hotel private transfers on arrival and departure",
+        "London city tour, 3 hrs with guide",
+        "London Eye standard tickets and one-way Thames river cruise",
+        "Stonehenge & Bath excursion with entrances",
+        "Private transfers between London, Manchester, Edinburgh, Inverness and Glasgow",
+        "10 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive London",
+      "overnight": "Overnight: London",
+      "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots. Overnight in London.",
+      "taste": "A classic fish and chips supper is the perfect first-night welcome — Poppies in Spitalfields has served the dish from the same East End corner since 1952."
+    },
+    {
+      "num": 2,
+      "title": "London",
+      "overnight": "Overnight: London",
+      "desc": "Explore London with a Hop on Hop off 1 day pass. The pass allows you to visit the city’s most famous landmarks at your own pace. You can visit the Tower of London, the British Museum, the London Eye, and many other attractions. The pass also includes a one-way Thames River cruise, which is a great way to see the city from a different perspective. Overnight in London.",
+      "experience": "An evening in London's West End — The Mousetrap has run continuously at St Martin's Theatre since 1952, the world's longest-running show."
+    },
+    {
+      "num": 3,
+      "title": "Stonehenge & Bath excursion",
+      "overnight": "Overnight: London",
+      "desc": "Today, you have the option to explore London at your own pace or take an optional tour to see Stonehenge and Bath. Overnight in London.",
+      "taste": "Sally Lunn's in Bath serves its famous buns from a house dating to 1482, a short walk from the Roman Baths."
+    },
+    {
+      "num": 4,
+      "title": "London to Manchester",
+      "overnight": "Overnight: Manchester",
+      "desc": "Check out and journey by train to Manchester, a city steeped in industrial history and renowned for its vibrant cultural scene. Explore this dynamic cityscape alive with music, art, and world-famous football clubs. Overnight in Manchester."
+    },
+    {
+      "num": 5,
+      "title": "Manchester",
+      "overnight": "Overnight: Manchester",
+      "desc": "Revel in a day of freedom in Manchester. Uncover the city's vibrant culture or opt for day trips to the picturesque Lake or Peak Districts, embracing the stunning natural landscapes. Overnight in Manchester.",
+      "taste": "Rusholme's Curry Mile, a stretch of Wilmslow Road lined with South Asian restaurants and sweet shops, reflects Manchester's long-standing curry culture.",
+      "fallbackIncluded": "Day at leisure — optional Manchester United stadium tour available."
+    },
+    {
+      "num": 6,
+      "title": "Manchester to Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Travel comfortably by train from Manchester to Edinburgh, immersing yourself in Scotland's capital known for its captivating history, striking architecture, and cultural festivals. Overnight in Edinburgh."
+    },
+    {
+      "num": 7,
+      "title": "Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Enjoy a day at your pace in Edinburgh. Discover the city's historic sites, wander along the Royal Mile, or visit the majestic Edinburgh Castle. Opt for a Hop-On Hop-Off tour or venture on a day trip to the enchanting Highlands to witness Scotland's breathtaking landscapes. Overnight in Edinburgh.",
+      "shopping": "The Royal Mile and George Street are lined with tartan, tweed and single-malt whisky shops.",
+      "taste": "Haggis, neeps and tatties at Deacon Brodie's Tavern, a Royal Mile institution named after the 18th-century town councillor whose double life as a burglar is said to have inspired Dr Jekyll and Mr Hyde.",
+      "fallbackIncluded": "Day at leisure — optional Edinburgh Castle & Royal Mile tour available."
+    },
+    {
+      "num": 8,
+      "title": "Edinburgh to Inverness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Board the train from Edinburgh to Inverness, a journey that offers scenic views of Scotland's landscapes. Arrive in Inverness, the gateway to the Highlands, where history and natural beauty converge. Enjoy a tranquil evening in this charming Scottish city. Overnight in Inverness."
+    },
+    {
+      "num": 9,
+      "title": "Inverness & Loch Ness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Embark on a captivating 12-hour coach tour to the picturesque Isle of Skye and the iconic Eilean Donan Castle. Traverse through Scotland's stunning landscapes, capturing the essence of its beauty and history. Return to Inverness for a serene evening. Overnight in Inverness.",
+      "taste": "A single-malt tasting featuring Speyside names such as Glenfiddich and The Glenlivet, distilled less than an hour from Inverness in the region that produces more whisky than anywhere else in Scotland.",
+      "fallbackIncluded": "Day at leisure — optional Loch Ness cruise available."
+    },
+    {
+      "num": 10,
+      "title": "Inverness to Glasgow",
+      "overnight": "Overnight: Glasgow",
+      "desc": "Depart Inverness by train, traversing Scotland's landscapes towards the vibrant city of Glasgow. Embrace the cultural diversity and architectural wonders of this dynamic city upon arrival. Relax and prepare to explore Glasgow's charm. Overnight in Glasgow.",
+      "taste": "The evening is free for dinner in the Merchant City's converted Victorian warehouses, or a taste of Tunnock's Tea Cakes and Irn-Bru, two of Scotland's best-known exports."
+    },
+    {
+      "num": 11,
+      "title": "Depart Glasgow",
+      "overnight": "Departure day",
+      "desc": "Bid farewell to Glasgow as you're privately transferred from your hotel to Glasgow airport. Conclude your remarkable journey through Scotland, departing with cherished memories of its rich history and breathtaking landscapes."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "3 Nights",
+      "h3": "Hotel Montana",
+      "h4": "Hotel Riu Plaza London Victoria"
+    },
+    {
+      "city": "Manchester",
+      "nights": "2 Nights",
+      "h3": "Hilton Garden Inn Manchester Emirates Old Trafford",
+      "h4": "Crowne Plaza Manchester City Centre"
+    },
+    {
+      "city": "Edinburgh",
+      "nights": "2 Nights",
+      "h3": "Holiday Inn Express Edinburgh City Centre",
+      "h4": "Apex City of Edinburgh Hotel"
+    },
+    {
+      "city": "Inverness",
+      "nights": "2 Nights",
+      "h3": "Royal Highland Hotel",
+      "h4": "Blackfriars Inverness"
+    },
+    {
+      "city": "Glasgow",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Glasgow City Centre Riverside",
+      "h4": "Novotel Glasgow Centre"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for the longest, mildest days; the Highlands are especially scenic in early autumn. Edinburgh's Festival Fringe takes over the city each August, so book ahead if travelling then."
+    },
+    {
+      "title": "Weather",
+      "body": "Temperate and changeable throughout, typically 12–20°C in summer, cooler and wetter further north in Scotland."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Pound sterling (£) throughout; the United Kingdom is outside the Schengen area, so standard UK entry requirements apply for the whole itinerary."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Edinburgh Castle and the Tower of London ahead in summer — both sell out days in advance. Arrive at Stonehenge early to avoid coach-tour crowds."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the inter-city services. Allow extra connection time at Manchester Piccadilly and Edinburgh Waverley.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by law, so long driving days (such as Inverness to Glasgow) include a scheduled rest stop. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof jacket year-round, especially north of Edinburgh. Comfortable, sturdy shoes for cobbled streets and hillside paths. Midges can be troublesome in the Highlands on still summer evenings — pack repellent."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere across England and Scotland; a little cash is useful in smaller Highland towns. Scottish banknotes are legal but occasionally refused by shops in England, so spend or exchange them before heading south. Tipping around 10% in restaurants is customary."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 3
+      },
+      {
+        "lat": 53.4808,
+        "lng": -2.2426,
+        "label": "Manchester",
+        "nights": 2
+      },
+      {
+        "lat": 55.9533,
+        "lng": -3.1883,
+        "label": "Edinburgh",
+        "nights": 2
+      },
+      {
+        "lat": 57.4778,
+        "lng": -4.2247,
+        "label": "Inverness",
+        "nights": 2
+      },
+      {
+        "lat": 55.8642,
+        "lng": -4.2518,
+        "label": "Glasgow",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "uk-ireland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/1.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

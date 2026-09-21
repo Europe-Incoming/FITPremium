@@ -1,0 +1,142 @@
+{
+  "id": "10.3",
+  "title": "Northern Norway, Arctic Gateway.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "A fully escorted winter base in Tromsø with private airport transfers and a full programme of Arctic excursions.",
+      "nights": "4 nights · 5 days",
+      "route": "Tromsø (4N)",
+      "aboutNights": "4 nights across 1 stay",
+      "transport": {
+        "1": "Private transfer from Tromsø Airport to your hotel on arrival.",
+        "2": "Tromsø Island Tour with Arctic Cathedral, including transport across the sound.",
+        "3": "Full-day snowmobile safari into the Arctic wilderness surrounding Tromsø, approx. 7 hours.",
+        "4": "Winter whale watching boat tour into the fjords around Tromsø, approx. 7 hours.",
+        "5": "Private transfer from your hotel to Tromsø Airport for departure."
+      },
+      "inclusions": [
+        "Private transfer Tromsø Airport to hotel on arrival",
+        "Tromsø Island Tour with Arctic Cathedral",
+        "Northern Lights Cruise",
+        "Night Reindeer Sledding Tour with Dinner",
+        "Snowmobile Safari, approx. 7 hours",
+        "Winter whale watching boat tour, approx. 7 hours",
+        "Private transfer hotel to Tromsø Airport on departure",
+        "4 nights accommodation with breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Tromsø",
+      "overnight": "Overnight: Tromso",
+      "desc": "Arrive in the Arctic capital and transfer privately to your hotel. In the evening, set sail on a serene cruise from Tromsø, gliding into the silent night in search of the Northern Lights. Witness the shimmering Aurora from spacious decks or the cosy lounge of a sustainable sightseeing boat. Overnight in Tromsø.",
+      "taste": "Ølhallen, Tromsø's oldest pub, has poured beer from the adjoining Mack Brewery — the world's northernmost — since 1928; a good first stop for a Mack Arctic Pilsner."
+    },
+    {
+      "num": 2,
+      "title": "Tromsø & Arctic Cathedral",
+      "overnight": "Overnight: Tromso",
+      "desc": "Enjoy a scenic and informative city tour of Tromsø. Travel across to Kvaløya for panoramic views of the city and a chance to spot Arctic wildlife. Stop at Telegrafbukta beach and drive through the city centre, learning about its rich history. Cross the Tromsø Bridge to view the striking Arctic Cathedral (exterior only) and ascend by cable car for breathtaking views of the surrounding islands. Tour ends in the city centre. In the evening, travel to a Sami reindeer camp where you’ll walk among a herd of 300 reindeer, followed by a peaceful sledding ride. Gather inside a warm candlelit hut for a traditional three-course Sami dinner, storytelling, and a joik performance. If skies are clear, step outside and watch the Northern Lights dance above. Overnight in Tromsø.",
+      "taste": "Arctic king crab and Arctic char are Tromsø specialities — Fiskekompaniet, on the harbour by Stortorget, is a long-standing choice for both.",
+      "experience": "An evening Northern Lights Cruise takes you out into the fjords, away from the city's lights, for one of the best chances to see the aurora.",
+      "shopping": "Storgata, Tromsø's main pedestrian street, runs the length of the old town for Norwegian knitwear, troll figures and Arctic-fox pelts alongside the everyday shops."
+    },
+    {
+      "num": 3,
+      "title": "Snowmobile Safari",
+      "overnight": "Overnight: Tromso",
+      "desc": "Embark on a thrilling snowmobile safari through the Lyngen Alps. Paired in twos, you’ll ride across snowy trails with photo stops and scenic views. End your Arctic adventure with a hearty fish soup before heading back. Overnight in Tromsø.",
+      "taste": "A hot bowl of bidos, the traditional Sami reindeer stew, is the usual warm-up during the safari's midway stop — thick, slow-cooked and built for Arctic cold."
+    },
+    {
+      "num": 4,
+      "title": "Whale Watching",
+      "overnight": "Overnight: Tromso",
+      "desc": "Take the reins on a dogsledding tour through the Arctic wilderness. Learn to mush and switch roles with your partner midway. This active yet heart-warming experience ends with a steaming bowl of soup back at the kennel. Overnight in Tromsø.",
+      "experience": "Round off the evening with a Night Reindeer Sledding Tour and dinner, gliding across the snow behind reindeer with a taste of Sami tradition.",
+      "taste": "Dinner typically ends with multekrem — cloudberries folded through whipped cream, a Norwegian classic and a particular treat this far north, where the berries are hand-picked from Arctic marshland each autumn."
+    },
+    {
+      "num": 5,
+      "title": "Depart Tromsø",
+      "overnight": "Departure day",
+      "desc": "Enjoy a private transfer to Tromsø Airport. Bid farewell to Norway’s winter wonderland, taking with you memories of the Northern Lights, snowy landscapes, and Arctic encounters."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Tromso",
+      "nights": "4 Nights",
+      "h3": "Scandic Grand Tromsø",
+      "h4": "Clarion Hotel The Edge"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "Winter (November–March) is the very reason to visit — long dark nights this far inside the Arctic Circle give Tromsø some of the best Northern Lights odds in Norway."
+    },
+    {
+      "title": "Weather",
+      "body": "Arctic winter conditions typically -5°C to -15°C, with snow cover from November through April and only a few hours of blue twilight around midday."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Norwegian Krone (NOK) is the local currency, and Norway is a Schengen Area member so no separate visa is needed for Schengen visa holders travelling from within Europe."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Northern Lights viewing",
+      "body": "Aurora sightings depend on clear skies and solar activity — no tour can guarantee a sighting on any single night, though the Northern Lights Cruise gets you away from Tromsø's city lights for the best chance."
+    },
+    {
+      "title": "What to pack",
+      "body": "Full thermal layers, a waterproof outer shell, insulated winter boots and gloves are essential — tours typically provide extra thermal oversuits, but good personal base layers make a real difference."
+    },
+    {
+      "title": "Weather-dependent tours",
+      "body": "Snowmobile safaris and whale watching cruises can be rescheduled at short notice for weather and daylight safety — keep the days either side flexible where possible."
+    },
+    {
+      "title": "Tipping",
+      "body": "Tipping is not expected in Norway — a service charge is generally built into restaurant prices, so rounding up for good service is plenty rather than the 10–15% common further south."
+    },
+    {
+      "title": "Airport transfers",
+      "body": "Private transfers are included on both arrival and departure, so there's no need to arrange separate airport pickup in Tromsø.",
+      "styles": [
+        "trains"
+      ]
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 69.6492,
+        "lng": 18.9553,
+        "label": "Tromso",
+        "nights": 4
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "scandinavia-iceland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/10.3-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

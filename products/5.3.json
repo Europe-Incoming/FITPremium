@@ -1,0 +1,188 @@
+{
+  "id": "5.3",
+  "title": "Corsica Discovery.",
+  "styles": {
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "A rental car and one of Europe's great coastal drives — the Calanques de Piana, the Gorges de Spelunca and Bonifacio's cliff-top old town.",
+      "nights": "8 nights · 9 days",
+      "route": "Ajaccio (1N) → Porto-Ota (2N) → Corte (2N) → Bonifacio (2N) → Ajaccio (1N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Rental car pickup at Ajaccio Airport (standard sedan class).",
+        "2": "Self-drive north along the D81 through the Calanques de Piana to Porto.",
+        "4": "Self-drive inland on the D84 through the Gorges de Spelunca and over the Col de Vergio to Corte.",
+        "6": "Self-drive south on the N193/N198 coastal road via Aleria and Porto-Vecchio to Bonifacio.",
+        "8": "Self-drive north on the N196 via Sartène back to Ajaccio.",
+        "9": "Return the rental car at Ajaccio Airport."
+      },
+      "inclusions": [
+        "8 nights accommodation including breakfast",
+        "Rental car (standard sedan class), Day 1 10am to Day 9 2pm"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Ajaccio",
+      "overnight": "Overnight: Ajaccio",
+      "desc": "Welcome to Corsica. Pick up your rental car at Ajaccio airport and make your way to your hotel. Spend the afternoon exploring Napoleon's birthplace at your leisure — the harbour, the old town, or one of the city beaches. Overnight in Ajaccio.",
+      "taste": "Corsican charcuterie — coppa, lonzu and figatellu — with a glass of local wine at one of the harbourside cafés."
+    },
+    {
+      "num": 2,
+      "title": "Ajaccio to Porto via Calanques de Piana",
+      "overnight": "Overnight: Porto-Ota",
+      "desc": "One of Europe's most spectacular coastal drives: the D81 winds north through the Calanques de Piana, a UNESCO World Heritage site where towering red granite cliffs plunge into turquoise water. Stop often at the viewpoints, and pause in the hillside village of Piana for lunch with sweeping coastal views before continuing to Porto. Overnight in Porto-Ota.",
+      "experience": "A boat excursion to the Scandola Nature Reserve and the fishing village of Girolata, accessible only by sea or on foot, reveals red cliffs and marine wildlife the road never reaches."
+    },
+    {
+      "num": 3,
+      "title": "Porto — Day at Leisure",
+      "overnight": "Overnight: Porto-Ota",
+      "desc": "A relaxed day around Porto: the pebble beach, the Genoese watchtower, or simply the surrounding scenery. Overnight in Porto-Ota."
+    },
+    {
+      "num": 4,
+      "title": "Porto to Corte via Mountain Route",
+      "overnight": "Overnight: Corte",
+      "desc": "Inland on the winding D84 through the Gorges de Spelunca, a dramatic river canyon, stopping in the chestnut-forested village of Evisa before climbing to the Col de Vergio (1,477m), Corsica's highest paved pass. Descend through pine forest to Corte, the historic heart of the island and former capital during its brief independence. Overnight in Corte.",
+      "taste": "Chestnut-flour specialities — pulenda and fritelle — are an Evisa tradition, from forests that once fed the whole island through hard winters."
+    },
+    {
+      "num": 5,
+      "title": "Restonica Valley and Corte",
+      "overnight": "Overnight: Corte",
+      "desc": "A scenic drive into the Restonica Valley, where crystal-clear mountain streams cut through granite gorges lined with Corsican pine. Spend the morning walking toward the glacial lakes, then return to Corte by afternoon to explore the citadel above the town and the medieval streets of the old quarter. Overnight in Corte."
+    },
+    {
+      "num": 6,
+      "title": "Corte to Bonifacio via East Coast",
+      "overnight": "Overnight: Bonifacio",
+      "desc": "Down Corsica's eastern coastal plain on the N193/N198, past the Roman ruins at Aleria and through Porto-Vecchio for a lunch stop. In the afternoon, reach Bonifacio, perched dramatically on white limestone cliffs above the Mediterranean. Overnight in Bonifacio.",
+      "shopping": "Bonifacio's old town lanes carry Corsican knives, honey and myrtle liqueur — look for the atelier workshops just off the main rue Doria."
+    },
+    {
+      "num": 7,
+      "title": "Bonifacio — Day at Leisure",
+      "overnight": "Overnight: Bonifacio",
+      "desc": "A full day at Bonifacio's own pace — the powder-white beaches of Palombaggia or Santa Giulia, or the town's dramatic sea cliffs, caves, and the King of Aragon's Staircase carved into the rock face. Overnight in Bonifacio.",
+      "experience": "A boat excursion to the Lavezzi Islands, a protected granite archipelago with secluded coves and some of Corsica's clearest water for snorkelling."
+    },
+    {
+      "num": 8,
+      "title": "Bonifacio to Ajaccio via Sartène",
+      "overnight": "Overnight: Ajaccio",
+      "desc": "North on the N196, stopping in Sartène — often called “the most Corsican of Corsican towns” — a medieval hilltop settlement of tall granite houses and shadowy alleys largely untouched by tourism. Continue through the interior back to Ajaccio for a final evening. Overnight in Ajaccio."
+    },
+    {
+      "num": 9,
+      "title": "Depart Ajaccio",
+      "overnight": "Departure day",
+      "desc": "Return your rental car at Ajaccio airport, marking the end of your journey through Corsica's coastlines, mountain valleys and timeless villages."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Ajaccio",
+      "nights": "1 Night (x2)",
+      "h4": "Best Western Plus Ajaccio Amirauté"
+    },
+    {
+      "city": "Porto-Ota",
+      "nights": "2 Nights",
+      "h4": "Hôtel Cala di Sole"
+    },
+    {
+      "city": "Corte",
+      "nights": "2 Nights",
+      "h4": "Les Jardins De La Glaciere"
+    },
+    {
+      "city": "Bonifacio",
+      "nights": "2 Nights",
+      "h4": "Best Western Hotel Du Roy D'aragon"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for reliable warm weather and calm seas for boat excursions; July–August is busiest and hottest — late spring or September gives quieter roads and beaches."
+    },
+    {
+      "title": "Weather",
+      "body": "Mediterranean climate: hot, dry summers around 25–30°C on the coast, cooler in the mountainous interior around Corte; winters are mild but mountain passes can see snow."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Corsica is part of France, using the Euro (€) and the Schengen Area — no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Mountain roads",
+      "body": "The D81, D84 and interior routes are narrow and winding with limited overtaking room — journey times are longer than the distances suggest; build in stops rather than rushing between towns."
+    },
+    {
+      "title": "Fuel and driving",
+      "body": "Fuel stations are sparser in the mountainous interior around Corte — top up before climbing into the hills, particularly outside peak season when some rural stations keep shorter hours."
+    },
+    {
+      "title": "Boat excursions",
+      "body": "The Scandola and Lavezzi boat trips depend on sea conditions and run seasonally — book locally on arrival rather than in advance, and keep a backup day free."
+    },
+    {
+      "title": "What to pack",
+      "body": "Swimwear and reef shoes for the pebble coves, plus a light layer for cooler evenings in Corte's mountain air."
+    },
+    {
+      "title": "Tipping",
+      "body": "Rounding up is appreciated in restaurants; a service charge is often already included in French bills, so further tipping is a courtesy, not an obligation."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 41.9192,
+        "lng": 8.7386,
+        "label": "Ajaccio",
+        "nights": 1
+      },
+      {
+        "lat": 42.2667,
+        "lng": 8.6833,
+        "label": "Porto-Ota",
+        "nights": 2
+      },
+      {
+        "lat": 42.3069,
+        "lng": 9.1497,
+        "label": "Corte",
+        "nights": 2
+      },
+      {
+        "lat": 41.3871,
+        "lng": 9.1597,
+        "label": "Bonifacio",
+        "nights": 2
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "france",
+  "pricesFile": "prices/5.3-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

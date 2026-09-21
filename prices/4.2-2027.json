@@ -1,0 +1,129 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1903,
+          "twin": 1198,
+          "child": 497
+        },
+        "summer": {
+          "single": 1983,
+          "twin": 1248,
+          "child": 517
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2191,
+          "twin": 1342,
+          "child": 553
+        },
+        "summer": {
+          "single": 2283,
+          "twin": 1398,
+          "child": 576
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 1945,
+            "4star": 2089
+          },
+          {
+            "pax": 10,
+            "3star": 1723,
+            "4star": 1867
+          },
+          {
+            "pax": 12,
+            "3star": 1575,
+            "4star": 1719
+          },
+          {
+            "pax": 14,
+            "3star": 1469,
+            "4star": 1613
+          },
+          {
+            "pax": 16,
+            "3star": 1389,
+            "4star": 1533
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2027,
+            "4star": 2177
+          },
+          {
+            "pax": 10,
+            "3star": 1795,
+            "4star": 1945
+          },
+          {
+            "pax": 12,
+            "3star": 1640,
+            "4star": 1790
+          },
+          {
+            "pax": 14,
+            "3star": 1530,
+            "4star": 1680
+          },
+          {
+            "pax": 16,
+            "3star": 1447,
+            "4star": 1597
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Grindelwald First (with any two activities) with Swiss Pass",
+      "price": 77
+    },
+    {
+      "name": "Jungfraujoch with Swiss Pass",
+      "price": 168
+    },
+    {
+      "name": "Glacier 3000, with swiss pass",
+      "price": 44
+    },
+    {
+      "name": "Broc chocolate museum ticket",
+      "price": 19
+    }
+  ]
+}

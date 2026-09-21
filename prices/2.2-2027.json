@@ -1,0 +1,133 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 2609,
+          "twin": 1882,
+          "child": 803
+        },
+        "summer": {
+          "single": 2718,
+          "twin": 1961,
+          "child": 837
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2921,
+          "twin": 2038,
+          "child": 864
+        },
+        "summer": {
+          "single": 3042,
+          "twin": 2123,
+          "child": 900
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2266,
+            "4star": 2422
+          },
+          {
+            "pax": 10,
+            "3star": 1997,
+            "4star": 2153
+          },
+          {
+            "pax": 12,
+            "3star": 1818,
+            "4star": 1974
+          },
+          {
+            "pax": 14,
+            "3star": 1690,
+            "4star": 1846
+          },
+          {
+            "pax": 16,
+            "3star": 1594,
+            "4star": 1750
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2361,
+            "4star": 2523
+          },
+          {
+            "pax": 10,
+            "3star": 2081,
+            "4star": 2243
+          },
+          {
+            "pax": 12,
+            "3star": 1894,
+            "4star": 2056
+          },
+          {
+            "pax": 14,
+            "3star": 1761,
+            "4star": 1923
+          },
+          {
+            "pax": 16,
+            "3star": 1661,
+            "4star": 1823
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Moulin Rogue with drinks  9 pm",
+      "price": 191
+    },
+    {
+      "name": "Louvre Museum (Audioguide €5 pp)",
+      "price": 26
+    },
+    {
+      "name": "Paris Montmartre food tour, 4 hrs walking",
+      "price": 153
+    },
+    {
+      "name": "Grindelwald First (with any two activities)",
+      "price": 77
+    },
+    {
+      "name": "Nordkette Tops of Innsbruck cable car return ticket",
+      "price": 57
+    }
+  ]
+}

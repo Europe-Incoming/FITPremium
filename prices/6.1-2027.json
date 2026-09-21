@@ -1,0 +1,121 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 2494,
+          "twin": 1573,
+          "child": 653
+        },
+        "summer": {
+          "single": 2598,
+          "twin": 1638,
+          "child": 680
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2790,
+          "twin": 1721,
+          "child": 710
+        },
+        "summer": {
+          "single": 2907,
+          "twin": 1793,
+          "child": 740
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 3042,
+            "4star": 3190
+          },
+          {
+            "pax": 10,
+            "3star": 2670,
+            "4star": 2818
+          },
+          {
+            "pax": 12,
+            "3star": 2422,
+            "4star": 2570
+          },
+          {
+            "pax": 14,
+            "3star": 2244,
+            "4star": 2393
+          },
+          {
+            "pax": 16,
+            "3star": 2111,
+            "4star": 2260
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 3169,
+            "4star": 3323
+          },
+          {
+            "pax": 10,
+            "3star": 2781,
+            "4star": 2936
+          },
+          {
+            "pax": 12,
+            "3star": 2522,
+            "4star": 2677
+          },
+          {
+            "pax": 14,
+            "3star": 2338,
+            "4star": 2492
+          },
+          {
+            "pax": 16,
+            "3star": 2199,
+            "4star": 2354
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Seville Flamenco Show Ticket without dinner",
+      "price": 52
+    },
+    {
+      "name": "Sagrada Familia ticket",
+      "price": 54
+    }
+  ]
+}

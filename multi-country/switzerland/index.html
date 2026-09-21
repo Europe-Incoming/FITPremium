@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Switzerland | Europe Incoming</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Switzerland | Europe Incoming FIT Packages</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+:root{--navy:#0B1733;--navy-tile:#132347;--gold:#F2B91D;--ink:#1A1D2E;--muted:#6B7080;--control-border:#D8DAE1;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#212121;line-height:1.6;padding-top:80px;}
-.top-nav{position:fixed;top:0;left:0;right:0;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.08);z-index:1000;padding:16px 0;}
-.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;}
-.logo{height:48px;width:auto;}.logo:hover{opacity:0.8;}
-.header-right{display:flex;align-items:center;gap:32px;flex:1;justify-content:flex-end;}
-.site-title-group{text-align:right;}
-.site-title-main{font-size:1.1em;font-weight:600;color:#212121;}
-.site-title-sub{font-size:0.9em;color:#757575;}
-.contact-info{text-align:right;padding-left:32px;border-left:1px solid #e0e0e0;}
-.contact-prompt{font-size:0.85em;color:#757575;margin-bottom:4px;}
-.contact-email{font-size:0.9em;color:#2196F3;text-decoration:none;font-weight:500;}
-.contact-email:hover{text-decoration:underline;}
-.search-box{width:100%;max-width:350px;padding:10px 18px;font-size:0.95em;border:1px solid #e0e0e0;border-radius:24px;background:#fafafa;transition:all 0.2s;}
-.search-box::placeholder{text-align:center;}
-.search-box:focus{outline:none;border-color:#2196F3;background:white;box-shadow:0 2px 8px rgba(33,150,243,0.15);}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:24px 24px 0;font-size:0.9em;color:#757575;}
-.breadcrumb a{color:#2196F3;text-decoration:none;}
-.breadcrumb a:hover{text-decoration:underline;}
-.container{max-width:1200px;margin:0 auto;padding:32px 24px 48px;}
-h1{font-size:2.2em;font-weight:600;color:#212121;margin-bottom:32px;letter-spacing:-0.5px;}
-footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:0.9em;border-top:1px solid #e8e8e8;}
-@media(max-width:768px){body{padding-top:180px;}.nav-container{flex-wrap:wrap;gap:16px;}.header-right{width:100%;flex-direction:column;align-items:center;order:3;gap:16px;}.site-title-group{text-align:center;}.contact-info{text-align:center;border-left:none;border-top:1px solid #e0e0e0;padding-left:0;padding-top:16px;}.search-box{max-width:100%;}}
-
-.brochures{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:stretch;}
-.brochure-card{background:white;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-decoration:none;color:inherit;display:flex;flex-direction:row;border:1px solid #ebebeb;overflow:hidden;min-height:210px;}
-.brochure-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.11);border-color:#d0d0d0;}
-.brochure-card.expired{opacity:0.75;border-color:#ffcc80;}
-.card-info{flex:1;padding:20px 20px 16px;display:flex;flex-direction:column;gap:5px;min-width:0;}
-.card-title{font-size:1.0em;font-weight:700;color:#1a1a1a;line-height:1.3;}
-.tour-type{font-size:0.72em;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#1565c0;}
-.card-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px;}
-.pill{font-size:0.71em;font-weight:600;padding:3px 9px;border-radius:20px;}
-.pill-duration{background:#f3f3f3;color:#444;}
-.pill-summer{background:#fff8e1;color:#e65100;}
-.pill-winter{background:#e8f4fd;color:#0277bd;}
-.pill-allyear{background:#e8f5e9;color:#2e7d32;}
-.pill-valid{background:#e8f5e9;color:#2e7d32;}
-.pill-expired{background:#fff3e0;color:#e65100;}
-.card-description{font-size:0.81em;color:#666;font-style:italic;line-height:1.4;}
-.cities-list{font-size:0.79em;color:#555;}
-.price-tag{font-size:0.88em;color:#2e7d32;font-weight:700;margin-top:auto;padding-top:6px;}
-.card-map{width:200px;min-width:200px;border-left:1px solid #ebebeb;position:relative;overflow:hidden;}
-.map-inner{width:100%;height:100%;min-height:210px;}
-.leaflet-tooltip.city-tip{background:rgba(255,255,255,0.92)!important;border:1.5px solid #c62828!important;border-radius:3px!important;box-shadow:0 1px 3px rgba(0,0,0,0.25)!important;font-size:9px;font-weight:700;color:#1a1a1a;white-space:nowrap;padding:1px 5px;}
+body{font-family:'Segoe UI','Open Sans',sans-serif;color:var(--ink);font-size:15px;line-height:1.5;background:#fff;padding-top:0;}
+a{color:inherit;}
+.metro-header{display:flex;align-items:center;gap:28px;padding:26px 40px 0;}
+.metro-logo{height:32px;width:auto;display:block;}
+.metro-back-link{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-decoration:none;}
+.metro-back-circle{width:26px;height:26px;border:2px solid var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:400;}
+.metro-back-link:hover{color:var(--gold);}
+.metro-back-link:hover .metro-back-circle{border-color:var(--gold);}
+.metro-search-wrap{flex:1;max-width:360px;}
+.metro-search{width:100%;padding:9px 14px;font-size:13px;font-family:'Segoe UI','Open Sans',sans-serif;border:2px solid var(--control-border);border-radius:0;background:#fff;box-sizing:border-box;outline:none;color:var(--ink);}
+.metro-search::placeholder{color:var(--muted);}
+.metro-trade{margin-left:auto;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;}
+.metro-trade:hover{color:var(--gold);}
+.metro-title-row{padding:36px 40px 22px;display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;}
+.metro-title-row h1{font-weight:300;font-size:64px;letter-spacing:-0.02em;line-height:1;color:var(--navy);margin:0;}
+.metro-eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-bottom:12px;}
+.metro-intro{padding:0 40px 30px;max-width:640px;font-weight:300;font-size:19px;color:var(--muted);}
+.metro-grid-wrap{padding:0 40px 80px;}
+.metro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px;}
+.metro-empty{padding:80px 0;color:var(--muted);font-weight:300;font-size:22px;}
+.metro-tile{display:flex;align-items:stretch;text-decoration:none;color:inherit;min-height:240px;transition:opacity 180ms linear;}
+.metro-tile:hover{opacity:.86;}
+.metro-tile.navy{background:var(--navy-tile);}
+.metro-tile.gold{background:var(--gold);}
+.metro-tile-body{flex:1;min-width:0;padding:22px 24px;display:flex;flex-direction:column;gap:8px;}
+.metro-tile-meta,.metro-tile-route,.metro-tile-from,.metro-tile-note,.metro-tile-validity{font-size:11px;font-weight:700;}
+.metro-tile-meta,.metro-tile-route{letter-spacing:.14em;text-transform:uppercase;}
+.metro-tile-route{letter-spacing:.06em;}
+.metro-tile-from,.metro-tile-validity{letter-spacing:.12em;text-transform:uppercase;}
+.metro-tile-validity{font-size:10px;}
+.metro-tile-note{font-weight:400;}
+.metro-tile.navy .metro-tile-meta,.metro-tile.navy .metro-tile-route,.metro-tile.navy .metro-tile-from,.metro-tile.navy .metro-tile-note,.metro-tile.navy .metro-tile-validity{color:var(--gold);}
+.metro-tile.gold .metro-tile-meta,.metro-tile.gold .metro-tile-route,.metro-tile.gold .metro-tile-from,.metro-tile.gold .metro-tile-note,.metro-tile.gold .metro-tile-validity{color:rgba(11,23,51,.65);}
+.metro-tile-title{font-weight:300;font-size:30px;line-height:1.1;}
+.metro-tile.navy .metro-tile-title{color:#fff;}
+.metro-tile.gold .metro-tile-title{color:var(--navy);}
+.metro-tile-blurb{font-size:13px;line-height:1.55;margin:0;}
+.metro-tile.navy .metro-tile-blurb{color:rgba(255,255,255,.72);}
+.metro-tile.gold .metro-tile-blurb{color:rgba(11,23,51,.8);}
+.metro-tile-price-row{margin-top:auto;padding-top:10px;display:flex;align-items:baseline;gap:8px;}
+.metro-tile-amount{font-weight:300;font-size:34px;line-height:1;}
+.metro-tile.navy .metro-tile-amount{color:#fff;}
+.metro-tile.gold .metro-tile-amount{color:var(--navy);}
+.metro-tile-map-col{width:190px;flex-shrink:0;position:relative;background:#F5F5F3;}
+.metro-tile-map{position:absolute;inset:0;}
+.leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-family:'Segoe UI','Open Sans',sans-serif;font-size:9px;font-weight:600;color:var(--navy);white-space:nowrap;padding:0;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;}
 .leaflet-tooltip.city-tip::before{display:none!important;}
-@media(max-width:900px){.brochures{grid-template-columns:1fr;}.card-map{width:160px;min-width:160px;}}
-@media(max-width:768px){.brochure-card{flex-direction:column;}.card-map{width:100%;min-width:100%;height:180px;border-left:none;border-top:1px solid #ebebeb;}.map-inner{min-height:180px;}}
+.metro-expired{opacity:0.6;}
+@media(max-width:900px){.metro-grid{grid-template-columns:1fr;}.metro-header{flex-wrap:wrap;}.metro-search-wrap{order:3;max-width:100%;}}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
@@ -60,157 +64,117 @@ footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:
 <body>
 <script>
 (async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
-if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
+if(['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
 }catch(e){}}
-)();</script><nav class="top-nav"><div class="nav-container">
-<a href="../../"><img src="../../logo.png" alt="Europe Incoming" class="logo"></a>
-<input type="text" class="search-box" placeholder="Search packages - type city or country" id="searchBox">
-<div class="header-right">
-  <div class="site-title-group"><div class="site-title-main">Europe Incoming</div><div class="site-title-sub">FIT Packages</div></div>
-  <div class="contact-info"><div class="contact-prompt">Can't find what you're looking for? Email us at:</div>
-  <a href="mailto:fitsales@europeincoming.com" class="contact-email">fitsales@europeincoming.com</a></div>
-</div></div></nav>
-<div class="breadcrumb"><a href="../../">Home</a> › <a href="../">Multi-Country</a> › Switzerland</div>
-<div class="container">
-<h1>Switzerland</h1>
-<div class="brochures" id="brochuresList">
-<a href="5 nights, 6 days Switzerland_Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">5 nights, 6 days Switzerland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 5 nights / 6 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Mount Titlis, the Jungfrau region and Rhine Falls on a Swiss Travel Pass loop.</div>
-    <div class="cities-list">📍 Lucerne · Interlaken</div>
-    <div class="price-tag">From €902 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_5_nights__6_days_s_0" class="map-inner"></div></div>
-</a>
-<a href="7 nights, 8 days Switzerland_Private.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">7 nights, 8 days Switzerland</div>
-    <div class="tour-type">Private</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 7 nights / 8 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Private guided Switzerland: Titlis, Interlaken paragliding views, Montreux jazz lakeside and Zurich.</div>
-    <div class="cities-list">📍 Lucerne · Interlaken · Montreux · Zurich</div>
-    <div class="price-tag">From €1,349 pp (group rate)</div>
-  </div>
-  <div class="card-map"><div id="map_7_nights__8_days_s_1" class="map-inner"></div></div>
-</a>
-<a href="7 nights, 8 days Switzerland_Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">7 nights, 8 days Switzerland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 7 nights / 8 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Seven nights on the Swiss Travel Pass — Titlis, Jungfrau, Lake Geneva and Broc chocolate factory.</div>
-    <div class="cities-list">📍 Lucerne · Interlaken · Montreux · Zurich</div>
-    <div class="price-tag">From €1,163 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_7_nights__8_days_s_2" class="map-inner"></div></div>
-</a>
+)();</script>
+<div class="metro-header">
+  <a href="../../"><img class="metro-logo" src="../../logo.png" alt="Europe Incoming"></a>
+  <a class="metro-back-link" href="../"><span class="metro-back-circle">←</span> All regions</a>
+  <div class="metro-search-wrap"><input type="text" class="metro-search" id="metroSearch" placeholder="search packages"></div>
+  <a class="metro-trade" href="mailto:fitsales@europeincoming.com">Trade enquiries</a>
 </div>
-<footer><p>All packages are available for download in PDF format</p></footer>
+
+<div class="metro-title-row">
+  <h1>Switzerland</h1>
+  <div class="metro-eyebrow">FIT Packages</div>
 </div>
-<script src="../../global-search.js"></script>
-<script>window.addEventListener('load',function(){(function(){
-  var pts=[[47.0502, 8.3093, "Lucerne"], [46.6863, 7.8632, "Interlaken"]];
+<div class="metro-intro">FIT packages across Switzerland — self drive, rail and private coach.</div>
+
+<div class="metro-grid-wrap">
+  <div class="metro-grid" id="metroGrid" style=""><a href="4.1_brochure.html" class="metro-tile navy">
+  <div class="metro-tile-body">
+    <div class="metro-tile-meta">5 nights · 6 days · All Year Round</div>
+    <div class="metro-tile-title">Lucerne, Interlaken & Zurich</div>
+    <p class="metro-tile-blurb">Lucerne, Interlaken and Zurich — by train.</p>
+    <div class="metro-tile-route">Lucerne · Interlaken · Zurich</div>
+    <div class="metro-tile-price-row"><span class="metro-tile-from">From</span><span class="metro-tile-amount">€843</span><span class="metro-tile-note">pp (twin)</span></div>
+    <div class="metro-tile-validity">Valid till Nov 2027</div>
+  </div>
+  <div class="metro-tile-map-col"><div id="map_4_1" class="metro-tile-map"></div></div>
+</a>
+<a href="4.2_brochure.html" class="metro-tile gold">
+  <div class="metro-tile-body">
+    <div class="metro-tile-meta">7 nights · 8 days · All Year Round</div>
+    <div class="metro-tile-title">Lucerne, Interlaken, Montreux & Zurich</div>
+    <p class="metro-tile-blurb">Lucerne, Interlaken and Montreux — by train or private coach.</p>
+    <div class="metro-tile-route">Lucerne · Interlaken · Montreux · Zurich</div>
+    <div class="metro-tile-price-row"><span class="metro-tile-from">From</span><span class="metro-tile-amount">€1,198</span><span class="metro-tile-note">pp (twin)</span></div>
+    <div class="metro-tile-validity">Valid till Nov 2027</div>
+  </div>
+  <div class="metro-tile-map-col"><div id="map_4_2" class="metro-tile-map"></div></div>
+</a></div>
+  <div class="metro-empty" id="metroEmpty" style="display:none">No packages match this search yet.</div>
+</div>
+
+<script>
+(function(){
+  var input = document.getElementById('metroSearch');
+  var grid = document.getElementById('metroGrid');
+  var empty = document.getElementById('metroEmpty');
+  var tiles = Array.prototype.slice.call(grid.querySelectorAll('.metro-tile'));
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    tiles.forEach(function(t){
+      var match = !q || t.textContent.toLowerCase().indexOf(q) !== -1;
+      t.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    grid.style.display = shown ? '' : 'none';
+    empty.style.display = shown ? 'none' : '';
+  });
+})();
+window.addEventListener('load',function(){(function(){
+  var pts=[{"lat": 47.0502, "lng": 8.3093, "label": "Lucerne", "nights": 2}, {"lat": 46.6863, "lng": 7.8632, "label": "Interlaken", "nights": 2}, {"lat": 47.3769, "lng": 8.5417, "label": "Zurich", "nights": 1}];
   if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.3;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_5_nights__6_days_s_0',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var lats=pts.map(function(p){return p.lat;}), lngs=pts.map(function(p){return p.lng;});
+  var latSpread=Math.max.apply(null,lats)-Math.min.apply(null,lats);
+  var lngSpread=Math.max.apply(null,lngs)-Math.min.apply(null,lngs);
+  var spread=Math.max(latSpread,lngSpread);
+  var pad=spread>5?1.2:(spread>1?0.6:0.35);
+  var map=L.map('map_4_1',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+  map.fitBounds([[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]],{padding:[10,10]});
+  var route=pts.map(function(p){return [p.lat,p.lng];});
+  if(false && route.length>1) route.push(route[0]);
+  if(route.length>1) L.polyline(route,{color:'#0B1733',weight:1.5,dashArray:'4,4'}).addTo(map);
+  pts.forEach(function(p){
+    if(p.nights){
+      L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',iconSize:[18,18],iconAnchor:[9,9],
+        html:'<div style="width:18px;height:18px;background:#F2B91D;color:#0B1733;font-size:9px;font-weight:700;line-height:18px;text-align:center;box-sizing:border-box">'+p.nights+'N</div>'})}).addTo(map)
+       .bindTooltip(p.label,{permanent:true,direction:'top',className:'city-tip',offset:[0,-10]});
+    } else {
+      L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',iconSize:[10,10],iconAnchor:[5,5],
+        html:'<div style="width:10px;height:10px;background:#0B1733;box-sizing:border-box"></div>'})}).addTo(map)
+       .bindTooltip(p.label,{permanent:true,direction:'top',className:'city-tip',offset:[0,-6]});
     }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
 })();
 (function(){
-  var pts=[[47.0502, 8.3093, "Lucerne"], [46.6863, 7.8632, "Interlaken"], [46.4312, 6.9107, "Montreux"], [47.3769, 8.5417, "Zurich"]];
+  var pts=[{"lat": 47.0502, "lng": 8.3093, "label": "Lucerne", "nights": 2}, {"lat": 46.6863, "lng": 7.8632, "label": "Interlaken", "nights": 2}, {"lat": 46.4312, "lng": 6.9107, "label": "Montreux", "nights": 2}, {"lat": 47.3769, "lng": 8.5417, "label": "Zurich", "nights": 1}];
   if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_7_nights__8_days_s_1',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
+  var lats=pts.map(function(p){return p.lat;}), lngs=pts.map(function(p){return p.lng;});
+  var latSpread=Math.max.apply(null,lats)-Math.min.apply(null,lats);
+  var lngSpread=Math.max.apply(null,lngs)-Math.min.apply(null,lngs);
+  var spread=Math.max(latSpread,lngSpread);
+  var pad=spread>5?1.2:(spread>1?0.6:0.35);
+  var map=L.map('map_4_2',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
+  map.fitBounds([[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]],{padding:[10,10]});
+  var route=pts.map(function(p){return [p.lat,p.lng];});
+  if(false && route.length>1) route.push(route[0]);
+  if(route.length>1) L.polyline(route,{color:'#0B1733',weight:1.5,dashArray:'4,4'}).addTo(map);
+  pts.forEach(function(p){
+    if(p.nights){
+      L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',iconSize:[18,18],iconAnchor:[9,9],
+        html:'<div style="width:18px;height:18px;background:#F2B91D;color:#0B1733;font-size:9px;font-weight:700;line-height:18px;text-align:center;box-sizing:border-box">'+p.nights+'N</div>'})}).addTo(map)
+       .bindTooltip(p.label,{permanent:true,direction:'top',className:'city-tip',offset:[0,-10]});
+    } else {
+      L.marker([p.lat,p.lng],{icon:L.divIcon({className:'',iconSize:[10,10],iconAnchor:[5,5],
+        html:'<div style="width:10px;height:10px;background:#0B1733;box-sizing:border-box"></div>'})}).addTo(map)
+       .bindTooltip(p.label,{permanent:true,direction:'top',className:'city-tip',offset:[0,-6]});
     }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
   });
-})();
-(function(){
-  var pts=[[47.0502, 8.3093, "Lucerne"], [46.6863, 7.8632, "Interlaken"], [46.4312, 6.9107, "Montreux"], [47.3769, 8.5417, "Zurich"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_7_nights__8_days_s_2',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();});</script>
+})();});
+</script>
 </body></html>

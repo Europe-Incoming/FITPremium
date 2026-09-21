@@ -1,0 +1,151 @@
+{
+  "id": "9.2",
+  "title": "Norway Nutshell.",
+  "styles": {
+    "trains": {
+      "name": "Regular FIT",
+      "blurb": "The classic Norway in a Nutshell route between Oslo and Bergen — trains, the Flåm Railway and a fjord cruise, with an included Bergen fjord cruise and Mt Fløyen funicular.",
+      "nights": "5 nights · 6 days",
+      "route": "Oslo (2N) → Bergen (2N) → Oslo (1N)",
+      "aboutNights": "5 nights across 2 stays",
+      "transport": {
+        "2": "Discover Oslo on a 24-hour Hop-On-Hop-Off bus ticket.",
+        "3": "Norway in a Nutshell: train to Myrdal, the Flåm Railway down to Flåm, fjord cruise to Gudvangen, bus to Voss, train to Bergen.",
+        "5": "Bergen to Oslo by train, 2nd class."
+      },
+      "inclusions": [
+        "5 nights accommodation including breakfast",
+        "Oslo 24-hour Hop-On-Hop-Off bus ticket",
+        "Norway in a Nutshell 1-day ticket, Oslo to Bergen",
+        "Mostraumen fjord cruise, return ticket",
+        "Mount Fløyen funicular, return ticket",
+        "Bergen to Oslo train ticket, 2nd class"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Oslo",
+      "overnight": "Overnight: Oslo",
+      "desc": "Welcome to Norway. Make your own way to the hotel from the airport, and settle into Oslo, the vibrant capital known for its rich cultural heritage and modern urban charm. Overnight in Oslo."
+    },
+    {
+      "num": 2,
+      "title": "Oslo",
+      "overnight": "Overnight: Oslo",
+      "desc": "Discover Oslo at your own pace with a 24-hour Hop-On-Hop-Off bus ticket — from the Aker Brygge waterfront to the open-air sculptures of Vigeland Park. Overnight in Oslo.",
+      "shopping": "Aker Brygge's waterfront promenade mixes Norwegian design shops with harbourside dining — a good spot for a browse between sights."
+    },
+    {
+      "num": 3,
+      "title": "Oslo to Bergen via Flåm",
+      "overnight": "Overnight: Bergen",
+      "desc": "The iconic Norway in a Nutshell route: a scenic train to Myrdal, then the Flåm Railway's descent to Flåm, one of the steepest standard-gauge railways in the world. From Flåm, cruise the fjords to Gudvangen, continue by bus to Voss, then train onward to Bergen. Overnight in Bergen.",
+      "experience": "The Flåm Railway drops 866 metres in 20km, with a stop at Kjosfossen waterfall where the train pauses for photos beside the cascading falls."
+    },
+    {
+      "num": 4,
+      "title": "Bergen",
+      "overnight": "Overnight: Bergen",
+      "desc": "A Mostraumen fjord cruise reveals dramatic landscapes close to Bergen, followed by the Mt Fløyen funicular for panoramic views over the city and surrounding fjords. Overnight in Bergen.",
+      "taste": "Fresh seafood at Bergen's historic Fish Market on the harbour, a short walk from the colourful Bryggen wharf houses."
+    },
+    {
+      "num": 5,
+      "title": "Bergen to Oslo",
+      "overnight": "Overnight: Oslo",
+      "desc": "Check out from Bergen and board the Bergen–Oslo train, one of Northern Europe's great rail journeys, crossing the Hardangervidda plateau. Spend your final evening back in Oslo. Overnight in Oslo."
+    },
+    {
+      "num": 6,
+      "title": "Depart Oslo",
+      "overnight": "Departure day",
+      "desc": "Make your way from your Oslo hotel to the airport, concluding your Norway in a Nutshell journey."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Oslo",
+      "nights": "2 Nights (x1) + 1 Night",
+      "h3": "Scandic Holberg",
+      "h4": "Scandic Vulkan"
+    },
+    {
+      "city": "Bergen",
+      "nights": "2 Nights",
+      "h3": "Scandic Torget Bergen",
+      "h4": "Scandic Ørnen"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for the clearest fjord views and mildest weather; the Flåm Railway and fjord cruise run year-round, but winter days are short and cold."
+    },
+    {
+      "title": "Weather",
+      "body": "Coastal Norway: mild, wet summers around 15–22°C; Bergen is one of Europe's rainiest cities, so a waterproof layer is worth packing whatever the season."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Norwegian Krone (NOK) is the local currency. Norway is a Schengen Area member (though not an EU member), so no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Norway in a Nutshell timing",
+      "body": "The Oslo–Bergen leg (Day 3) is a long day combining train, rail, boat and bus connections — pack a day bag with essentials rather than digging through checked luggage between changes."
+    },
+    {
+      "title": "Weather-dependent views",
+      "body": "Fjord and mountain views depend on clear weather — Bergen in particular is prone to cloud and rain, so treat a clear day as a bonus rather than a guarantee."
+    },
+    {
+      "title": "What to pack",
+      "body": "A waterproof jacket is essential in Bergen regardless of season; layers for the Flåm valley, which can be notably cooler than either Oslo or the Bergen coast."
+    },
+    {
+      "title": "Tipping",
+      "body": "Tipping is not expected in Norway — a service charge is generally built into restaurant prices, so rounding up for good service is plenty."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 59.9139,
+        "lng": 10.7522,
+        "label": "Oslo",
+        "nights": 3
+      },
+      {
+        "lat": 60.8633,
+        "lng": 7.1159,
+        "label": "Flåm",
+        "nights": 0
+      },
+      {
+        "lat": 60.3913,
+        "lng": 5.3221,
+        "label": "Bergen",
+        "nights": 2
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "scandinavia-iceland",
+  "pricesFile": "prices/9.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

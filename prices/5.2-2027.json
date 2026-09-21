@@ -1,0 +1,185 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1688,
+          "twin": 1054,
+          "child": 436
+        },
+        "summer": {
+          "single": 1759,
+          "twin": 1098,
+          "child": 455
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2237,
+          "twin": 1329,
+          "child": 543
+        },
+        "summer": {
+          "single": 2330,
+          "twin": 1384,
+          "child": 566
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2045,
+            "4star": 2319
+          },
+          {
+            "pax": 10,
+            "3star": 1765,
+            "4star": 2039
+          },
+          {
+            "pax": 12,
+            "3star": 1579,
+            "4star": 1853
+          },
+          {
+            "pax": 14,
+            "3star": 1445,
+            "4star": 1720
+          },
+          {
+            "pax": 16,
+            "3star": 1346,
+            "4star": 1620
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2130,
+            "4star": 2416
+          },
+          {
+            "pax": 10,
+            "3star": 1839,
+            "4star": 2124
+          },
+          {
+            "pax": 12,
+            "3star": 1644,
+            "4star": 1930
+          },
+          {
+            "pax": 14,
+            "3star": 1506,
+            "4star": 1791
+          },
+          {
+            "pax": 16,
+            "3star": 1402,
+            "4star": 1687
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 1682,
+          "twin": 1048,
+          "child": 434
+        },
+        "summer": {
+          "single": 1752,
+          "twin": 1092,
+          "child": 452
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2231,
+          "twin": 1323,
+          "child": 541
+        },
+        "summer": {
+          "single": 2324,
+          "twin": 1378,
+          "child": 563
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Moulin Rogue with drinks  9 pm",
+      "price": 170
+    },
+    {
+      "name": "Louvre Museum (Audioguide € 6 pp)",
+      "price": 23
+    },
+    {
+      "name": "Paris Montmartre food tour, 4 hrs walking",
+      "price": 185
+    },
+    {
+      "name": "D-Day U.S Sector & Omaha Beach half-day tour, 4 hrs",
+      "price": 98
+    },
+    {
+      "name": "Mont Saint Michel Village & Abbey tour, 8 hrs",
+      "price": 175
+    },
+    {
+      "name": "Loire Valley Wine Tour To Vouvray - Afternoon, 4 hrs",
+      "price": 98
+    },
+    {
+      "name": "Chenonceau & Chambord Castles tour, 8 hrs",
+      "price": 175
+    },
+    {
+      "name": "Visit a Loire vineyard with tasting",
+      "price": 36
+    },
+    {
+      "name": "Tickets to Royal fortress of Chinon",
+      "price": 15
+    }
+  ]
+}

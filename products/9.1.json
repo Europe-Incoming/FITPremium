@@ -1,0 +1,193 @@
+{
+  "id": "9.1",
+  "title": "Nordic Capitals.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Sightseeing buses, a scenic train and two overnight ferries link four Nordic capitals in one loop.",
+      "nights": "6 nights · 7 days",
+      "route": "Copenhagen (1N) → DFDS Ferry (1N) → Oslo (1N) → Stockholm (1N) → Tallink Silja Ferry (1N) → Helsinki (1N)",
+      "aboutNights": "6 nights across 6 stays",
+      "transport": {
+        "2": "24-hour Hop-On Hop-Off bus tour of Copenhagen, followed by boarding the overnight DFDS ferry to Oslo.",
+        "3": "Arrive into Oslo by ferry across the fjord, then a 24-hour Hop-On Hop-Off bus tour of the city.",
+        "4": "Oslo to Stockholm by train, II Class (approx. 6 hours through the Norwegian and Swedish countryside).",
+        "5": "Guided 2.5-hour Stockholm archipelago boat tour, then board the overnight Tallink Silja ferry to Helsinki.",
+        "6": "Arrive into Helsinki by ferry through the archipelago; Helsinki Panorama sightseeing tour (winter) or Hop-On Hop-Off bus plus canal cruise (summer).",
+        "7": "Private transfer from the Helsinki hotel to Helsinki airport."
+      },
+      "inclusions": [
+        "Copenhagen 24-hour Hop-On Hop-Off bus ticket",
+        "DFDS overnight ferry Copenhagen–Oslo, cabin with breakfast & dinner",
+        "Oslo 24-hour Hop-On Hop-Off bus ticket",
+        "Oslo to Stockholm train ticket, II Class",
+        "Guided Stockholm archipelago boat tour, 2.5 hrs",
+        "Tallink Silja overnight ferry Stockholm–Helsinki, cabin with breakfast & dinner",
+        "Helsinki sightseeing tour (seasonal: Panorama tour in winter, Hop-On Hop-Off bus & canal cruise in summer)",
+        "Private transfer to Helsinki airport on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Copenhagen",
+      "overnight": "Overnight: Copenhagen",
+      "desc": "Welcome to Copenhagen, the enchanting Danish capital where historic charm meets modern vibrancy. As you arrive at the airport, make your own way to the hotel. Discover the city known for its picturesque canals, historic landmarks, and contemporary design. Get ready for a delightful Nordic adventure. Overnight in Copenhagen.",
+      "taste": "Try classic smørrebrød — open rye sandwiches piled with herring or roast pork — at one of the covered stalls in Torvehallerne market.",
+      "experience": "Tivoli Gardens, one of the world's oldest amusement parks (opened 1843), is a short walk from the city-centre hotels and magical after dark."
+    },
+    {
+      "num": 2,
+      "title": "Copenhagen → Ferry to Oslo",
+      "overnight": "Overnight: DFDS Ferry to Oslo",
+      "desc": "Embark on a day of exploration with the 24h BUS Hop On-Hop Off Classic Copenhagen tour, discovering the city's iconic sights at your own pace. Later, check out and make your own way to the port for an overnight ferry to Oslo. Experience the blend of culture and relaxation as you sail towards the Norwegian capital. Overnight on the ferry to Oslo.",
+      "taste": "Stop for a wienerbrød (Danish pastry) at a bakery near Nyhavn before boarding — the Danes claim to have perfected the flaky, laminated dough that took their name abroad."
+    },
+    {
+      "num": 3,
+      "title": "Oslo",
+      "overnight": "Overnight: Oslo",
+      "desc": "Welcome to Oslo! After making your own way to the hotel, immerse yourself in the vibrant atmosphere of the city. Explore Oslo's highlights with the 24h BUS Hop On-Hop Off, allowing you to discover its cultural and historical gems at your leisure. Enjoy the blend of modernity and tradition that defines the Norwegian capital. Overnight in Oslo.",
+      "taste": "Try brunost, Norway's caramel-coloured brown cheese, on a waffle at one of the harbourside cafés in Aker Brygge — a breakfast staple in Norwegian households since the 1800s.",
+      "experience": "Vigeland Sculpture Park in Frogner Park is the world's largest sculpture park created by a single artist — over 200 bronze and granite works by Gustav Vigeland."
+    },
+    {
+      "num": 4,
+      "title": "Oslo → Stockholm by train",
+      "overnight": "Overnight: Stockholm",
+      "desc": "Welcome to the Swedish capital! After bidding adieu to Oslo, hop on a train for a scenic journey to Stockholm. As you arrive, soak in the allure of this historic and modern city. Explore its rich cultural heritage and discover why it's hailed as the Swedish capital. Overnight in Stockholm.",
+      "taste": "Pause for a Swedish fika — coffee and a cinnamon bun (kanelbulle) — a daily ritual across the city's cafés."
+    },
+    {
+      "num": 5,
+      "title": "Stockholm → Ferry to Helsinki",
+      "overnight": "Overnight: Tallink Silja Ferry to Helsinki",
+      "desc": "Embark on a captivating journey through the Stockholm Archipelago on a guided tour, unveiling the scenic beauty of these islands. As the day unfolds, explore the charming archipelago town of Vaxholm. Later, make your way to the port for an overnight ferry to Helsinki.",
+      "shopping": "Browse Drottninggatan and the NK department store for Scandinavian design before the ferry departs."
+    },
+    {
+      "num": 6,
+      "title": "Helsinki",
+      "overnight": "Overnight: Helsinki",
+      "desc": "In summer, hop aboard the Hop On-Hop Off Bus + Beautiful Canal Cruise, gliding through Helsinki's scenic shores. Visit landmarks like Suomenlinna Maritime Fortress and Olympic Stadium. In winter, delve into Helsinki's history with the Panorama Sightseeing bus tour, showcasing iconic sites and local life in districts like Kallio and Hakaniemi. Overnight in Helsinki.",
+      "taste": "Try lohikeitto, a creamy salmon and leek soup, or fresh Baltic herring from the stalls at Kauppatori (Market Square), trading on the harbourfront since 1889.",
+      "experience": "Suomenlinna, the UNESCO-listed sea fortress spread across six islands, is a short public ferry ride from Market Square."
+    },
+    {
+      "num": 7,
+      "title": "Depart Helsinki",
+      "overnight": "Departure day",
+      "desc": "Bid farewell to the captivating Nordic journey. Check out from your Helsinki hotel and make your way to the airport, concluding your Scandinavian Capitals adventure."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Copenhagen",
+      "nights": "1 Night",
+      "h3": "Moxy Copenhagen Sydhavnen",
+      "h4": "Scandic Kødbyen"
+    },
+    {
+      "city": "Oslo",
+      "nights": "1 Night",
+      "h3": "Anker Hotel",
+      "h4": "Scandic Vulkan"
+    },
+    {
+      "city": "Stockholm",
+      "nights": "1 Night",
+      "h3": "Quality Hotel Globe",
+      "h4": "Best Western Plus Time Hotel"
+    },
+    {
+      "city": "Helsinki",
+      "nights": "1 Night",
+      "h3": "Scandic Hakaniemi",
+      "h4": "Scandic Simonkenttä"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for long daylight hours and the best conditions on the two overnight ferry crossings."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild Nordic summers of 15–22°C give way to cold, often snowy winters from -5 to 2°C, so pack accordingly."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Four currencies are used across the route — Danish krone, Norwegian krone, Swedish krona, and the Euro in Finland since 2002 — but all four countries are within the Schengen area with no border checks between them."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Ferry cabins",
+      "body": "Both overnight ferry crossings include a buffet breakfast and dinner in the cabin rate — book early if you want a sea-view or promenade cabin upgrade."
+    },
+    {
+      "title": "Currencies",
+      "body": "Card payments are accepted almost everywhere across all four countries — even at market stalls and on the ferries — so very little cash is needed beyond the odd coin for a public toilet."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the Oslo–Stockholm train. Allow time to change stations if arriving into Oslo from the ferry terminal.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof jacket are useful in any season, especially on ferry decks and open-top sightseeing buses."
+    },
+    {
+      "title": "Money",
+      "body": "Service is usually included in restaurant bills across Scandinavia; tipping is appreciated but not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 55.6761,
+        "lng": 12.5683,
+        "label": "Copenhagen",
+        "nights": 1
+      },
+      {
+        "lat": 59.9139,
+        "lng": 10.7522,
+        "label": "Oslo",
+        "nights": 1
+      },
+      {
+        "lat": 59.3293,
+        "lng": 18.0686,
+        "label": "Stockholm",
+        "nights": 1
+      },
+      {
+        "lat": 60.1699,
+        "lng": 24.9384,
+        "label": "Helsinki",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "scandinavia-iceland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/9.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

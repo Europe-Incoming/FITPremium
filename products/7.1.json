@@ -1,0 +1,202 @@
+{
+  "id": "7.1",
+  "title": "Prague, Vienna & Budapest.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Prague, Vienna and Budapest linked by 2nd-class train, with a guided city tour in each.",
+      "nights": "6 nights · 7 days",
+      "route": "Prague (2N) → Vienna (2N) → Budapest (2N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Private transfer from Prague Airport to your hotel.",
+        "3": "Prague to Vienna by train, 2nd class.",
+        "5": "Vienna to Budapest by train, 2nd class.",
+        "7": "Private transfer from your hotel to Budapest Airport."
+      },
+      "inclusions": [
+        "6 nights accommodation including breakfast",
+        "Private transfer Prague Airport to hotel on arrival",
+        "Grand City Tour of Prague with Prague Castle and 1-hour River Vltava cruise, 4 hrs",
+        "Prague – Vienna train ticket, 2nd class",
+        "Vienna city tour with Schönbrunn Palace, 3.5 hrs",
+        "Vienna – Budapest train ticket, 2nd class",
+        "Budapest Grand City Tour, 3 hrs",
+        "Private transfer hotel to Budapest Airport on departure"
+      ]
+    },
+    "private": {
+      "name": "Private Minivan",
+      "blurb": "A private minivan throughout, with scenic photostops in Český Krumlov and Bratislava along the way.",
+      "nights": "6 nights · 7 days",
+      "route": "Prague (2N) → Vienna (2N) → Budapest (2N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Private minivan or coach transfer from Prague Airport to your hotel.",
+        "3": "Private coach transfer from Prague to Vienna, with a scenic photostop in Český Krumlov.",
+        "5": "Private coach transfer from Vienna to Budapest, with a scenic photostop in Bratislava.",
+        "7": "Private transfer from your hotel to Budapest Airport."
+      },
+      "inclusions": [
+        "6 nights accommodation including breakfast",
+        "Private minivan for 4 hrs on Day 2",
+        "Private minivan on disposal from Day 3 to Day 6 (daily driving capped at 8 hrs)",
+        "Prague city tour with English-speaking guide, 4 hrs, including Prague Castle basic circuit admission",
+        "Vienna city tour with English-speaking guide, 4 hrs, including Schönbrunn Palace admission",
+        "Budapest city tour with English-speaking guide, 3 hrs, and a 1-hour Danube river cruise",
+        "Private transfer hotel to Budapest Airport on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Prague",
+      "overnight": "Overnight: Prague",
+      "desc": "Begin your journey in Prague, the “City of a Hundred Spires”, renowned for its medieval charm, stunning architecture and rich history. Unwind and prepare for a captivating stay. Overnight in Prague.",
+      "taste": "A Czech Pilsner and svičková (marinated beef in cream sauce) at one of the pubs around Old Town Square — Prague's beer halls have been pouring since long before the city became a tourist draw."
+    },
+    {
+      "num": 2,
+      "title": "Prague",
+      "overnight": "Overnight: Prague",
+      "desc": "A guided tour reveals Prague Castle and the historic districts of Hradčany and Malá Strana, taking in St Vitus Cathedral, Golden Lane and the Old Royal Palace. The day closes with a leisurely cruise on the River Vltava, taking in the city's skyline from the water. Overnight in Prague.",
+      "experience": "A 1-hour River Vltava cruise beneath Charles Bridge, with Prague Castle floodlit above the water as evening falls.",
+      "shopping": "Parizska Street, running from Old Town Square toward the river, is Prague's boutique strip — alongside Bohemian crystal and garnet jewellery shops in the surrounding lanes."
+    },
+    {
+      "num": 3,
+      "title": "Prague to Vienna",
+      "overnight": "Overnight: Vienna",
+      "desc": "Check out from Prague and continue on to Vienna, the “City of Music”, known for its imperial palaces, classical heritage and vibrant cultural scene. Overnight in Vienna.",
+      "taste": "A slice of Sachertorte and a mélange (Vienna's take on a cappuccino) at one of the grand coffeehouses that have anchored Viennese social life since the 19th century."
+    },
+    {
+      "num": 4,
+      "title": "Vienna",
+      "overnight": "Overnight: Vienna",
+      "desc": "A guided tour uncovers Vienna's imperial legacy, with a visit to the opulent Schönbrunn Palace, a UNESCO World Heritage site, and its formal gardens. The tour continues through the elegant Innere Stadt, taking in the grandeur of Austria's capital. Overnight in Vienna.",
+      "experience": "Schönbrunn Palace's formal gardens are free to walk even outside the palace tour hours — the Gloriette terrace above them gives one of Vienna's best skyline views."
+    },
+    {
+      "num": 5,
+      "title": "Vienna to Budapest",
+      "overnight": "Overnight: Budapest",
+      "desc": "Check out from Vienna and continue to Budapest, the “Queen of the Danube”, known for its thermal baths, striking architecture and the historic Buda Castle. Overnight in Budapest.",
+      "taste": "Goolyás (goulash soup) and a glass of Hungarian Tokaji or Egri Bikavér, best enjoyed in one of the bistros around Váci utca."
+    },
+    {
+      "num": 6,
+      "title": "Budapest",
+      "overnight": "Overnight: Budapest",
+      "desc": "A guided city tour takes in Budapest's iconic landmarks — the Hungarian Parliament, Buda Castle, Matthias Church and the Fishermen's Bastion — before crossing into Pest to see the Central Market Hall, Europe's largest synagogue and Heroes' Square. Overnight in Budapest.",
+      "experience": "Széchenyi Thermal Bath, one of Europe's largest spa complexes, is a short taxi ride from the centre and open into the evening — a properly Hungarian way to end the tour."
+    },
+    {
+      "num": 7,
+      "title": "Depart Budapest",
+      "overnight": "Departure day",
+      "desc": "Check out and bid farewell to Budapest with a private transfer from your hotel to the airport."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Prague",
+      "nights": "2 Nights",
+      "h3": "Hotel Merkur",
+      "h4": "Novotel Praha Wenceslas Square"
+    },
+    {
+      "city": "Vienna",
+      "nights": "2 Nights",
+      "h3": "ibis Styles Wien City",
+      "h4": "arte Hotel Wien"
+    },
+    {
+      "city": "Budapest",
+      "nights": "2 Nights",
+      "h3": "ibis Styles Budapest City",
+      "h4": "NH Budapest City"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm, long days on the river cruises; the Christmas markets (late Nov–Dec) give all three cities a festive alternative, with mulled wine on Old Town Square and Vienna's Rathausplatz."
+    },
+    {
+      "title": "Weather",
+      "body": "Continental climate: warm summers around 20–28°C, cold winters that can drop below freezing, particularly in Prague and Budapest."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Prague uses the Czech Koruna (CZK) and Budapest the Hungarian Forint (HUF) — neither is on the Euro; Vienna uses the Euro (€). All three are Schengen Area members, so no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Currency crossing borders",
+      "body": "Card payment is widely accepted in all three cities, but carry some local cash — CZK in Prague and HUF in Budapest — for markets, trams and smaller cafés; Euros are not usable outside Vienna."
+    },
+    {
+      "title": "Train travel",
+      "body": "Seat reservations are included on the Prague–Vienna and Vienna–Budapest routes — keep tickets to hand for conductor checks.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Photostops",
+      "body": "The Český Krumlov and Bratislava stops are brief photo and stretch breaks en route, not full guided visits — come with realistic expectations for time on the ground.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable shoes for cobbled old towns; a warm layer even in summer evenings, as all three cities sit inland with cooler nights than their daytime highs suggest."
+    },
+    {
+      "title": "Tipping",
+      "body": "10% is customary in restaurants across all three cities, usually added directly when paying rather than left on the table."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 50.0755,
+        "lng": 14.4378,
+        "label": "Prague",
+        "nights": 2
+      },
+      {
+        "lat": 48.2082,
+        "lng": 16.3738,
+        "label": "Vienna",
+        "nights": 2
+      },
+      {
+        "lat": 47.4979,
+        "lng": 19.0402,
+        "label": "Budapest",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "eastern-europe",
+  "pricesFile": "prices/7.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

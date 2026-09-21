@@ -1,0 +1,225 @@
+{
+  "id": "4.2",
+  "title": "Lucerne, Interlaken, Montreux & Zurich.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled Swiss rail travel between cities using an 8-day Swiss Travel Pass, with transfers at each end.",
+      "nights": "7 nights · 8 days",
+      "route": "Lucerne (2N) → Interlaken (2N) → Montreux (2N) → Zurich (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Zurich Airport to Lucerne by scheduled train, covered by the 8-day Swiss Travel Pass.",
+        "2": "Mount Titlis cable car included with the Swiss Travel Pass; Lake Lucerne cruise also included free with the pass.",
+        "3": "Lucerne to Interlaken by scheduled train, covered by the Swiss Travel Pass.",
+        "5": "Interlaken to Montreux by scheduled train, covered by the Swiss Travel Pass.",
+        "7": "Montreux to Zurich by scheduled train, covered by the Swiss Travel Pass.",
+        "8": "Zurich hotel to Zurich Airport by scheduled train, covered by the Swiss Travel Pass."
+      },
+      "inclusions": [
+        "8-day consecutive Swiss Travel Pass, II Class, covering rail travel between all cities on the itinerary",
+        "Mount Titlis Rotair revolving cable car ticket",
+        "Lake Lucerne cruise, included free with the Swiss Travel Pass",
+        "All city-to-city train transfers as per itinerary",
+        "7 nights accommodation on a PI (half-board) basis",
+        "Daily breakfast at all hotels"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach with driver on disposal throughout, ideal for families and small groups wanting flexibility.",
+      "nights": "7 nights · 8 days",
+      "route": "Lucerne (2N) → Interlaken (2N) → Montreux (2N) → Zurich (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Private coach transfer from Zurich Airport to Lucerne; private vehicle on disposal from Day 1 to Day 7.",
+        "2": "Private excursion to Titlis and Engelberg by private vehicle.",
+        "3": "Private coach transfer from Lucerne to Interlaken.",
+        "5": "Private coach transfer from Interlaken to Montreux.",
+        "6": "Private excursion to the Cailler chocolate factory in Broc, in the Gruyère region, including tasting tickets.",
+        "7": "Private coach transfer from Montreux to Zurich.",
+        "8": "Private transfer from the Zurich hotel to Zurich Airport."
+      },
+      "inclusions": [
+        "Private coach on disposal from Day 1 to Day 7",
+        "Private transfers Zurich Airport – Lucerne and Zurich hotel – Zurich Airport",
+        "Titlis and Engelberg excursion by private vehicle",
+        "Broc chocolate factory visit with tasting tickets",
+        "All private inter-city transfers as per itinerary",
+        "7 nights accommodation on a PI (half-board) basis"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Zurich → Lucerne",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
+      "experience": "The Lion Monument, a dying lion carved into a sandstone cliff face to honour the Swiss Guards killed in 1792, is what Mark Twain called 'the most mournful and moving piece of rock in the world'."
+    },
+    {
+      "num": 2,
+      "title": "Lucerne & Mount Titlis",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
+      "experience": "The glacier cave carved into Titlis's permanent ice field, one of the most accessible in the Alps."
+    },
+    {
+      "num": 3,
+      "title": "Lucerne → Interlaken",
+      "overnight": "Overnight: Interlaken",
+      "desc": "Embark on a scenic train journey from Lucerne to Interlaken, reveling in the breathtaking vistas along the way. As you arrive, experience the allure of Interlaken, nestled between Lake Thun and Lake Brienz, offering a gateway to the Bernese Oberland's splendour. Overnight in Interlaken.",
+      "taste": "Meringue, by local tradition invented in nearby Meiringen, is served everywhere in the Bernese Oberland piled high with thick double cream."
+    },
+    {
+      "num": 4,
+      "title": "Interlaken at leisure",
+      "overnight": "Overnight: Interlaken",
+      "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Interlaken.",
+      "experience": "Interlaken's central Höhematte park doubles as the valley's paragliding landing strip — all summer, canopies drift down over the town from launch points at Beatenberg and Schynige Platte.",
+      "fallbackIncluded": "Day at leisure — optional Jungfraujoch excursion available."
+    },
+    {
+      "num": 5,
+      "title": "Interlaken → Montreux",
+      "overnight": "Overnight: Montreux",
+      "desc": "Board a mesmerizing train journey from Interlaken to Montreux via the Swiss Pass, traversing Switzerland's picturesque landscapes. Upon arrival in Montreux, indulge in the charm of this lakeside town famed for its jazz festival and stunning lakeside promenade. Overnight in Montreux.",
+      "taste": "The steep terraced vineyards of Lavaux, a UNESCO World Heritage landscape along this shore of Lake Geneva, produce Chasselas, the crisp local white poured in nearly every Montreux restaurant."
+    },
+    {
+      "num": 6,
+      "title": "Montreux & Château de Chillon",
+      "overnight": "Overnight: Montreux",
+      "desc": "Enjoy a day of exploration in the Montreux region at your pace using the Swiss Pass. You can visit the historical Chillon Castle nestled on Lake Geneva's shores, offering a glimpse into medieval life. Alternatively, soak in the beauty of Lake Geneva's serene landscapes. Optionally, visit the chocolate museum in Broc to delight your taste buds. Overnight in Montreux.",
+      "taste": "Gruyère is Switzerland's heartland of chocolate and cheese-making — the Cailler factory at Broc, founded in 1819, is the country's oldest chocolatier.",
+      "experience": "Château de Chillon, immortalised by Lord Byron's poem 'The Prisoner of Chillon'."
+    },
+    {
+      "num": 7,
+      "title": "Montreux → Zurich",
+      "overnight": "Overnight: Zurich",
+      "desc": "As your journey draws to a close, take the scenic train ride from Montreux to Zurich using the Swiss Pass. Embrace your final evening in Zurich by exploring the vibrant shopping districts like Bahnhofstrasse, renowned for its luxury boutiques and world- class shopping. Relish your last night in Switzerland with a delightful shopping experience. Overnight in Zurich.",
+      "taste": "Zürcher Geschnetzeltes — veal strips in a creamy mushroom sauce, served with rösti — is the city's signature dish, on the menu at old-world institutions like the Zeughauskeller, a former armoury turned beer hall.",
+      "shopping": "Bahnhofstrasse is one of the world's most expensive shopping streets, lined with Swiss watch houses and department stores."
+    },
+    {
+      "num": 8,
+      "title": "Depart Zurich",
+      "overnight": "Departure day",
+      "desc": "Make your way to Zurich Airport from the city center using the convenient public transport covered by the Swiss Pass. As your memorable Swiss adventure concludes, cherish the scenic journey and bid adieu to the beautiful landscapes and hospitable culture of Switzerland."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Lucerne",
+      "nights": "2 Nights",
+      "h3": "Boutique Hotel Karl",
+      "h4": "Altstadt Hotel Krone Apartments Luzern"
+    },
+    {
+      "city": "Interlaken",
+      "nights": "2 Nights",
+      "h3": "Hotel Lötschberg",
+      "h4": "Stella Hotel Interlaken"
+    },
+    {
+      "city": "Montreux",
+      "nights": "2 Nights",
+      "h3": "Hotel Helvetie",
+      "h4": "Eden Palace au Lac"
+    },
+    {
+      "city": "Zurich",
+      "nights": "1 Night",
+      "h3": "Montana Hotel",
+      "h4": "Züri by Fassbind"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–October for the best weather across the lakes and Alpine scenery; the Titlis excursion also runs through winter for snow."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild, changeable Alpine climate — warm summers around 18–25°C in the lowlands, cold and snowy at altitude and in winter, so pack layers."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Switzerland's official currency is the Swiss Franc (CHF); Switzerland is in the Schengen area but not the EU, so standard Schengen entry rules apply."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "The Titlis cable car and Château de Chillon both get busy in summer — travelling early in the day avoids the longest queues."
+    },
+    {
+      "title": "Rail travel",
+      "body": "The Swiss Travel Pass covers trains, lake cruises and city transport included in this itinerary — keep it to hand for spot checks by conductors.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by Swiss law, so day-trip timings are planned around required rest breaks. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable shoes for cobbled Old Towns, cable cars and lakeside walks, plus a layer for cooler evenings and higher altitudes."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere in Switzerland, even for small purchases; a little cash is still useful for rural cafés and market stalls. Switzerland is consistently ranked among the most expensive countries in Europe, so budget accordingly."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 47.0502,
+        "lng": 8.3093,
+        "label": "Lucerne",
+        "nights": 2
+      },
+      {
+        "lat": 46.6863,
+        "lng": 7.8632,
+        "label": "Interlaken",
+        "nights": 2
+      },
+      {
+        "lat": 46.4312,
+        "lng": 6.9107,
+        "label": "Montreux",
+        "nights": 2
+      },
+      {
+        "lat": 47.3769,
+        "lng": 8.5417,
+        "label": "Zurich",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "switzerland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/4.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

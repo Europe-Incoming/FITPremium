@@ -1,0 +1,238 @@
+{
+  "id": "2.4",
+  "title": "Amsterdam, Paris & Switzerland.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled inter-city trains link Amsterdam, Paris, Lucerne and Zurich, with private transfers on arrival.",
+      "nights": "8 nights · 9 days",
+      "route": "Amsterdam (2N) → Paris (2N) → Lucerne (3N) → Zurich (1N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Amsterdam airport to Amsterdam hotel private transfer.",
+        "2": "Windmills and Volendam cheese-factory coach tour, approx. 5.5 hrs.",
+        "3": "Amsterdam to Paris train journey, II Class.",
+        "4": "Paris City Tour with Seine Cruise and Eiffel Tower (2nd floor), 4-hr coach tour.",
+        "5": "Paris to Lucerne train journey, II Class; 4-day Swiss Travel Pass begins.",
+        "6": "Titlis excursion using the Swiss Travel Pass, with a Lake Lucerne cruise included free of charge.",
+        "8": "Lucerne to Zurich train journey using the Swiss Travel Pass, II Class."
+      },
+      "inclusions": [
+        "Amsterdam airport to hotel private transfer on arrival",
+        "Windmills, Volendam and cheese-factory coach tour, 5.5 hrs",
+        "Amsterdam to Paris train ticket, II Class",
+        "Paris City Tour with Seine Cruise and Eiffel Tower (2nd floor), 4-hr coach tour",
+        "Paris to Lucerne train ticket, II Class",
+        "Swiss Travel Pass, 4 consecutive days, II Class",
+        "Titlis excursion with Lake Lucerne cruise included",
+        "8 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach is on disposal from Amsterdam through to Zurich, with a driver-guide for every transfer and excursion.",
+      "nights": "8 nights · 9 days",
+      "route": "Amsterdam (2N) → Paris (2N) → Lucerne (3N) → Zurich (1N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Amsterdam airport to Amsterdam hotel private transfer.",
+        "2": "Private coach canal cruise combined with Volendam and Marken villages, approx. 5 hrs.",
+        "3": "Private coach transfer from Amsterdam to Paris (vehicle on disposal from today).",
+        "4": "Paris panoramic tour with an English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise.",
+        "5": "Private coach transfer from Paris to Lucerne.",
+        "6": "Private coach excursion to Titlis and Engelberg.",
+        "8": "Private coach transfer from Lucerne to Zurich, the final day of the vehicle on disposal.",
+        "9": "Zurich hotel to Zurich airport private transfer."
+      },
+      "inclusions": [
+        "Private coach on disposal for 5 hrs on Day 2, and 8 hrs daily from Day 3 to Day 8",
+        "Amsterdam airport to hotel private transfer on arrival",
+        "Canal cruise combined with Volendam and Marken villages",
+        "Paris panoramic tour with English-speaking guide, 3 hrs",
+        "Seine river cruise, 1 hour",
+        "Private transfers linking Paris, Lucerne and Zurich",
+        "Titlis and Engelberg excursion",
+        "Zurich hotel to airport private transfer on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Amsterdam",
+      "overnight": "Overnight: Amsterdam",
+      "desc": "Welcome to the Dutch capital! Your arrival is met with a seamless private transfer to your hotel. Amsterdam, fondly known as the \"Venice of the North,\" charms visitors with its iconic network of canals. Immerse yourself in the city's cultural tapestry by exploring the historic Canal Ring, a UNESCO World Heritage site. Uncover the Netherlands' history and innovation, all within the captivating embrace of Amsterdam. Overnight in Amsterdam.",
+      "taste": "A wedge of aged Gouda and a jenever at Café 't Smalle, a Jordaan brown café that has been pouring drinks on the Egelantiersgracht since 1780."
+    },
+    {
+      "num": 2,
+      "title": "Windmills & Volendam",
+      "overnight": "Overnight: Amsterdam",
+      "desc": "Embark on a 5.5-hour coach tour exploring the Dutch countryside from Amsterdam. Admire the iconic windmills of Zaanse Schans and taste authentic Dutch cheese at the Volendam Cheese Factory. Witness the crafting of wooden shoes with an antique steam engine. Overnight in Amsterdam.",
+      "experience": "Traditional clog-making demonstration at Zaanse Schans, a craft still practised on site.",
+      "taste": "Smoked eel sold straight from the barrel at Volendam's harbourside stalls, a local speciality of the old Zuiderzee fishing fleet."
+    },
+    {
+      "num": 3,
+      "title": "Amsterdam to Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Depart Amsterdam by train for Paris, the City of Lights. Paris is renowned for its artistic heritage, captivating landmarks like the Eiffel Tower, and the historical charm of Montmartre. Wander along the Seine River or explore the vibrant streets of Le Marais for an evening of enchantment. Overnight in Paris.",
+      "taste": "Steak-frites and a carafe of house red at a Marais bistro, the classic first-night dinner for arrivals in Paris."
+    },
+    {
+      "num": 4,
+      "title": "Paris City Tour",
+      "overnight": "Overnight: Paris",
+      "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
+      "taste": "Macarons at Ladurée, the Paris confectioner trading on the Champs-Élysées since 1862, or an onion soup gratinée for dinner.",
+      "shopping": "Galeries Lafayette on Boulevard Haussmann, its 1912 stained-glass dome presiding over one of the world's most famous department stores."
+    },
+    {
+      "num": 5,
+      "title": "Paris to Lucerne",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne."
+    },
+    {
+      "num": 6,
+      "title": "Mount Titlis excursion",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
+      "experience": "The Titlis Cliff Walk, Europe's highest suspension bridge, spanning a ridge just below the summit.",
+      "taste": "Cheese fondue in a lakeside Stübli back in Lucerne after the descent from the glacier."
+    },
+    {
+      "num": 7,
+      "title": "Lucerne at leisure",
+      "overnight": "Overnight: Lucerne",
+      "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
+      "taste": "Kirschtorte and pralines at Confiserie Bachmann, Lucerne's own confectioner and bakery since 1938.",
+      "fallbackIncluded": "Day at leisure — optional excursions available."
+    },
+    {
+      "num": 8,
+      "title": "Lucerne to Zurich",
+      "overnight": "Overnight: Zurich",
+      "desc": "Travel from Lucerne to Zurich using your Swiss Travel Pass, exploring the vibrant city of Zurich upon arrival. Zurich, a financial hub, blends modernity with history, offering a plethora of cultural attractions. Optionally, venture further to Schaffhausen by train to witness the majestic Rhine Falls, Europe's largest waterfall. Overnight Zurich.",
+      "taste": "Luxemburgerli macarons and hot chocolate at Confiserie Sprüngli on Paradeplatz, trading since 1836."
+    },
+    {
+      "num": 9,
+      "title": "Depart Zurich",
+      "overnight": "Departure day",
+      "desc": "Your unforgettable Paris-Swiss tour concludes today. Make your way to Zurich Airport for your return journey home, carrying beautiful memories of Parisian elegance and the mesmerizing Swiss landscapes."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Amsterdam",
+      "nights": "2 Nights",
+      "h3": "WestCord Art Hotel Amsterdam",
+      "h4": "Leonardo Hotel Amsterdam City Center"
+    },
+    {
+      "city": "Paris",
+      "nights": "2 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Marceau Bastille"
+    },
+    {
+      "city": "Lucerne",
+      "nights": "3 Nights",
+      "h3": "Boutique Hotel Karl",
+      "h4": "Altstadt Hotel Krone Apartments Luzern"
+    },
+    {
+      "city": "Zurich",
+      "nights": "1 Night",
+      "h3": "Montana Hotel",
+      "h4": "Züri by Fassbind"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm weather and long days across all four cities; December offers festive markets in Amsterdam, Paris and Zurich."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild and changeable in Amsterdam and Paris, 10–22°C in summer; Alpine Lucerne and Zurich are cooler and can see afternoon showers, so pack a rain layer."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Euro (€) is used in the Netherlands and France; Switzerland's official currency is the Swiss Franc (CHF), though Euros are widely accepted — all three countries are within the Schengen Area."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Eiffel Tower access and the Titlis cable car ahead in summer — both sell out days in advance. Visit Zaanse Schans before 11:00 to avoid coach traffic."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the Amsterdam–Paris and Paris–Lucerne inter-city trains. The Swiss Travel Pass covers onward rail travel within Switzerland.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited to 10 hrs per day by EU and Swiss law, so day-trip timings are planned around required rest breaks. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable, waterproof footwear for cobbled old towns and Alpine paths, plus a warm layer for Titlis even in summer."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere; a little cash is useful for the Volendam harbour stalls and Alpine cable-car kiosks. Tipping 10% in restaurants is customary, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 52.3676,
+        "lng": 4.9041,
+        "label": "Amsterdam",
+        "nights": 2
+      },
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 2
+      },
+      {
+        "lat": 47.0502,
+        "lng": 8.3093,
+        "label": "Lucerne",
+        "nights": 3
+      },
+      {
+        "lat": 47.3769,
+        "lng": 8.5417,
+        "label": "Zurich",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/2.4-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}
