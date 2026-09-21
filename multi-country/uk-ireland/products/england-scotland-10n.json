@@ -1,0 +1,243 @@
+{
+  "id": "england-scotland-10n",
+  "title": "England & Scotland Grand Tour",
+  "eyebrow": "UK & Ireland \u00b7 FIT Packages \u00b7 2026\u201327",
+  "heroImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80",
+  "pricesFile": "prices/england-scotland-10n.json",
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 0
+      },
+      {
+        "lat": 53.4808,
+        "lng": -2.2426,
+        "label": "Manchester",
+        "nights": 0
+      },
+      {
+        "lat": 55.9533,
+        "lng": -3.1883,
+        "label": "Edinburgh",
+        "nights": 0
+      },
+      {
+        "lat": 57.4778,
+        "lng": -4.2247,
+        "label": "Inverness",
+        "nights": 0
+      },
+      {
+        "lat": 55.8642,
+        "lng": -4.2518,
+        "label": "Glasgow",
+        "nights": 0
+      }
+    ],
+    "closeLoop": false
+  },
+  "styles": {
+    "regular": {
+      "name": "Regular FIT",
+      "blurb": "Trains and scheduled transfers between cities \u2014 the classic way to cross Britain.",
+      "nights": "10 nights / 11 days",
+      "route": "London (3N) \u2192 Manchester (2N) \u2192 Edinburgh (2N) \u2192 Inverness (2N) \u2192 Glasgow (1N)",
+      "aboutNights": "10 nights / 11 days",
+      "transport": {},
+      "inclusions": [
+        "10 nights\u2019 accommodation including breakfast.",
+        "Private transfer from London airport to London hotel",
+        "London Hop on Hop off 1 day pass with one way Thames river cruise",
+        "London to Manchester train ticket, II class",
+        "Manchester to Edinburgh train ticket, II class",
+        "Edinburgh to Inverness train ticket, II Class",
+        "Ex Inverness - The Isle of Skye & Eilean Donan Castle, 12 hour regular coach",
+        "Inverness to Glasgow train ticket, II Class",
+        "Glasgow hotel to Glasgow airport private transfer"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "Private coach with driver from London to Glasgow \u2014 ideal for groups and families.",
+      "nights": "10 nights / 11 days",
+      "route": "London (3N) \u2192 Manchester (2N) \u2192 Edinburgh (2N) \u2192 Inverness (1N) \u2192 Glasgow (1N)",
+      "aboutNights": "10 nights / 11 days",
+      "transport": {},
+      "inclusions": [
+        "9 nights\u2019 accommodation including breakfast.",
+        "Guided city tour of London for 3 hours",
+        "London Eye standard tickets",
+        "Thames river cruise one way ticket",
+        "Tickets to Stonehenge and Roman Bath",
+        "Glasgow hotel to Glasgow airport private transfer",
+        "Private vehicle for 3 hrs on Day 2",
+        "Private vehicle for 8 hrs on Day 3",
+        "Private mini coach at disposal from Day 4 till Day 9 (Daily driving capped at 8 hrs)"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in London",
+      "overnight": "Overnight: London",
+      "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 2,
+      "title": "London",
+      "overnight": "Overnight: London",
+      "desc": "Explore London with a Hop on Hop off 1 day pass. The pass allows you to visit the city\u2019s most famous landmarks at your own pace. You can visit the Tower of London, the British Museum, the London Eye, and many other attractions. The pass also includes a one-way Thames River cruise, which is a great way to see the city from a different perspective. Overnight in London. Optional: Madam Tussauds ticket | Tower of London ticket | London Eye standard ticket",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 3,
+      "title": "London",
+      "overnight": "Overnight: London",
+      "desc": "Today, you have the option to explore London at your own pace or take an optional tour to see Stonehenge and Bath.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 4,
+      "title": "London to Manchester",
+      "overnight": "Overnight: Manchester",
+      "desc": "Check out and journey by train to Manchester, a city steeped in industrial history and renowned for its vibrant cultural scene. Explore this dynamic cityscape alive with music, art, and world-famous football clubs.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 5,
+      "title": "Manchester",
+      "overnight": "Overnight: Manchester",
+      "desc": "Revel in a day of freedom in Manchester. Uncover the city's vibrant culture or opt for day trips to the picturesque Lake or Peak Districts, embracing the stunning natural landscapes. Overnight in Manchester. Optional: Windermere & the Lake District day trip | Derbyshire & the Peak District day trip",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 6,
+      "title": "Manchester to Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Travel comfortably by train from Manchester to Edinburgh, immersing yourself in Scotland's capital known for its captivating history, striking architecture, and cultural festivals.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 7,
+      "title": "Manchester to Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Enjoy a day at your pace in Edinburgh. Discover the city's historic sites, wander along the Royal Mile, or visit the majestic Edinburgh Castle. Opt for a Hop-On Hop-Off tour or venture on a day trip to the enchanting Highlands to witness Scotland's breathtaking landscapes.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 8,
+      "title": "Edinburgh to Inverness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Board the train from Edinburgh to Inverness, a journey that offers scenic views of Scotland's landscapes. Arrive in Inverness, the gateway to the Highlands, where history and natural beauty converge. Enjoy a tranquil evening in this charming Scottish city.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 9,
+      "title": "Inverness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Embark on a captivating 12-hour coach tour to the picturesque Isle of Skye and the iconic Eilean Donan Castle. Traverse through Scotland's stunning landscapes, capturing the essence of its beauty and history. Return to Inverness for a serene evening. Overnight in Inverness. Unit 11-12 Turnham Green Terrace Mews, London W4 1QU. Tel: +44 208 994 5001. Email: FITsales@europeincoming.com Web: www.europeincoming.com. Europe Incoming Holdings Ltd is registered in England & Wales with company reg. number: 07053949. Please review general T&C on www.europeincoming.com",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 10,
+      "title": "Inverness to Glasgow",
+      "overnight": "Overnight: Glasgow",
+      "desc": "Depart Inverness by train, traversing Scotland's landscapes towards the vibrant city of Glasgow. Embrace the cultural diversity and architectural wonders of this dynamic city upon arrival. Relax and prepare to explore Glasgow's charm.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 11,
+      "title": "Inverness to Glasgow",
+      "overnight": "Departure day",
+      "desc": "Bid farewell to Glasgow as you're privately transferred from your hotel to Glasgow airport. Conclude your remarkable journey through Scotland, departing with cherished memories of its rich history and breathtaking landscapes.",
+      "fallbackIncluded": "Day at leisure."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "3 Nights",
+      "h3": "Hotel Montana",
+      "h4": "Hotel Riu Plaza London Victoria"
+    },
+    {
+      "city": "Manchester",
+      "nights": "2 Nights",
+      "h3": "Hilton Garden Inn Manchester Emirates Old Trafford",
+      "h4": "Crowne Plaza Manchester City Centre"
+    },
+    {
+      "city": "Edinburgh",
+      "nights": "2 Nights",
+      "h3": "Holiday Inn Express Edinburgh City Centre",
+      "h4": "Apex City of Edinburgh Hotel"
+    },
+    {
+      "city": "Inverness",
+      "nights": "2 Nights",
+      "h3": "Royal Highland Hotel",
+      "h4": "Blackfriars Inverness"
+    },
+    {
+      "city": "Glasgow",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Glasgow City Centre Riverside",
+      "h4": "Novotel Glasgow Centre"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May\u2013September for long days; shoulder months quieter and better value"
+    },
+    {
+      "title": "Weather",
+      "body": "Mild and changeable. 12\u201320\u00b0C in summer. Pack a rain layer year-round"
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Best season",
+      "body": "April\u2013September for long days and best weather; shoulder months quieter and often better value."
+    },
+    {
+      "title": "Currency & documents",
+      "body": "England/Scotland use \u00a3 GBP. Ireland uses \u20ac EUR. Both are Schengen-free \u2014 check your entry requirements."
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof in any month. Comfortable shoes for cobbles and coastal paths."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on inter-city trains. Arrive 10 minutes before departure.",
+      "styles": [
+        "regular"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver hours are limited to 10 hrs/day by law. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    }
+  ],
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged from 2 to 11 years old. 1 child sharing a room with 2 adults (depending on hotel policy). If the hotel doesn\u2019t have availability for family rooms, adult rates will apply.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted in the packages.",
+    "Rates quoted are not applicable during trade fair periods, major European Holidays and other major events.",
+    "City taxes are not included in the price.",
+    "If certain entrances are closed during certain periods, alternative entrances will be provided.",
+    "All bookings have to be confirmed at least 60 working days prior to arrival date by the Agent. Early bookings increase the chances of achieving the quoted package rate.",
+    "The prices we quote are indicative, but we always try to confirm the prices offered in this document.",
+    "We require 100% pre-payment either by bank transfer or by credit card (VISA or Mastercard). All charges for bank transfers need to be covered by the Agent.",
+    "Vouchers will be issued after receipt of the full payment in our bank account."
+  ]
+}

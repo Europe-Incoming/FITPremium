@@ -1,0 +1,36 @@
+{
+  "year": "2026-27",
+  "currency": "GBP",
+  "validFrom": "01 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "note": "Premium market rates. Net, per person.",
+  "variants": {
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 2274,
+          "twin": 1372,
+          "child": 563
+        },
+        "summer": {
+          "single": 2369,
+          "twin": 1429,
+          "child": 587
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2880,
+          "twin": 1675,
+          "child": 681
+        },
+        "summer": {
+          "single": 3000,
+          "twin": 1745,
+          "child": 710
+        }
+      }
+    }
+  },
+  "optionalTours": []
+}

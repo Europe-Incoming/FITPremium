@@ -1,576 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UK & Ireland | Europe Incoming</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UK &amp; Ireland — FIT Packages | Europe Incoming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f0f2f5;color:#212121;line-height:1.6;padding-top:80px;}
-.top-nav{position:fixed;top:0;left:0;right:0;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.08);z-index:1000;padding:16px 0;}
-.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:32px;}
-.logo{height:48px;width:auto;}.logo:hover{opacity:0.8;}
-.header-right{display:flex;align-items:center;gap:32px;flex:1;justify-content:flex-end;}
-.site-title-group{text-align:right;}
-.site-title-main{font-size:1.1em;font-weight:600;color:#212121;}
-.site-title-sub{font-size:0.9em;color:#757575;}
-.contact-info{text-align:right;padding-left:32px;border-left:1px solid #e0e0e0;}
-.contact-prompt{font-size:0.85em;color:#757575;margin-bottom:4px;}
-.contact-email{font-size:0.9em;color:#2196F3;text-decoration:none;font-weight:500;}
-.contact-email:hover{text-decoration:underline;}
-.search-box{width:100%;max-width:350px;padding:10px 18px;font-size:0.95em;border:1px solid #e0e0e0;border-radius:24px;background:#fafafa;transition:all 0.2s;}
-.search-box::placeholder{text-align:center;}
-.search-box:focus{outline:none;border-color:#2196F3;background:white;box-shadow:0 2px 8px rgba(33,150,243,0.15);}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:24px 24px 0;font-size:0.9em;color:#757575;}
-.breadcrumb a{color:#2196F3;text-decoration:none;}
-.breadcrumb a:hover{text-decoration:underline;}
-.container{max-width:1200px;margin:0 auto;padding:32px 24px 48px;}
-h1{font-size:2.2em;font-weight:600;color:#212121;margin-bottom:32px;letter-spacing:-0.5px;}
-footer{text-align:center;margin-top:60px;padding:32px 0;color:#9e9e9e;font-size:0.9em;border-top:1px solid #e8e8e8;}
-@media(max-width:768px){body{padding-top:180px;}.nav-container{flex-wrap:wrap;gap:16px;}.header-right{width:100%;flex-direction:column;align-items:center;order:3;gap:16px;}.site-title-group{text-align:center;}.contact-info{text-align:center;border-left:none;border-top:1px solid #e0e0e0;padding-left:0;padding-top:16px;}.search-box{max-width:100%;}}
-
-.brochures{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:stretch;}
-.brochure-card{background:white;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-decoration:none;color:inherit;display:flex;flex-direction:row;border:1px solid #ebebeb;overflow:hidden;min-height:210px;}
-.brochure-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.11);border-color:#d0d0d0;}
-.brochure-card.expired{opacity:0.75;border-color:#ffcc80;}
-.card-info{flex:1;padding:20px 20px 16px;display:flex;flex-direction:column;gap:5px;min-width:0;}
-.card-title{font-size:1.0em;font-weight:700;color:#1a1a1a;line-height:1.3;}
-.tour-type{font-size:0.72em;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#1565c0;}
-.card-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px;}
-.pill{font-size:0.71em;font-weight:600;padding:3px 9px;border-radius:20px;}
-.pill-duration{background:#f3f3f3;color:#444;}
-.pill-summer{background:#fff8e1;color:#e65100;}
-.pill-winter{background:#e8f4fd;color:#0277bd;}
-.pill-allyear{background:#e8f5e9;color:#2e7d32;}
-.pill-valid{background:#e8f5e9;color:#2e7d32;}
-.pill-expired{background:#fff3e0;color:#e65100;}
-.card-description{font-size:0.81em;color:#666;font-style:italic;line-height:1.4;}
-.cities-list{font-size:0.79em;color:#555;}
-.price-tag{font-size:0.88em;color:#2e7d32;font-weight:700;margin-top:auto;padding-top:6px;}
-.card-map{width:200px;min-width:200px;border-left:1px solid #ebebeb;position:relative;overflow:hidden;}
-.map-inner{width:100%;height:100%;min-height:210px;}
-.leaflet-tooltip.city-tip{background:rgba(255,255,255,0.92)!important;border:1.5px solid #c62828!important;border-radius:3px!important;box-shadow:0 1px 3px rgba(0,0,0,0.25)!important;font-size:9px;font-weight:700;color:#1a1a1a;white-space:nowrap;padding:1px 5px;}
-.leaflet-tooltip.city-tip::before{display:none!important;}
-@media(max-width:900px){.brochures{grid-template-columns:1fr;}.card-map{width:160px;min-width:160px;}}
-@media(max-width:768px){.brochure-card{flex-direction:column;}.card-map{width:100%;min-width:100%;height:180px;border-left:none;border-top:1px solid #ebebeb;}.map-inner{min-height:180px;}}
+:root{--navy:#0B1733;--navy-tile:#132347;--gold:#F2B91D;--ink:#1A1D2E;--body-grey:#3A3D4D;--muted:#6B7080;--line:#E5E7EC;--line-light:#EFF0F3;--ctrl-border:#D8DAE1;--surface:#F5F5F3;--surface-hover:#EDEDEA;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--ink);}
+/* Header */
+.site-header{display:flex;align-items:center;gap:28px;padding:26px 40px 0;}
+.site-header img{height:32px;width:auto;display:block;}
+.search-wrap{flex:1;max-width:360px;}
+.search-wrap input{width:100%;padding:9px 14px;font-size:13px;font-family:inherit;border:2px solid var(--ctrl-border);border-radius:0;background:#fff;color:var(--ink);outline:none;box-sizing:border-box;}
+.search-wrap input::placeholder{color:var(--muted);}
+.trade-link{margin-left:auto;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;}
+/* Title block */
+.page-title-block{padding:36px 40px 22px;display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;}
+.page-eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-bottom:12px;}
+.page-h1{font-weight:300;font-size:64px;letter-spacing:-0.02em;line-height:1;color:var(--navy);}
+.intro-line{padding:0 40px 30px;max-width:640px;font-weight:300;font-size:19px;color:var(--muted);}
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px;padding:0 40px 80px;}
+/* Package tile */
+.pkg-tile{display:flex;align-items:stretch;text-decoration:none;color:inherit;min-height:240px;border-radius:0;transition:opacity 180ms linear;}
+.pkg-tile:hover{opacity:.86;}
+.pkg-tile.navy{background:var(--navy-tile);}
+.pkg-tile.gold{background:var(--gold);}
+.tile-left{flex:1;min-width:0;padding:22px 24px;display:flex;flex-direction:column;gap:8px;}
+/* Navy tile text */
+.navy .tile-meta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+.navy .tile-title{font-weight:300;font-size:30px;line-height:1.1;color:#fff;}
+.navy .tile-blurb{font-size:13px;line-height:1.55;color:rgba(255,255,255,0.72);}
+.navy .tile-route{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,0.72);}
+.navy .tile-price-row{margin-top:auto;padding-top:10px;display:flex;align-items:baseline;gap:8px;}
+.navy .tile-from{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;}
+.navy .tile-amount{font-weight:300;font-size:34px;line-height:1;color:#fff;}
+.navy .tile-pnote{font-size:11px;color:rgba(255,255,255,0.72);}
+.navy .tile-validity{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);}
+/* Gold tile text */
+.gold .tile-meta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);}
+.gold .tile-title{font-weight:300;font-size:30px;line-height:1.1;color:var(--navy);}
+.gold .tile-blurb{font-size:13px;line-height:1.55;color:rgba(11,23,51,0.8);}
+.gold .tile-route{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(11,23,51,0.8);}
+.gold .tile-price-row{margin-top:auto;padding-top:10px;display:flex;align-items:baseline;gap:8px;}
+.gold .tile-from{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);}
+.gold .tile-amount{font-weight:300;font-size:34px;line-height:1;color:var(--navy);}
+.gold .tile-pnote{font-size:11px;color:rgba(11,23,51,0.65);}
+.gold .tile-validity{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(11,23,51,0.65);}
+/* Tile map column */
+.tile-right{width:190px;flex-shrink:0;position:relative;background:var(--surface);}
+.tile-map{position:absolute;inset:0;}
+/* City-tip */
+.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;}
+.city-tip .leaflet-tooltip-content{font-size:9px;font-weight:600;color:var(--navy);text-shadow:1px 0 0 #fff,-1px 0 0 #fff,0 1px 0 #fff,0 -1px 0 #fff;}
+/* Empty state */
+.empty-state{padding:80px 0;color:var(--muted);font-weight:300;font-size:22px;display:none;}
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,0.55);padding:20px 40px;font-size:12px;display:flex;justify-content:space-between;align-items:center;}
+footer a{color:var(--gold);text-decoration:none;}
 </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04BZKH6574');</script>
 </head>
 <body>
+
+<header class="site-header">
+  <a href="../../index.html"><img src="../../logo.png" alt="Europe Incoming"></a>
+  <div class="search-wrap">
+    <input type="search" id="search" placeholder="search packages" autocomplete="off">
+  </div>
+  <a class="trade-link" href="mailto:fitsales@europeincoming.com">Trade enquiries</a>
+</header>
+
+<div class="page-title-block">
+  <div>
+    <div class="page-eyebrow">Multi-country · FIT</div>
+    <h1 class="page-h1">UK &amp; Ireland</h1>
+  </div>
+</div>
+<p class="intro-line">FIT packages across Britain and Ireland — by train, self-drive or private coach.</p>
+
+<div class="card-grid" id="grid"></div>
+<p class="empty-state" id="empty">No packages match this search yet.</p>
+
+<footer>
+  <span>Europe Incoming Holdings Ltd · Unit 11-12 Turnham Green Terrace Mews, London W4 1QU</span>
+  <span><a href="mailto:fitsales@europeincoming.com">fitsales@europeincoming.com</a> &nbsp;·&nbsp; +44 208 994 5001</span>
+</footer>
+
 <script>
-(async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
-if(!['US','CA','AU','NZ','GB'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
-}catch(e){}}
-)();</script><nav class="top-nav"><div class="nav-container">
-<a href="../../"><img src="../../logo.png" alt="Europe Incoming" class="logo"></a>
-<input type="text" class="search-box" placeholder="Search packages - type city or country" id="searchBox">
-<div class="header-right">
-  <div class="site-title-group"><div class="site-title-main">Europe Incoming</div><div class="site-title-sub">FIT Packages</div></div>
-  <div class="contact-info"><div class="contact-prompt">Can't find what you're looking for? Email us at:</div>
-  <a href="mailto:fitsales@europeincoming.com" class="contact-email">fitsales@europeincoming.com</a></div>
-</div></div></nav>
-<div class="breadcrumb"><a href="../../">Home</a> › <a href="../">Multi-Country</a> › UK & Ireland</div>
-<div class="container">
-<h1>UK & Ireland</h1>
-<div class="brochures" id="brochuresList">
-<a href="10 Nights 11 Days England-Scotland_ Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">10 nights, 11 days England & Scotland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 10 nights / 11 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">London to Glasgow via the Peak District, Edinburgh's old town, Loch Ness and the Isle of Skye.</div>
-    <div class="cities-list">📍 London · Manchester · Edinburgh · Inverness</div>
-    <div class="price-tag">From £1,259 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_10_nights_11_days__0" class="map-inner"></div></div>
-</a>
-<a href="3 nights 4 days London_Private.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">3 nights, 4 days London</div>
-    <div class="tour-type">Private</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 3 nights / 4 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Oct 2026</span></div>
-    <div class="card-description">Private London — panoramic city tour, Thames cruise, Stonehenge and Bath with a dedicated vehicle.</div>
-    <div class="cities-list">📍 London</div>
-    <div class="price-tag">From £509 pp (group rate)</div>
-  </div>
-  <div class="card-map"><div id="map_3_nights_4_days_lo_1" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Ireland_Private.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Ireland</div>
-    <div class="tour-type">Private</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Private Ireland: Dublin's Georgian streets, Cliffs of Moher, Killarney and the Burren by minivan.</div>
-    <div class="cities-list">📍 Dublin · Limerick</div>
-    <div class="price-tag">From €1,159 pp (group rate)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_i_2" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Ireland_Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Ireland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Dublin Hop-On Hop-Off, Cliffs of Moher tour and a train loop through the west of Ireland.</div>
-    <div class="cities-list">📍 Dublin · Limerick</div>
-    <div class="price-tag">From €848 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_i_3" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Ireland_Self Drive.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Ireland</div>
-    <div class="tour-type">Self Drive</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Self-drive Ireland: Cliffs of Moher, the Burren, Killarney and the Ring of Kerry at your own pace.</div>
-    <div class="cities-list">📍 Dublin · Limerick</div>
-    <div class="price-tag">From €954 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_i_4" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Scotland_Private.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Scotland</div>
-    <div class="tour-type">Private</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Private Scotland: Edinburgh Castle, Loch Ness, the Isle of Skye and Loch Lomond with a dedicated vehicle.</div>
-    <div class="cities-list">📍 Edinburgh · Inverness · Fort William · Glasgow</div>
-    <div class="price-tag">From £1,155 pp (group rate)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_s_5" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Scotland_Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Scotland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Edinburgh to Glasgow by train via Inverness, the Isle of Skye and the Highlands.</div>
-    <div class="cities-list">📍 Edinburgh · Invernes s · Inverness · Glasgow</div>
-    <div class="price-tag">From £838 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_s_6" class="map-inner"></div></div>
-</a>
-<a href="6 nights, 7 days Scotland_Self Drive.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">6 nights, 7 days Scotland</div>
-    <div class="tour-type">Self Drive</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 6 nights / 7 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Self-drive Scotland: Edinburgh, Loch Ness, the Isle of Skye and Loch Lomond at your own pace.</div>
-    <div class="cities-list">📍 Edinburgh · Inverness · Fort William · Glasgow</div>
-    <div class="price-tag">From £836 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_6_nights__7_days_s_7" class="map-inner"></div></div>
-</a>
-<a href="8 Nights 9 Days London Scotland_Regular.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">8 nights, 9 days London & Scotland</div>
-    <div class="tour-type">Regular</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 8 nights / 9 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">London to Edinburgh by train via Glasgow, Loch Ness and the Highlands.</div>
-    <div class="cities-list">📍 London · Glasgow · Inverness · Edinburgh</div>
-    <div class="price-tag">From £1,081 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_8_nights_9_days_lo_8" class="map-inner"></div></div>
-</a>
-<a href="9 Nights 10 Days England-Scotland_ Private.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">9 nights, 10 days England & Scotland</div>
-    <div class="tour-type">Private</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 9 nights / 10 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Nov 2026</span></div>
-    <div class="card-description">Private Britain: London, Peak District, Edinburgh, Isle of Skye and Loch Lomond with a dedicated vehicle.</div>
-    <div class="cities-list">📍 London · Manchester · Edinburgh · Inverness · Glasgow</div>
-    <div class="price-tag">From £1,596 pp (group rate)</div>
-  </div>
-  <div class="card-map"><div id="map_9_nights_10_days_e_9" class="map-inner"></div></div>
-</a>
-<a href="9 nights, 10 days London with Devon & Cornwall_Self-drive.pdf" class="brochure-card" target="_blank">
-  <div class="card-info">
-    <div class="card-title">9 nights, 10 days London, with, Devon & Cornwall</div>
-    <div class="tour-type">Self Drive</div>
-    <div class="card-pills"><span class="pill pill-duration">🕐 9 nights / 10 days</span><span class="pill pill-allyear">🌍 All Year Round</span><span class="pill pill-valid">✓ Valid till Oct 2026</span></div>
-    <div class="card-description">Self-drive through Cheltenham, Barnstaple, Truro, Plymouth, Exeter and Bournemouth — your route, your pace.</div>
-    <div class="cities-list">📍 Cheltenham · Barnstaple · Truro · Plymouth · Exeter · Bournemouth</div>
-    <div class="price-tag">From £1,332 pp (twin)</div>
-  </div>
-  <div class="card-map"><div id="map_9_nights__10_days__10" class="map-inner"></div></div>
-</a>
-</div>
-<footer><p>All packages are available for download in PDF format</p></footer>
-</div>
-<script src="../../global-search.js"></script>
-<script>window.addEventListener('load',function(){(function(){
-  var pts=[[51.5074, -0.1278, "London"], [53.4808, -2.2426, "Manchester"], [55.9533, -3.1883, "Edinburgh"], [57.4778, -4.2247, "Inverness"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=1.2;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_10_nights_11_days__0',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+const PRODUCTS_URL = 'products/index.json';
+const maps = {};
+
+function squareMarker(size, color) {
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:${size}px;height:${size}px;background:${color};"></div>`,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
   });
-})();
-(function(){
-  var pts=[[51.5074, -0.1278, "London"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.3;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_3_nights_4_days_lo_1',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+}
+
+function initMap(mapId, points, closeLoop) {
+  if (maps[mapId]) return;
+  const el = document.getElementById(mapId);
+  if (!el) return;
+  const map = L.map(el, {
+    zoomControl: false, scrollWheelZoom: false,
+    dragging: false, attributionControl: false,
   });
-})();
-(function(){
-  var pts=[[53.3498, -6.2603, "Dublin"], [52.6638, -8.6267, "Limerick"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_i_2',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {maxZoom: 13}).addTo(map);
+
+  const latlngs = points.map(p => [p.lat, p.lng]);
+  if (latlngs.length > 1) {
+    const route = closeLoop ? [...latlngs, latlngs[0]] : latlngs;
+    L.polyline(route, {color:'#0B1733', weight:1.5, dashArray:'4,4'}).addTo(map);
   }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+
+  points.forEach(p => {
+    const isOvernight = p.nights > 0;
+    L.marker([p.lat, p.lng], {
+      icon: squareMarker(isOvernight ? 10 : 6, isOvernight ? '#F2B91D' : '#6B7080'),
+    }).addTo(map).bindTooltip(p.label, {
+      permanent: true, direction: 'top', offset: [0, -8],
+      className: 'city-tip',
+    });
   });
-})();
-(function(){
-  var pts=[[53.3498, -6.2603, "Dublin"], [52.6638, -8.6267, "Limerick"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_i_3',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+
+  const bounds = L.latLngBounds(latlngs);
+  map.fitBounds(bounds, {padding: [10, 10]});
+  if (latlngs.length === 1) map.setZoom(8);
+  maps[mapId] = map;
+}
+
+let allProducts = [];
+
+fetch(PRODUCTS_URL)
+  .then(r => r.json())
+  .then(data => {
+    allProducts = data.products || [];
+    render(allProducts);
+    document.getElementById('search').addEventListener('input', e => {
+      const q = e.target.value.toLowerCase();
+      const filtered = q
+        ? allProducts.filter(p =>
+            p.title.toLowerCase().includes(q) ||
+            (p.region||'').toLowerCase().includes(q) ||
+            (p.routeStops||[]).some(s => s.toLowerCase().includes(q))
+          )
+        : allProducts;
+      render(filtered);
+    });
   });
-})();
-(function(){
-  var pts=[[53.3498, -6.2603, "Dublin"], [52.6638, -8.6267, "Limerick"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_i_4',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
+
+function render(products) {
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  grid.innerHTML = '';
+  if (!products.length) { empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+
+  products.forEach((prod, i) => {
+    const variant = i % 3 === 1 ? 'gold' : 'navy';
+    const currency = prod.currency || '€';
+    const mapId = 'map_' + prod.id;
+    const route = (prod.routeStops || []).join(' · ').toUpperCase();
+    const nights = prod.nights || '';
+
+    const tile = document.createElement('a');
+    tile.className = `pkg-tile ${variant}`;
+    tile.href = `package.html?product=${encodeURIComponent(prod.productFile)}`;
+    tile.innerHTML = `
+      <div class="tile-left">
+        <div class="tile-meta">${nights} · ${prod.season || ''}</div>
+        <div class="tile-title">${prod.title}</div>
+        <div class="tile-blurb">${prod.blurb || ''}</div>
+        <div class="tile-route">${route}</div>
+        <div class="tile-price-row">
+          <span class="tile-from">From</span>
+          <span class="tile-amount">${currency}${prod.fromPrice ? prod.fromPrice.toLocaleString() : '—'}</span>
+          <span class="tile-pnote">${prod.priceNote || 'pp (twin)'}</span>
+        </div>
+        <div class="tile-validity">${prod.validity || ''}</div>
+      </div>
+      <div class="tile-right"><div class="tile-map" id="${mapId}"></div></div>
+    `;
+    grid.appendChild(tile);
+
+    // Init map after paint
+    setTimeout(() => initMap(mapId, prod.map?.points || [], prod.map?.closeLoop || false), 50);
   });
-})();
-(function(){
-  var pts=[[55.9533, -3.1883, "Edinburgh"], [57.4778, -4.2247, "Inverness"], [56.8198, -5.1052, "Fort William"], [55.8642, -4.2518, "Glasgow"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_s_5',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[55.9533, -3.1883, "Edinburgh"], [57.4745541, -4.2291087, "Invernes s"], [57.4778, -4.2247, "Inverness"], [55.8642, -4.2518, "Glasgow"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_s_6',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[55.9533, -3.1883, "Edinburgh"], [57.4778, -4.2247, "Inverness"], [56.8198, -5.1052, "Fort William"], [55.8642, -4.2518, "Glasgow"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_6_nights__7_days_s_7',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[51.5074, -0.1278, "London"], [55.8642, -4.2518, "Glasgow"], [57.4778, -4.2247, "Inverness"], [55.9533, -3.1883, "Edinburgh"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=1.2;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_8_nights_9_days_lo_8',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[51.5074, -0.1278, "London"], [53.4808, -2.2426, "Manchester"], [55.9533, -3.1883, "Edinburgh"], [57.4778, -4.2247, "Inverness"], [55.8642, -4.2518, "Glasgow"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=1.2;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_9_nights_10_days_e_9',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();
-(function(){
-  var pts=[[51.8994, -2.0783, "Cheltenham"], [51.0803, -4.0588, "Barnstaple"], [50.2632, -5.051, "Truro"], [50.3755, -4.1427, "Plymouth"], [50.7184, -3.5339, "Exeter"], [50.7192, -1.8808, "Bournemouth"]];
-  if(!pts.length) return;
-  var lats=pts.map(function(p){return p[0];});
-  var lngs=pts.map(function(p){return p[1];});
-  var pad=0.6;
-  var bounds=[[Math.min.apply(null,lats)-pad,Math.min.apply(null,lngs)-pad],[Math.max.apply(null,lats)+pad,Math.max.apply(null,lngs)+pad]];
-  var map=L.map('map_9_nights__10_days__10',{zoomControl:false,scrollWheelZoom:false,dragging:false,touchZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,attributionControl:false});
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(map);
-  map.fitBounds(bounds,{padding:[20,20]});
-  function bezier(p1,p2,n){
-    var la1=p1[0],ln1=p1[1],la2=p2[0],ln2=p2[1];
-    var mla=(la1+la2)/2,mln=(ln1+ln2)/2;
-    var dla=la2-la1,dln=ln2-ln1,len=Math.sqrt(dla*dla+dln*dln);
-    var off=len*0.25,cla=mla-(dln/len)*off,cln=mln+(dla/len)*off;
-    var r=[];
-    for(var i=0;i<=n;i++){var t=i/n;r.push([(1-t)*(1-t)*la1+2*(1-t)*t*cla+t*t*la2,(1-t)*(1-t)*ln1+2*(1-t)*t*cln+t*t*ln2]);}
-    return r;
-  }
-  if(pts.length>1){
-    for(var i=0;i<pts.length-1;i++){
-      var cv=bezier(pts[i],pts[i+1],60);
-      L.polyline(cv,{color:'#c62828',weight:2,opacity:0.9}).addTo(map);
-      var n=cv.length,dx=cv[n-1][1]-cv[n-5][1],dy=cv[n-1][0]-cv[n-5][0];
-      var ang=Math.atan2(dx,dy)*180/Math.PI-90;
-      L.marker(cv[n-1],{icon:L.divIcon({className:'',html:'<div style="width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:10px solid #c62828;transform-origin:50% 100%;transform:rotate('+ang+'deg)"></div>',iconSize:[8,10],iconAnchor:[4,5]})}).addTo(map);
-    }
-  }
-  pts.forEach(function(p,i){
-    var dir=i===0?'left':(i===pts.length-1?'right':'top');
-    var off=i===0?[-8,0]:(i===pts.length-1?[8,0]:[0,-6]);
-    L.circleMarker([p[0],p[1]],{radius:5,fillColor:'#c62828',color:'white',weight:2,fillOpacity:1}).addTo(map).bindTooltip(p[2],{permanent:true,direction:dir,className:'city-tip',offset:off});
-  });
-})();});</script>
-</body></html>
+}
+</script>
+</body>
+</html>

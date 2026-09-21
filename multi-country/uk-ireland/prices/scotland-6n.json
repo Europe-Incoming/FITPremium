@@ -1,0 +1,106 @@
+{
+  "year": "2026-27",
+  "currency": "GBP",
+  "validFrom": "01 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "note": "Premium market rates. Net, per person.",
+  "variants": {
+    "regular": {
+      "3": {
+        "winter": {
+          "single": 1366,
+          "twin": 863,
+          "child": 358
+        },
+        "summer": {
+          "single": 1423,
+          "twin": 899,
+          "child": 373
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1523,
+          "twin": 942,
+          "child": 389
+        },
+        "summer": {
+          "single": 1586,
+          "twin": 981,
+          "child": 405
+        }
+      }
+    },
+    "private": {
+      "minPax": [
+        {
+          "pax": 8,
+          "w3": 1517,
+          "w4": 1596,
+          "s3": 1581,
+          "s4": 1662
+        },
+        {
+          "pax": 10,
+          "w3": 1386,
+          "w4": 1465,
+          "s3": 1444,
+          "s4": 1526
+        },
+        {
+          "pax": 12,
+          "w3": 1299,
+          "w4": 1377,
+          "s3": 1353,
+          "s4": 1434
+        },
+        {
+          "pax": 14,
+          "w3": 1236,
+          "w4": 1315,
+          "s3": 1288,
+          "s4": 1369
+        },
+        {
+          "pax": 16,
+          "w3": 1189,
+          "w4": 1268,
+          "s3": 1239,
+          "s4": 1320
+        }
+      ]
+    },
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 1363,
+          "twin": 861,
+          "child": 357
+        },
+        "summer": {
+          "single": 1420,
+          "twin": 897,
+          "child": 372
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1520,
+          "twin": 939,
+          "child": 388
+        },
+        "summer": {
+          "single": 1584,
+          "twin": 979,
+          "child": 404
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Edinburgh Castle tickets",
+      "price": 22.66
+    }
+  ]
+}
