@@ -2,7 +2,7 @@
   "id": "london-scotland-8n",
   "title": "London & Scotland Highlights",
   "eyebrow": "UK & Ireland \u00b7 FIT Packages \u00b7 2026\u201327",
-  "heroImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80",
+  "heroImage": "",
   "pricesFile": "prices/london-scotland-8n.json",
   "map": {
     "points": [
@@ -40,7 +40,15 @@
       "nights": "8 nights / 9 days",
       "route": "London (3N) \u2192 Glasgow (1N) \u2192 Inverness (2N) \u2192 Edinburgh (2N)",
       "aboutNights": "8 nights / 9 days",
-      "transport": {},
+      "transport": {
+        "1": "Private transfer from London airport to your hotel.",
+        "2": "London Hop-On Hop-Off 1-day pass and a one-way Thames River cruise.",
+        "4": "London to Glasgow train ticket, standard class.",
+        "5": "Glasgow to Inverness train ticket, standard class.",
+        "6": "Isle of Skye and Eilean Donan Castle full-day excursion.",
+        "7": "Inverness to Edinburgh train ticket, standard class.",
+        "9": "Private transfer from your hotel to Edinburgh airport."
+      },
       "inclusions": [
         "8 nights\u2019 accommodation including breakfast.",
         "London airport to London hotel private transfer",
@@ -50,74 +58,79 @@
         "The Isle of Skye & Eilean Donan Castle, 12-hour regular coach",
         "Inverness to Edinburgh 2nd class train ticket",
         "Edinburgh hotel to airport private transfer"
+      ],
+      "days": [
+        {
+          "num": 1,
+          "title": "Arrival in London",
+          "overnight": "Overnight: London",
+          "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "Fish and chips at a classic London pub."
+        },
+        {
+          "num": 2,
+          "title": "London",
+          "overnight": "Overnight: London",
+          "desc": "Immerse yourself in London's splendour using the one-day Hop on Hop off Pass, inclusive of a one-way Thames River cruise. Experience the city's highlights at your pace.",
+          "fallbackIncluded": "London Eye standard tickets",
+          "experience": "A one-way Thames cruise past the Tower of London and Tower Bridge."
+        },
+        {
+          "num": 3,
+          "title": "London",
+          "overnight": "Overnight: London",
+          "desc": "Following breakfast, relish the freedom to explore the capital city independently or opt for an excursion to discover the surrounding areas.",
+          "fallbackIncluded": "Stonehenge and Bath full day group tour",
+          "shopping": "Covent Garden\u2019s covered market and Oxford Street for an afternoon of browsing."
+        },
+        {
+          "num": 4,
+          "title": "London \u2013 Glasgow",
+          "overnight": "Overnight: Glasgow",
+          "desc": "Post breakfast, proceed to check out and board your train to Glasgow. Upon arrival, independently reach your hotel. Glasgow beckons with its vibrant cultural scene and exceptional dining choices. Check in and relish the remaining day at your own pace.",
+          "fallbackIncluded": "Day at leisure."
+        },
+        {
+          "num": 5,
+          "title": "Glasgow \u2013 Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Following breakfast, gather your belongings and head to Glasgow Railway Station for your train journey to Inverness. Arriving in the heart of the Scottish Highlands, Inverness boasts breathtaking beauty and cosmopolitan allure. Check in and savour the day at your leisure.",
+          "fallbackIncluded": "Glasgow 1 day hop on hop off pass"
+        },
+        {
+          "num": 6,
+          "title": "Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Immerse yourself in the enchanting beauty of Inverness. Embark on an exploration to The Isle of Skye & Eilean Donan Castle. Discover the wonders of this picturesque location.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "Eilean Donan Castle, framed by three lochs \u2014 one of Scotland\u2019s most photographed sights."
+        },
+        {
+          "num": 7,
+          "title": "Inverness \u2013 Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Post-breakfast, proceed to check out and make your way to the railway station for your journey to Edinburgh. Arriving in the capital, check in at the hotel. Welcome to Edinburgh, a city adorned with rich history and celebrated for its harmonious fusion of antiquity and modernity. Indulge in remarkable dining experiences and diverse activities in this acclaimed city.",
+          "fallbackIncluded": "Day at leisure."
+        },
+        {
+          "num": 8,
+          "title": "Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Immerse yourself in the vibrant atmosphere of Edinburgh, exploring at your leisure. Experience the city's unique charm and cultural offerings.",
+          "fallbackIncluded": "Edinburgh 1 day hop on hop off pass Edinburgh | Loch Lomond, Stirling Castle, 10 -hour coach tour",
+          "taste": "A dram of single malt Scotch at a historic Royal Mile pub."
+        },
+        {
+          "num": 9,
+          "title": "Departure",
+          "overnight": "Departure day",
+          "desc": "Following breakfast, check out from your accommodation and depart via private transfer to Edinburgh Airport for your onward journey.",
+          "fallbackIncluded": "Day at leisure."
+        }
       ]
     }
   },
-  "days": [
-    {
-      "num": 1,
-      "title": "Arrival in London",
-      "overnight": "Overnight: London",
-      "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 2,
-      "title": "London",
-      "overnight": "Overnight: London",
-      "desc": "Immerse yourself in London's splendour using the one-day Hop on Hop off Pass, inclusive of a one-way Thames River cruise. Experience the city's highlights at your pace. Overnight in London. Optional: London Eye standard tickets",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 3,
-      "title": "London",
-      "overnight": "Overnight: London",
-      "desc": "Following breakfast, relish the freedom to explore the capital city independently or opt for an excursion to discover the surrounding areas. Overnight in London. Optional: Stonehenge and Bath full day group tour",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 4,
-      "title": "London \u2013 Glasgow",
-      "overnight": "Overnight: Glasgow",
-      "desc": "Post breakfast, proceed to check out and board your train to Glasgow. Upon arrival, independently reach your hotel. Glasgow beckons with its vibrant cultural scene and exceptional dining choices. Check in and relish the remaining day at your own pace.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 5,
-      "title": "Glasgow \u2013 Inverness",
-      "overnight": "Overnight: Inverness",
-      "desc": "Following breakfast, gather your belongings and head to Glasgow Railway Station for your train journey to Inverness. Arriving in the heart of the Scottish Highlands, Inverness boasts breathtaking beauty and cosmopolitan allure. Check in and savour the day at your leisure. Overnight in Inverness. Optional: Glasgow 1 day hop on hop off pass",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 6,
-      "title": "Inverness",
-      "overnight": "Overnight: Inverness",
-      "desc": "Immerse yourself in the enchanting beauty of Inverness. Embark on an exploration to The Isle of Skye & Eilean Donan Castle. Discover the wonders of this picturesque location.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 7,
-      "title": "Inverness \u2013 Edinburgh",
-      "overnight": "Overnight: Edinburgh",
-      "desc": "Post-breakfast, proceed to check out and make your way to the railway station for your journey to Edinburgh. Arriving in the capital, check in at the hotel. Welcome to Edinburgh, a city adorned with rich history and celebrated for its harmonious fusion of antiquity and modernity. Indulge in remarkable dining experiences and diverse activities in this acclaimed city.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 8,
-      "title": "Edinburgh",
-      "overnight": "Overnight: Edinburgh",
-      "desc": "Immerse yourself in the vibrant atmosphere of Edinburgh, exploring at your leisure. Experience the city's unique charm and cultural offerings. Overnight in Edinburgh. Optional: Edinburgh 1 day hop on hop off pass Edinburgh | Loch Lomond, Stirling Castle, 10 -hour coach tour",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 9,
-      "title": "Departure",
-      "overnight": "Departure day",
-      "desc": "Following breakfast, check out from your accommodation and depart via private transfer to Edinburgh Airport for your onward journey. Unit 11-12 Turnham Green Terrace Mews, London W4 1QU. Tel: +44 208 994 5001. Email: FITsales@europeincoming.com Web: www.europeincoming.com. Europe Incoming Holdings Ltd is registered in England & Wales with company reg. number: 07053949. Please review general T&C on www.europeincoming.com",
-      "fallbackIncluded": "Day at leisure."
-    }
-  ],
   "hotels": [
     {
       "city": "London",

@@ -2,7 +2,7 @@
   "id": "scotland-6n",
   "title": "Scotland Discovery",
   "eyebrow": "UK & Ireland \u00b7 FIT Packages \u00b7 2026\u201327",
-  "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
+  "heroImage": "",
   "pricesFile": "prices/scotland-6n.json",
   "map": {
     "points": [
@@ -23,6 +23,12 @@
         "lng": -5.1057,
         "label": "Fort William",
         "nights": 0
+      },
+      {
+        "lat": 55.8642,
+        "lng": -4.2518,
+        "label": "Glasgow",
+        "nights": 0
       }
     ],
     "closeLoop": false
@@ -32,9 +38,16 @@
       "name": "Regular FIT",
       "blurb": "Trains and bus connections between cities \u2014 the classic Scottish rail adventure.",
       "nights": "6 nights / 7 days",
-      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Edinburgh (1N)",
+      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Glasgow (1N)",
       "aboutNights": "6 nights / 7 days",
-      "transport": {},
+      "transport": {
+        "1": "Private transfer from Edinburgh airport to your hotel.",
+        "3": "Edinburgh to Inverness train ticket, II Class.",
+        "4": "Isle of Skye and Eilean Donan Castle full-day regular coach tour.",
+        "5": "Inverness to Fort William bus ticket.",
+        "6": "Fort William to Glasgow train ticket, II Class.",
+        "7": "Private transfer from your hotel to Glasgow airport."
+      },
       "inclusions": [
         "6 nights\u2019 accommodation including breakfast.",
         "Private transfer from Edinburgh airport to Edinburgh hotel",
@@ -43,86 +56,216 @@
         "Inverness to Fort William bus ticket",
         "Fort William to Glasgow train ticket, II Class",
         "Glasgow hotel to Glasgow airport private transfer"
+      ],
+      "days": [
+        {
+          "num": 1,
+          "title": "Arrival in Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Welcome to the historic capital of Scotland, renowned for its rich history, stunning architecture, and vibrant cultural scene. Begin your journey with a private transfer from Edinburgh airport to your hotel. Prepare to immerse yourself in the city's charm and heritage.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "A dram of single malt Scotch at a historic Royal Mile pub."
+        },
+        {
+          "num": 2,
+          "title": "Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Enjoy a leisurely day in Edinburgh, exploring its historic sites, wandering along the Royal Mile, or visiting the majestic Edinburgh Castle. Delight in the city's cultural offerings at your own pace.",
+          "fallbackIncluded": "Edinburgh 1 day hop on hop off | Loch Lomond, Stirling Castle, 10 hrs coach tour",
+          "experience": "Climb Arthur\u2019s Seat for a view over the whole city, or descend into the Real Mary King\u2019s Close beneath the Royal Mile."
+        },
+        {
+          "num": 3,
+          "title": "Edinburgh to Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Travel by train to Inverness, the gateway to the Scottish Highlands. Explore this charming city, nestled by the River Ness, known for its historic sites like Inverness Castle and the Caledonian Canal. Prepare for Highland adventures.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "The train skirts the Cairngorms and follows the shore of Loch Ness."
+        },
+        {
+          "num": 4,
+          "title": "Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Embark on a full-day coach tour from Inverness, exploring the mesmerizing Isle of Skye and the iconic Eilean Donan Castle. Immerse yourself in Scotland's stunning landscapes and historic landmarks. Return for a tranquil evening in Inverness.",
+          "fallbackIncluded": "Day at leisure."
+        },
+        {
+          "num": 5,
+          "title": "Inverness to Fort William",
+          "overnight": "Overnight: Fort William",
+          "desc": "Travel by bus to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels.",
+          "fallbackIncluded": "Ben Nevis 1 day gondola ticket",
+          "experience": "Ben Nevis, the UK\u2019s highest peak, rises straight from Fort William\u2019s edge."
+        },
+        {
+          "num": 6,
+          "title": "Fort William to Glasgow",
+          "overnight": "Overnight: Glasgow",
+          "desc": "Board the train to Glasgow, Scotland's largest city renowned for its vibrant arts scene, rich architectural heritage, and bustling city life. Embrace cultural diversity and explore the city's museums, galleries, and lively atmosphere.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "Fresh seafood or a hearty plate of stovies in one of Glasgow\u2019s Merchant City restaurants."
+        },
+        {
+          "num": 7,
+          "title": "Departure.",
+          "overnight": "Departure day",
+          "desc": "Conclude your Scottish adventure with a private transfer from your Glasgow hotel to Glasgow airport. Depart with cherished memories of Scotland's captivating landscapes and vibrant cities.",
+          "fallbackIncluded": "Day at leisure."
+        }
       ]
     },
     "private": {
       "name": "Private Exclusive Coach",
       "blurb": "Private coach with driver from Edinburgh to Fort William \u2014 photo stops at every loch.",
       "nights": "6 nights / 7 days",
-      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Edinburgh (1N)",
+      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Glasgow (1N)",
       "aboutNights": "6 nights / 7 days",
-      "transport": {},
+      "transport": {
+        "1": "Private transfer from Edinburgh airport to your hotel.",
+        "3": "Private transfer Edinburgh to Inverness, via Loch Ness and the Highlands.",
+        "4": "Isle of Skye full-day private excursion.",
+        "5": "Private transfer Inverness to Fort William.",
+        "6": "Private transfer Fort William to Glasgow, with a photo stop at Loch Lomond.",
+        "7": "Private transfer from your hotel to Glasgow airport."
+      },
       "inclusions": [
         "6 nights\u2019 accommodation including breakfast.",
         "Private transfer from Edinburgh airport to Edinburgh hotel",
         "Private minivan for 3 hrs on Day 2 & on disposal from Day 3 till Day 6 (Daily driving capped at 8 hours)",
         "Glasgow hotel to Glasgow airport private transfer"
+      ],
+      "days": [
+        {
+          "num": 1,
+          "title": "Arrival in Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Welcome to the historic capital of Scotland, renowned for its rich history, stunning architecture, and vibrant cultural scene. Begin your journey with a private transfer from Edinburgh airport to your hotel. Prepare to immerse yourself in the city's charm and heritage.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "A dram of single malt Scotch at a historic Royal Mile pub."
+        },
+        {
+          "num": 2,
+          "title": "Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Discover Edinburgh at your pace with a self-guided city tour. Traverse its historic streets, marvel at architectural wonders, and immerse yourself in the city's captivating ambiance. Explore the majestic Edinburgh Castle, vibrant Princes Street, and more.",
+          "fallbackIncluded": "Edinburgh castle tickets",
+          "experience": "Climb Arthur\u2019s Seat for a view over the whole city, or descend into the Real Mary King\u2019s Close beneath the Royal Mile."
+        },
+        {
+          "num": 3,
+          "title": "Edinburgh to Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Travel from Edinburgh to Inverness, passing through the legendary Loch Ness and the breathtaking Highlands. Nestled by the River Ness, Inverness, the Highland capital, boasts historic sites like Inverness Castle and the serene Caledonian Canal.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "The train skirts the Cairngorms and follows the shore of Loch Ness."
+        },
+        {
+          "num": 4,
+          "title": "Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Immerse yourself in a captivating journey to the Isle of Skye from Inverness. Discover the island's natural beauty, rugged landscapes, and ancient castles. Traverse iconic sites like the Old Man of Storr and the picturesque Fairy Pools. Return for a serene evening in Inverness.",
+          "fallbackIncluded": "Day at leisure."
+        },
+        {
+          "num": 5,
+          "title": "Inverness to Fort William",
+          "overnight": "Overnight: Fort William",
+          "desc": "After breakfast, check out and proceed to to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels.",
+          "fallbackIncluded": "Ben Nevis 1 day gondola ticket",
+          "experience": "Ben Nevis, the UK\u2019s highest peak, rises straight from Fort William\u2019s edge."
+        },
+        {
+          "num": 6,
+          "title": "Fort William to Glasgow",
+          "overnight": "Overnight: Glasgow",
+          "desc": "Travel from Fort William to Glasgow, pausing for a picturesque photo stop at Loch Lomond, Scotland's largest lake. Arrive in Glasgow by late afternoon, Scotland's vibrant cultural hub, boasts architectural marvels, a thriving arts scene, and rich industrial history.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "Fresh seafood or a hearty plate of stovies in one of Glasgow\u2019s Merchant City restaurants."
+        },
+        {
+          "num": 7,
+          "title": "Departure.",
+          "overnight": "Departure day",
+          "desc": "Conclude your Scottish adventure with a private transfer from your Glasgow hotel to Glasgow airport. Depart with cherished memories of Scotland's captivating landscapes and vibrant cities.",
+          "fallbackIncluded": "Day at leisure."
+        }
       ]
     },
     "selfdrive": {
       "name": "Self Drive",
       "blurb": "Rental car from Edinburgh \u2014 freedom to stop at any viewpoint on the Highland roads.",
       "nights": "6 nights / 7 days",
-      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Edinburgh (1N)",
+      "route": "Edinburgh (2N) \u2192 Inverness (2N) \u2192 Fort William (1N) \u2192 Glasgow (1N)",
       "aboutNights": "6 nights / 7 days",
-      "transport": {},
+      "transport": {
+        "1": "Rental car pick-up at Edinburgh airport.",
+        "3": "Self-drive Edinburgh to Inverness through the Highlands.",
+        "5": "Self-drive Inverness to Fort William, via the Glenfinnan Viaduct.",
+        "6": "Self-drive Fort William to Glasgow, via Loch Lomond.",
+        "7": "Return your rental car at Glasgow Airport."
+      },
       "inclusions": [
         "6 nights\u2019 accommodation including breakfast.",
         "Rental car (Standard sedan class) from Day 1, 10 AM till Day 7, 2 PM. **Actual vehicle model depends on availability at the time of pick-up. ** Rental terms and policies will be available after booking the rental car."
+      ],
+      "days": [
+        {
+          "num": 1,
+          "title": "Arrival in Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Welcome to the historic capital of Scotland, renowned for its rich history, stunning architecture, and vibrant cultural scene. Pick up your rental car from the airport office. Get ready to start your Scottish self-drive adventure.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "A dram of single malt Scotch at a historic Royal Mile pub."
+        },
+        {
+          "num": 2,
+          "title": "Edinburgh",
+          "overnight": "Overnight: Edinburgh",
+          "desc": "Enjoy a day exploring Edinburgh at your pace with the freedom of your rental car. Discover historic landmarks, such as Edinburgh Castle or Holyrood Palace, and meander through the city's charming streets.",
+          "fallbackIncluded": "Edinburgh castle tickets",
+          "experience": "Climb Arthur\u2019s Seat for a view over the whole city, or descend into the Real Mary King\u2019s Close beneath the Royal Mile."
+        },
+        {
+          "num": 3,
+          "title": "Edinburgh to Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Embark on a scenic self-drive through the majestic Highlands from Edinburgh to Inverness. Revel in the picturesque landscapes and the rugged beauty of Scotland's countryside. Nestled by the River Ness, Inverness, the Highland capital, boasts historic sites like Inverness Castle and the serene Caledonian Canal.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "The train skirts the Cairngorms and follows the shore of Loch Ness."
+        },
+        {
+          "num": 4,
+          "title": "Inverness",
+          "overnight": "Overnight: Inverness",
+          "desc": "Enjoy the flexibility of your self-drive adventure around Inverness. Choose to visit the stunning Isle of Skye to witness its breathtaking landscapes or explore the renowned Speyside distilleries for a taste of Scotland's finest whiskies.",
+          "fallbackIncluded": "Day at leisure."
+        },
+        {
+          "num": 5,
+          "title": "Inverness to Fort William",
+          "overnight": "Overnight: Fort William",
+          "desc": "Enjoy a picturesque self-drive from Inverness to Fort William, perhaps including a visit to the iconic Glenfinnan Viaduct, known for its stunning architecture and Harry Potter film fame. Arrive at Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. The town is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels.",
+          "fallbackIncluded": "Ben Nevis 1 day gondola ticket",
+          "experience": "Ben Nevis, the UK\u2019s highest peak, rises straight from Fort William\u2019s edge."
+        },
+        {
+          "num": 6,
+          "title": "Fort William to Glasgow",
+          "overnight": "Overnight: Glasgow",
+          "desc": "Take a scenic self-drive from Fort William to Glasgow, with a potential stopover at Loch Lomond, Scotland's largest lake. Arrive in Glasgow, Scotland's vibrant cultural hub, boasts architectural marvels, a thriving arts scene, and rich industrial history.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "Fresh seafood or a hearty plate of stovies in one of Glasgow\u2019s Merchant City restaurants."
+        },
+        {
+          "num": 7,
+          "title": "Departure.",
+          "overnight": "Departure day",
+          "desc": "Conclude your self-drive adventure by returning the rental car at Glasgow Airport rental office. Depart with wonderful memories of Scotland's scenic landscapes and vibrant cities.",
+          "fallbackIncluded": "Day at leisure."
+        }
       ]
     }
   },
-  "days": [
-    {
-      "num": 1,
-      "title": "Arrival in Edinburgh",
-      "overnight": "Overnight: Edinburgh",
-      "desc": "Welcome to the historic capital of Scotland, renowned for its rich history, stunning architecture, and vibrant cultural scene. Begin your journey with a private transfer from Edinburgh airport to your hotel. Prepare to immerse yourself in the city's charm and heritage.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 2,
-      "title": "Edinburgh",
-      "overnight": "Overnight: Edinburgh",
-      "desc": "Enjoy a leisurely day in Edinburgh, exploring its historic sites, wandering along the Royal Mile, or visiting the majestic Edinburgh Castle. Delight in the city's cultural offerings at your own pace. Overnight in Edinburgh. Optional: Edinburgh 1 day hop on hop off | Loch Lomond, Stirling Castle, 10 hrs coach tour",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 3,
-      "title": "Edinburgh to Inverness",
-      "overnight": "Overnight: Invernes s",
-      "desc": "Travel by train to Inverness, the gateway to the Scottish Highlands. Explore this charming city, nestled by the River Ness, known for its historic sites like Inverness Castle and the Caledonian Canal. Prepare for Highland adventures.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 4,
-      "title": "Inverness",
-      "overnight": "Overnight: Inverness",
-      "desc": "Embark on a full-day coach tour from Inverness, exploring the mesmerizing Isle of Skye and the iconic Eilean Donan Castle. Immerse yourself in Scotland's stunning landscapes and historic landmarks. Return for a tranquil evening in Inverness.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 5,
-      "title": "Inverness to Fort William",
-      "overnight": "Overnight: Fort William",
-      "desc": "Travel by bus to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels. Overnight in Fort William. Optional: Ben Nevis 1 day gondola ticket",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 6,
-      "title": "Fort William to Glasgow",
-      "overnight": "Overnight: Glasgow",
-      "desc": "Board the train to Glasgow, Scotland's largest city renowned for its vibrant arts scene, rich architectural heritage, and bustling city life. Embrace cultural diversity and explore the city's museums, galleries, and lively atmosphere.",
-      "fallbackIncluded": "Day at leisure."
-    },
-    {
-      "num": 7,
-      "title": "Departure.",
-      "overnight": "Departure day",
-      "desc": "Conclude your Scottish adventure with a private transfer from your Glasgow hotel to Glasgow airport. Depart with cherished memories of Scotland's captivating landscapes and vibrant cities.",
-      "fallbackIncluded": "Day at leisure."
-    }
-  ],
   "hotels": [
     {
       "city": "Edinburgh",

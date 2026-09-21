@@ -165,6 +165,12 @@
             "lng": -5.1057,
             "label": "Fort William",
             "nights": 0
+          },
+          {
+            "lat": 55.8642,
+            "lng": -4.2518,
+            "label": "Glasgow",
+            "nights": 0
           }
         ],
         "closeLoop": false
@@ -172,7 +178,8 @@
       "routeStops": [
         "Edinburgh",
         "Inverness",
-        "Fort William"
+        "Fort William",
+        "Glasgow"
       ],
       "nights": "6 nights / 7 days",
       "season": "All Year Round",
@@ -280,6 +287,12 @@
             "lng": -1.8808,
             "label": "Bournemouth",
             "nights": 0
+          },
+          {
+            "lat": 51.47,
+            "lng": -0.4543,
+            "label": "Heathrow",
+            "nights": 0
           }
         ],
         "closeLoop": false
@@ -291,7 +304,8 @@
         "Truro",
         "Plymouth",
         "Exeter",
-        "Bournemouth"
+        "Bournemouth",
+        "Heathrow"
       ],
       "nights": "9 nights / 10 days",
       "season": "All Year Round",

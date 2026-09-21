@@ -27,10 +27,10 @@ body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--i
 .page-h1{font-weight:300;font-size:56px;letter-spacing:-0.02em;color:var(--navy);line-height:1;}
 
 /* Hero row */
-.hero-row{display:flex;align-items:stretch;margin:24px 40px 0;gap:0;}
-.hero-img{flex:1;min-width:320px;min-height:380px;background:var(--navy);overflow:hidden;}
+.hero-row{display:flex;align-items:stretch;height:300px;margin:24px 40px 0;gap:0;}
+.hero-img{flex:1;min-width:320px;background:var(--navy);overflow:hidden;}
 .hero-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.facts-panel{width:280px;flex-shrink:0;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;}
+.facts-panel{width:280px;flex-shrink:0;overflow:auto;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;}
 .facts-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
 .facts-value{font-weight:300;font-size:24px;margin-top:2px;}
 .facts-route{font-size:13px;color:rgba(255,255,255,0.78);}
@@ -69,6 +69,7 @@ body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--i
 .tag-included{background:var(--navy);color:#fff;}
 .tag-taste{background:var(--gold);color:var(--navy);}
 .tag-exp{background:#EDEDEA;color:var(--navy);}
+.tag-shop{background:#EDEDEA;color:var(--navy);}
 
 /* Package includes */
 .includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:40px;}
@@ -326,8 +327,9 @@ if (!productFile) {
       document.getElementById('page-title').textContent = prod.title;
       document.getElementById('eyebrow').textContent = prod.eyebrow || '';
       document.getElementById('pkg-title').textContent = prod.title;
-      document.getElementById('hero-img').src = prod.heroImage || '';
-      document.getElementById('hero-img').alt = prod.title;
+      const heroImg = document.getElementById('hero-img');
+      if (prod.heroImage) { heroImg.src = prod.heroImage; heroImg.alt = prod.title; }
+      else { heroImg.remove(); }
       buildStyleSwitcher();
       const firstStyle = params.get('style') || Object.keys(prod.styles)[0];
       setStyle(firstStyle);
@@ -382,8 +384,12 @@ function buildDays(styleKey) {
   const transport = s.transport || {};
   const container = document.getElementById('days-container');
   container.innerHTML = '';
-  (PRODUCT.days || []).forEach(d => {
+  (s.days || []).forEach(d => {
     const inc = transport[String(d.num)] || d.fallbackIncluded || '';
+    const flavor = d.taste ? {label: 'Local Taste', cls: 'tag-taste', text: d.taste}
+      : d.experience ? {label: 'Local Experience', cls: 'tag-exp', text: d.experience}
+      : d.shopping ? {label: 'Local Shopping', cls: 'tag-shop', text: d.shopping}
+      : null;
     const row = document.createElement('div');
     row.className = 'day-row';
     row.innerHTML = `
@@ -395,7 +401,10 @@ function buildDays(styleKey) {
         <div class="day-title">${d.title}</div>
         <div class="day-overnight">${d.overnight || ''}</div>
         <div class="day-desc">${d.desc || ''}</div>
-        ${inc ? `<div class="day-tags"><span class="tag tag-included">${inc}</span></div>` : ''}
+        <div class="day-tags">
+          ${inc ? `<span class="tag tag-included">${inc}</span>` : ''}
+          ${flavor ? `<span class="tag ${flavor.cls}">${flavor.label}: ${flavor.text}</span>` : ''}
+        </div>
       </div>
     `;
     container.appendChild(row);
@@ -557,7 +566,7 @@ function buildSidebarMap() {
   if (!el || !PRODUCT) return;
   const pts = PRODUCT.map?.points || [];
   sidebarMap = L.map(el, {zoomControl:false,scrollWheelZoom:false,dragging:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:13}).addTo(sidebarMap);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(sidebarMap);
   if (pts.length > 1) {
     const lls = pts.map(p => [p.lat,p.lng]);
     const route = PRODUCT.map?.closeLoop ? [...lls,lls[0]] : lls;
@@ -589,7 +598,7 @@ function openMapModal() {
     const el = document.getElementById('modal-map');
     const pts = PRODUCT.map?.points || [];
     modalMap = L.map(el,{zoomControl:true,scrollWheelZoom:true,dragging:true,attributionControl:false});
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:15}).addTo(modalMap);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(modalMap);
     if (pts.length > 1) {
       const lls = pts.map(p => [p.lat,p.lng]);
       L.polyline(PRODUCT.map?.closeLoop?[...lls,lls[0]]:lls,{color:'#0B1733',weight:2}).addTo(modalMap);
