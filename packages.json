@@ -1559,6 +1559,170 @@
       "season": "all-year"
     },
     {
+      "id": "metro-uk-ireland-london-3n",
+      "name": "London City Break",
+      "filename": "package.html?product=products/london-3n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Bath"
+      ],
+      "duration": "3 nights / 4 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 443,
+      "currency": "£",
+      "valid_till": "Oct 2027",
+      "is_expired": false,
+      "description": "Classic London — panoramic tour, Thames cruise, Stonehenge and Bath with a private vehicle.",
+      "tags": [
+        "London",
+        "Bath"
+      ]
+    },
+    {
+      "id": "metro-uk-ireland-england-scotland-10n",
+      "name": "England & Scotland Grand Tour",
+      "filename": "package.html?product=products/england-scotland-10n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Manchester",
+        "Edinburgh",
+        "Inverness",
+        "Glasgow"
+      ],
+      "duration": "10 nights / 11 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 1297,
+      "currency": "£",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "London to Glasgow — Peak District, Edinburgh's Old Town, Loch Ness and the Highland wilderness.",
+      "tags": [
+        "London",
+        "Manchester",
+        "Edinburgh",
+        "Inverness",
+        "Glasgow"
+      ]
+    },
+    {
+      "id": "metro-uk-ireland-london-scotland-8n",
+      "name": "London & Scotland Highlights",
+      "filename": "package.html?product=products/london-scotland-8n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Glasgow",
+        "Inverness",
+        "Edinburgh"
+      ],
+      "duration": "8 nights / 9 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 1114,
+      "currency": "£",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "London to Edinburgh via Glasgow — city sights, Highland wilderness and Loch Ness.",
+      "tags": [
+        "London",
+        "Glasgow",
+        "Inverness",
+        "Edinburgh"
+      ]
+    },
+    {
+      "id": "metro-uk-ireland-scotland-6n",
+      "name": "Scotland Discovery",
+      "filename": "package.html?product=products/scotland-6n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ],
+      "duration": "6 nights / 7 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 861,
+      "currency": "£",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Edinburgh, Inverness and Fort William — castles, lochs and Highland glens by train, coach or self-drive.",
+      "tags": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ]
+    },
+    {
+      "id": "metro-uk-ireland-ireland-6n",
+      "name": "Ireland Discovery",
+      "filename": "package.html?product=products/ireland-6n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "Dublin",
+        "Cliffs of Moher",
+        "Limerick",
+        "Kilkenny"
+      ],
+      "duration": "6 nights / 7 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 874,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Dublin, the Cliffs of Moher and Limerick — by train, private coach or self-drive.",
+      "tags": [
+        "Dublin",
+        "Cliffs of Moher",
+        "Limerick",
+        "Kilkenny"
+      ]
+    },
+    {
+      "id": "metro-uk-ireland-devon-cornwall-9n",
+      "name": "London, Devon & Cornwall",
+      "filename": "package.html?product=products/devon-cornwall-9n.json",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ],
+      "duration": "9 nights / 10 days",
+      "type": "",
+      "season": "all-year",
+      "price_twin": 1372,
+      "currency": "£",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "London to Land's End by rental car — Cotswolds, Tintagel, the Lizard Peninsula and Dartmoor.",
+      "tags": [
+        "London",
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ]
+    },
+    {
       "id": "wce-005",
       "name": "10 Nights, 11 Days Paris Switzerland Italy - Private",
       "filename": "10 nights, 11 days Paris Switzerland Italy_Private.pdf",

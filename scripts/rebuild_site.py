@@ -723,6 +723,39 @@ def make_brochure_card(pdf_filename, pdf_data, title, description, map_id, coord
 </a>"""
 
 
+# ── METRO SEARCH ENTRIES ────────────────────────────────────────────────────────
+
+def build_metro_search_entries(folder_rel, region, metro_products, desc_cache):
+    """Metro-design regions (see design_handoff_metro/) don't have one PDF per
+    package, so they never enter the normal PDF-scanning loop below and would
+    otherwise be invisible to global-search.js, which reads only packages.json.
+    Build one packages.json-style entry per product, linking to its Metro
+    package page instead of a PDF."""
+    entries = []
+    for p in metro_products:
+        filename = f"package.html?product={p['productFile']}"
+        key = f"{folder_rel}/{filename}"
+        desc_cache[key] = p.get("blurb", "")
+        valid_till = re.sub(r'^Valid till\s+', '', p.get("validity", ""), flags=re.IGNORECASE)
+        slug = folder_rel.replace("multi-country/", "")
+        entries.append({
+            "id": f"metro-{slug}-{p['id']}",
+            "filename": filename, "title": p["title"],
+            "folder": folder_rel, "region": region,
+            "pdf_data": {
+                "cities": p.get("routeStops", []),
+                "duration": p.get("nights", ""),
+                "tour_type": "",
+                "season": "all-year",
+                "price_twin": p.get("fromPrice"),
+                "currency": p.get("currency", "€"),
+                "valid_till": valid_till,
+                "is_expired": False,
+            },
+        })
+    return entries
+
+
 # ── REGION CARD ───────────────────────────────────────────────────────────────
 
 def make_region_card(slug, display_name, pkg_count, tour_types):
@@ -820,7 +853,7 @@ def update_packages_json(packages_path, all_found, desc_cache):
                 pkg["season"] = pd.get("season", pkg.get("season", "all-year"))
             new_pkgs.append(pkg)
         else:
-            pid = re.sub(r'[^a-z0-9]', '-', item["filename"].lower().replace('.pdf', ''))[:30]
+            pid = item.get("id") or re.sub(r'[^a-z0-9]', '-', item["filename"].lower().replace('.pdf', ''))[:30]
             pd = item["pdf_data"]
             new_pkgs.append({
                 "id": pid, "name": item["title"], "filename": item["filename"],
@@ -852,7 +885,34 @@ def main():
         folder_abs = os.path.join(REPO_ROOT, folder_rel)
         if not os.path.isdir(folder_abs): continue
         pdfs = sorted([f for f in os.listdir(folder_abs) if f.lower().endswith('.pdf')])
-        if not pdfs: continue
+        if not pdfs:
+            # Metro-design folders (see design_handoff_metro/) keep their source
+            # PDFs in a subfolder so this legacy scanner can't rebuild/clobber
+            # their bespoke index.html. Still surface them on the top-level
+            # multi-country/index.html using their products/index.json.
+            metro_index_path = os.path.join(folder_abs, "products", "index.json")
+            if config.get("depth") == 2 and os.path.isfile(metro_index_path):
+                with open(metro_index_path, encoding="utf-8") as f:
+                    metro_products = json.load(f).get("products", [])
+                metro_styles = set()
+                for p in metro_products:
+                    product_path = os.path.join(folder_abs, p["productFile"])
+                    if not os.path.isfile(product_path): continue
+                    with open(product_path, encoding="utf-8") as f:
+                        for style_key in json.load(f).get("styles", {}):
+                            metro_styles.add(
+                                "Self Drive" if style_key == "selfdrive" else style_key.title()
+                            )
+                slug = folder_rel.replace("multi-country/", "")
+                region_stats[slug] = {
+                    "count": len(metro_products),
+                    "tour_types": sorted(metro_styles),
+                }
+                all_found.extend(build_metro_search_entries(
+                    folder_rel, config["region"], metro_products, desc_cache
+                ))
+                print(f"\n{folder_rel} — Metro page, {len(metro_products)} packages (index.html not rebuilt)")
+            continue
         print(f"\n{folder_rel} — {len(pdfs)} PDFs")
 
         depth = config["depth"]
