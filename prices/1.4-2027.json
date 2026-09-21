@@ -1,0 +1,157 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "£",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1366,
+          "twin": 863,
+          "child": 358
+        },
+        "summer": {
+          "single": 1423,
+          "twin": 899,
+          "child": 373
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1523,
+          "twin": 942,
+          "child": 389
+        },
+        "summer": {
+          "single": 1586,
+          "twin": 981,
+          "child": 405
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 1517,
+            "4star": 1596
+          },
+          {
+            "pax": 10,
+            "3star": 1386,
+            "4star": 1465
+          },
+          {
+            "pax": 12,
+            "3star": 1299,
+            "4star": 1377
+          },
+          {
+            "pax": 14,
+            "3star": 1236,
+            "4star": 1315
+          },
+          {
+            "pax": 16,
+            "3star": 1189,
+            "4star": 1268
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 1581,
+            "4star": 1662
+          },
+          {
+            "pax": 10,
+            "3star": 1444,
+            "4star": 1526
+          },
+          {
+            "pax": 12,
+            "3star": 1353,
+            "4star": 1434
+          },
+          {
+            "pax": 14,
+            "3star": 1288,
+            "4star": 1369
+          },
+          {
+            "pax": 16,
+            "3star": 1239,
+            "4star": 1320
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 1363,
+          "twin": 861,
+          "child": 357
+        },
+        "summer": {
+          "single": 1420,
+          "twin": 897,
+          "child": 372
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1520,
+          "twin": 939,
+          "child": 388
+        },
+        "summer": {
+          "single": 1584,
+          "twin": 979,
+          "child": 404
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Edinburgh Castle tickets",
+      "price": 23
+    },
+    {
+      "name": "Fort William - Ben Nevis 1 day gondola ticket",
+      "price": 29
+    }
+  ]
+}

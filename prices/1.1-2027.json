@@ -1,0 +1,109 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "£",
+  "variants": {
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 581,
+            "4star": 643
+          },
+          {
+            "pax": 10,
+            "3star": 526,
+            "4star": 588
+          },
+          {
+            "pax": 12,
+            "3star": 489,
+            "4star": 551
+          },
+          {
+            "pax": 14,
+            "3star": 463,
+            "4star": 525
+          },
+          {
+            "pax": 16,
+            "3star": 443,
+            "4star": 505
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 605,
+            "4star": 670
+          },
+          {
+            "pax": 10,
+            "3star": 548,
+            "4star": 612
+          },
+          {
+            "pax": 12,
+            "3star": 509,
+            "4star": 574
+          },
+          {
+            "pax": 14,
+            "3star": 482,
+            "4star": 546
+          },
+          {
+            "pax": 16,
+            "3star": 462,
+            "4star": 526
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "London Eye standard ticket",
+      "price": 31
+    },
+    {
+      "name": "Madam Tussauds ticket",
+      "price": 36
+    },
+    {
+      "name": "Tower of London ticket",
+      "price": 35
+    },
+    {
+      "name": "London - Stonehenge and Bath Tour, 10 hrs regular coach including all entrance tickets",
+      "price": 119
+    },
+    {
+      "name": "Manchester - Windermere & the Lake District, 11 hours coach tour",
+      "price": 72
+    },
+    {
+      "name": "Manchester - Derbyshire & the Peak District, 9 hours coach tour",
+      "price": 67
+    },
+    {
+      "name": "Edinburgh 1 day hop on hop off pass",
+      "price": 21
+    },
+    {
+      "name": "Edinburgh - Loch Lomond, Stirling Castle, 10 hrs coach regular",
+      "price": 64
+    }
+  ]
+}

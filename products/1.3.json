@@ -1,0 +1,208 @@
+{
+  "id": "1.3",
+  "title": "London, Glasgow, Inverness & Edinburgh.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled inter-city trains linking London with Glasgow, Inverness and Edinburgh, with private transfers at each end.",
+      "nights": "8 nights · 9 days",
+      "route": "London (3N) → Glasgow (1N) → Inverness (2N) → Edinburgh (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "London airport to London hotel private transfer.",
+        "2": "London Hop-on Hop-off 1-day pass with a one-way Thames river cruise.",
+        "4": "Scheduled train from London to Glasgow, standard class (approx. 4h 30m).",
+        "5": "Scheduled train from Glasgow to Inverness, standard class (approx. 3h 15m), skirting Loch Lomond and the Cairngorms.",
+        "7": "Scheduled train from Inverness to Edinburgh, standard class (approx. 3h 30m).",
+        "9": "Edinburgh hotel to Edinburgh airport private transfer."
+      },
+      "inclusions": [
+        "London airport–hotel private transfer on arrival",
+        "London Hop-On Hop-Off 1-day ticket with one-way Thames river cruise",
+        "Train ticket London to Glasgow, standard class",
+        "Train ticket Glasgow to Inverness, standard class",
+        "Train ticket Inverness to Edinburgh, standard class",
+        "Edinburgh hotel–airport private transfer on departure",
+        "8 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive London",
+      "overnight": "Overnight: London",
+      "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots. Overnight in London.",
+      "taste": "Fish and chips with a pint of London Pride at a historic pub — Ye Olde Cheshire Cheese, rebuilt after the Great Fire of 1666, is one of the city's oldest."
+    },
+    {
+      "num": 2,
+      "title": "London sightseeing",
+      "overnight": "Overnight: London",
+      "desc": "Immerse yourself in London's splendour using the one-day Hop on Hop off Pass, inclusive of a one-way Thames River cruise. Experience the city's highlights at your pace. Overnight in London.",
+      "shopping": "Selfridges on Oxford Street and the Art Nouveau Liberty department store on Regent Street are two of the world's most famous flagship stores.",
+      "fallbackIncluded": "London Hop-on Hop-off 1-day pass with one-way Thames river cruise."
+    },
+    {
+      "num": 3,
+      "title": "London at leisure",
+      "overnight": "Overnight: London",
+      "desc": "Following breakfast, relish the freedom to explore the capital city independently or opt for an excursion to discover the surrounding areas. Overnight in London.",
+      "taste": "Borough Market, trading in some form since the 13th century, is one of London's oldest food markets — good for a lunch of artisan cheeses, salt beef and street food.",
+      "experience": "Catch a West End show — London's theatre district rivals Broadway for range and quality.",
+      "fallbackIncluded": "Day at leisure — optional West End show or Harry Potter Studio Tour available."
+    },
+    {
+      "num": 4,
+      "title": "London → Glasgow",
+      "overnight": "Overnight: Glasgow",
+      "desc": "Post breakfast, proceed to check out and board your train to Glasgow. Upon arrival, independently reach your hotel. Glasgow beckons with its vibrant cultural scene and exceptional dining choices. Check in and relish the remaining day at your own pace. Overnight in Glasgow.",
+      "taste": "Glasgow lays claim to inventing chicken tikka masala in the 1970s, and the curry houses along the West End's Gibson Street are still renowned for it.",
+      "experience": "Glasgow's Kelvingrove Art Gallery and Museum is one of Europe's great civic collections, and free to enter."
+    },
+    {
+      "num": 5,
+      "title": "Glasgow → Inverness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Following breakfast, gather your belongings and head to Glasgow Railway Station for your train journey to Inverness. Arriving in the heart of the Scottish Highlands, Inverness boasts breathtaking beauty and cosmopolitan allure. Check in and savour the day at your leisure. Overnight in Inverness."
+    },
+    {
+      "num": 6,
+      "title": "Inverness & Loch Ness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Immerse yourself in the enchanting beauty of Inverness. Embark on an exploration to The Isle of Skye & Eilean Donan Castle. Discover the wonders of this picturesque location. Overnight in Inverness.",
+      "taste": "Try a dram of Highland single malt at Hootananny on Church Street, Inverness's best-known venue for whisky and nightly live folk music, or order venison, a Highland speciality, at dinner.",
+      "fallbackIncluded": "Day at leisure — optional Loch Ness & Urquhart Castle tour available."
+    },
+    {
+      "num": 7,
+      "title": "Inverness → Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Post-breakfast, proceed to check out and make your way to the railway station for your journey to Edinburgh. Arriving in the capital, check in at the hotel. Welcome to Edinburgh, a city adorned with rich history and celebrated for its harmonious fusion of antiquity and modernity. Indulge in remarkable dining experiences and diverse activities in this acclaimed city. Overnight in Edinburgh."
+    },
+    {
+      "num": 8,
+      "title": "Edinburgh sightseeing",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Immerse yourself in the vibrant atmosphere of Edinburgh, exploring at your leisure. Experience the city's unique charm and cultural offerings. Overnight in Edinburgh.",
+      "taste": "Haggis, neeps and tatties at Deacon Brodie's Tavern on the Royal Mile — named after the 18th-century Edinburgh councillor and secret burglar said to have inspired Jekyll and Hyde.",
+      "experience": "The Scotch Whisky Experience, just below the Castle esplanade, traces the drink through Scotland's whisky regions with a barrel-ride tour and tastings.",
+      "fallbackIncluded": "Day at leisure — optional Edinburgh Castle & Royal Mile walking tour available."
+    },
+    {
+      "num": 9,
+      "title": "Depart Edinburgh",
+      "overnight": "Departure day",
+      "desc": "Following breakfast, check out from your accommodation and depart via private transfer to Edinburgh Airport for your onward journey."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "3 Nights",
+      "h3": "Hotel Montana",
+      "h4": "Hotel Riu Plaza London Victoria"
+    },
+    {
+      "city": "Glasgow",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Glasgow City Centre Riverside",
+      "h4": "Novotel Glasgow Centre"
+    },
+    {
+      "city": "Inverness",
+      "nights": "2 Nights",
+      "h3": "Royal Highland Hotel",
+      "h4": "Blackfriars Inverness"
+    },
+    {
+      "city": "Edinburgh",
+      "nights": "2 Nights",
+      "h3": "Holiday Inn Express Edinburgh City Centre",
+      "h4": "Apex City of Edinburgh Hotel"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May to September brings the longest, mildest days; August adds Edinburgh's Festival Fringe, the world's largest arts festival, so book hotels and trains well ahead."
+    },
+    {
+      "title": "Weather",
+      "body": "Temperate but changeable maritime climate, roughly 12–20°C in summer — pack a rain layer for any season."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Pound Sterling (£) throughout; the UK is outside the Schengen area, so check entry requirements separately from EU travel."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Edinburgh Castle and Loch Ness cruises ahead in the summer months, when both can sell out days in advance."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the London–Glasgow, Glasgow–Inverness and Inverness–Edinburgh trains; luggage space is generous but one large case per guest is recommended.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof jacket in any month, plus comfortable shoes for cobbled streets in Edinburgh's Old Town."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere across England and Scotland; tipping around 10-12.5% in restaurants is customary. Scotland issues its own Bank of Scotland and RBS banknotes, legal tender UK-wide but occasionally refused in England."
+    },
+    {
+      "title": "Highlands distances",
+      "body": "Journeys between Highland towns can take longer than the map suggests — the scenery more than makes up for the extra time."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 3
+      },
+      {
+        "lat": 55.8642,
+        "lng": -4.2518,
+        "label": "Glasgow",
+        "nights": 1
+      },
+      {
+        "lat": 57.4778,
+        "lng": -4.2247,
+        "label": "Inverness",
+        "nights": 2
+      },
+      {
+        "lat": 55.9533,
+        "lng": -3.1883,
+        "label": "Edinburgh",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "uk-ireland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/1.3-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

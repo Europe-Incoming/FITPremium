@@ -1,0 +1,133 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 2450,
+          "twin": 1635,
+          "child": 687
+        },
+        "summer": {
+          "single": 2552,
+          "twin": 1703,
+          "child": 715
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 2994,
+          "twin": 1907,
+          "child": 793
+        },
+        "summer": {
+          "single": 3119,
+          "twin": 1986,
+          "child": 826
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2120,
+            "4star": 2392
+          },
+          {
+            "pax": 10,
+            "3star": 1901,
+            "4star": 2173
+          },
+          {
+            "pax": 12,
+            "3star": 1755,
+            "4star": 2027
+          },
+          {
+            "pax": 14,
+            "3star": 1650,
+            "4star": 1922
+          },
+          {
+            "pax": 16,
+            "3star": 1572,
+            "4star": 1844
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2209,
+            "4star": 2492
+          },
+          {
+            "pax": 10,
+            "3star": 1980,
+            "4star": 2263
+          },
+          {
+            "pax": 12,
+            "3star": 1828,
+            "4star": 2111
+          },
+          {
+            "pax": 14,
+            "3star": 1719,
+            "4star": 2002
+          },
+          {
+            "pax": 16,
+            "3star": 1637,
+            "4star": 1921
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Louvre Museum (Audioguide €5 pp)",
+      "price": 26
+    },
+    {
+      "name": "Versailles Palace admission ticket",
+      "price": 31
+    },
+    {
+      "name": "Grindelwald First (any 2 activities)",
+      "price": 119
+    },
+    {
+      "name": "Rhine Falls, 30 mins boat ride",
+      "price": 23
+    },
+    {
+      "name": "Lindt chocolate museum ticket",
+      "price": 21
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1326,
+          "twin": 843,
+          "child": 350
+        },
+        "summer": {
+          "single": 1381,
+          "twin": 878,
+          "child": 365
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1515,
+          "twin": 938,
+          "child": 387
+        },
+        "summer": {
+          "single": 1578,
+          "twin": 977,
+          "child": 403
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Grindelwald First (with any two activities)",
+      "price": 77
+    },
+    {
+      "name": "Jungfraujoch with Swiss Pass",
+      "price": 168
+    },
+    {
+      "name": "Rhine Falls, 30 mins boat ride",
+      "price": 23
+    },
+    {
+      "name": "Lindt chocolate museum ticket",
+      "price": 21
+    }
+  ]
+}

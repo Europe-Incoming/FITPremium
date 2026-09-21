@@ -1,0 +1,244 @@
+{
+  "id": "5.2",
+  "title": "Paris with Normandy & Loire Valley.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled trains between cities with private taxi transfers at each end.",
+      "nights": "7 nights · 8 days",
+      "route": "Paris (2N) → Bayeux (2N) → Tours (2N) → Paris (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "8": "Paris hotel to Paris airport private transfer."
+      },
+      "inclusions": [
+        "Paris airport to Paris hotel private transfer on arrival",
+        "Train tickets Paris–Bayeux, Bayeux–Tours and Tours–Paris, 2nd class",
+        "Local taxi transfers between each train station and hotel",
+        "Paris hotel to Paris airport private transfer on departure",
+        "7 nights accommodation with daily breakfast",
+        "Bayeux Tapestry Museum admission"
+      ]
+    },
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "Rental car for the full itinerary — drive Normandy's D-Day beaches and the Loire Valley chateaux at your own pace.",
+      "nights": "7 nights · 8 days",
+      "route": "Paris (2N) → Bayeux (2N) → Tours (2N) → Paris (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer, then pick up rental car (SUV class, 5-seat, automatic) in Paris.",
+        "3": "Self-drive from Paris to Bayeux through the Normandy countryside.",
+        "5": "Self-drive from Bayeux to Tours via the Loire Valley.",
+        "7": "Self-drive from Tours back to Paris.",
+        "8": "Return the rental car and private transfer from the Paris hotel to the airport."
+      },
+      "inclusions": [
+        "Paris airport to Paris hotel private transfer on arrival",
+        "Rental car, SUV class 5-seat, automatic, for the duration of the tour",
+        "Self-guided route notes for Normandy and the Loire Valley",
+        "7 nights accommodation with daily breakfast",
+        "Car drop-off and airport transfer on departure"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "Private coach with driver throughout — ideal for exploring Normandy's D-Day sites and the Loire Valley chateaux at an easy pace.",
+      "nights": "7 nights · 8 days",
+      "route": "Paris (2N) → Bayeux (2N) → Tours (2N) → Paris (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer. Private coach on disposal from Day 1 through Day 7.",
+        "2": "Paris city tour with local guide, 3 hrs, followed by a 1-hour Seine river cruise.",
+        "3": "Private coach transfer from Paris to Bayeux through the Normandy countryside.",
+        "5": "Private coach transfer from Bayeux to Tours via the Loire Valley.",
+        "7": "Private coach transfer from Tours back to Paris.",
+        "8": "Paris hotel to Paris airport private transfer."
+      },
+      "inclusions": [
+        "Private coach on disposal from Day 1 to Day 7",
+        "Paris airport–hotel private transfers on arrival and departure",
+        "Paris city tour with local guide, 3 hrs",
+        "Seine river cruise, 1 hr",
+        "Private coach transfers Paris–Bayeux–Tours–Paris",
+        "7 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Welcome to the enchanting French capital! Upon arrival at the airport, enjoy a seamless transfer to your hotel. Dive into Parisian life by exploring iconic sites like the Champs-Élysées for high-end shopping, or relishing the artistic vibes of Montmartre. Experience the city's allure with a stroll along the Seine River or indulge in renowned French cuisine. Overnight in Paris",
+      "taste": "Steak-frites and a glass of Bordeaux at Le Procope in the Latin Quarter, reputedly the oldest continuously running café in Paris, open since 1686."
+    },
+    {
+      "num": 2,
+      "title": "Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Discover the allure of Paris as you explore at your own pace or opt for curated optional tours. From strolling along the Seine to marveling at iconic landmarks, the day is yours to savor. Overnight in Paris.",
+      "experience": "A one-hour Seine river cruise past the Eiffel Tower, Musée d'Orsay and Notre-Dame.",
+      "taste": "Mont Blanc pastry and hot chocolate at Angelina on the Rue de Rivoli, a Paris institution since 1903.",
+      "shopping": "The grand boulevards around the Opéra Garnier, including the Galeries Lafayette department store beneath its stained-glass dome."
+    },
+    {
+      "num": 3,
+      "title": "Paris → Bayeux",
+      "overnight": "Overnight: Bayeux",
+      "desc": "Check out from Paris and embark on a scenic train journey to Bayeux. Nestled in the heart of Normandy, Bayeux is a town steeped in history, known for its enchanting medieval streets and, most notably, the Bayeux Tapestry. Immerse yourself in the rich heritage of this captivating region. Overnight in Bayeux.",
+      "taste": "Normandy specialities on arrival — Camembert cheese (named for the nearby village), farmhouse cider and Calvados apple brandy, often served with andouille de Vire."
+    },
+    {
+      "num": 4,
+      "title": "Normandy landing beaches",
+      "overnight": "Overnight: Bayeux",
+      "desc": "Discover the charm of Bayeux at your own pace or opt for an enriching experience. Choose between the poignant D-Day U.S. Sector & Omaha Beach half-day tour, unraveling the history of World War II, or embark on a full-day exploration of the iconic Mont Saint-Michel Village & Abbey. Capture the essence of Bayeux's diverse offerings. Overnight in Bayeux.",
+      "experience": "Arromanches-les-Bains, where sections of the artificial Mulberry Harbour towed across the Channel for the invasion still sit in the bay beside the town's D-Day museum.",
+      "fallbackIncluded": "Day at leisure — optional D-Day beaches and landing museums tour available."
+    },
+    {
+      "num": 5,
+      "title": "Bayeux → Tours",
+      "overnight": "Overnight: Tours",
+      "desc": "Check out from Bayeux and board a train to Tours. Nestled in the heart of the Loire Valley, Tours is renowned for its picturesque landscapes, historic architecture, and its role as the gateway to the enchanting châteaux of the region. Uncover the essence of Tours, a city rich in cultural heritage and culinary delights. Overnight in Tours.",
+      "taste": "A Loire Valley wine tasting along the way — a crisp Vouvray white or a Chinon red, both from appellations the route passes directly through."
+    },
+    {
+      "num": 6,
+      "title": "Loire Valley chateaux",
+      "overnight": "Overnight: Tours",
+      "desc": "Embark on a personal exploration of Tours or choose an optional tour. Delight in a half-day Loire Valley Wine Tour to Vouvray, savoring exquisite local wines, or opt for a full-day adventure exploring the grandeur of Chenonceau & Chambord Castles. Tours invites you to tailor your experience. Overnight in Tours.",
+      "taste": "Tarte Tatin, the caramelised upside-down apple tart said to have been created by the Tatin sisters at their hotel in the nearby Sologne, still served across the region.",
+      "fallbackIncluded": "Day at leisure — optional Loire Valley chateaux tour available."
+    },
+    {
+      "num": 7,
+      "title": "Tours → Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Bid adieu to Tours and board a train back to the radiant city of Paris for your final night. Reflect on the memories created in the Loire Valley as you return to the enchanting atmosphere of Paris. Overnight in Paris.",
+      "taste": "A last Left Bank coffee at Café de Flore or Les Deux Magots in Saint-Germain-des-Prés, historic haunts of Sartre, de Beauvoir and Hemingway.",
+      "shopping": "The Marais district for boutiques, vintage shops and galleries."
+    },
+    {
+      "num": 8,
+      "title": "Depart Paris",
+      "overnight": "Departure day",
+      "desc": "Check out from Paris, and your journey concludes with a private transfer to Charles de Gaulle Airport (CDG)."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Paris",
+      "nights": "2 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Hôtel Napoléon Paris"
+    },
+    {
+      "city": "Bayeux",
+      "nights": "2 Nights",
+      "h3": "ibis Bayeux Port en Bessin",
+      "h4": "Villa Lara Bayeux"
+    },
+    {
+      "city": "Tours",
+      "nights": "2 Nights",
+      "h3": "Kyriad Tours Centre",
+      "h4": "Hôtel de l'Univers"
+    },
+    {
+      "city": "Paris",
+      "nights": "1 Night",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Hôtel Napoléon Paris"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm weather and long days; spring is especially good for the Loire Valley's gardens."
+    },
+    {
+      "title": "Weather",
+      "body": "Temperate, 15–25°C in summer; cooler and wetter along the Normandy coast year-round."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) throughout France, part of the Schengen area; UK visitors need a passport valid for the length of stay but no visa for short trips."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book the Bayeux Tapestry and Château de Chenonceau ahead in peak summer months — both are popular and queues build quickly by mid-morning."
+    },
+    {
+      "title": "Driving",
+      "body": "France drives on the right. Tolls apply on the autoroutes between Paris, Normandy and the Loire — keep a card handy for the péage booths.",
+      "styles": [
+        "selfdrive"
+      ]
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the Paris–Bayeux–Tours routes; keep tickets to hand for conductor checks.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by law to around 10 hrs per day — the Normandy and Loire transfer days are planned around this.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable shoes for cobbled town centres and the D-Day beach paths; a light rain layer for Normandy in any season."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are widely accepted, including contactless; keep some cash for smaller cafés and rural chateaux ticket offices. Service is included by law in French bills, so a small extra tip for good service is a courtesy, not an obligation."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 3
+      },
+      {
+        "lat": 49.2764,
+        "lng": -0.7024,
+        "label": "Bayeux",
+        "nights": 2
+      },
+      {
+        "lat": 47.3941,
+        "lng": 0.6848,
+        "label": "Tours",
+        "nights": 2
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "france",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/5.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

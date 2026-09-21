@@ -1,0 +1,61 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 0,
+          "twin": 0,
+          "child": 0
+        },
+        "summer": {
+          "single": 0,
+          "twin": 0,
+          "child": 0
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1397,
+          "twin": 698,
+          "child": 272
+        },
+        "summer": {
+          "single": 1455,
+          "twin": 727,
+          "child": 284
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Ex-Villasimius - Boat excursion in the Marine Park of Villasimius, 3 hrs",
+      "price": 78
+    },
+    {
+      "name": "Ex-Cala Gonone - Boat excursion to Gulf of Orosei, 7 hr",
+      "price": 118
+    },
+    {
+      "name": "Alghero ticket (includes admission to 13 attractions, including Neptune's cave)",
+      "price": 41
+    },
+    {
+      "name": "Ex-Alghero - Dolphin watching a nd snorkeling boat tour, 4 hrs (June-Sept only)",
+      "price": 77
+    }
+  ]
+}

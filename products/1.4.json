@@ -1,0 +1,245 @@
+{
+  "id": "1.4",
+  "title": "Scottish Highlands Discovery.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scenic scheduled trains between cities, with private taxi transfers at each end.",
+      "nights": "6 nights · 7 days",
+      "route": "Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)",
+      "aboutNights": "6 nights across 4 stays",
+      "transport": {
+        "1": "Edinburgh airport to Edinburgh hotel private taxi transfer.",
+        "3": "Edinburgh to Inverness scheduled train, standard class, skirting the Cairngorms and Loch Ness.",
+        "5": "Inverness to Fort William scheduled coach transfer via Fort Augustus and the Great Glen.",
+        "6": "Fort William to Glasgow on the scenic West Highland Line train, past Glencoe and Loch Lomond.",
+        "7": "Glasgow hotel to Glasgow airport private taxi transfer."
+      },
+      "inclusions": [
+        "Edinburgh airport to hotel private taxi transfer on arrival",
+        "Edinburgh to Inverness train ticket, standard class",
+        "Inverness to Fort William coach transfer via the Great Glen",
+        "Fort William to Glasgow train ticket on the West Highland Line",
+        "Glasgow hotel to airport private taxi transfer on departure",
+        "6 nights accommodation with daily breakfast"
+      ]
+    },
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "Rental car from arrival to departure — explore the Highlands at your own pace.",
+      "nights": "6 nights · 7 days",
+      "route": "Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)",
+      "aboutNights": "6 nights across 4 stays",
+      "transport": {
+        "1": "Pick up rental car at Edinburgh airport — SUV class, Ford Kuga or similar.",
+        "3": "Drive Edinburgh to Inverness at your own pace, with stops at Loch Ness and Urquhart Castle.",
+        "5": "Drive Inverness to Fort William via Fort Augustus and the Great Glen at your own pace.",
+        "6": "Drive Fort William to Glasgow via Glencoe and Loch Lomond, with suggested photo stops.",
+        "7": "Return rental car at Glasgow airport before departure."
+      },
+      "inclusions": [
+        "Rental car for 7 days, SUV class Ford Kuga or similar",
+        "Fully comprehensive insurance and unlimited mileage",
+        "Self-guided route notes with recommended stops at Loch Ness, Glencoe and Loch Lomond",
+        "One-way drop-off from Edinburgh to Glasgow airport",
+        "6 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private vehicle on disposal from Edinburgh to Glasgow, ideal for families and small groups.",
+      "nights": "6 nights · 7 days",
+      "route": "Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)",
+      "aboutNights": "6 nights across 4 stays",
+      "transport": {
+        "1": "Edinburgh airport to Edinburgh hotel private transfer.",
+        "2": "Edinburgh panoramic tour, 3 hrs, with private vehicle.",
+        "3": "Private transfer Edinburgh to Inverness, en route Loch Ness and the Highlands. Vehicle on disposal from today until Day 6.",
+        "4": "Skye excursion by private vehicle, via Eilean Donan Castle.",
+        "5": "Private transfer Inverness to Fort William via Fort Augustus and the Great Glen, using the vehicle on disposal.",
+        "6": "Private transfer Fort William to Glasgow, en route Glencoe and Loch Lomond.",
+        "7": "Glasgow hotel to Glasgow airport private transfer."
+      },
+      "inclusions": [
+        "Private vehicle on disposal from Day 3 to Day 6 (8 hrs per day)",
+        "Edinburgh airport to hotel private transfer on arrival",
+        "Edinburgh panoramic tour, 3 hrs, by private vehicle",
+        "Private transfer Edinburgh to Inverness via Loch Ness and the Highlands",
+        "Skye excursion by private vehicle",
+        "Private transfer Fort William to Glasgow via Glencoe and Loch Lomond",
+        "Glasgow hotel to airport private transfer on departure",
+        "6 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Welcome to the historic capital of Scotland, renowned for its rich history, stunning architecture, and vibrant cultural scene. Begin your journey with a private transfer from Edinburgh airport to your hotel. Prepare to immerse yourself in the city's charm and heritage. Overnight in Edinburgh.",
+      "taste": "A dram of single malt Scotch whisky at Deacon Brodie's Tavern, a Royal Mile institution licensed since 1806 and named after the city councillor and secret burglar said to have inspired Dr Jekyll and Mr Hyde."
+    },
+    {
+      "num": 2,
+      "title": "Edinburgh",
+      "overnight": "Overnight: Edinburgh",
+      "desc": "Enjoy a leisurely day in Edinburgh, exploring its historic sites, wandering along the Royal Mile, or visiting the majestic Edinburgh Castle. Delight in the city's cultural offerings at your own pace. Overnight in Edinburgh.",
+      "experience": "Descend into the Real Mary King's Close, the hidden 17th-century Old Town streets sealed beneath the modern city."
+    },
+    {
+      "num": 3,
+      "title": "Edinburgh → Inverness",
+      "overnight": "Overnight: Inverness",
+      "desc": "Travel by train to Inverness, the gateway to the Scottish Highlands. Explore this charming city, nestled by the River Ness, known for its historic sites like Inverness Castle and the Caledonian Canal. Prepare for Highland adventures. Overnight in Inverness.",
+      "taste": "The route passes close to Glenturret Distillery near Crieff, licensed since 1763 and generally regarded as Scotland's oldest working distillery, now home to the Famous Grouse Experience."
+    },
+    {
+      "num": 4,
+      "title": "Skye Excursion",
+      "overnight": "Overnight: Inverness",
+      "desc": "Embark on a full-day coach tour from Inverness, exploring the mesmerizing Isle of Skye and the iconic Eilean Donan Castle. Immerse yourself in Scotland's stunning landscapes and historic landmarks. Return for a tranquil evening in Inverness. Overnight in Inverness.",
+      "taste": "Skye is home to the Talisker distillery, the island's only whisky maker, founded in 1830 on the shores of Loch Harport."
+    },
+    {
+      "num": 5,
+      "title": "Inverness → Fort William",
+      "overnight": "Overnight: Fort William",
+      "desc": "Travel by bus to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels. Overnight in Fort William.",
+      "taste": "Fort William is home to Ben Nevis Distillery, founded at the foot of the mountain in 1825 and one of the oldest licensed distilleries in the Highlands."
+    },
+    {
+      "num": 6,
+      "title": "Fort William → Glasgow",
+      "overnight": "Overnight: Glasgow",
+      "desc": "Board the train to Glasgow, Scotland's largest city renowned for its vibrant arts scene, rich architectural heritage, and bustling city life. Embrace cultural diversity and explore the city's museums, galleries, and lively atmosphere. Overnight in Glasgow.",
+      "taste": "Glasgow lays a well-known claim to inventing chicken tikka masala in one of its Asian restaurants in the 1970s — still a fixture on menus across the city's curry houses.",
+      "shopping": "Glasgow's Buchanan Street and the Style Mile make it the UK's second-largest shopping destination after London's West End."
+    },
+    {
+      "num": 7,
+      "title": "Depart Glasgow",
+      "overnight": "Departure day",
+      "desc": "Conclude your Scottish adventure with a private transfer from your Glasgow hotel to Glasgow airport. Depart with cherished memories of Scotland's captivating landscapes and vibrant cities."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Edinburgh",
+      "nights": "2 Nights",
+      "h3": "Holiday Inn Express Edinburgh City Centre",
+      "h4": "Apex City of Edinburgh Hotel"
+    },
+    {
+      "city": "Inverness",
+      "nights": "2 Nights",
+      "h3": "Royal Highland Hotel",
+      "h4": "Blackfriars Inverness"
+    },
+    {
+      "city": "Fort William",
+      "nights": "1 Night",
+      "h3": "Premier Inn Fort William Hotel",
+      "h4": "The Garrison Hotel"
+    },
+    {
+      "city": "Glasgow",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Glasgow - City Ctr Riverside",
+      "h4": "Novotel Glasgow Centre"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May to September for long daylight hours and the best chance of settled Highland weather; shoulder months are quieter."
+    },
+    {
+      "title": "Weather",
+      "body": "Cool and changeable throughout the year, roughly 10–18°C in summer — pack a waterproof layer regardless of season."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Pound sterling (£) throughout; the UK is outside the Schengen area, so standard UK entry requirements apply for visitors."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Edinburgh Castle tickets ahead in summer, especially during the Festival in August. Loch Ness boat trips and Urquhart Castle are quietest early morning."
+    },
+    {
+      "title": "Driving",
+      "body": "The UK drives on the left. Highland roads north and west of Fort William are often single-track with passing places — allow extra time.",
+      "styles": [
+        "selfdrive"
+      ]
+    },
+    {
+      "title": "Rail travel",
+      "body": "The Fort William to Glasgow leg runs on the West Highland Line, rated one of the world's great scenic railways — window seats are worth requesting.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by law, so day-trip timings on the Highlands route are planned around rest breaks. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof jacket for any month, plus sturdy shoes for castle grounds and lochside paths. Midge repellent is worth packing for the Highland legs between late May and September, when the biting midge is at its most active."
+    },
+    {
+      "title": "Money",
+      "body": "Cards and contactless are accepted almost everywhere, though a little cash is useful in rural Highland villages. Tipping around 10% in restaurants is customary, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 55.9533,
+        "lng": -3.1883,
+        "label": "Edinburgh",
+        "nights": 2
+      },
+      {
+        "lat": 57.4778,
+        "lng": -4.2247,
+        "label": "Inverness",
+        "nights": 2
+      },
+      {
+        "lat": 56.8198,
+        "lng": -5.1052,
+        "label": "Fort William",
+        "nights": 1
+      },
+      {
+        "lat": 55.8642,
+        "lng": -4.2518,
+        "label": "Glasgow",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "uk-ireland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/1.4-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1541849546-216549ae216d?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

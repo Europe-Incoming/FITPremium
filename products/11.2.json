@@ -1,0 +1,138 @@
+{
+  "id": "11.2",
+  "title": "Bavarian & Austrian Christmas Markets.",
+  "styles": {
+    "trains": {
+      "name": "Regular FIT",
+      "blurb": "Salzburg's historic Christkindlmarkt and Munich's Marienplatz market, linked by train, each with its own hop-on hop-off city tour.",
+      "nights": "4 nights · 5 days",
+      "route": "Salzburg (2N) → Munich (2N)",
+      "aboutNights": "4 nights across 2 stays",
+      "transport": {
+        "1": "Train, 2nd class, from Munich Airport to Salzburg (approx. 2.5 hrs).",
+        "3": "Train, 2nd class, from Salzburg to Munich (approx. 2 hrs), crossing the border from Austria to Germany.",
+        "5": "Private transfer from your Munich hotel to Munich Airport."
+      },
+      "inclusions": [
+        "4 nights accommodation including breakfast",
+        "Train, 2nd class, Munich Airport to Salzburg",
+        "Salzburg Hop-on Hop-off city tour, 24-hour pass",
+        "Train, 2nd class, Salzburg to Munich",
+        "Munich Hop-on Hop-off city tour, 24-hour pass",
+        "Private transfer from your Munich hotel to Munich Airport"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Salzburg",
+      "overnight": "Overnight: Salzburg",
+      "desc": "Upon arrival at Munich Airport, take the train to Salzburg for the roughly 2.5-hour journey. Check in and spend the rest of the day at leisure. Overnight in Salzburg."
+    },
+    {
+      "num": 2,
+      "title": "Salzburg",
+      "overnight": "Overnight: Salzburg",
+      "desc": "A hop-on hop-off bus tour is the best way to see the city of Mozart and The Sound of Music — Mirabell Palace, Mozart's Residence, Trinity Church, the Festival Halls and Hellbrunn Palace among the stops. Stroll the Old Town before spending the evening at the Salzburg Christmas Market, one of the oldest of its kind, open from mid-to-late November. Overnight in Salzburg.",
+      "experience": "Salzburg's Christkindlmarkt on Domplatz and Residenzplatz sits directly beneath the fortress of Hohensalzburg, floodlit above the stalls each evening."
+    },
+    {
+      "num": 3,
+      "title": "Salzburg to Munich",
+      "overnight": "Overnight: Munich",
+      "desc": "Make your own way to Salzburg train station for the roughly 2-hour journey to Munich, crossing the border from Austria into Germany through scenic countryside. Check in and spend the rest of the day exploring Munich. Overnight in Munich."
+    },
+    {
+      "num": 4,
+      "title": "Munich",
+      "overnight": "Overnight: Munich",
+      "desc": "A double-decker hop-on hop-off bus tour (approx. 2.5 hrs) takes in Munich's highlights — the City Hall in Marienplatz, Karlsplatz-Stachus, the Opera, BMW World, the Palace of Nymphenburg and the Siegestor arch. Afterwards, spend the rest of the day at the Christmas Market in Marienplatz, with more than 160 stalls of handmade souvenirs and culinary delicacies. Overnight in Munich.",
+      "experience": "The towering Christmas tree in front of the Neues Rathaus is Marienplatz market's centrepiece, lit by thousands of candles."
+    },
+    {
+      "num": 5,
+      "title": "Departure",
+      "overnight": "Departure day",
+      "desc": "Extend your stay or say farewell to Munich with a transfer to Munich Airport."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Salzburg",
+      "nights": "2 Nights",
+      "h3": "Leonardo Hotel Salzburg City Center",
+      "h4": "NH Collection Salzburg City"
+    },
+    {
+      "city": "Munich",
+      "nights": "2 Nights",
+      "h3": "Mercure Hotel München am Olympiapark",
+      "h4": "Eurostars Book Hotel"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "This tour is built specifically around the Christmas market season — Salzburg's Christkindlmarkt runs 19 Nov 2026–1 Jan 2027, Munich's Marienplatz market 20 Nov–24 Dec 2026 (closed 22 Nov)."
+    },
+    {
+      "title": "Weather",
+      "body": "Cold Alpine winter: typically -3°C to 5°C in Salzburg, similar in Munich, often with snow — dress for extended time outdoors at both markets."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Salzburg uses the Euro (€) as does Munich; both Austria and Germany are Schengen Area members, so no separate visa is needed for Schengen visa holders, and there's no border check on the train between them."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Market crowds",
+      "body": "Both markets get busy on weekends and in the final two weeks before Christmas — a weekday morning visit gives a quieter first look before the evening rush."
+    },
+    {
+      "title": "Mulled wine mugs",
+      "body": "Glühwein and Punsch are served in collectible mugs with a small deposit — keep it as a souvenir or return it at the stall for a refund."
+    },
+    {
+      "title": "What to pack",
+      "body": "Warm boots, gloves and a proper winter coat for long stretches outdoors at both markets."
+    },
+    {
+      "title": "Tipping",
+      "body": "Rounding up the bill by 5–10% is customary in both Austrian and German restaurants — state the total you'd like to pay rather than leaving cash on the table."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 47.8095,
+        "lng": 13.055,
+        "label": "Salzburg",
+        "nights": 2
+      },
+      {
+        "lat": 48.1351,
+        "lng": 11.582,
+        "label": "Munich",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "pricesFile": "prices/11.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

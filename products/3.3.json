@@ -1,0 +1,181 @@
+{
+  "id": "3.3",
+  "title": "Sardinia Discovery.",
+  "styles": {
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "A rental car and Sardinia's best coastal roads — white-sand coves, the Gulf of Orosei by boat, and Neptune's Grotto beneath the Capo Caccia cliffs.",
+      "nights": "7 nights · 8 days",
+      "route": "Cagliari (2N) → Cala Gonone (2N) → Alghero (2N) → Olbia (1N)",
+      "aboutNights": "7 nights across 4 stays",
+      "transport": {
+        "1": "Rental car pickup at Cagliari Airport (one-way fee payable locally, approx. €75).",
+        "3": "Self-drive along the SS125 coastal road via Arbatax to Cala Gonone.",
+        "5": "Self-drive west via Bosa to Alghero.",
+        "7": "Self-drive north along the Costa Smeralda to Olbia.",
+        "8": "Return the rental car at Olbia Airport."
+      },
+      "inclusions": [
+        "7 nights accommodation including breakfast",
+        "Rental car (standard sedan/SUV class), Day 1 10am to Day 8 2pm"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Cagliari",
+      "overnight": "Overnight: Cagliari",
+      "desc": "Welcome to Sardinia. Pick up your rental car at Cagliari airport and spend the afternoon in the capital's historic Castello district, high above the city, with views from the Bastione Saint Remy terraces down to the harbour. Overnight in Cagliari.",
+      "taste": "Sardinian cuisine and a glass of Cannonau wine at one of the waterfront cafés lining the harbour."
+    },
+    {
+      "num": 2,
+      "title": "Day trip to Villasimius",
+      "overnight": "Overnight: Cagliari",
+      "desc": "Drive southeast to Villasimius, gateway to some of Sardinia's most spectacular beaches. Spend the afternoon on Cala Sinzias or Punta Molentis, where white sand meets turquoise water, before returning to Cagliari for the evening. Overnight in Cagliari.",
+      "experience": "A boat excursion in the Marine Park of Villasimius (3 hrs) explores protected coves and marine life along this stretch of coast."
+    },
+    {
+      "num": 3,
+      "title": "Cagliari to Cala Gonone via Coastal Route",
+      "overnight": "Overnight: Cala Gonone",
+      "desc": "One of Sardinia's most spectacular drives along the SS125, where rugged cliffs plunge into the sea. Stop at Arbatax to see the Rocce Rosse (Red Rocks) and the Baunei viewpoint, before arriving in Cala Gonone, a seaside village nestled between mountains and water. Overnight in Cala Gonone."
+    },
+    {
+      "num": 4,
+      "title": "Cala Gonone — Day at Leisure",
+      "overnight": "Overnight: Cala Gonone",
+      "desc": "Explore the Cala Gonone area at your own pace — the secluded beaches of Cala Fuili or Cala Cartoe, or the mountain village of Dorgali, known for traditional Sardinian crafts and ceramics. Overnight in Cala Gonone.",
+      "experience": "A 7-hour boat excursion to the Gulf of Orosei reaches the beaches of Cala Luna, Cala Mariolu and the UNESCO-listed Cala Goloritzè, all accessible only by sea."
+    },
+    {
+      "num": 5,
+      "title": "Cala Gonone to Alghero via Bosa",
+      "overnight": "Overnight: Alghero",
+      "desc": "West along the coast through Bosa, stopping at the Bronze Age Nuraghe Nuraddeo and the pastel-hued riverside town of Bosa itself, before arriving in Alghero, where Catalan Gothic architecture recalls centuries of Spanish rule. Overnight in Alghero.",
+      "taste": "Alghero's Catalan heritage shows on the menu too — look for aragosta alla catalana (Catalan-style lobster) in the old town's seafood restaurants."
+    },
+    {
+      "num": 6,
+      "title": "Alghero — Day at Leisure",
+      "overnight": "Overnight: Alghero",
+      "desc": "Visit Neptune's Grotto (Grotta di Nettuno), one of the Mediterranean's most spectacular cave systems at the base of the Capo Caccia cliffs — reached by descending the 654-step stairway, or by boat from the harbour. Overnight in Alghero.",
+      "experience": "June–September only: a dolphin-watching and snorkelling boat tour (4 hrs) runs along this stretch of coast."
+    },
+    {
+      "num": 7,
+      "title": "Alghero to Olbia via Costa Smeralda",
+      "overnight": "Overnight: Olbia",
+      "desc": "North along Sardinia's legendary coastline, stopping at the cliff-top fortress town of Castelsardo, then through the Costa Smeralda (Emerald Coast) past Porto Cervo's yacht-lined harbour. Swim at Spiaggia del Principe or Capriccioli before arriving in Olbia. Overnight in Olbia."
+    },
+    {
+      "num": 8,
+      "title": "Depart Olbia",
+      "overnight": "Departure day",
+      "desc": "Make your way to Olbia airport at leisure, returning your rental car at the airport office to conclude your Sardinian adventure."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Cagliari",
+      "nights": "2 Nights",
+      "h4": "Holiday Inn Cagliari by IHG"
+    },
+    {
+      "city": "Cala Gonone",
+      "nights": "2 Nights",
+      "h4": "Club Esse Cala Gonone Beach Village"
+    },
+    {
+      "city": "Alghero",
+      "nights": "2 Nights",
+      "h4": "Hotel Catalunya"
+    },
+    {
+      "city": "Olbia",
+      "nights": "1 Night",
+      "h4": "Hotel Martini Olbia"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for warm, dry weather and calm seas for the Gulf of Orosei boat trips; July–August is peak season on the Costa Smeralda — late spring or September is quieter and cooler."
+    },
+    {
+      "title": "Weather",
+      "body": "Mediterranean climate: hot, dry summers around 28–32°C on the coast, mild winters; the interior around Dorgali can be noticeably cooler than the coast."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Sardinia is part of Italy, using the Euro (€) and the Schengen Area — no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "One-way car rental fee",
+      "body": "Picking up in Cagliari and dropping off in Olbia carries a one-way fee, payable locally at pickup (approx. €75) — factor this into on-the-ground costs."
+    },
+    {
+      "title": "Boat excursions",
+      "body": "The Gulf of Orosei and Neptune's Grotto boat trips are weather-dependent and best booked locally a day or two ahead rather than far in advance."
+    },
+    {
+      "title": "Coastal roads",
+      "body": "The SS125 and the Bosa coast road are scenic but narrow with frequent bends — allow more time than the distance suggests, especially in peak summer traffic."
+    },
+    {
+      "title": "What to pack",
+      "body": "Swimwear, reef shoes for rocky coves, and good walking shoes for the 654-step descent to Neptune's Grotto."
+    },
+    {
+      "title": "Tipping",
+      "body": "Rounding up is appreciated in restaurants; a service charge (coperto) is often already added to the bill in Italy."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 39.2238,
+        "lng": 9.1217,
+        "label": "Cagliari",
+        "nights": 2
+      },
+      {
+        "lat": 40.2833,
+        "lng": 9.6167,
+        "label": "Cala Gonone",
+        "nights": 2
+      },
+      {
+        "lat": 40.5594,
+        "lng": 8.3197,
+        "label": "Alghero",
+        "nights": 2
+      },
+      {
+        "lat": 40.9167,
+        "lng": 9.5,
+        "label": "Olbia",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "italy",
+  "pricesFile": "prices/3.3-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

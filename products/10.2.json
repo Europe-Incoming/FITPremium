@@ -1,0 +1,150 @@
+{
+  "id": "10.2",
+  "title": "Finnish Lapland.",
+  "styles": {
+    "trains": {
+      "name": "Regular FIT",
+      "blurb": "A full week of Arctic winter immersion in Rovaniemi — reindeer, huskies, wildlife, snowmobiling and ice fishing, with a free day to chase the Northern Lights.",
+      "nights": "7 nights · 8 days",
+      "route": "Rovaniemi (7N)",
+      "aboutNights": "7 nights across 1 stay",
+      "transport": {
+        "1": "Private transfer from Rovaniemi Airport to your hotel on arrival.",
+        "2": "Reindeer farm visit with a one-hour reindeer-pulled sleigh safari, followed by an evening Northern Lights trip.",
+        "3": "Husky Experience — 3km safari with Lapland Safaris, kennel visit, thermal outfit provided.",
+        "4": "Excursion to Ranua Wildlife Park, Finland's northernmost zoo, approx. 4 hours including transfers.",
+        "5": "Snowmobile Driving Experience — one-hour guided introduction through forest and frozen terrain, thermal suit and gloves provided.",
+        "6": "Ice Fishing Trip — private frozen lake, approx. 30 minutes from town, guide, gear, thermal clothing and snowshoes included.",
+        "7": "Free day in Rovaniemi — optional Snowmobile Safari in the Nature, Arctic Ice Floating, Northern Lights sleigh ride or a snowshoe forest trek.",
+        "8": "Private transfer from your hotel to Rovaniemi Airport for departure."
+      },
+      "inclusions": [
+        "7 nights accommodation in Rovaniemi including breakfast",
+        "Private airport transfers in Rovaniemi (arrival & departure)",
+        "Visit a Reindeer Farm and 1h Safari, coffee, tea and sweet bread included",
+        "Northern Lights Trip with warm beverages",
+        "Husky Experience 3km with Lapland Safaris, thermal outfit and hot beverage included",
+        "Excursion to Ranua Wildlife Park, 4 hrs, minibus transfer and admission",
+        "Snowmobile Driving Experience, 1 hr, thermal clothing and guidance",
+        "Ice Fishing Trip, 4 hrs, minibus transfer, thermal clothing, equipment, snowshoes, hot beverages and snack"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Rovaniemi",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "Your private transfer meets you at the airport and gets you to the hotel without fuss. Rovaniemi is compact — the town centre is walkable and worth a quick explore before the programme kicks off. If the sky clears on your first evening, keep an eye out — the Aurora doesn't wait for scheduled excursions. Overnight in Rovaniemi."
+    },
+    {
+      "num": 2,
+      "title": "Reindeer & The Northern Lights",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "Your morning heads to a working reindeer farm where you'll meet both wild and trained safari reindeer, before a one-hour safari itself: a slow glide through snow-covered forest on a reindeer-pulled sleigh. The evening belongs to the Aurora — 45 minutes out of town gets you clear of light pollution, ending at a wilderness lodge with a fire in a traditional Finnish tepee. If the Aurora doesn't show, you go again. Overnight in Rovaniemi.",
+      "experience": "The Northern Lights trip ends at a wilderness lodge where a fire burns in a traditional Finnish tepee, with a warm drink waiting while guides share the mythology and science of the Aurora."
+    },
+    {
+      "num": 3,
+      "title": "Husky Experience",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "Out to the husky kennel this morning for the 3km Husky Experience with Lapland Safaris — a proper working kennel with dogs bred to run. One person drives, one rides as passenger, and the dogs do the rest across roughly 20 minutes on the snow. Thermal outfit and winter gear are provided, with hot berry juice waiting back at the kennel. Overnight in Rovaniemi."
+    },
+    {
+      "num": 4,
+      "title": "Ranua Wildlife Park",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "Drive northeast through boreal forest to Ranua Wildlife Park — Finland's northernmost zoo, where arctic species roam in natural enclosures beneath snow-covered pines. Meet polar bears, arctic foxes, snowy owls and musk oxen, alongside wolves, wolverines and lynx across 28 hectares of winter forest. The visit runs roughly 4 hours including transfers and time to explore independently. Overnight in Rovaniemi."
+    },
+    {
+      "num": 5,
+      "title": "Snowmobile Driving Experience",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "An hour-long introduction to snowmobiling through forest and across frozen terrain — the basics of speed control, turns and reading narrow forest tracks, before a short guided ride on a prepared trail. Thermal suits and gloves are provided. Overnight in Rovaniemi."
+    },
+    {
+      "num": 6,
+      "title": "Ice Fishing Trip",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "Transfer by minibus to a private frozen lake roughly 30 minutes from town, then a short walk through forest to a secluded fishing spot away from public areas. Your guide drills the holes, explains the technique and hands you the gear — with time for a snowshoe walk or coffee by the fire while you wait for a bite. Overnight in Rovaniemi."
+    },
+    {
+      "num": 7,
+      "title": "Free Day — Rovaniemi",
+      "overnight": "Overnight: Rovaniemi",
+      "desc": "No programme today. The Snowmobile Safari in the Nature runs 3.5 hours through snowy hillsides and forests crossing frozen rivers. Santa Claus Village sits right on the Arctic Circle line, 8km out of town. Alternatively, try Arctic Ice Floating in a survival suit beneath the Aurora, a horse-drawn Northern Lights sleigh ride, or a guided snowshoe forest trek. Overnight in Rovaniemi.",
+      "shopping": "Santa Claus Village, 8km out of town on the Arctic Circle line, is the place for Lapland souvenirs alongside the official Santa meeting."
+    },
+    {
+      "num": 8,
+      "title": "Depart Rovaniemi",
+      "overnight": "Departure day",
+      "desc": "Your private transfer covers the short run back to Rovaniemi Airport."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Rovaniemi",
+      "nights": "7 Nights",
+      "h4": "Scandic Pohjanovi"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "Winter (November–March) is the reason to visit — long dark nights this far inside the Arctic Circle give Rovaniemi strong Northern Lights odds, alongside snow-guaranteed reindeer, husky and wildlife excursions."
+    },
+    {
+      "title": "Weather",
+      "body": "Arctic winter conditions typically -5°C to -20°C, with snow cover from November through April and only a few hours of daylight around midday."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Euro (€) is the local currency, and Finland is a Schengen Area member so no separate visa is needed for Schengen visa holders travelling from within Europe."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Northern Lights viewing",
+      "body": "Aurora sightings depend on clear skies and solar activity — no tour can guarantee a sighting on any single night, though the included Northern Lights trip gets you away from town lights for the best chance."
+    },
+    {
+      "title": "What to pack",
+      "body": "Full thermal layers, a waterproof outer shell, insulated winter boots and gloves are essential — tours typically provide extra thermal outfits, but good personal base layers make a real difference."
+    },
+    {
+      "title": "Weather-dependent tours",
+      "body": "Snowmobiling and ice fishing can be rescheduled at short notice for weather and daylight safety — keep the free day flexible where possible."
+    },
+    {
+      "title": "Tipping",
+      "body": "Tipping is not expected in Finland — a service charge is generally built into restaurant prices, so rounding up for good service is plenty."
+    },
+    {
+      "title": "Airport transfers",
+      "body": "Private transfers are included on both arrival and departure, so there's no need to arrange separate airport pickup in Rovaniemi.",
+      "styles": ["trains"]
+    }
+  ],
+  "map": {
+    "points": [
+      { "lat": 66.5039, "lng": 25.7294, "label": "Rovaniemi", "nights": 7 }
+    ],
+    "closeLoop": false
+  },
+  "region": "scandinavia-iceland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/10.2-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

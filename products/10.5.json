@@ -1,0 +1,139 @@
+{
+  "id": "10.5",
+  "title": "Swedish Lapland.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Private transfers bookend a four-night Arctic base in Kiruna, packed with winter excursions.",
+      "nights": "4 nights · 5 days",
+      "route": "Kiruna (4N)",
+      "aboutNights": "4 nights across 1 stay",
+      "transport": {
+        "1": "Private transfer from Kiruna Airport to your hotel on arrival.",
+        "2": "Dog sled adventure, 2-3 hours, including transfers to and from the kennel.",
+        "3": "Guided tour to the world-famous ICEHOTEL in Jukkasjärvi, 3 hours, including transfers.",
+        "4": "Snowmobile safari into the surrounding wilderness, 6 hours, including transfers.",
+        "5": "Private transfer from your hotel to Kiruna Airport for departure."
+      },
+      "inclusions": [
+        "Private transfer from Kiruna Airport to hotel on arrival",
+        "4 nights accommodation with breakfast",
+        "Dog sled adventure, 2-3 hours, including transfers",
+        "Northern Lights chase by minibus or snowmobile sleigh, 2 pax per snowmobile",
+        "Tour to the iconic ICEHOTEL & Jukkasjärvi, 3 hours",
+        "Snowmobile safari, 6 hours",
+        "Private transfer from hotel to Kiruna Airport on departure"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Kiruna",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Welcome to Swedish Lapland! Arrive at Kiruna Airport and enjoy a comfortable transfer to your hotel. Settle in and take your first breath of the crisp Arctic air as you prepare for the snowy adventures ahead. Overnight in Kiruna.",
+      "experience": "Kiruna sits in the heart of Sápmi, home to the indigenous Sami people and their reindeer-herding traditions."
+    },
+    {
+      "num": 2,
+      "title": "Dog Sledding in the Wilderness",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Begin your day with a serene dog sled ride through the snowy wilderness near Jukkasjärvi. Seated on reindeer skins, glide behind a team of huskies along frozen trails, guided by an experienced musher. After the ride, enjoy Swedish fika by the fire in a traditional tipi. In the evening, gear up for an exhilarating snowmobile ride in pursuit of the Northern Lights. After a safety briefing at the Laxforsen base, set off in pairs across remote Arctic terrain far from city lights. Stop to warm up by an open fire with sandwiches and hot drinks as you scan the skies for a glimpse of the aurora. A thrilling night under Lapland’s stars. Overnight in Kiruna.",
+      "taste": "Warm up afterwards with reindeer stew (renskav) and cloudberries at Camp Ripan's restaurant, known locally for a Sami-inspired kitchen built on local game, Arctic char and forest berries."
+    },
+    {
+      "num": 3,
+      "title": "ICEHOTEL & Jukkasjärvi",
+      "overnight": "Overnight: Kiruna",
+      "desc": "This morning, journey to the iconic ICEHOTEL and the historic village of Jukkasjärvi. Explore the stunning ice art exhibition at your own pace, then visit Sweden’s northernmost church, dating back to 1607. Meet reindeer at the Nutti Sami Siida and learn about Sami culture and Kiruna’s past from your local guide. A perfect mix of art, heritage, and Arctic tradition. Overnight in Kiruna.",
+      "experience": "See resident artists sculpting that season's ice suites, a new design unveiled each winter.",
+      "shopping": "Jukkasjärvi's craft shop sells Sami duodji — hand-carved reindeer-horn knives, woven bands and silverwork made by Sápmi artisans."
+    },
+    {
+      "num": 4,
+      "title": "Snowmobile Safari",
+      "overnight": "Overnight: Kiruna",
+      "desc": "Set out on a 6-hour snowmobile safari through the forests and mountains surrounding Kiruna. With your Sami guide, travel along scenic trails near the Kalix River in search of moose, reindeer, grouse, and other Arctic wildlife. Spot animal tracks in the snow and hear stories of traditional reindeer herding and life in the Sámi north. Enjoy a warming lunch of local Sami dishes before returning to town as the polar twilight settles in. Overnight in Kiruna.",
+      "taste": "A trailside stop for coffee and cinnamon buns, or fika, the Swedish tradition of a warming coffee break."
+    },
+    {
+      "num": 5,
+      "title": "Depart Kiruna",
+      "overnight": "Departure day",
+      "desc": "After breakfast, check out and transfer to Kiruna Airport. Your Arctic journey through Swedish Lapland comes to an end—taking with you the silence of snowy forests, stories of Sami life, and the glow of the Northern Lights."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Kiruna",
+      "nights": "4 Nights",
+      "h3": "Camp Ripan",
+      "h4": "Scandic Kiruna"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "December to March, when polar darkness and clear Arctic nights give the best chance of seeing the Northern Lights."
+    },
+    {
+      "title": "Weather",
+      "body": "Deep Arctic winter, typically -20°C to -5°C, with short daylight hours and frequent snow — warm thermal layers are essential."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Sweden uses the Swedish Krona (SEK), though this package is priced in Euro; Sweden is part of the Schengen area, so standard Schengen entry rules apply."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Northern Lights",
+      "body": "Sightings depend on clear skies and solar activity and can never be guaranteed — the chase excursion maximises the chance by heading away from town lights."
+    },
+    {
+      "title": "What to pack",
+      "body": "Thermal base layers, warm socks and sturdy winter boots are essential; outer thermal suits and boots for excursions are typically provided locally."
+    },
+    {
+      "title": "Combining with Stockholm",
+      "body": "Kiruna is most often paired with a pre- or post-stay in Stockholm, reached by direct flight or the overnight Arctic Circle sleeper train.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Daylight hours",
+      "body": "In midwinter, Kiruna sees only a few hours of blue twilight each day — excursions are timed around this short window."
+    },
+    {
+      "title": "Money",
+      "body": "Sweden is largely cashless; cards are accepted almost everywhere, including for small purchases."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 67.8558,
+        "lng": 20.2253,
+        "label": "Kiruna",
+        "nights": 4
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "scandinavia-iceland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/10.5-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

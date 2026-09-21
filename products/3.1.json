@@ -1,0 +1,216 @@
+{
+  "id": "3.1",
+  "title": "Classic Italy.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled trains between Venice, Florence and Rome, with private transfers at each end.",
+      "nights": "6 nights · 7 days",
+      "route": "Mestre (2N) → Florence (2N) → Rome (2N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Venice airport to Mestre hotel private transfer.",
+        "2": "Venice small-group walking tour, 1.5 hrs.",
+        "3": "Venice to Florence train ticket, II Class.",
+        "4": "Full-day trip to Tuscany, Siena and San Gimignano, with lunch and wine tasting, 11.5 hrs by regular coach.",
+        "5": "Florence to Rome train ticket, II Class.",
+        "6": "Rome small-group walking tour of Imperial Rome with the Colosseum, 2.5 hrs.",
+        "7": "Rome hotel to Rome airport private transfer."
+      },
+      "inclusions": [
+        "Venice airport–Mestre hotel private transfer",
+        "Venice small-group walking tour, 1.5 hrs",
+        "Venice to Florence train ticket, II Class",
+        "Full-day Tuscany excursion to Siena and San Gimignano with lunch and wine tasting, 11.5 hrs regular coach",
+        "Florence to Rome train ticket, II Class",
+        "Rome small-group walking tour of Imperial Rome with the Colosseum, 2.5 hrs",
+        "Rome hotel–airport private transfer",
+        "6 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach at your exclusive disposal from Venice through to Rome.",
+      "nights": "6 nights · 7 days",
+      "route": "Mestre (2N) → Florence (2N) → Rome (2N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Venice to Mestre hotel private transfer.",
+        "2": "Venice walking tour, 2 hrs with English-speaking guide.",
+        "3": "Private coach transfer, Mestre to Florence (private coach on disposal Day 3 to Day 7).",
+        "4": "Full-day private coach excursion to Tuscany, Siena and San Gimignano.",
+        "5": "Private coach transfer, Florence to Rome.",
+        "6": "Rome city tour, 3 hrs with English-speaking guide, no entrances.",
+        "7": "Rome hotel to Rome airport private transfer by private coach."
+      },
+      "inclusions": [
+        "Private coach at your exclusive disposal from Day 3 to Day 7",
+        "Venice to Mestre hotel private transfer",
+        "Venice walking tour, 2 hrs with English-speaking guide",
+        "Full-day private coach excursion to Tuscany, Siena and San Gimignano",
+        "Private coach transfer, Florence to Rome",
+        "Rome city tour, 3 hrs with English-speaking guide",
+        "Rome hotel–airport private transfer",
+        "6 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Venice",
+      "overnight": "Overnight: Mestre",
+      "desc": "Upon arrival at Venice Airport, a private transfer awaits to transport you to Mestre. Embrace the captivating essence of Venice, known for its intricate canals and rich cultural heritage, as you begin your Italian escapade. Overnight in Venice Mestre.",
+      "taste": "A glass of Veneto Prosecco and cicchetti (small savoury bites) at one of the bacari bars around the Rialto Market, Venice's centuries-old produce and fish market by the Grand Canal."
+    },
+    {
+      "num": 2,
+      "title": "Venice",
+      "overnight": "Overnight: Mestre",
+      "desc": "Explore Venice's intricate streets, elegant palaces, and captivating churches with a Small Group Walking Tour. Starting at the iconic Piazza San Marco, uncover the secrets and history of St. Mark's Basilica, the Doge's Palace, and the Bell Tower. Traverse Marco Polo’s House, and the Mercerie for a glimpse into Venice's rich history, art, and architecture. Overnight in Venice Mestre.",
+      "experience": "A gondola glide along the smaller canals away from the crowds is the classic Venetian experience.",
+      "taste": "Coffee at Caffè Florian in St. Mark's Square, open since 1720 and reckoned to be the oldest coffee house in continuous operation in the world."
+    },
+    {
+      "num": 3,
+      "title": "Venice → Florence",
+      "overnight": "Overnight: Florence",
+      "desc": "Depart Venice for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" is famed for its historic art and cultural richness. Marvel at the iconic Duomo, Ponte Vecchio, and the vibrant streets of Florence. Immerse yourself in its artistry and history. Overnight stay in Florence.",
+      "taste": "Lampredotto — a Florentine tripe sandwich sold from street carts for generations — or fresh pasta at the Mercato Centrale food hall near San Lorenzo.",
+      "shopping": "The leather workshops around Santa Croce and the stalls of the Mercato di San Lorenzo are famous for handmade goods."
+    },
+    {
+      "num": 4,
+      "title": "Tuscany: Siena & San Gimignano",
+      "overnight": "Overnight: Florence",
+      "desc": "Embark on a picturesque journey through Tuscany, visiting Siena and San Gimignano. Marvel at Siena's stunning medieval architecture and the iconic Piazza del Campo. Explore San Gimignano's timeless beauty with its ancient towers. Enjoy a delectable Tuscan lunch and wine tasting amidst scenic vineyards. Return to Florence by evening. Overnight in Florence.",
+      "taste": "A tasting of Chianti and Vernaccia di San Gimignano wines paired with local Tuscan cured meats and pecorino cheese."
+    },
+    {
+      "num": 5,
+      "title": "Florence → Rome",
+      "overnight": "Overnight: Rome",
+      "desc": "Depart Florence for Rome by train. Rome, known as the \"Eternal City,\" boasts iconic landmarks like the Trevi Fountain and the Spanish Steps. Enjoy the timeless allure of Rome's ancient and modern marvels. Overnight in Rome.",
+      "experience": "Tossing a coin into the Trevi Fountain is said to guarantee a return visit to Rome.",
+      "taste": "Carciofi alla giudia — Roman-Jewish deep-fried artichokes — in the Jewish Ghetto, a recipe served there since the 16th century."
+    },
+    {
+      "num": 6,
+      "title": "Rome: Imperial Rome",
+      "overnight": "Overnight: Rome",
+      "desc": "Embark on an immersive Colosseum and Roman Forum walking tour, delving into the ancient heart of the Eternal City. Unravel the history of Rome with a local guide, uncovering stories of emperors, gladiators, and the city's captivating past. Explore the monumental Colosseum, an emblem of ancient grandeur, and the evocative ruins of the Roman Forum, where echoes of a glorious past linger. Overnight in Rome.",
+      "taste": "A classic Roman cacio e pepe or carbonara in the trattorias of the Monti or Trastevere neighbourhoods."
+    },
+    {
+      "num": 7,
+      "title": "Depart Rome",
+      "overnight": "Departure day",
+      "desc": "Enjoy a private transfer from your Rome hotel to Rome airport, marking the conclusion of this captivating tour through Italy.",
+      "fallbackIncluded": "Rome hotel to Rome airport private transfer."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Mestre",
+      "nights": "2 Nights",
+      "h3": "Venezia Mestre",
+      "h4": "NH Venezia Laguna Palace"
+    },
+    {
+      "city": "Florence",
+      "nights": "2 Nights",
+      "h3": "Hotel Delle Nazioni",
+      "h4": "NH Firenze"
+    },
+    {
+      "city": "Rome",
+      "nights": "2 Nights",
+      "h3": "Hotel Windrose",
+      "h4": "NH Collection Roma Vittorio Veneto"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–June and September–October offer mild weather and thinner crowds across Venice, Florence and Rome. Avoid mid-August if possible — many family-run trattorias close around Ferragosto (15 August), Italy's national summer holiday."
+    },
+    {
+      "title": "Weather",
+      "body": "Warm, dry summers (often 28–33°C) and mild, wetter winters (5–12°C); pack for sun and occasional rain in shoulder months."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) throughout Italy; non-EU passport holders should check Schengen entry requirements before travel."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book the Doge's Palace, Uffizi Gallery and Vatican Museums ahead in summer — all sell out days in advance. Visit St. Mark's Square before 09:00 to beat the crowds."
+    },
+    {
+      "title": "Getting around Venice",
+      "body": "Mestre sits on the mainland, a short train or bus ride from the historic centre. Once across the lagoon, Venice itself is entirely on foot or by vaporetto water bus — there are no cars or bicycles in the historic centre."
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the inter-city trains between Venice, Florence and Rome; arrive at the platform at least 15 minutes before departure.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by law, so day-trip timings are planned around this. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable shoes are essential for cobbled streets and long museum days; a light layer is useful for cool evenings even in summer."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are widely accepted; a little cash is useful for small cafés and markets. Restaurant bills usually include a small 'coperto' (cover charge) per person, so tipping beyond rounding up is appreciated, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 45.4903,
+        "lng": 12.2424,
+        "label": "Mestre",
+        "nights": 2
+      },
+      {
+        "lat": 43.7696,
+        "lng": 11.2558,
+        "label": "Florence",
+        "nights": 2
+      },
+      {
+        "lat": 41.9028,
+        "lng": 12.4964,
+        "label": "Rome",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "italy",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/3.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

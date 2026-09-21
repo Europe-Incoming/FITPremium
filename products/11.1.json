@@ -1,0 +1,138 @@
+{
+  "id": "11.1",
+  "title": "Bavarian Christmas Markets.",
+  "styles": {
+    "trains": {
+      "name": "Regular FIT",
+      "blurb": "Nuremberg's world-famous Christkindlesmarkt and Munich's Marienplatz market, linked by a short train ride, with a hop-on hop-off city tour in Munich.",
+      "nights": "4 nights · 5 days",
+      "route": "Nuremberg (2N) → Munich (2N)",
+      "aboutNights": "4 nights across 2 stays",
+      "transport": {
+        "1": "Train, 2nd class, from Munich Airport to Nuremberg (approx. 2 hrs).",
+        "3": "Train, 2nd class, from Nuremberg to Munich (approx. 1.5 hrs).",
+        "5": "Private transfer from your Munich hotel to Munich Airport."
+      },
+      "inclusions": [
+        "4 nights accommodation including breakfast",
+        "Train, 2nd class, Munich Airport to Nuremberg",
+        "Train, 2nd class, Nuremberg to Munich",
+        "Munich Hop-on Hop-off city tour, 24-hour pass",
+        "Private transfer from your Munich hotel to Munich Airport"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in Nuremberg",
+      "overnight": "Overnight: Nuremberg",
+      "desc": "Upon arrival at Munich Airport, take the train north to Nuremberg for the roughly 2-hour journey. Check in and spend the rest of the day at leisure. Overnight in Nuremberg."
+    },
+    {
+      "num": 2,
+      "title": "Nuremberg",
+      "overnight": "Overnight: Nuremberg",
+      "desc": "Explore this northern Bavarian gem at your own pace — the Kaiserburg Castle, Hauptmarkt Square with its “Schöner Brunnen” fountain, and the Frauenkirche. In the Old Town, stroll the streets and take a break at one of the many cafés before spending the evening at the Nuremberg Christmas Market, open daily from late November to Christmas Eve. Overnight in Nuremberg.",
+      "experience": "The Nuremberg Christkindlesmarkt's Sternenhaus (House of Stars) programme keeps children entertained with crafts and activities while the adults browse the stalls.",
+      "shopping": "Hand-made gold-foil angels (Nürnberger Engel), glass tree baubles and wooden nutcrackers are the market's signature souvenirs, alongside Nürnberger Lebkuchen gingerbread."
+    },
+    {
+      "num": 3,
+      "title": "Nuremberg to Munich",
+      "overnight": "Overnight: Munich",
+      "desc": "Make your own way to the train station for the roughly 1.5-hour journey to Munich, the capital of Bavaria. Check in and spend the rest of the day at leisure. Overnight in Munich."
+    },
+    {
+      "num": 4,
+      "title": "Munich",
+      "overnight": "Overnight: Munich",
+      "desc": "A double-decker hop-on hop-off bus tour (approx. 2.5 hrs) takes in Munich's highlights — the City Hall in Marienplatz, Karlsplatz-Stachus, the Opera, BMW World, the Palace of Nymphenburg, the Olympic Grounds and the Siegestor arch. Afterwards, spend the rest of the day at the Christmas Market in Marienplatz, open daily from late November to Christmas Eve, with more than 160 stalls of handmade souvenirs and culinary delicacies. Overnight in Munich.",
+      "experience": "The towering Christmas tree in front of the Neues Rathaus is Marienplatz market's centrepiece, lit by thousands of candles alongside the traditional Christmas songs playing across the square."
+    },
+    {
+      "num": 5,
+      "title": "Departure",
+      "overnight": "Departure day",
+      "desc": "Extend your stay or say farewell to Munich with a transfer to Munich Airport."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Nuremberg",
+      "nights": "2 Nights",
+      "h3": "Centro Hotel Nürnberg",
+      "h4": "Holiday Inn Nürnberg City Centre"
+    },
+    {
+      "city": "Munich",
+      "nights": "2 Nights",
+      "h3": "Mercure Hotel München am Olympiapark",
+      "h4": "Eurostars Book Hotel"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "This tour is built specifically around the Christmas market season — Nuremberg's Christkindlesmarkt runs 27 Nov–24 Dec, Munich's Marienplatz market 20 Nov–24 Dec (closed 22 Nov)."
+    },
+    {
+      "title": "Weather",
+      "body": "Cold Bavarian winter: typically -2°C to 5°C, often with snow — dress for standing outdoors at the markets for extended periods."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Euro (€) is the local currency, and Germany is a Schengen Area member — no separate visa is needed for Schengen visa holders."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Market crowds",
+      "body": "Both markets are extremely popular on weekends and in the run-up to Christmas — visit on a weekday morning or early afternoon for a quieter first look before the evening crowds arrive."
+    },
+    {
+      "title": "Mulled wine mugs",
+      "body": "Glühwein is served in collectible ceramic mugs with a small deposit — keep the mug as a souvenir, or return it at the stall for a refund."
+    },
+    {
+      "title": "What to pack",
+      "body": "Warm boots, gloves and a proper winter coat — you'll be on your feet outdoors for long stretches at both markets."
+    },
+    {
+      "title": "Tipping",
+      "body": "Rounding up the bill by 5–10% is customary in German restaurants — tell the server the total you'd like to pay rather than leaving cash on the table."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 49.4521,
+        "lng": 11.0767,
+        "label": "Nuremberg",
+        "nights": 2
+      },
+      {
+        "lat": 48.1351,
+        "lng": 11.582,
+        "label": "Munich",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "western-central-europe",
+  "pricesFile": "prices/11.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

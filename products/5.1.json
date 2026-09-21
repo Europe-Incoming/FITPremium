@@ -1,0 +1,263 @@
+{
+  "id": "5.1",
+  "title": "Paris with Provence & French Riviera.",
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled trains link each city, with private transfers at your Paris arrival.",
+      "nights": "8 nights · 9 days",
+      "route": "Paris (2N) → Avignon (2N) → Aix-en-Provence (2N) → Nice (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer on arrival.",
+        "3": "Paris to Avignon by train, II Class, with station transfers at each end.",
+        "5": "Avignon to Aix-en-Provence by train, II Class, with station transfers.",
+        "7": "Aix-en-Provence to Nice by train, II Class, with station transfers."
+      },
+      "inclusions": [
+        "Paris airport to Paris hotel private transfer on arrival",
+        "Paris to Avignon train ticket, II Class, with station transfers",
+        "Avignon to Aix-en-Provence train ticket, II Class, with station transfers",
+        "Aix-en-Provence to Nice train ticket, II Class, with station transfers",
+        "Nice hotel to Nice airport private transfer on departure",
+        "8 nights accommodation with daily breakfast",
+        "All applicable taxes and service charges"
+      ]
+    },
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "Arrive by train and transfer, then pick up a rental car in Avignon to explore Provence and the Riviera at your own pace.",
+      "nights": "8 nights · 9 days",
+      "route": "Paris (2N) → Avignon (2N) → Aix-en-Provence (2N) → Nice (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer.",
+        "3": "Paris to Avignon by train, II Class.",
+        "4": "Pick up rental car in Avignon — SUV class, 5-seater, automatic.",
+        "5": "Self-drive from Avignon to Aix-en-Provence at your own pace.",
+        "7": "Self-drive from Aix-en-Provence to Nice at your own pace.",
+        "9": "Drop off rental car in Nice before departure."
+      },
+      "inclusions": [
+        "Paris airport to Paris hotel private transfer",
+        "Paris to Avignon train ticket, II Class",
+        "Rental car pickup in Avignon, SUV class, 5-seater, automatic",
+        "Comprehensive insurance and unlimited mileage",
+        "Self-guided route notes for Avignon, Aix-en-Provence and Nice",
+        "8 nights accommodation with daily breakfast",
+        "Rental car drop-off in Nice before departure"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "A private coach and driver stay with you for the whole journey, Paris to Nice.",
+      "nights": "8 nights · 9 days",
+      "route": "Paris (2N) → Avignon (2N) → Aix-en-Provence (2N) → Nice (2N)",
+      "aboutNights": "8 nights across 4 stays",
+      "transport": {
+        "1": "Paris airport to Paris hotel private transfer, coach on disposal for 6 hrs.",
+        "2": "Paris city tour with local guide, 3 hrs, private coach on disposal for 10 hrs.",
+        "3": "Paris to Avignon by train, II Class, with private station transfers at each end.",
+        "4": "Private coach on disposal for sightseeing in and around Avignon.",
+        "5": "Private coach transfer from Avignon to Aix-en-Provence.",
+        "6": "Private coach on disposal for sightseeing in and around Aix-en-Provence.",
+        "7": "Private coach transfer from Aix-en-Provence to Nice.",
+        "8": "Private coach on disposal for sightseeing in and around Nice.",
+        "9": "Nice hotel to Nice airport private transfer by private coach."
+      },
+      "inclusions": [
+        "Private coach on disposal from Day 1 to Day 9",
+        "Paris airport to Paris hotel private transfer",
+        "Paris city tour with local guide, 3 hrs",
+        "Seine river cruise, 1 hr",
+        "Paris to Avignon train ticket, II Class, with private station transfers",
+        "Private coach transfers linking Avignon, Aix-en-Provence and Nice",
+        "8 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Welcome to the enchanting French capital! Upon arrival at the airport, enjoy a seamless transfer to your hotel. Dive into Parisian life by exploring iconic sites like the Champs-Élysées for high-end shopping, or relishing the artistic vibes of Montmartre. Experience the city's allure with a stroll along the Seine River or indulge in renowned French cuisine. Overnight in Paris",
+      "taste": "Le Relais de l'Entrecôte, the Paris institution serving only steak-frites in a secret walnut-butter sauce since 1959, is the classic first-night dinner."
+    },
+    {
+      "num": 2,
+      "title": "Paris",
+      "overnight": "Overnight: Paris",
+      "desc": "Discover the allure of Paris as you explore at your own pace or opt for curated optional tours. From strolling along the Seine to marveling at iconic landmarks, the day is yours to savor. Overnight in Paris.",
+      "experience": "A Bateaux Mouches cruise past Notre-Dame and the Eiffel Tower, run from the same Pont de l'Alma landing stage since 1949, is the classic way to see the city lit up from the water."
+    },
+    {
+      "num": 3,
+      "title": "Paris → Avignon",
+      "overnight": "Overnight: Avignon",
+      "desc": "Check out from Paris and embark on a scenic train journey to Avignon. Known as the \"City of Popes,\" Avignon boasts historic charm and the iconic Palais des Papes. Explore the medieval bridge, Pont Saint-Bénézet, and immerse yourself in the city's rich history. Overnight in Avignon.",
+      "taste": "A glass of Côtes du Rhône is the natural choice on arrival in Provence's wine country."
+    },
+    {
+      "num": 4,
+      "title": "Avignon",
+      "overnight": "Overnight: Avignon",
+      "desc": "Discover Avignon at your leisure or opt for optional adventures. Choose between Saint-Remy and Les Baux de Provence with Pont du Gard or explore Châteauneuf-du-Pape wineries. Overnight in Avignon.",
+      "taste": "Les Halles d'Avignon, the covered market on Place Pie, is the place to try berlingots — the striped boiled sweets made in the city since the 1850s.",
+      "fallbackIncluded": "Day at leisure — optional guided tour of the Palais des Papes available."
+    },
+    {
+      "num": 5,
+      "title": "Avignon → Aix-en-Provence",
+      "overnight": "Overnight: Aix-en-Provence",
+      "desc": "Check out from Avignon and hop on a train to Aix en Provence. Famous for its artistic heritage and elegant architecture, Aix en Provence is known as the \"City of a Thousand Fountains.\" Explore charming squares, like Place de l'Hotel de Ville, and immerse yourself in the city's vibrant cultural scene. Overnight in Aix en Provence.",
+      "experience": "Follow the Cézanne trail through the old town to his studio, the Atelier des Lauves, preserved much as he left it."
+    },
+    {
+      "num": 6,
+      "title": "Aix-en-Provence",
+      "overnight": "Overnight: Aix-en-Provence",
+      "desc": "Explore Aix en Provence at your own pace, wandering through charming streets like Cours Mirabeau, lined with cafes and fountains. Stroll through the historic Old Town, visit the vibrant markets of Place Richelme, or discover the artistic flair of Quartier Mazarin. Optionally, choose from curated tours. Overnight in Aix en Provence.",
+      "shopping": "Aix's Saturday market and the boutiques along Cours Mirabeau are known for Provençal linens, soaps and lavender products."
+    },
+    {
+      "num": 7,
+      "title": "Aix-en-Provence → Nice",
+      "overnight": "Overnight: Nice",
+      "desc": "Check out from Aix en Provence and board a scenic train to Nice. Nestled on the French Riviera, Nice is known as the \"Queen of the Riviera.\" Famous for its stunning Promenade des Anglais, vibrant markets, and captivating Old Town, Nice invites you to explore its Mediterranean charm. Overnight in Nice.",
+      "taste": "Socca, a chickpea-flour pancake sold from street stalls, is Nice's most typical snack."
+    },
+    {
+      "num": 8,
+      "title": "Nice",
+      "overnight": "Overnight: Nice",
+      "desc": "Embark on a Riviera adventure for the best views of Nice and Villefranche. Explore the perched village of Eze, indulge in a visit to the Fragonard perfumery, and then journey to Monaco for its old town, cathedral, palace, F1 circuit, and the allure of Monte Carlo. Discover Antibes, its glamorous port, and end the day in Cannes, strolling the famous \"Croisette.\" Overnight in Nice.",
+      "experience": "The Musée Matisse and Musée Chagall reflect Nice's long history as a magnet for artists drawn to its Mediterranean light."
+    },
+    {
+      "num": 9,
+      "title": "Depart Nice",
+      "overnight": "Departure day",
+      "desc": "Check out and bid adieu to the French Riviera. Enjoy a private transfer to Nice airport as your unforgettable tour comes to an end."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Paris",
+      "nights": "2 Nights",
+      "h3": "Hôtel Berne Opéra",
+      "h4": "Marceau Bastille"
+    },
+    {
+      "city": "Avignon",
+      "nights": "2 Nights",
+      "h3": "Kyriad avignon Palais des papes",
+      "h4": "Mercure Avignon Gare TGV"
+    },
+    {
+      "city": "Aix en Provence",
+      "nights": "2 Nights",
+      "h3": "ibis Aix-en-Provence",
+      "h4": "Boutique Hôtel Cézanne"
+    },
+    {
+      "city": "Nice",
+      "nights": "2 Nights",
+      "h3": "ibis Nice Centre Gare",
+      "h4": "Mercure Nice Centre Notre-Dame"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–June and September–October for warm weather without the peak August crowds and heat across Provence and the Riviera."
+    },
+    {
+      "title": "Weather",
+      "body": "Mediterranean climate with hot, dry summers around 25–30°C and mild winters, though the Mistral wind can bring a sharp chill in Provence."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€) throughout; France is part of the Schengen Area, so standard Schengen visa and border rules apply."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book the Palais des Papes and Cézanne's studio ahead in summer — both are popular and queues build quickly by mid-morning."
+    },
+    {
+      "title": "Driving",
+      "body": "Provençal and Riviera roads are well signed but busy in summer. Central Nice and Aix have restricted or paid parking zones near the old towns.",
+      "styles": [
+        "selfdrive"
+      ]
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on the inter-city trains. Stations are typically a short taxi ride from the central hotels.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited by law to around 10 hrs per day, so day-trip timings are planned accordingly. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Light layers for summer, a warmer layer for evenings, and comfortable shoes for cobbled old towns and hillside viewpoints."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are widely accepted, but a little cash is useful for markets and small cafés. Tipping around 5-10% in restaurants is appreciated, not obligatory."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "label": "Paris",
+        "nights": 2
+      },
+      {
+        "lat": 43.9493,
+        "lng": 4.8055,
+        "label": "Avignon",
+        "nights": 2
+      },
+      {
+        "lat": 43.5297,
+        "lng": 5.4474,
+        "label": "Aix-en-Provence",
+        "nights": 2
+      },
+      {
+        "lat": 43.7102,
+        "lng": 7.262,
+        "label": "Nice",
+        "nights": 2
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "france",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/5.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

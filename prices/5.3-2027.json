@@ -1,0 +1,57 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 1632,
+          "twin": 816,
+          "child": 318
+        },
+        "summer": {
+          "single": 1700,
+          "twin": 850,
+          "child": 331
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1706,
+          "twin": 853,
+          "child": 333
+        },
+        "summer": {
+          "single": 1777,
+          "twin": 888,
+          "child": 346
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Ex-Porto, morning boat tour of Scandola reserve, Calanques de Piana , Capo Rosso & Girolata with swimming break, 3.5 hrs",
+      "price": 74
+    },
+    {
+      "name": "Ex-Bonifacio, Half day boat tour to Lavezzi Islands & caves with swimming break, 4 hrs",
+      "price": 101
+    },
+    {
+      "name": "Ajaccio - Maison Bonaparte admission ticket (Napoleon's birthplace)",
+      "price": 7
+    }
+  ]
+}

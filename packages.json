@@ -2,7 +2,7 @@
   "packages": [
     {
       "id": "city-001",
-      "name": "3 Days Amsterdam",
+      "name": "3 days Amsterdam",
       "filename": "3 Days_Amsterdam_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -25,7 +25,7 @@
     },
     {
       "id": "city-002",
-      "name": "3 Days Athens",
+      "name": "3 days Athens",
       "filename": "3 Days_Athens_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -48,7 +48,7 @@
     },
     {
       "id": "city-003",
-      "name": "3 Days Barcelona",
+      "name": "3 days Barcelona",
       "filename": "3 Days_Barcelona_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -71,7 +71,7 @@
     },
     {
       "id": "city-004",
-      "name": "3 Days Bergen",
+      "name": "3 days Bergen",
       "filename": "3 Days_Bergen_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -93,7 +93,7 @@
     },
     {
       "id": "city-005",
-      "name": "3 Days Berlin",
+      "name": "3 days Berlin",
       "filename": "3 Days_Berlin_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -115,7 +115,7 @@
     },
     {
       "id": "city-006",
-      "name": "3 Days Brussels",
+      "name": "3 days Brussels",
       "filename": "3 Days_Brussels_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -137,7 +137,7 @@
     },
     {
       "id": "city-007",
-      "name": "3 Days Budapest",
+      "name": "3 days Budapest",
       "filename": "3 Days_Budapest_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -160,7 +160,7 @@
     },
     {
       "id": "city-008",
-      "name": "3 Days Copenhagen",
+      "name": "3 days Copenhagen",
       "filename": "3 Days_Copenhagen_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -182,7 +182,7 @@
     },
     {
       "id": "city-009",
-      "name": "3 Days Dublin",
+      "name": "3 days Dublin",
       "filename": "3 Days_Dublin_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -203,7 +203,7 @@
     },
     {
       "id": "city-010",
-      "name": "3 Days Dusseldorf",
+      "name": "3 days Dusseldorf",
       "filename": "3 Days_Dusseldorf_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -225,7 +225,7 @@
     },
     {
       "id": "city-011",
-      "name": "3 Days Edinburgh",
+      "name": "3 days Edinburgh",
       "filename": "3 Days_Edinburgh_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -247,7 +247,7 @@
     },
     {
       "id": "city-012",
-      "name": "3 Days Florence",
+      "name": "3 days Florence",
       "filename": "3 Days_Florence_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -270,7 +270,7 @@
     },
     {
       "id": "city-013",
-      "name": "3 Days Frankfurt",
+      "name": "3 days Frankfurt",
       "filename": "3 Days_Frankfurt_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -292,7 +292,7 @@
     },
     {
       "id": "city-014",
-      "name": "3 Days Geneva",
+      "name": "3 days Geneva",
       "filename": "3 Days_Geneva_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -314,7 +314,7 @@
     },
     {
       "id": "city-015",
-      "name": "3 Days Glasgow",
+      "name": "3 days Glasgow",
       "filename": "3 Days_Glasgow_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -335,7 +335,7 @@
     },
     {
       "id": "city-016",
-      "name": "3 Days Helsinki",
+      "name": "3 days Helsinki",
       "filename": "3 Days_Helsinki_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -357,7 +357,7 @@
     },
     {
       "id": "city-017",
-      "name": "3 Days Innsbruck",
+      "name": "3 days Innsbruck",
       "filename": "3 Days_Innsbruck_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -379,7 +379,7 @@
     },
     {
       "id": "city-018",
-      "name": "3 Days Interlaken",
+      "name": "3 days Interlaken",
       "filename": "3 Days_Interlaken_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -402,7 +402,7 @@
     },
     {
       "id": "city-019",
-      "name": "3 Days Inverness",
+      "name": "3 days Inverness",
       "filename": "3 Days_Inverness_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -425,7 +425,7 @@
     },
     {
       "id": "city-020",
-      "name": "3 Days Lisbon",
+      "name": "3 days Lisbon",
       "filename": "3 Days_Lisbon_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -447,7 +447,7 @@
     },
     {
       "id": "city-021",
-      "name": "3 Days London",
+      "name": "3 days London",
       "filename": "3 Days_London_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -470,7 +470,7 @@
     },
     {
       "id": "city-022",
-      "name": "3 Days Lucerne",
+      "name": "3 days Lucerne",
       "filename": "3 Days_Lucerne_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -493,7 +493,7 @@
     },
     {
       "id": "city-023",
-      "name": "3 Days Madrid",
+      "name": "3 days Madrid",
       "filename": "3 Days_Madrid_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -515,7 +515,7 @@
     },
     {
       "id": "city-024",
-      "name": "3 Days Milan",
+      "name": "3 days Milan",
       "filename": "3 Days_Milan_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -538,7 +538,7 @@
     },
     {
       "id": "city-025",
-      "name": "3 Days Munich",
+      "name": "3 days Munich",
       "filename": "3 Days_Munich_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -561,7 +561,7 @@
     },
     {
       "id": "city-026",
-      "name": "3 Days Mykonos",
+      "name": "3 days Mykonos",
       "filename": "3 Days_Mykonos_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -584,7 +584,7 @@
     },
     {
       "id": "city-027",
-      "name": "3 Days Nice",
+      "name": "3 days Nice",
       "filename": "3 Days_Nice_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -607,7 +607,7 @@
     },
     {
       "id": "city-028",
-      "name": "3 Days Oslo",
+      "name": "3 days Oslo",
       "filename": "3 Days_Oslo_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -630,7 +630,7 @@
     },
     {
       "id": "city-029",
-      "name": "3 Days Paris",
+      "name": "3 days Paris",
       "filename": "3 Days_Paris_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -653,7 +653,7 @@
     },
     {
       "id": "city-030",
-      "name": "3 Days Prague",
+      "name": "3 days Prague",
       "filename": "3 Days_Prague_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -675,7 +675,7 @@
     },
     {
       "id": "city-031",
-      "name": "3 Days Rome",
+      "name": "3 days Rome",
       "filename": "3 Days_Rome_2024-25_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -699,7 +699,7 @@
     },
     {
       "id": "city-032",
-      "name": "3 Days Salzburg",
+      "name": "3 days Salzburg",
       "filename": "3 Days_Salzburg_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -722,7 +722,7 @@
     },
     {
       "id": "city-033",
-      "name": "3 Days Santorini",
+      "name": "3 days Santorini",
       "filename": "3 Days_Santorini_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -746,7 +746,7 @@
     },
     {
       "id": "city-034",
-      "name": "3 Days Stockholm",
+      "name": "3 days Stockholm",
       "filename": "3 Days_Stockholm_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -768,7 +768,7 @@
     },
     {
       "id": "city-035",
-      "name": "3 Days Venice",
+      "name": "3 days Venice",
       "filename": "3 Days_Venice_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -791,7 +791,7 @@
     },
     {
       "id": "city-036",
-      "name": "3 Days Vienna",
+      "name": "3 days Vienna",
       "filename": "3 Days_Vienna_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -814,7 +814,7 @@
     },
     {
       "id": "city-037",
-      "name": "3 Days Zurich",
+      "name": "3 days Zurich",
       "filename": "3 Days_Zurich_2025-26_Europe Incoming.pdf",
       "region": "City Break",
       "folder": "city-break",
@@ -832,422 +832,6 @@
       "price_twin": 621,
       "currency": "€",
       "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "italy-003",
-      "name": "10 Nights, 11 Days Italy - Private",
-      "filename": "10 nights, 11 days Italy_Private.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": [
-        "Rome",
-        "Naples",
-        "Florence",
-        "Venice",
-        "Milan"
-      ],
-      "duration": "10 nights, 11 days",
-      "type": "Private",
-      "tags": [
-        "Italy",
-        "Tuscany",
-        "Amalfi Coast",
-        "Canals"
-      ],
-      "description": "Private guided tour through Naples, Rome, Florence, Venice Mestre, Venice and Milan.",
-      "price_twin": 1508,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "italy-004",
-      "name": "10 Nights, 11 Days Italy - Regular",
-      "filename": "10 nights, 11 days Italy_Regular.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": [
-        "Rome",
-        "Naples",
-        "Florence",
-        "Venice",
-        "Milan"
-      ],
-      "duration": "10 nights, 11 days",
-      "type": "Regular",
-      "tags": [
-        "Italy",
-        "Tuscany",
-        "Amalfi Coast",
-        "Canals"
-      ],
-      "description": "Trains, landmarks and local character through Rome, Naples, Venice and Milan.",
-      "price_twin": 1404,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "italy-001",
-      "name": "6 Nights, 7 Days Italy - Private",
-      "filename": "6 nights, 7 days Italy_Private.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": [
-        "Rome",
-        "Florence",
-        "Venice"
-      ],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": [
-        "Italy",
-        "Tuscany",
-        "Canals"
-      ],
-      "description": "Private guided tour: Venice canals, Florentine frescoes and Roman ruins with a dedicated vehicle.",
-      "price_twin": 908,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "italy-002",
-      "name": "6 Nights, 7 Days Italy - Regular",
-      "filename": "6 nights, 7 days Italy_Regular.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": [
-        "Rome",
-        "Florence",
-        "Venice"
-      ],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": [
-        "Italy",
-        "Tuscany",
-        "Canals"
-      ],
-      "description": "Venice walking tour, a full-day Tuscany excursion and the Colosseum by train.",
-      "price_twin": 837,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "7-nights--8-days-sardinia-self",
-      "name": "7 nights, 8 days Sardinia Self-drive",
-      "filename": "7 nights, 8 days Sardinia_Self-drive.pdf",
-      "region": "Italy",
-      "folder": "multi-country/italy",
-      "cities": [
-        "Cagliari",
-        "Cala Gonone",
-        "Alghero",
-        "Olbia"
-      ],
-      "duration": "7 nights / 8 days",
-      "type": "Self Drive",
-      "tags": [
-        "Sardinia",
-        "Italy",
-        "Self Drive"
-      ],
-      "description": "Sardinia's wild east coast, the Gulf of Orosei's sea caves, Alghero's Spanish old town and the Costa Smeralda.",
-      "price_twin": 1020,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "ee-001",
-      "name": "6 Nights, 7 Days East Europe - Private",
-      "filename": "6 nights, 7 days East Europe_Private.pdf",
-      "region": "Eastern Europe",
-      "folder": "multi-country/eastern-europe",
-      "cities": [
-        "Prague",
-        "Vienna",
-        "Budapest"
-      ],
-      "duration": "6 nights, 7 days",
-      "type": "Private",
-      "tags": [
-        "Czech Republic",
-        "Austria",
-        "Hungary",
-        "Danube"
-      ],
-      "description": "Private guided tour through Prague, Vienna and Budapest.",
-      "price_twin": 745,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "ee-002",
-      "name": "6 Nights, 7 Days East Europe - Regular",
-      "filename": "6 nights, 7 days East Europe_Regular.pdf",
-      "region": "Eastern Europe",
-      "folder": "multi-country/eastern-europe",
-      "cities": [
-        "Prague",
-        "Vienna",
-        "Budapest"
-      ],
-      "duration": "6 nights, 7 days",
-      "type": "Regular",
-      "tags": [
-        "Czech Republic",
-        "Austria",
-        "Hungary",
-        "Danube"
-      ],
-      "description": "Gothic Prague, imperial Vienna and thermal Budapest by train in six nights.",
-      "price_twin": 764,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "7-nights--8-days-france-norman",
-      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
-      "filename": "7 nights, 8 days France Normandy & Loire Valley_Private.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "duration": "7 nights / 8 days",
-      "type": "Private",
-      "season": "all-year",
-      "price_twin": 1306,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "description": "Private guided tour through Paris, Bayeux and Tours.",
-      "tags": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "7-nights--8-days-france-norman",
-      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
-      "filename": "7 nights, 8 days France Normandy & Loire Valley_Regular.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "duration": "7 nights / 8 days",
-      "type": "Regular",
-      "season": "all-year",
-      "price_twin": 1024,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "description": "Trains, landmarks and local character through Paris, Bayeux and Tours.",
-      "tags": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "7-nights--8-days-france-norman",
-      "name": "7 nights, 8 days France, Normandy, Loire & Valley",
-      "filename": "7 nights, 8 days France Normandy & Loire Valley_Self-drive.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "duration": "7 nights / 8 days",
-      "type": "Self Drive",
-      "season": "all-year",
-      "price_twin": 1018,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "description": "Self-drive through Paris, Bayeux and Tours — your route, your pace.",
-      "tags": [
-        "Paris",
-        "Bayeux",
-        "Tours"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "8-nights--9-days-corsica-self-",
-      "name": "8 nights, 9 days Corsica Self-drive",
-      "filename": "8 nights, 9 days Corsica_Self-drive.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Ajaccio",
-        "Corte",
-        "Bonifacio"
-      ],
-      "duration": "8 nights / 9 days",
-      "type": "Self Drive",
-      "tags": [
-        "Corsica",
-        "France",
-        "Self Drive"
-      ],
-      "description": "Corsica's dramatic interior — the Calanques de Piana, Spelunca gorge and the white limestone cliffs of Bonifacio.",
-      "price_twin": 1182,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "8-nights--9-days-france-proven",
-      "name": "8 nights, 9 days France, Provence, French & Riviera",
-      "filename": "8 nights, 9 days France Provence & French Riviera_Private.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "duration": "8 nights / 9 days",
-      "type": "Private",
-      "season": "all-year",
-      "price_twin": 1558,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "description": "Private guided tour through Paris, Avignon, Aix en Provence and Nice.",
-      "tags": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "8-nights--9-days-france-proven",
-      "name": "8 nights, 9 days France, Provence, French & Riviera",
-      "filename": "8 nights, 9 days France Provence & French Riviera_Regular.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "duration": "8 nights / 9 days",
-      "type": "Regular",
-      "season": "all-year",
-      "price_twin": 1198,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "description": "Trains, landmarks and local character through Paris, Avignon, Aix en Provence and Nice.",
-      "tags": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "8-nights--9-days-france-proven",
-      "name": "8 nights, 9 days France, Provence, French & Riviera",
-      "filename": "8 nights, 9 days France Provence & French Riviera_Self drive.pdf",
-      "region": "France",
-      "folder": "multi-country/france",
-      "cities": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "duration": "8 nights / 9 days",
-      "type": "Self Drive",
-      "season": "all-year",
-      "price_twin": 1420,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "description": "Self-drive through Paris, Avignon, Aix en Provence and Nice — your route, your pace.",
-      "tags": [
-        "Paris",
-        "Avignon",
-        "Aix en Provence",
-        "Nice"
-      ],
-      "is_expired": false
-    },
-    {
-      "id": "5-nights--6-days-norway-in-a-n",
-      "name": "5 nights, 6 days Norway, In, a & Nutshell",
-      "filename": "5 nights, 6 days Norway In a Nutshell_Regular.pdf",
-      "region": "Scandinavia & Iceland",
-      "folder": "multi-country/scandinavia-iceland",
-      "cities": [
-        "Oslo",
-        "Bergen"
-      ],
-      "duration": "5 nights / 6 days",
-      "type": "Regular",
-      "season": "all-year",
-      "price_twin": 1080,
-      "currency": "€",
-      "valid_till": "Mar 2026",
-      "description": "From Oslo to Bergen — landmarks, local character and curated transfers.",
-      "tags": [
-        "Oslo",
-        "Bergen"
-      ],
-      "is_expired": true
-    },
-    {
-      "id": "6-nights--7-days-nordic-capita",
-      "name": "6 nights, 7 days Nordic Capitals Regular",
-      "filename": "6 nights, 7 days Nordic Capitals_Regular.pdf",
-      "region": "Scandinavia & Iceland",
-      "folder": "multi-country/scandinavia-iceland",
-      "cities": [
-        "Copenhagen",
-        "Oslo",
-        "Stockholm",
-        "Helsinki"
-      ],
-      "duration": "6 nights / 7 days",
-      "type": "Regular",
-      "tags": [
-        "Copenhagen",
-        "Oslo",
-        "Stockholm",
-        "Helsinki",
-        "Nordic"
-      ],
-      "description": "Four Nordic capitals by ferry and train — design, open-faced sandwiches and the Vigeland sculpture park.",
-      "price_twin": 1110,
-      "currency": "€",
-      "valid_till": "Mar 2027",
       "is_expired": false,
       "season": "all-year"
     },
@@ -1279,156 +863,374 @@
       "is_expired": false
     },
     {
-      "id": "finnish-lapland-7n-regular-wi",
-      "name": "7 nights, 8 days Finnish Lapland",
-      "filename": "Finnish Lapland 7N_Regular Winter.pdf",
+      "id": "product-3.1",
+      "name": "Classic Italy",
+      "filename": "3.1_brochure.html",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Mestre",
+        "Florence",
+        "Rome"
+      ],
+      "duration": "6 nights · 7 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 862,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Mestre, Florence and Rome — by train or private coach.",
+      "tags": [
+        "Mestre",
+        "Florence",
+        "Rome"
+      ]
+    },
+    {
+      "id": "product-3.2",
+      "name": "Italy with Naples",
+      "filename": "3.2_brochure.html",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Rome",
+        "Naples",
+        "Florence",
+        "Venice",
+        "Milan"
+      ],
+      "duration": "10 nights · 11 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1446,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Rome, Naples and Florence — by train or private coach.",
+      "tags": [
+        "Rome",
+        "Naples",
+        "Florence",
+        "Venice",
+        "Milan"
+      ]
+    },
+    {
+      "id": "product-3.3",
+      "name": "Sardinia Discovery",
+      "filename": "3.3_brochure.html",
+      "region": "Italy",
+      "folder": "multi-country/italy",
+      "cities": [
+        "Cagliari",
+        "Cala Gonone",
+        "Alghero",
+        "Olbia"
+      ],
+      "duration": "7 nights · 8 days",
+      "type": "Self Drive",
+      "season": "All Year Round",
+      "price_twin": 0,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Cagliari, Cala Gonone and Alghero — by self-drive.",
+      "tags": [
+        "Cagliari",
+        "Cala Gonone",
+        "Alghero",
+        "Olbia"
+      ]
+    },
+    {
+      "id": "product-7.1",
+      "name": "Prague, Vienna & Budapest",
+      "filename": "7.1_brochure.html",
+      "region": "Eastern Europe",
+      "folder": "multi-country/eastern-europe",
+      "cities": [
+        "Prague",
+        "Vienna",
+        "Budapest"
+      ],
+      "duration": "6 nights · 7 days",
+      "type": "Trains & Taxi Transfers; Private Minivan",
+      "season": "All Year Round",
+      "price_twin": 768,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Prague, Vienna and Budapest — by train or private coach.",
+      "tags": [
+        "Prague",
+        "Vienna",
+        "Budapest"
+      ]
+    },
+    {
+      "id": "product-5.1",
+      "name": "Paris with Provence & French Riviera",
+      "filename": "5.1_brochure.html",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Avignon",
+        "Aix-en-Provence",
+        "Nice"
+      ],
+      "duration": "8 nights · 9 days",
+      "type": "Trains & Taxi Transfers; Self Drive; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1234,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Paris, Avignon and Aix-en-Provence — by train, self-drive or private coach.",
+      "tags": [
+        "Paris",
+        "Avignon",
+        "Aix-en-Provence",
+        "Nice"
+      ]
+    },
+    {
+      "id": "product-5.2",
+      "name": "Paris with Normandy & Loire Valley",
+      "filename": "5.2_brochure.html",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ],
+      "duration": "7 nights · 8 days",
+      "type": "Trains & Taxi Transfers; Self Drive; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1048,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Paris, Bayeux and Tours — by train, self-drive or private coach.",
+      "tags": [
+        "Paris",
+        "Bayeux",
+        "Tours"
+      ]
+    },
+    {
+      "id": "product-5.3",
+      "name": "Corsica Discovery",
+      "filename": "5.3_brochure.html",
+      "region": "France",
+      "folder": "multi-country/france",
+      "cities": [
+        "Ajaccio",
+        "Porto-Ota",
+        "Corte",
+        "Bonifacio"
+      ],
+      "duration": "8 nights · 9 days",
+      "type": "Self Drive",
+      "season": "All Year Round",
+      "price_twin": 816,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Ajaccio, Porto-Ota and Corte — by self-drive.",
+      "tags": [
+        "Ajaccio",
+        "Porto-Ota",
+        "Corte",
+        "Bonifacio"
+      ]
+    },
+    {
+      "id": "product-10.1",
+      "name": "Finnish Lapland",
+      "filename": "10.1_brochure.html",
       "region": "Scandinavia & Iceland",
       "folder": "multi-country/scandinavia-iceland",
       "cities": [
         "Rovaniemi"
       ],
-      "duration": "7 nights / 8 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 2308,
+      "duration": "4 nights · 5 days",
+      "type": "Regular FIT",
+      "season": "Winter",
+      "price_twin": 1296,
       "currency": "€",
-      "valid_till": "Mar 2027",
+      "valid_till": "Mar 2026",
       "is_expired": false,
-      "description": "Seven packed Lapland nights: reindeer farm, husky run, Aurora hunt, Ranua wildlife park, ice fishing on a frozen lake and snowmobiling.",
+      "description": "Rovaniemi — by train.",
       "tags": [
         "Rovaniemi"
       ]
     },
     {
-      "id": "kiruna-4n-regular-winter",
-      "name": "Kiruna Winter 4 nights / 5 days",
-      "filename": "Kiruna 4N_Regular Winter.pdf",
+      "id": "product-10.2",
+      "name": "Finnish Lapland",
+      "filename": "10.2_brochure.html",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Rovaniemi"
+      ],
+      "duration": "7 nights · 8 days",
+      "type": "Regular FIT",
+      "season": "Winter",
+      "price_twin": 2308,
+      "currency": "€",
+      "valid_till": "Mar 2026",
+      "is_expired": false,
+      "description": "Rovaniemi — by train.",
+      "tags": [
+        "Rovaniemi"
+      ]
+    },
+    {
+      "id": "product-10.3",
+      "name": "Northern Norway, Arctic Gateway",
+      "filename": "10.3_brochure.html",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Tromso"
+      ],
+      "duration": "4 nights · 5 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "Winter",
+      "price_twin": 1882,
+      "currency": "€",
+      "valid_till": "Mar 2026",
+      "is_expired": false,
+      "description": "Tromso — by train.",
+      "tags": [
+        "Tromso"
+      ]
+    },
+    {
+      "id": "product-10.4",
+      "name": "Northern Norway, Arctic Gateway",
+      "filename": "10.4_brochure.html",
+      "region": "Scandinavia & Iceland",
+      "folder": "multi-country/scandinavia-iceland",
+      "cities": [
+        "Tromso"
+      ],
+      "duration": "7 nights · 8 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "Winter",
+      "price_twin": 2835,
+      "currency": "€",
+      "valid_till": "Mar 2026",
+      "is_expired": false,
+      "description": "Tromso — by train.",
+      "tags": [
+        "Tromso"
+      ]
+    },
+    {
+      "id": "product-10.5",
+      "name": "Swedish Lapland",
+      "filename": "10.5_brochure.html",
       "region": "Scandinavia & Iceland",
       "folder": "multi-country/scandinavia-iceland",
       "cities": [
         "Kiruna"
       ],
-      "duration": "4 nights / 5 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 1351,
+      "duration": "4 nights · 5 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "Winter",
+      "price_twin": 1474,
       "currency": "€",
-      "valid_till": "Mar 2027",
+      "valid_till": "Mar 2026",
       "is_expired": false,
-      "description": "Dog sledding, the ICEHOTEL at Jukkasjärvi, a snowmobile wildlife safari and a Northern Lights chase in the deep Arctic.",
+      "description": "Kiruna — by train.",
       "tags": [
-        "Kiruna",
-        "Sweden",
-        "Northern Lights",
-        "Winter"
+        "Kiruna"
       ]
     },
     {
-      "id": "rovaniemi-4n-regular-winter",
-      "name": "Rovaniemi Winter 4 nights / 5 days",
-      "filename": "Rovaniemi 4N_Regular Winter.pdf",
-      "region": "Scandinavia & Iceland",
-      "folder": "multi-country/scandinavia-iceland",
-      "cities": [
-        "Rovaniemi"
-      ],
-      "duration": "4 nights / 5 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 1188,
-      "currency": "€",
-      "valid_till": "Mar 2027",
-      "is_expired": false,
-      "description": "Reindeer farm safari, husky experience and a guaranteed Northern Lights excursion from Santa's Arctic hometown.",
-      "tags": [
-        "Rovaniemi",
-        "Finland",
-        "Northern Lights",
-        "Winter",
-        "Lapland"
-      ]
-    },
-    {
-      "id": "swedish-lapland-7n-regular-win",
-      "name": "Swedish Lapland 7 nights / 8 days",
-      "filename": "Swedish Lapland 7N_Regular Winter.pdf",
+      "id": "product-10.6",
+      "name": "Swedish Lapland: Kiruna & Abisko Winter Adventure",
+      "filename": "10.6_brochure.html",
       "region": "Scandinavia & Iceland",
       "folder": "multi-country/scandinavia-iceland",
       "cities": [
         "Kiruna",
         "Abisko"
       ],
-      "duration": "7 nights / 8 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 2087,
+      "duration": "7 nights · 8 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "Winter",
+      "price_twin": 2277,
       "currency": "€",
-      "valid_till": "Mar 2027",
+      "valid_till": "Mar 2026",
       "is_expired": false,
-      "description": "Four days in Kiruna — dog sleds, ICEHOTEL, snowmobiles — then three nights at Abisko's Aurora Sky Station.",
+      "description": "Kiruna and Abisko — by train.",
       "tags": [
         "Kiruna",
-        "Abisko",
-        "Sweden",
-        "Northern Lights",
-        "Winter"
+        "Abisko"
       ]
     },
     {
-      "id": "tromso-4n-regular-winter",
-      "name": "Tromsø Winter 4 nights / 5 days",
-      "filename": "Tromso 4N_Regular Winter.pdf",
+      "id": "product-9.1",
+      "name": "Nordic Capitals",
+      "filename": "9.1_brochure.html",
       "region": "Scandinavia & Iceland",
       "folder": "multi-country/scandinavia-iceland",
       "cities": [
-        "Tromsø"
+        "Copenhagen",
+        "Oslo",
+        "Stockholm",
+        "Helsinki"
       ],
-      "duration": "4 nights / 5 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 1726,
+      "duration": "6 nights · 7 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "All Year Round",
+      "price_twin": 1143,
       "currency": "€",
-      "valid_till": "Mar 2027",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "Northern Lights cruise, Sámi reindeer camp dinner, Lyngen Alps snowmobile safari and a polar whale watching expedition.",
+      "description": "Copenhagen, Oslo and Stockholm — by train.",
       "tags": [
-        "Tromsø",
-        "Norway",
-        "Northern Lights",
-        "Winter",
-        "Whale Watching"
+        "Copenhagen",
+        "Oslo",
+        "Stockholm",
+        "Helsinki"
       ]
     },
     {
-      "id": "tromso-7n-regular-winter",
-      "name": "Tromsø Winter 7 nights / 8 days",
-      "filename": "Tromso 7N_Regular Winter.pdf",
+      "id": "product-9.2",
+      "name": "Norway Nutshell",
+      "filename": "9.2_brochure.html",
       "region": "Scandinavia & Iceland",
       "folder": "multi-country/scandinavia-iceland",
       "cities": [
-        "Tromsø"
+        "Oslo",
+        "Flåm",
+        "Bergen"
       ],
-      "duration": "7 nights / 8 days",
-      "type": "Regular",
-      "season": "winter",
-      "price_twin": 2599,
+      "duration": "5 nights · 6 days",
+      "type": "Regular FIT",
+      "season": "All Year Round",
+      "price_twin": 1224,
       "currency": "€",
-      "valid_till": "Mar 2027",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "Seven nights of Arctic immersion — whale watching, snowmobiles, reindeer sledding, Aurora cruises and a coastal fjord safari.",
+      "description": "Oslo, Flåm and Bergen — by train.",
       "tags": [
-        "Tromsø",
-        "Norway",
-        "Northern Lights",
-        "Winter",
-        "Whale Watching",
-        "Sámi Culture"
+        "Oslo",
+        "Flåm",
+        "Bergen"
       ]
     },
     {
-      "id": "8-nights--9-days-spain-private",
-      "name": "8 nights, 9 days Spain Private",
-      "filename": "8 nights, 9 days Spain_Private.pdf",
+      "id": "product-6.1",
+      "name": "Madrid, Granada, Seville & Barcelona",
+      "filename": "6.1_brochure.html",
       "region": "Spain & Portugal",
       "folder": "multi-country/spain-portugal",
       "cities": [
@@ -1437,52 +1239,25 @@
         "Seville",
         "Barcelona"
       ],
-      "duration": "8 nights / 9 days",
-      "type": "Private",
+      "duration": "8 nights · 9 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1573,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Madrid, Granada and Seville — by train or private coach.",
       "tags": [
         "Madrid",
         "Granada",
         "Seville",
         "Barcelona"
-      ],
-      "description": "Private guided Spain: Alhambra gardens, Seville flamenco, Toledo detour and Gaudí in Barcelona.",
-      "price_twin": 2050,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "is_expired": false,
-      "season": "all-year"
+      ]
     },
     {
-      "id": "8-nights--9-days-spain-regular",
-      "name": "8 nights, 9 days Spain Regular",
-      "filename": "8 nights, 9 days Spain_Regular.pdf",
-      "region": "Spain & Portugal",
-      "folder": "multi-country/spain-portugal",
-      "cities": [
-        "Madrid",
-        "Granada",
-        "Seville",
-        "Barcelona"
-      ],
-      "duration": "8 nights / 9 days",
-      "type": "Regular",
-      "tags": [
-        "Madrid",
-        "Granada",
-        "Seville",
-        "Barcelona"
-      ],
-      "description": "Alhambra gardens, Seville's Royal Alcázar and Gaudí's Barcelona by high-speed train.",
-      "price_twin": 1527,
-      "currency": "€",
-      "valid_till": "Oct 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "switz-001",
-      "name": "5 Nights, 6 Days Switzerland - Regular",
-      "filename": "5 nights, 6 days Switzerland_Regular.pdf",
+      "id": "product-4.1",
+      "name": "Lucerne, Interlaken & Zurich",
+      "filename": "4.1_brochure.html",
       "region": "Switzerland",
       "folder": "multi-country/switzerland",
       "cities": [
@@ -1490,24 +1265,24 @@
         "Interlaken",
         "Zurich"
       ],
-      "duration": "5 nights, 6 days",
-      "type": "Regular",
-      "tags": [
-        "Switzerland",
-        "Alps",
-        "Jungfrau"
-      ],
-      "description": "Mount Titlis, the Jungfrau region and Rhine Falls on a Swiss Travel Pass loop.",
-      "price_twin": 902,
+      "duration": "5 nights · 6 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "All Year Round",
+      "price_twin": 843,
       "currency": "€",
-      "valid_till": "Nov 2026",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "season": "all-year"
+      "description": "Lucerne, Interlaken and Zurich — by train.",
+      "tags": [
+        "Lucerne",
+        "Interlaken",
+        "Zurich"
+      ]
     },
     {
-      "id": "switz-002",
-      "name": "7 Nights, 8 Days Switzerland - Private",
-      "filename": "7 nights, 8 days Switzerland_Private.pdf",
+      "id": "product-4.2",
+      "name": "Lucerne, Interlaken, Montreux & Zurich",
+      "filename": "4.2_brochure.html",
       "region": "Switzerland",
       "folder": "multi-country/switzerland",
       "cities": [
@@ -1516,75 +1291,50 @@
         "Montreux",
         "Zurich"
       ],
-      "duration": "7 nights, 8 days",
-      "type": "Private",
-      "tags": [
-        "Switzerland",
-        "Alps",
-        "Jungfrau",
-        "Lake Geneva"
-      ],
-      "description": "Private guided Switzerland: Titlis, Interlaken paragliding views, Montreux jazz lakeside and Zurich.",
-      "price_twin": 1349,
+      "duration": "7 nights · 8 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1198,
       "currency": "€",
-      "valid_till": "Nov 2026",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "switz-003",
-      "name": "7 Nights, 8 Days Switzerland - Regular",
-      "filename": "7 nights, 8 days Switzerland_Regular.pdf",
-      "region": "Switzerland",
-      "folder": "multi-country/switzerland",
-      "cities": [
+      "description": "Lucerne, Interlaken and Montreux — by train or private coach.",
+      "tags": [
         "Lucerne",
         "Interlaken",
         "Montreux",
         "Zurich"
-      ],
-      "duration": "7 nights, 8 days",
-      "type": "Regular",
-      "tags": [
-        "Switzerland",
-        "Alps",
-        "Jungfrau",
-        "Lake Geneva"
-      ],
-      "description": "Seven nights on the Swiss Travel Pass — Titlis, Jungfrau, Lake Geneva and Broc chocolate factory.",
-      "price_twin": 1163,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
+      ]
     },
     {
-      "id": "metro-uk-ireland-london-3n",
-      "name": "London City Break",
-      "filename": "package.html?product=products/london-3n.json",
+      "id": "product-1.1",
+      "name": "3 Nights London Private",
+      "filename": "1.1_brochure.html",
       "region": "UK & Ireland",
       "folder": "multi-country/uk-ireland",
       "cities": [
         "London",
+        "Stonehenge",
         "Bath"
       ],
-      "duration": "3 nights / 4 days",
-      "type": "",
-      "season": "all-year",
+      "duration": "3 nights · 4 days",
+      "type": "Private Exclusive Coach",
+      "season": "All Year Round",
       "price_twin": 443,
       "currency": "£",
-      "valid_till": "Oct 2027",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "Classic London — panoramic tour, Thames cruise, Stonehenge and Bath with a private vehicle.",
+      "description": "London, Stonehenge and Bath — by private coach.",
       "tags": [
         "London",
+        "Stonehenge",
         "Bath"
       ]
     },
     {
-      "id": "metro-uk-ireland-england-scotland-10n",
-      "name": "England & Scotland Grand Tour",
-      "filename": "package.html?product=products/england-scotland-10n.json",
+      "id": "product-1.2",
+      "name": "London, Manchester, Edinburgh, Inverness & Glasgow",
+      "filename": "1.2_brochure.html",
       "region": "UK & Ireland",
       "folder": "multi-country/uk-ireland",
       "cities": [
@@ -1594,14 +1344,14 @@
         "Inverness",
         "Glasgow"
       ],
-      "duration": "10 nights / 11 days",
-      "type": "",
-      "season": "all-year",
+      "duration": "10 nights · 11 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
       "price_twin": 1297,
       "currency": "£",
       "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "London to Glasgow — Peak District, Edinburgh's Old Town, Loch Ness and the Highland wilderness.",
+      "description": "London, Manchester and Edinburgh — by train or private coach.",
       "tags": [
         "London",
         "Manchester",
@@ -1611,9 +1361,9 @@
       ]
     },
     {
-      "id": "metro-uk-ireland-london-scotland-8n",
-      "name": "London & Scotland Highlights",
-      "filename": "package.html?product=products/london-scotland-8n.json",
+      "id": "product-1.3",
+      "name": "London, Glasgow, Inverness & Edinburgh",
+      "filename": "1.3_brochure.html",
       "region": "UK & Ireland",
       "folder": "multi-country/uk-ireland",
       "cities": [
@@ -1622,14 +1372,14 @@
         "Inverness",
         "Edinburgh"
       ],
-      "duration": "8 nights / 9 days",
-      "type": "",
-      "season": "all-year",
+      "duration": "8 nights · 9 days",
+      "type": "Trains & Taxi Transfers",
+      "season": "All Year Round",
       "price_twin": 1114,
       "currency": "£",
       "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "London to Edinburgh via Glasgow — city sights, Highland wilderness and Loch Ness.",
+      "description": "London, Glasgow and Inverness — by train.",
       "tags": [
         "London",
         "Glasgow",
@@ -1638,200 +1388,144 @@
       ]
     },
     {
-      "id": "metro-uk-ireland-scotland-6n",
-      "name": "Scotland Discovery",
-      "filename": "package.html?product=products/scotland-6n.json",
+      "id": "product-1.4",
+      "name": "Scottish Highlands Discovery",
+      "filename": "1.4_brochure.html",
       "region": "UK & Ireland",
       "folder": "multi-country/uk-ireland",
       "cities": [
         "Edinburgh",
         "Inverness",
-        "Fort William"
+        "Fort William",
+        "Glasgow"
       ],
-      "duration": "6 nights / 7 days",
-      "type": "",
-      "season": "all-year",
+      "duration": "6 nights · 7 days",
+      "type": "Trains & Taxi Transfers; Self Drive; Private Exclusive Coach",
+      "season": "All Year Round",
       "price_twin": 861,
       "currency": "£",
       "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "Edinburgh, Inverness and Fort William — castles, lochs and Highland glens by train, coach or self-drive.",
+      "description": "Edinburgh, Inverness and Fort William — by train, self-drive or private coach.",
       "tags": [
         "Edinburgh",
         "Inverness",
-        "Fort William"
+        "Fort William",
+        "Glasgow"
       ]
     },
     {
-      "id": "metro-uk-ireland-ireland-6n",
+      "id": "product-cotswolds-devon-cornwall",
+      "name": "Cotswolds, Devon & Cornwall",
+      "filename": "cotswolds-devon-cornwall_brochure.html",
+      "region": "UK & Ireland",
+      "folder": "multi-country/uk-ireland",
+      "cities": [
+        "London",
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ],
+      "duration": "9 nights · 10 days",
+      "type": "Self Drive",
+      "season": "All Year Round",
+      "price_twin": 902,
+      "currency": "£",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "London, Cheltenham and Barnstaple — by self-drive.",
+      "tags": [
+        "London",
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ]
+    },
+    {
+      "id": "product-ireland-discovery",
       "name": "Ireland Discovery",
-      "filename": "package.html?product=products/ireland-6n.json",
+      "filename": "ireland-discovery_brochure.html",
       "region": "UK & Ireland",
       "folder": "multi-country/uk-ireland",
       "cities": [
         "Dublin",
         "Cliffs of Moher",
         "Limerick",
+        "Killarney",
         "Kilkenny"
       ],
-      "duration": "6 nights / 7 days",
-      "type": "",
-      "season": "all-year",
+      "duration": "6 nights · 7 days",
+      "type": "Trains & Taxi Transfers; Self Drive; Private Exclusive Coach",
+      "season": "All Year Round",
       "price_twin": 874,
       "currency": "€",
       "valid_till": "Nov 2027",
       "is_expired": false,
-      "description": "Dublin, the Cliffs of Moher and Limerick — by train, private coach or self-drive.",
+      "description": "Dublin, Cliffs of Moher and Limerick — by train, self-drive or private coach.",
       "tags": [
         "Dublin",
         "Cliffs of Moher",
         "Limerick",
+        "Killarney",
         "Kilkenny"
       ]
     },
     {
-      "id": "metro-uk-ireland-devon-cornwall-9n",
-      "name": "London, Devon & Cornwall",
-      "filename": "package.html?product=products/devon-cornwall-9n.json",
-      "region": "UK & Ireland",
-      "folder": "multi-country/uk-ireland",
-      "cities": [
-        "London",
-        "Cheltenham",
-        "Barnstaple",
-        "Truro",
-        "Plymouth",
-        "Exeter",
-        "Bournemouth"
-      ],
-      "duration": "9 nights / 10 days",
-      "type": "",
-      "season": "all-year",
-      "price_twin": 1372,
-      "currency": "£",
-      "valid_till": "Nov 2027",
-      "is_expired": false,
-      "description": "London to Land's End by rental car — Cotswolds, Tintagel, the Lizard Peninsula and Dartmoor.",
-      "tags": [
-        "London",
-        "Cheltenham",
-        "Barnstaple",
-        "Truro",
-        "Plymouth",
-        "Exeter",
-        "Bournemouth"
-      ]
-    },
-    {
-      "id": "wce-005",
-      "name": "10 Nights, 11 Days Paris Switzerland Italy - Private",
-      "filename": "10 nights, 11 days Paris Switzerland Italy_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
-        "Paris",
-        "Lucerne",
-        "Venice",
-        "Florence",
-        "Rome"
-      ],
-      "duration": "10 nights, 11 days",
-      "type": "Private",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Italy",
-        "Alps",
-        "Tuscany"
-      ],
-      "description": "Private grand tour: Paris, Swiss Alps, Venice canals, Florentine frescoes and the Colosseum.",
-      "price_twin": 1803,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "wce-006",
-      "name": "10 Nights, 11 Days Paris Switzerland Italy - Regular",
-      "filename": "10 nights, 11 days Paris Switzerland Italy_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
-        "Paris",
-        "Lucerne",
-        "Venice",
-        "Florence",
-        "Rome"
-      ],
-      "duration": "10 nights, 11 days",
-      "type": "Regular",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Italy",
-        "Alps",
-        "Tuscany"
-      ],
-      "description": "Eiffel Tower, Mount Titlis, Venice gondolas and the Colosseum on a twelve-night grand tour by train.",
-      "price_twin": 1954,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "4-nights--5-days-bavarian---au",
-      "name": "4 nights, 5 days Bavarian and Austrian Christmas Markets",
-      "filename": "4 nights, 5 days Bavarian & Austrian Christmas Markets.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
-        "Salzburg",
-        "Munich"
-      ],
-      "duration": "4 nights / 5 days",
-      "type": null,
-      "season": "winter",
-      "price_twin": 714,
-      "currency": "€",
-      "valid_till": "Dec 2026",
-      "is_expired": false,
-      "description": "Baroque Salzburg by candlelight, Munich's Christkindlmarkt and glühwein in the shadow of the Frauenkirche.",
-      "tags": [
-        "Salzburg",
-        "Munich"
-      ]
-    },
-    {
-      "id": "4-nights--5-days-bavarian-chri",
-      "name": "4 nights, 5 days Bavarian Christmas Markets",
-      "filename": "4 nights, 5 days Bavarian Christmas Markets.pdf",
+      "id": "product-11.1",
+      "name": "Bavarian Christmas Markets",
+      "filename": "11.1_brochure.html",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
       "cities": [
         "Nuremberg",
         "Munich"
       ],
-      "duration": "4 nights / 5 days",
-      "type": null,
-      "season": "winter",
+      "duration": "4 nights · 5 days",
+      "type": "Regular FIT",
+      "season": "Winter",
       "price_twin": 642,
       "currency": "€",
-      "valid_till": "Dec 2026",
+      "valid_till": "Dec 2025",
       "is_expired": false,
-      "description": "Medieval Nuremberg's world-famous Christkindlesmarkt and Munich's festive old town — the definitive Bavarian Christmas double.",
+      "description": "Nuremberg and Munich — by train.",
       "tags": [
-        "Christmas",
-        "Bavaria",
         "Nuremberg",
         "Munich"
       ]
     },
     {
-      "id": "wce-001",
-      "name": "7 Nights, 8 Days Paris Switzerland - Private",
-      "filename": "7 nights, 8 days Paris Switzerland_Private.pdf",
+      "id": "product-11.2",
+      "name": "Bavarian & Austrian Christmas Markets",
+      "filename": "11.2_brochure.html",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Salzburg",
+        "Munich"
+      ],
+      "duration": "4 nights · 5 days",
+      "type": "Regular FIT",
+      "season": "Winter",
+      "price_twin": 714,
+      "currency": "€",
+      "valid_till": "Dec 2025",
+      "is_expired": false,
+      "description": "Salzburg and Munich — by train.",
+      "tags": [
+        "Salzburg",
+        "Munich"
+      ]
+    },
+    {
+      "id": "product-2.1",
+      "name": "Paris & Switzerland",
+      "filename": "2.1_brochure.html",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
       "cities": [
@@ -1839,107 +1533,24 @@
         "Lucerne",
         "Zurich"
       ],
-      "duration": "7 nights, 8 days",
-      "type": "Private",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Alps",
-        "Seine"
-      ],
-      "description": "Private Paris and Switzerland: Eiffel Tower, Seine cruise, Titlis cable car and the Rhine Falls.",
-      "price_twin": 1376,
+      "duration": "7 nights · 8 days",
+      "type": "Trains & Swiss Travel Pass; Private Vehicle",
+      "season": "All Year Round",
+      "price_twin": 1572,
       "currency": "€",
-      "valid_till": "Nov 2026",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "wce-002",
-      "name": "7 Nights, 8 Days Paris Switzerland - Regular",
-      "filename": "7 nights, 8 days Paris Switzerland_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
+      "description": "Paris, Lucerne and Zurich — by train or private coach.",
+      "tags": [
         "Paris",
         "Lucerne",
         "Zurich"
-      ],
-      "duration": "7 nights, 8 days",
-      "type": "Regular",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Alps",
-        "Seine"
-      ],
-      "description": "Paris city tour with Seine cruise, then Titlis, Lake Lucerne and the Rhine Falls by rail.",
-      "price_twin": 1436,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
+      ]
     },
     {
-      "id": "wce-008",
-      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Private",
-      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Private.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
-        "Amsterdam",
-        "Paris",
-        "Lucerne",
-        "Zurich"
-      ],
-      "duration": "8 nights, 9 days",
-      "type": "Private",
-      "tags": [
-        "Netherlands",
-        "France",
-        "Switzerland",
-        "Alps",
-        "Canals"
-      ],
-      "description": "Private: Amsterdam windmills, Paris Seine cruise, Swiss Alps and the Rhine Falls with a dedicated vehicle.",
-      "price_twin": 1488,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "wce-007",
-      "name": "8 Nights, 9 Days Amsterdam Paris Switzerland - Regular",
-      "filename": "8 nights, 9 days Amsterdam Paris Switzerland_Regular.pdf",
-      "region": "Western & Central Europe",
-      "folder": "multi-country/western-central-europe",
-      "cities": [
-        "Amsterdam",
-        "Paris",
-        "Lucerne",
-        "Zurich"
-      ],
-      "duration": "8 nights, 9 days",
-      "type": "Regular",
-      "tags": [
-        "Netherlands",
-        "France",
-        "Switzerland",
-        "Alps",
-        "Canals"
-      ],
-      "description": "Amsterdam canal tour, Paris city tour and Titlis on a four-country rail journey.",
-      "price_twin": 1635,
-      "currency": "€",
-      "valid_till": "Nov 2026",
-      "is_expired": false,
-      "season": "all-year"
-    },
-    {
-      "id": "wce-003",
-      "name": "9 Nights, 10 Days Paris Switzerland Austria - Private",
-      "filename": "9 nights, 10 days Paris Switzerland Austria_Private.pdf",
+      "id": "product-2.2",
+      "name": "Paris, Lucerne, Innsbruck & Vienna",
+      "filename": "2.2_brochure.html",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
       "cities": [
@@ -1948,49 +1559,76 @@
         "Innsbruck",
         "Vienna"
       ],
-      "duration": "9 nights, 10 days",
-      "type": "Private",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Austria",
-        "Alps",
-        "Danube"
-      ],
-      "description": "Paris, Swiss Alps, Swarovski Crystal Worlds and Vienna's Schönbrunn on a private nine-night arc.",
-      "price_twin": 1548,
+      "duration": "9 nights · 10 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1594,
       "currency": "€",
-      "valid_till": "Nov 2026",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "season": "all-year"
+      "description": "Paris, Lucerne and Innsbruck — by train or private coach.",
+      "tags": [
+        "Paris",
+        "Lucerne",
+        "Innsbruck",
+        "Vienna"
+      ]
     },
     {
-      "id": "wce-004",
-      "name": "9 Nights, 10 Days Paris Switzerland Austria - Regular",
-      "filename": "9 nights, 10 days Paris Switzerland Austria_Regular.pdf",
+      "id": "product-2.3",
+      "name": "Paris, Lucerne, Venice, Florence & Rome",
+      "filename": "2.3_brochure.html",
       "region": "Western & Central Europe",
       "folder": "multi-country/western-central-europe",
       "cities": [
         "Paris",
         "Lucerne",
-        "Innsbruck",
-        "Vienna"
+        "Venice (Mestre)",
+        "Florence",
+        "Rome"
       ],
-      "duration": "9 nights, 10 days",
-      "type": "Regular",
-      "tags": [
-        "France",
-        "Switzerland",
-        "Austria",
-        "Alps",
-        "Danube"
-      ],
-      "description": "Paris to Vienna by rail — Titlis, Swarovski crystal worlds and a Schönbrunn Palace city tour.",
-      "price_twin": 1828,
+      "duration": "10 nights · 11 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1738,
       "currency": "€",
-      "valid_till": "Nov 2026",
+      "valid_till": "Nov 2027",
       "is_expired": false,
-      "season": "all-year"
+      "description": "Paris, Lucerne and Venice (Mestre) — by train or private coach.",
+      "tags": [
+        "Paris",
+        "Lucerne",
+        "Venice (Mestre)",
+        "Florence",
+        "Rome"
+      ]
+    },
+    {
+      "id": "product-2.4",
+      "name": "Amsterdam, Paris & Switzerland",
+      "filename": "2.4_brochure.html",
+      "region": "Western & Central Europe",
+      "folder": "multi-country/western-central-europe",
+      "cities": [
+        "Amsterdam",
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ],
+      "duration": "8 nights · 9 days",
+      "type": "Trains & Taxi Transfers; Private Exclusive Coach",
+      "season": "All Year Round",
+      "price_twin": 1551,
+      "currency": "€",
+      "valid_till": "Nov 2027",
+      "is_expired": false,
+      "description": "Amsterdam, Paris and Lucerne — by train or private coach.",
+      "tags": [
+        "Amsterdam",
+        "Paris",
+        "Lucerne",
+        "Zurich"
+      ]
     }
   ]
 }

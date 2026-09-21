@@ -1,0 +1,146 @@
+{
+  "id": "1.1",
+  "title": "3 Nights London Private.",
+  "styles": {
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "Private vehicle transfers and touring with a driver throughout your London stay.",
+      "nights": "3 nights · 4 days",
+      "route": "London (3N)",
+      "aboutNights": "3 nights across 1 stay",
+      "transport": {
+        "1": "London airport to London hotel private transfer.",
+        "2": "London city tour, 3 hrs with guide, by private vehicle.",
+        "3": "Stonehenge and Bath excursion by private coach, including entrance tickets.",
+        "4": "London hotel to London airport private transfer."
+      },
+      "inclusions": [
+        "London airport to hotel private transfer on arrival",
+        "London city tour, 3 hrs with private guide",
+        "London Eye standard tickets",
+        "Thames river cruise, one way",
+        "Stonehenge and Bath excursion with entrance tickets",
+        "Private coach on disposal for 2 days (Day 2–3)",
+        "London hotel to airport private transfer on departure",
+        "3 nights accommodation with breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive London",
+      "overnight": "Overnight: London",
+      "desc": "Welcome to London, a city with a rich history and vibrant culture. You'll be transferred to your hotel upon arrival. Spend the rest of the day exploring the city. If you're into shopping, Oxford Street and Harrods are must-visit spots. Overnight in London.",
+      "fallbackIncluded": "Day at leisure."
+    },
+    {
+      "num": 2,
+      "title": "London city tour",
+      "overnight": "Overnight: London",
+      "desc": "Embark on a captivating 3-hour guided city tour, discovering London's iconic landmarks. Glide above the city with standard London Eye tickets and unwind on a serene Thames River cruise. Immerse yourself in the vibrant tapestry of London's culture. Overnight in London.",
+      "experience": "Ride the London Eye for sweeping views over the Thames and the Palace of Westminster.",
+      "taste": "Afternoon tea at Fortnum & Mason on Piccadilly, the royal grocer trading since 1707, or fish and chips at one of the capital's traditional chippies.",
+      "shopping": "Oxford Street and Regent Street, London's flagship shopping mile, are a short ride from the hotel."
+    },
+    {
+      "num": 3,
+      "title": "Stonehenge & Bath excursion",
+      "overnight": "Overnight: London",
+      "desc": "Journey to the ancient mysteries of Stonehenge and the timeless allure of Bath. Explore these historic sites with included entrance tickets, tracing their fascinating narratives through time. Return to London for another night of exploration and enchantment. Overnight in London.",
+      "taste": "A warm Bath bun at Sally Lunn's, the oldest house in Bath with parts dating to 1482, tucked beside the Abbey.",
+      "shopping": "Milsom Street, Bath's Georgian shopping thoroughfare since the 18th century, for independent boutiques and jewellers."
+    },
+    {
+      "num": 4,
+      "title": "Depart London",
+      "overnight": "Departure day",
+      "desc": "Post breakfast, proceed to check out and proceed to the airport by private transfer."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "3 Nights",
+      "h3": "Hotel Montana",
+      "h4": "Hotel Riu Plaza London Victoria"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "April–September for mild weather and long daylight hours; December is festive but cold, with Oxford Street's Christmas lights and winter markets at the South Bank."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild and changeable year-round, typically 8–22°C in summer — a light rain layer is useful in any season, London being no stranger to a sudden shower."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Pound sterling (£). The United Kingdom is outside the Schengen area, so a separate passport check applies on arrival."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book London Eye and Thames river cruise slots in advance in peak summer months; Stonehenge is quietest earlier in the day, and its inner stone circle can only be entered on separate pre-booked Special Access visits."
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited to 10 hrs per day by law — the Stonehenge and Bath day is planned around this.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Comfortable walking shoes and a waterproof layer; London's pavements around markets like Borough Market and Bath's sloping Georgian streets both see a lot of walking."
+    },
+    {
+      "title": "Money",
+      "body": "Cards are accepted almost everywhere in London; contactless is standard. Tipping around 10-12.5% in restaurants is customary."
+    },
+    {
+      "title": "Getting around",
+      "body": "Central London hotels put Westminster, the South Bank and the West End within easy walking or short taxi distance."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 3
+      },
+      {
+        "lat": 51.1789,
+        "lng": -1.8262,
+        "label": "Stonehenge",
+        "nights": 0
+      },
+      {
+        "lat": 51.3811,
+        "lng": -2.359,
+        "label": "Bath",
+        "nights": 0
+      }
+    ],
+    "closeLoop": true
+  },
+  "region": "uk-ireland",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "pricesFile": "prices/1.1-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 2795,
+          "twin": 2013,
+          "child": 859
+        },
+        "summer": {
+          "single": 2912,
+          "twin": 2097,
+          "child": 895
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 3385,
+          "twin": 2308,
+          "child": 974
+        },
+        "summer": {
+          "single": 3526,
+          "twin": 2404,
+          "child": 1014
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 2572,
+            "4star": 2867
+          },
+          {
+            "pax": 10,
+            "3star": 2238,
+            "4star": 2533
+          },
+          {
+            "pax": 12,
+            "3star": 2016,
+            "4star": 2311
+          },
+          {
+            "pax": 14,
+            "3star": 1857,
+            "4star": 2152
+          },
+          {
+            "pax": 16,
+            "3star": 1738,
+            "4star": 2033
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 2679,
+            "4star": 2986
+          },
+          {
+            "pax": 10,
+            "3star": 2332,
+            "4star": 2639
+          },
+          {
+            "pax": 12,
+            "3star": 2100,
+            "4star": 2407
+          },
+          {
+            "pax": 14,
+            "3star": 1934,
+            "4star": 2241
+          },
+          {
+            "pax": 16,
+            "3star": 1810,
+            "4star": 2117
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Moulin Rogue with drinks  9 pm",
+      "price": 191
+    },
+    {
+      "name": "Louvre Museum (Audioguide €5 pp)",
+      "price": 26
+    },
+    {
+      "name": "Paris Montmartre food tour, 4 hrs walking",
+      "price": 153
+    },
+    {
+      "name": "Grindelwald First (with any two activities)",
+      "price": 77
+    },
+    {
+      "name": "Gondola ride, shared 30 mins",
+      "price": 39
+    },
+    {
+      "name": "Half day coach tour to Pisa, 5.5 hrs",
+      "price": 67
+    },
+    {
+      "name": "Half day coach tour to Chianti vineyards & wine tastings, 5.5 hrs",
+      "price": 77
+    },
+    {
+      "name": "Vatican museums walking tour, small group 3 hrs",
+      "price": 74
+    }
+  ]
+}

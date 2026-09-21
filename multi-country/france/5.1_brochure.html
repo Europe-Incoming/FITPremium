@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Paris with Provence & French Riviera. | Europe Incoming FIT Packages</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1733;--navy-tile:#132347;--gold:#F2B91D;--gold-hover:#E5AC12;
+--ink:#1A1D2E;--body:#3A3D4D;--muted:#6B7080;--line:#E5E7EC;--line-light:#EFF0F3;
+--control-border:#D8DAE1;--surface:#F5F5F3;--surface-hover:#EDEDEA;
+--taste-bg:#F2B91D;--exp-bg:#EDEDEA;--shop-bg:#F5F5F3;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Open Sans',sans-serif;color:var(--ink);background:#fff;line-height:1.55;padding-top:56px;}
+a{color:inherit;}
+.pkg-wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+.pkg-topbar{position:fixed;top:0;left:0;right:0;height:56px;background:#fff;border-bottom:1px solid var(--line);z-index:300;}
+.pkg-topbar-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.pkg-topbar-left{display:flex;align-items:center;gap:20px;}
+.pkg-logo{height:24px;width:auto;display:block;}
+.pkg-back-link{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-decoration:none;}
+.pkg-back-link .pkg-back-circle{width:26px;height:26px;border:2px solid var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:400;}
+.pkg-back-link:hover{color:var(--gold);}
+.pkg-back-link:hover .pkg-back-circle{border-color:var(--gold);}
+.pkg-topbar-right{display:flex;align-items:center;gap:16px;}
+.pkg-trade{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.pkg-trade a{color:var(--navy);text-decoration:none;}
+.pkg-trade a:hover{color:var(--gold);}
+.pkg-dl-btn{background:var(--navy);color:#fff;border:none;border-radius:0;padding:10px 18px;font-family:'Segoe UI','Open Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
+.pkg-dl-btn:hover{background:var(--gold);color:var(--navy);}
+.pkg-title-row{padding:26px 40px 0;display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;}
+.pkg-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-bottom:10px;}
+.pkg-hero-title{font-weight:300;font-size:56px;letter-spacing:-0.02em;line-height:1;margin:0;color:var(--navy);}
+.pkg-hero{padding:14px 40px 0;display:flex;gap:0;flex-wrap:wrap;}
+.pkg-hero-img{flex:1;min-width:320px;min-height:380px;background:var(--navy) center/cover no-repeat;position:relative;overflow:hidden;}
+.pkg-hero-facts{width:280px;flex-shrink:0;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box;}
+.pkg-hero-fact-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.pkg-hero-fact-value{font-weight:300;font-size:24px;line-height:1.1;}
+.pkg-hero-fact-value.small{font-size:13px;font-weight:400;color:rgba(255,255,255,.78);line-height:1.5;}
+.pkg-hero-price-block{margin-top:auto;background:var(--gold);color:var(--navy);padding:14px 16px;}
+.pkg-hero-price-block .pkg-hero-fact-label{color:var(--navy);margin-bottom:2px;}
+.pkg-hero-price{font-weight:300;font-size:34px;line-height:1;}
+.pkg-hero-price-unit{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.pkg-variantbar{position:sticky;top:56px;z-index:290;background:#fff;border-bottom:1px solid var(--line);}
+.pkg-variantbar-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.pkg-variantbar-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.pkg-variant-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.pkg-pills{display:flex;gap:4px;flex-wrap:wrap;}
+.pkg-pill{font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:0;border:2px solid var(--control-border);background:transparent;color:var(--navy);cursor:pointer;}
+.pkg-pill.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.pkg-variant-blurb{font-size:13px;color:var(--muted);text-align:right;}
+.pkg-body{max-width:1200px;margin:0 auto;padding:32px 40px 0;display:flex;gap:40px;align-items:flex-start;box-sizing:border-box;}
+.pkg-main{flex:1;min-width:0;}
+.pkg-sidebar{width:300px;flex-shrink:0;position:sticky;top:76px;}
+.pkg-section-label{font-weight:300;font-size:34px;color:var(--navy);margin:0 0 4px;}
+.pkg-section-sub{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.pkg-section{margin-bottom:36px;}
+.pkg-day{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);}
+.pkg-day-num-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.pkg-day-num{font-weight:300;font-size:40px;line-height:1;color:var(--gold);}
+.pkg-day-title{font-weight:600;font-size:19px;color:var(--navy);margin-bottom:2px;}
+.pkg-day-overnight{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.pkg-day-desc{font-size:14px;line-height:1.7;color:var(--body);margin-bottom:12px;}
+.pkg-pill-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-top:6px;}
+.pkg-tag{flex-shrink:0;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;white-space:nowrap;}
+.pkg-tag-inc{background:var(--navy);color:#fff;}
+.pkg-tag-taste{background:var(--taste-bg);color:var(--navy);}
+.pkg-tag-exp{background:var(--exp-bg);color:var(--navy);}
+.pkg-tag-shop{background:var(--shop-bg);color:var(--muted);}
+.pkg-tag-text{flex:1 1 220px;min-width:0;font-size:13px;color:var(--body);}
+.pkg-inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;}
+.pkg-inc-item{font-size:13.5px;color:var(--body);padding:9px 0 9px 22px;border-bottom:1px solid var(--line-light);position:relative;}
+.pkg-check{position:absolute;left:0;color:var(--gold);font-weight:700;font-size:12px;}
+.pkg-hotels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.pkg-hotel-card{background:var(--surface);padding:18px 20px;}
+.pkg-hotel-city{font-weight:300;font-size:22px;color:var(--navy);line-height:1.1;}
+.pkg-hotel-nights{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.pkg-hotel-cat{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--gold);}
+.pkg-hotel-name{font-size:12.5px;color:var(--body);margin-bottom:8px;line-height:1.4;}
+.pkg-rate-toggles{display:flex;gap:24px;margin-bottom:16px;flex-wrap:wrap;}
+.pkg-seg-group-labeled{display:flex;align-items:center;gap:10px;}
+.pkg-seg-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.pkg-seg-group{display:inline-flex;gap:4px;}
+.pkg-seg{font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:0;border:2px solid var(--control-border);background:transparent;color:var(--navy);cursor:pointer;}
+.pkg-seg.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.pkg-rate-table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+.pkg-rate-table th{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:left;padding:12px 16px;}
+.pkg-rate-table td{padding:12px 16px;font-size:13.5px;border-bottom:1px solid var(--line-light);color:var(--ink);}
+.pkg-rate-table td:last-child{text-align:right;font-weight:300;font-size:22px;color:var(--navy);}
+.pkg-pax-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:8px;}
+.pkg-pax-season-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.pkg-pax-table{width:100%;border-collapse:collapse;}
+.pkg-pax-table th{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:8px 12px;}
+.pkg-pax-table td{padding:8px 12px;font-size:13px;border-bottom:1px solid var(--line-light);}
+.pkg-pax-table td:not(:first-child){text-align:right;font-weight:600;color:var(--navy);}
+.pkg-rate-note{font-size:12px;color:var(--muted);}
+@media(max-width:960px){.pkg-pax-grid{grid-template-columns:1fr;}}
+.pkg-opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pkg-opt-item{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;padding:14px 18px;background:var(--surface);}
+.pkg-opt-name{color:var(--body);}
+.pkg-opt-price{font-weight:300;font-size:22px;color:var(--navy);white-space:nowrap;}
+.pkg-opt-price .pkg-opt-pp{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.pkg-gtk-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pkg-gtk-card{background:var(--navy);color:#fff;padding:18px 20px;}
+.pkg-gtk-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.pkg-gtk-body{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;}
+.pkg-tc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:none;border-radius:0;padding:14px 18px;font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);cursor:pointer;}
+.pkg-tc-btn:hover{background:var(--surface-hover);}
+.pkg-tc-body{display:none;padding:16px 20px;}
+.pkg-tc-body.open{display:block;}
+.pkg-tc-body li{font-size:12.5px;color:var(--body);padding:7px 0 7px 16px;list-style:none;border-bottom:1px solid var(--line-light);position:relative;line-height:1.55;}
+.pkg-tc-body li::before{content:'\00b7';position:absolute;left:2px;color:var(--gold);}
+.pkg-sb-card{background:var(--surface);padding:20px;margin-bottom:8px;}
+.pkg-sb-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.pkg-map-box{position:relative;height:180px;overflow:hidden;margin-bottom:14px;background:var(--surface);cursor:zoom-in;}
+.pkg-map-box #pkgMapSmall{pointer-events:none;height:100%;}
+.pkg-map-enlarge{position:absolute;right:0;bottom:0;z-index:10;background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:0;cursor:zoom-in;border:none;font-family:'Segoe UI','Open Sans',sans-serif;pointer-events:none;}
+.pkg-fact-row{padding:9px 0;border-top:1px solid var(--line);}
+.pkg-fact-title{font-size:13px;font-weight:600;color:var(--navy);}
+.pkg-fact-body{font-size:12px;color:var(--muted);margin-top:2px;}
+.pkg-sb-quote{background:var(--gold);color:var(--navy);}
+.pkg-sb-quote .pkg-sb-title{color:var(--navy);}
+.pkg-sb-quote-body{font-size:13px;color:rgba(11,23,51,.85);margin-bottom:14px;line-height:1.6;}
+.pkg-sb-quote-btn{display:block;text-align:center;width:100%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 0;border-radius:0;text-decoration:none;}
+.pkg-sb-footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:12px;padding:20px 40px;text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.pkg-sb-footer a{color:var(--gold);text-decoration:none;}
+.pkg-badge-icon{background:transparent;border:none;}
+.pkg-badge{background:var(--gold);color:var(--navy);text-align:center;font-weight:700;box-sizing:border-box;}
+.pkg-quiet-icon{background:transparent;border:none;}
+.pkg-quiet-dot{background:var(--navy);box-sizing:border-box;}
+.leaflet-tooltip.pkg-map-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-family:'Segoe UI','Open Sans',sans-serif;font-size:9px;font-weight:600;color:var(--navy);white-space:nowrap;padding:0!important;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;}
+.leaflet-tooltip.pkg-map-tip::before{display:none!important;}
+.pkg-map-modal{display:none;position:fixed;inset:0;background:rgba(11,23,51,.85);z-index:1000;align-items:center;justify-content:center;padding:40px;}
+.pkg-map-modal.open{display:flex;}
+.pkg-map-modal-panel{background:#fff;border-radius:0;width:min(960px,100%);height:min(640px,100%);display:flex;flex-direction:column;overflow:hidden;}
+.pkg-map-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--navy);}
+.pkg-map-modal-header h3{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;}
+.pkg-map-modal-close{background:none;border:none;font-size:16px;color:var(--gold);cursor:pointer;line-height:1;padding:6px;}
+.pkg-map-modal-canvas{flex:1;}
+.print-only-block{display:none;}
+.pkg-rate-print-wrap{display:none;}
+.pkg-rate-print{width:100%;border-collapse:collapse;margin-bottom:8px;}
+.pkg-rate-print th{background:var(--navy);color:#fff;font-weight:700;text-transform:uppercase;text-align:center;border-right:1px solid rgba(255,255,255,.25);}
+.pkg-rate-print th:first-child{text-align:left;}
+.pkg-rate-print th:last-child{border-right:none;}
+.pkg-rate-print td{border-bottom:1px solid var(--line-light);border-right:1px solid var(--line-light);color:var(--ink);text-align:right;}
+.pkg-rate-print td:first-child{text-align:left;color:var(--ink);}
+.pkg-rate-print td:last-child{border-right:none;}
+@media(max-width:960px){
+  .pkg-body{flex-direction:column;}
+  .pkg-sidebar{width:100%;position:static;}
+  .pkg-hero-title{font-size:38px;}
+  .pkg-inc-grid,.pkg-opt-grid,.pkg-gtk-grid,.pkg-hotels-grid{grid-template-columns:1fr;}
+}
+@page{margin:12mm 14mm;}
+@media print{
+  .no-print{display:none!important;}
+  .print-only-block{display:block!important;}
+  .pkg-rate-print-wrap.pkg-rate-print-active{display:block!important;}
+  body{padding-top:0;font-size:13px;}
+  .pkg-body{display:block;padding:0;max-width:none;}
+  .pkg-print-header{background:var(--navy);padding:10px 14px;margin-bottom:10px;}
+  .pkg-print-header img{height:32px;width:auto;display:block;}
+  .pkg-title-row{padding:0 0 4px;}
+  .pkg-hero-title{font-size:26px;}
+  .pkg-hero{padding:6px 0 0;}
+  #pkgHeroImg{display:none!important;}
+  .pkg-hero-facts{width:100%;}
+  .pkg-inc-grid,.pkg-opt-grid{grid-template-columns:1fr 1fr;}
+  .pkg-hotels-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+  .pkg-section{margin-bottom:14px;}
+  .pkg-section-label{font-size:16px;margin:10px 0 2px;page-break-after:avoid;break-after:avoid;}
+  .pkg-section-sub{margin-bottom:6px;page-break-after:avoid;break-after:avoid;}
+  .pkg-day{grid-template-columns:32px 1fr;gap:10px;padding:6px 0;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-day-num{font-size:16px;}
+  .pkg-day-title{font-size:12px;margin-bottom:1px;}
+  .pkg-day-overnight{margin-bottom:3px;}
+  .pkg-day-desc{font-size:10px;line-height:1.35;margin-bottom:4px;}
+  .pkg-tag{font-size:8px;padding:2px 6px;}
+  .pkg-tag-text{font-size:9.5px;}
+  .pkg-inc-item{font-size:10px;padding:4px 0 4px 16px;}
+  .pkg-hotel-card{padding:8px 10px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-hotel-city{font-size:14px;}
+  .pkg-hotel-nights{margin-bottom:4px;}
+  .pkg-hotel-cat{font-size:9px;}
+  .pkg-hotel-name{font-size:9.5px;margin-bottom:4px;}
+  #pkgRateTable{display:none!important;}
+  .pkg-rate-note{font-size:9px;margin:0 0 10px;}
+  .pkg-rate-print th,.pkg-rate-print td{padding:6px 10px;}
+  .pkg-rate-print th{font-size:8px;}
+  .pkg-rate-print td{font-size:10px;}
+  .pkg-opt-item{padding:8px 10px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-opt-name{font-size:10.5px;}
+  .pkg-opt-price{font-size:14px;}
+  .pkg-tc-body{display:block!important;padding:6px 0 0;}
+  .pkg-tc-btn{pointer-events:none;background:none!important;padding:0!important;font-weight:300!important;text-transform:none!important;letter-spacing:0!important;color:var(--navy)!important;page-break-after:avoid;break-after:avoid;}
+  #pkgTcArrow{display:none!important;}
+  .pkg-tc-body li{font-size:9px;padding:4px 0 4px 14px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-sb-footer{padding:8px 0;font-size:8.5px;margin-top:10px;}
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04BZKH6574');</script>
+</head>
+<body>
+<script>
+(async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
+if(['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
+}catch(e){}}
+)();</script>
+<div class="pkg-print-header print-only-block"><img src="../../assets/logo-print.png" alt="Europe Incoming"></div>
+<div class="pkg-topbar no-print"><div class="pkg-topbar-inner">
+  <div class="pkg-topbar-left">
+    <a href="../../"><img class="pkg-logo" src="../../logo.png" alt="Europe Incoming"></a>
+    <a class="pkg-back-link" href="./"><span class="pkg-back-circle">←</span> All packages</a>
+  </div>
+  <div class="pkg-topbar-right">
+    <div class="pkg-trade"><a href="mailto:fitsales@europeincoming.com">Trade enquiries</a></div>
+    <button class="pkg-dl-btn" id="pkgDownloadBtn">Download PDF</button>
+  </div>
+</div></div>
+
+<div class="pkg-title-row">
+  <h1 class="pkg-hero-title" id="pkgHeroTitle"></h1>
+  <div class="pkg-eyebrow" id="pkgEyebrow"></div>
+</div>
+
+<div class="pkg-hero">
+  <div class="pkg-hero-img" id="pkgHeroImg"></div>
+  <div class="pkg-hero-facts">
+    <div>
+      <div class="pkg-hero-fact-label">Duration</div>
+      <div class="pkg-hero-fact-value" id="pkgHeroNights"></div>
+    </div>
+    <div>
+      <div class="pkg-hero-fact-label">Route</div>
+      <div class="pkg-hero-fact-value small" id="pkgHeroRoute"></div>
+    </div>
+    <div class="pkg-hero-price-block">
+      <div class="pkg-hero-fact-label">From</div>
+      <div class="pkg-hero-price" id="pkgHeroPrice"></div>
+      <div class="pkg-hero-price-unit">per person</div>
+    </div>
+  </div>
+</div>
+
+<div class="pkg-variantbar no-print"><div class="pkg-variantbar-inner">
+  <div class="pkg-variantbar-left">
+    <div class="pkg-variant-label">Travel style</div>
+    <div class="pkg-pills" id="pkgVariantPills"></div>
+  </div>
+  <div class="pkg-variant-blurb" id="pkgVariantBlurb"></div>
+</div></div>
+
+<div class="pkg-body">
+  <div class="pkg-main">
+    <div class="pkg-section">
+      <div class="pkg-section-label">Day by day</div>
+      <div class="pkg-section-sub" id="pkgDaySub"></div>
+      <div id="pkgDays"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label">Package includes</div>
+      <div class="pkg-section-sub" id="pkgIncludesSub"></div>
+      <div class="pkg-inc-grid" id="pkgIncludes"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label" style="margin-bottom:14px">Sample hotels</div>
+      <div class="pkg-hotels-grid" id="pkgHotels"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label">Package rates</div>
+      <div class="pkg-section-sub" id="pkgRateSub"></div>
+      <div class="pkg-rate-toggles no-print">
+        <div class="pkg-seg-group-labeled">
+          <div class="pkg-seg-label">Rate year</div>
+          <div class="pkg-seg-group" id="pkgYearToggle"></div>
+        </div>
+      </div>
+      <div class="pkg-rate-toggles no-print" id="pkgRateToggles">
+        <div class="pkg-seg-group" id="pkgCatToggle"></div>
+        <div class="pkg-seg-group" id="pkgSeasonToggle"></div>
+      </div>
+      <table class="pkg-rate-table" id="pkgRateTable">
+        <thead><tr><th>Occupancy</th><th style="text-align:right" id="pkgRateColHeading"></th></tr></thead>
+        <tbody id="pkgRatesBody"></tbody>
+      </table>
+      <div class="pkg-pax-grid" id="pkgPaxRates"></div>
+      <div class="pkg-rate-print-wrap" id="pkgRateTablePrintWrap">
+        <table class="pkg-rate-print">
+          <thead>
+            <tr>
+              <th rowspan="2">Occupancy</th>
+              <th colspan="2">3 star</th>
+              <th colspan="2">4 star</th>
+            </tr>
+            <tr><th>Apr–Oct</th><th>Nov–Mar</th><th>Apr–Oct</th><th>Nov–Mar</th></tr>
+          </thead>
+          <tbody id="pkgRatesPrintBody"></tbody>
+        </table>
+      </div>
+      <div class="pkg-rate-note" id="pkgRateNote"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label" style="margin-bottom:14px">Optional tours &amp; extras</div>
+      <div class="pkg-opt-grid" id="pkgOptionals"></div>
+    </div>
+    <div class="pkg-section no-print">
+      <div class="pkg-section-label" style="margin-bottom:14px">Good to know</div>
+      <div class="pkg-gtk-grid" id="pkgGoodToKnow"></div>
+    </div>
+    <div class="pkg-section pkg-tc-wrap">
+      <button class="pkg-tc-btn" id="pkgTcBtn"><span>Terms &amp; conditions</span><span id="pkgTcArrow">▼</span></button>
+      <div class="pkg-tc-body" id="pkgTcBody"><ul id="pkgTerms"></ul></div>
+    </div>
+  </div>
+
+  <div class="pkg-sidebar no-print">
+    <div class="pkg-sb-card">
+      <div class="pkg-sb-title">About this tour</div>
+      <div class="pkg-map-box" id="pkgMapBox">
+        <div id="pkgMapSmall" style="height:100%;"></div>
+        <button class="pkg-map-enlarge" id="pkgMapEnlarge">⤢ ENLARGE</button>
+      </div>
+      <div class="pkg-fact-row">
+        <div class="pkg-fact-title" id="pkgAboutDuration"></div>
+        <div class="pkg-fact-body" id="pkgAboutRoute"></div>
+      </div>
+      <div id="pkgAboutFacts"></div>
+    </div>
+    <div class="pkg-sb-card pkg-sb-quote">
+      <div class="pkg-sb-title">Ready to quote?</div>
+      <div class="pkg-sb-quote-body">Get in touch with the FIT team for availability and a tailored quotation.</div>
+      <a class="pkg-sb-quote-btn" href="mailto:fitsales@europeincoming.com?subject=Quote request — Paris with Provence & French Riviera.">Email the FIT team</a>
+    </div>
+  </div>
+</div>
+
+<div class="pkg-sb-footer">Europe Incoming Holdings Ltd · Company Reg. England &amp; Wales 07053949 · <a href="mailto:fitsales@europeincoming.com" style="color:inherit">fitsales@europeincoming.com</a></div>
+
+<div class="pkg-map-modal no-print" id="pkgMapModal">
+  <div class="pkg-map-modal-panel">
+    <div class="pkg-map-modal-header">
+      <h3 id="pkgMapModalTitle"></h3>
+      <button class="pkg-map-modal-close" id="pkgMapModalClose">✕</button>
+    </div>
+    <div class="pkg-map-modal-canvas" id="pkgMapModalCanvas"></div>
+  </div>
+</div>
+
+<script>
+window.PRODUCT = {"id": "5.1", "title": "Paris with Provence & French Riviera.", "styles": {"trains": {"name": "Trains & Taxi Transfers", "blurb": "Scheduled trains link each city, with private transfers at your Paris arrival.", "nights": "8 nights \u00b7 9 days", "route": "Paris (2N) \u2192 Avignon (2N) \u2192 Aix-en-Provence (2N) \u2192 Nice (2N)", "aboutNights": "8 nights across 4 stays", "transport": {"1": "Paris airport to Paris hotel private transfer on arrival.", "3": "Paris to Avignon by train, II Class, with station transfers at each end.", "5": "Avignon to Aix-en-Provence by train, II Class, with station transfers.", "7": "Aix-en-Provence to Nice by train, II Class, with station transfers."}, "inclusions": ["Paris airport to Paris hotel private transfer on arrival", "Paris to Avignon train ticket, II Class, with station transfers", "Avignon to Aix-en-Provence train ticket, II Class, with station transfers", "Aix-en-Provence to Nice train ticket, II Class, with station transfers", "Nice hotel to Nice airport private transfer on departure", "8 nights accommodation with daily breakfast", "All applicable taxes and service charges"]}, "selfdrive": {"name": "Self Drive", "blurb": "Arrive by train and transfer, then pick up a rental car in Avignon to explore Provence and the Riviera at your own pace.", "nights": "8 nights \u00b7 9 days", "route": "Paris (2N) \u2192 Avignon (2N) \u2192 Aix-en-Provence (2N) \u2192 Nice (2N)", "aboutNights": "8 nights across 4 stays", "transport": {"1": "Paris airport to Paris hotel private transfer.", "3": "Paris to Avignon by train, II Class.", "4": "Pick up rental car in Avignon \u2014 SUV class, 5-seater, automatic.", "5": "Self-drive from Avignon to Aix-en-Provence at your own pace.", "7": "Self-drive from Aix-en-Provence to Nice at your own pace.", "9": "Drop off rental car in Nice before departure."}, "inclusions": ["Paris airport to Paris hotel private transfer", "Paris to Avignon train ticket, II Class", "Rental car pickup in Avignon, SUV class, 5-seater, automatic", "Comprehensive insurance and unlimited mileage", "Self-guided route notes for Avignon, Aix-en-Provence and Nice", "8 nights accommodation with daily breakfast", "Rental car drop-off in Nice before departure"]}, "private": {"name": "Private Exclusive Coach", "blurb": "A private coach and driver stay with you for the whole journey, Paris to Nice.", "nights": "8 nights \u00b7 9 days", "route": "Paris (2N) \u2192 Avignon (2N) \u2192 Aix-en-Provence (2N) \u2192 Nice (2N)", "aboutNights": "8 nights across 4 stays", "transport": {"1": "Paris airport to Paris hotel private transfer, coach on disposal for 6 hrs.", "2": "Paris city tour with local guide, 3 hrs, private coach on disposal for 10 hrs.", "3": "Paris to Avignon by train, II Class, with private station transfers at each end.", "4": "Private coach on disposal for sightseeing in and around Avignon.", "5": "Private coach transfer from Avignon to Aix-en-Provence.", "6": "Private coach on disposal for sightseeing in and around Aix-en-Provence.", "7": "Private coach transfer from Aix-en-Provence to Nice.", "8": "Private coach on disposal for sightseeing in and around Nice.", "9": "Nice hotel to Nice airport private transfer by private coach."}, "inclusions": ["Private coach on disposal from Day 1 to Day 9", "Paris airport to Paris hotel private transfer", "Paris city tour with local guide, 3 hrs", "Seine river cruise, 1 hr", "Paris to Avignon train ticket, II Class, with private station transfers", "Private coach transfers linking Avignon, Aix-en-Provence and Nice", "8 nights accommodation with daily breakfast"]}}, "days": [{"num": 1, "title": "Arrive Paris", "overnight": "Overnight: Paris", "desc": "Welcome to the enchanting French capital! Upon arrival at the airport, enjoy a seamless transfer to your hotel. Dive into Parisian life by exploring iconic sites like the Champs-\u00c9lys\u00e9es for high-end shopping, or relishing the artistic vibes of Montmartre. Experience the city's allure with a stroll along the Seine River or indulge in renowned French cuisine. Overnight in Paris", "taste": "Le Relais de l'Entrec\u00f4te, the Paris institution serving only steak-frites in a secret walnut-butter sauce since 1959, is the classic first-night dinner."}, {"num": 2, "title": "Paris", "overnight": "Overnight: Paris", "desc": "Discover the allure of Paris as you explore at your own pace or opt for curated optional tours. From strolling along the Seine to marveling at iconic landmarks, the day is yours to savor. Overnight in Paris.", "experience": "A Bateaux Mouches cruise past Notre-Dame and the Eiffel Tower, run from the same Pont de l'Alma landing stage since 1949, is the classic way to see the city lit up from the water."}, {"num": 3, "title": "Paris \u2192 Avignon", "overnight": "Overnight: Avignon", "desc": "Check out from Paris and embark on a scenic train journey to Avignon. Known as the \"City of Popes,\" Avignon boasts historic charm and the iconic Palais des Papes. Explore the medieval bridge, Pont Saint-B\u00e9n\u00e9zet, and immerse yourself in the city's rich history. Overnight in Avignon.", "taste": "A glass of C\u00f4tes du Rh\u00f4ne is the natural choice on arrival in Provence's wine country."}, {"num": 4, "title": "Avignon", "overnight": "Overnight: Avignon", "desc": "Discover Avignon at your leisure or opt for optional adventures. Choose between Saint-Remy and Les Baux de Provence with Pont du Gard or explore Ch\u00e2teauneuf-du-Pape wineries. Overnight in Avignon.", "taste": "Les Halles d'Avignon, the covered market on Place Pie, is the place to try berlingots \u2014 the striped boiled sweets made in the city since the 1850s.", "fallbackIncluded": "Day at leisure \u2014 optional guided tour of the Palais des Papes available."}, {"num": 5, "title": "Avignon \u2192 Aix-en-Provence", "overnight": "Overnight: Aix-en-Provence", "desc": "Check out from Avignon and hop on a train to Aix en Provence. Famous for its artistic heritage and elegant architecture, Aix en Provence is known as the \"City of a Thousand Fountains.\" Explore charming squares, like Place de l'Hotel de Ville, and immerse yourself in the city's vibrant cultural scene. Overnight in Aix en Provence.", "experience": "Follow the C\u00e9zanne trail through the old town to his studio, the Atelier des Lauves, preserved much as he left it."}, {"num": 6, "title": "Aix-en-Provence", "overnight": "Overnight: Aix-en-Provence", "desc": "Explore Aix en Provence at your own pace, wandering through charming streets like Cours Mirabeau, lined with cafes and fountains. Stroll through the historic Old Town, visit the vibrant markets of Place Richelme, or discover the artistic flair of Quartier Mazarin. Optionally, choose from curated tours. Overnight in Aix en Provence.", "shopping": "Aix's Saturday market and the boutiques along Cours Mirabeau are known for Proven\u00e7al linens, soaps and lavender products."}, {"num": 7, "title": "Aix-en-Provence \u2192 Nice", "overnight": "Overnight: Nice", "desc": "Check out from Aix en Provence and board a scenic train to Nice. Nestled on the French Riviera, Nice is known as the \"Queen of the Riviera.\" Famous for its stunning Promenade des Anglais, vibrant markets, and captivating Old Town, Nice invites you to explore its Mediterranean charm. Overnight in Nice.", "taste": "Socca, a chickpea-flour pancake sold from street stalls, is Nice's most typical snack."}, {"num": 8, "title": "Nice", "overnight": "Overnight: Nice", "desc": "Embark on a Riviera adventure for the best views of Nice and Villefranche. Explore the perched village of Eze, indulge in a visit to the Fragonard perfumery, and then journey to Monaco for its old town, cathedral, palace, F1 circuit, and the allure of Monte Carlo. Discover Antibes, its glamorous port, and end the day in Cannes, strolling the famous \"Croisette.\" Overnight in Nice.", "experience": "The Mus\u00e9e Matisse and Mus\u00e9e Chagall reflect Nice's long history as a magnet for artists drawn to its Mediterranean light."}, {"num": 9, "title": "Depart Nice", "overnight": "Departure day", "desc": "Check out and bid adieu to the French Riviera. Enjoy a private transfer to Nice airport as your unforgettable tour comes to an end."}], "hotels": [{"city": "Paris", "nights": "2 Nights", "h3": "H\u00f4tel Berne Op\u00e9ra", "h4": "Marceau Bastille"}, {"city": "Avignon", "nights": "2 Nights", "h3": "Kyriad avignon Palais des papes", "h4": "Mercure Avignon Gare TGV"}, {"city": "Aix en Provence", "nights": "2 Nights", "h3": "ibis Aix-en-Provence", "h4": "Boutique H\u00f4tel C\u00e9zanne"}, {"city": "Nice", "nights": "2 Nights", "h3": "ibis Nice Centre Gare", "h4": "Mercure Nice Centre Notre-Dame"}], "about": [{"title": "Best season", "body": "April\u2013June and September\u2013October for warm weather without the peak August crowds and heat across Provence and the Riviera."}, {"title": "Weather", "body": "Mediterranean climate with hot, dry summers around 25\u201330\u00b0C and mild winters, though the Mistral wind can bring a sharp chill in Provence."}, {"title": "Currency & docs", "body": "Euro (\u20ac) throughout; France is part of the Schengen Area, so standard Schengen visa and border rules apply."}], "goodToKnow": [{"title": "Tickets & timing", "body": "Book the Palais des Papes and C\u00e9zanne's studio ahead in summer \u2014 both are popular and queues build quickly by mid-morning."}, {"title": "Driving", "body": "Proven\u00e7al and Riviera roads are well signed but busy in summer. Central Nice and Aix have restricted or paid parking zones near the old towns.", "styles": ["selfdrive"]}, {"title": "Rail travel", "body": "Seat reservations are included on the inter-city trains. Stations are typically a short taxi ride from the central hotels.", "styles": ["trains"]}, {"title": "Your vehicle", "body": "Driver working hours are limited by law to around 10 hrs per day, so day-trip timings are planned accordingly. Luggage space fits one large case per guest.", "styles": ["private"]}, {"title": "What to pack", "body": "Light layers for summer, a warmer layer for evenings, and comfortable shoes for cobbled old towns and hillside viewpoints."}, {"title": "Money", "body": "Cards are widely accepted, but a little cash is useful for markets and small caf\u00e9s. Tipping around 5-10% in restaurants is appreciated, not obligatory."}], "map": {"points": [{"lat": 48.8566, "lng": 2.3522, "label": "Paris", "nights": 2}, {"lat": 43.9493, "lng": 4.8055, "label": "Avignon", "nights": 2}, {"lat": 43.5297, "lng": 5.4474, "label": "Aix-en-Provence", "nights": 2}, {"lat": 43.7102, "lng": 7.262, "label": "Nice", "nights": 2}], "closeLoop": false}, "region": "france", "eyebrow": "Europe Incoming \u00b7 FIT Packages \u00b7 2026\u201327", "pricesFile": "prices/5.1-2026.json", "heroImage": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1600&q=80", "terms": ["All rates are net and per person for the package.", "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.", "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.", "Rates are not applicable during trade fair periods, major European public holidays, and other major events.", "City taxes are not included in the price.", "If certain attractions are closed during specific periods, alternative options will be arranged.", "All bookings must be confirmed at least 60 working days prior to arrival.", "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.", "Vouchers will be issued after receipt of full payment."]};
+window.PRICES_BY_YEAR = {"2026-27": {"validFrom": "1 Nov 2026", "validTo": "30 Nov 2027", "currency": "\u20ac", "variants": {"trains": {"3": {"winter": {"single": 2047, "twin": 1234, "child": 506}, "summer": {"single": 2132, "twin": 1285, "child": 527}}, "4": {"winter": {"single": 2503, "twin": 1462, "child": 595}, "summer": {"single": 2607, "twin": 1522, "child": 620}}, "validity": {"winter": {"from": "1 Nov 2026", "to": "31 Mar 2027"}, "summer": {"from": "1 Apr 2027", "to": "30 Nov 2027"}}}, "private": {"paxTiers": {"winter": [{"pax": 8, "3star": 2284, "4star": 2512}, {"pax": 10, "3star": 2012, "4star": 2240}, {"pax": 12, "3star": 1831, "4star": 2059}, {"pax": 14, "3star": 1701, "4star": 1929}, {"pax": 16, "3star": 1604, "4star": 1832}], "summer": [{"pax": 8, "3star": 2379, "4star": 2617}, {"pax": 10, "3star": 2096, "4star": 2334}, {"pax": 12, "3star": 1907, "4star": 2145}, {"pax": 14, "3star": 1772, "4star": 2010}, {"pax": 16, "3star": 1671, "4star": 1909}]}, "validity": {"winter": {"from": "1 Nov 2026", "to": "31 Mar 2027"}, "summer": {"from": "1 Apr 2027", "to": "30 Nov 2027"}}}, "selfdrive": {"3": {"winter": {"single": 2275, "twin": 1462, "child": 609}, "summer": {"single": 2370, "twin": 1523, "child": 635}}, "4": {"winter": {"single": 2732, "twin": 1690, "child": 698}, "summer": {"single": 2845, "twin": 1761, "child": 727}}, "validity": {"winter": {"from": "1 Nov 2026", "to": "31 Mar 2027"}, "summer": {"from": "1 Apr 2027", "to": "30 Nov 2027"}}}}, "optionalTours": [{"name": "Moulin Rogue with drinks  9 pm", "price": 191}, {"name": "Louvre Museum (Audioguide \u20ac 5 pp)", "price": 26}, {"name": "Paris Montmartre food tour, 4 hrs walking", "price": 153}, {"name": "Wine tasting at a local wineyard in Ch\u00e2teauneuf-du-Pape", "price": 31}, {"name": "Wine tasting at a local wineyard in Luberon", "price": 31}, {"name": "Boat tour from Marseilles, 4 hrs C\u00f4te Bleue Marine Park", "price": 77}, {"name": "Half day Saint Remy -Les Baux de Provence with Pont du Gard, group 5 hrs", "price": 88}, {"name": "Half day Ch\u00e2teauneuf-du-Pape wineries, AM/PM group, 4 hrs", "price": 93}, {"name": "Wine tour to C\u00f4tes de Provence Sainte-Victoire vineyards, group 3.5 hrs", "price": 98}, {"name": "Cassis & Calanques tour, group 4 hrs", "price": 77}]}};
+window.DEFAULT_RATE_YEAR = "2026-27";
+</script>
+<script src="../../assets/package-page.js"></script>
+</body></html>

@@ -1,0 +1,242 @@
+{
+  "id": "cotswolds-devon-cornwall",
+  "title": "Cotswolds, Devon & Cornwall.",
+  "styles": {
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "London, the honey-stone Cotswolds and a full circuit of England's southwest — Tintagel, Land's End, Dartmoor and the Jurassic Coast, by rental car.",
+      "nights": "9 nights · 10 days",
+      "route": "London (1N) → Cheltenham (1N) → Barnstaple (1N) → Truro (2N) → Plymouth (1N) → Exeter (1N) → Bournemouth (1N) → Heathrow area (1N)",
+      "aboutNights": "9 nights across 8 stays",
+      "transport": {
+        "1": "Private transfer from London Airport to your hotel.",
+        "2": "Rental car pickup, then self-drive northwest to the Cotswolds.",
+        "3": "Self-drive south to Barnstaple via Bath and Glastonbury.",
+        "4": "Self-drive along the North Cornwall coast via Tintagel, Boscastle, Port Isaac and Padstow to Truro.",
+        "6": "Self-drive southwest to Plymouth via Dartmoor National Park.",
+        "7": "Self-drive east to Exeter via the South Devon coast.",
+        "8": "Self-drive east to Bournemouth via the Jurassic Coast.",
+        "9": "Self-drive north to the Heathrow area via Salisbury, Stonehenge and Windsor.",
+        "10": "Return the rental car at Heathrow Airport."
+      },
+      "inclusions": [
+        "9 nights accommodation including breakfast",
+        "Rental car (standard sedan/SUV class), Day 2 10am to Day 10 2pm",
+        "Private transfer from Heathrow Airport to your London hotel"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrival in London",
+      "overnight": "Overnight: London",
+      "desc": "Welcome to England. A private transfer takes you to your hotel in the capital. Spend the afternoon exploring at your own pace — Borough Market's artisan food stalls, or a stroll along the South Bank past Tower Bridge and the London Eye. Overnight in London."
+    },
+    {
+      "num": 2,
+      "title": "London to Cotswolds",
+      "overnight": "Overnight: Cheltenham",
+      "desc": "Collect your rental car and drive northwest to the Cotswolds, England's quintessential countryside region. Explore honey-coloured stone villages like Bourton-on-the-Water or Bibury's Arlington Row cottages before settling in Cheltenham. Overnight in Cheltenham.",
+      "taste": "A traditional Sunday roast at a historic country pub, if your visit falls on a Sunday — Yorkshire pudding, roast beef and all the trimmings."
+    },
+    {
+      "num": 3,
+      "title": "Cotswolds to Barnstaple via Bath",
+      "overnight": "Overnight: Barnstaple",
+      "desc": "Drive south to the Georgian city of Bath, exploring the Roman Baths and Bath Abbey, before continuing west via mystical Glastonbury and its legendary Tor. Arrive in Barnstaple, North Devon's historic market town, by early evening. Overnight in Barnstaple.",
+      "experience": "The Roman Baths' original chambers still carry the same natural hot spring water that first drew visitors here 2,000 years ago."
+    },
+    {
+      "num": 4,
+      "title": "Barnstaple to Truro via North Cornwall Coast",
+      "overnight": "Overnight: Truro",
+      "desc": "A spectacular coastal drive: Tintagel Castle, King Arthur's legendary birthplace on rugged clifftop ruins; Boscastle, tucked into a narrow valley; and Port Isaac, the fishing village known as Doc Martin's “Portwenn”. Stop in foodie Padstow for Cornish seafood or a pasty before continuing to Truro. Overnight in Truro."
+    },
+    {
+      "num": 5,
+      "title": "West Cornwall — St Ives or Penzance",
+      "overnight": "Overnight: Truro",
+      "desc": "A day exploring West Cornwall's coastline. St Ives offers golden beaches and the Tate St Ives gallery; alternatively, base around Penzance for St Michael's Mount, the cliffside Minack Theatre, Land's End, and the Lizard Peninsula's Kynance Cove. Return to Truro for the evening. Overnight in Truro.",
+      "experience": "The Minack Theatre, an open-air amphitheatre carved into granite cliffs 100 feet above the sea, is one of Britain's most spectacular performance venues (closed Nov–Feb)."
+    },
+    {
+      "num": 6,
+      "title": "Truro to Plymouth via Dartmoor",
+      "overnight": "Overnight: Plymouth",
+      "desc": "Drive northeast into Dartmoor National Park, the wild moorland of Conan Doyle's The Hound of the Baskervilles, stopping for a Devonshire cream tea amid granite tors. Continue to historic Plymouth, exploring Plymouth Hoe and the cobbled Barbican quarter where the Pilgrim Fathers set sail for the New World in 1620. Overnight in Plymouth."
+    },
+    {
+      "num": 7,
+      "title": "Plymouth to Exeter via South Devon Coast",
+      "overnight": "Overnight: Exeter",
+      "desc": "Drive east along the scenic South Devon coast, stopping at Slapton Sands and the historic harbour town of Dartmouth, crowned by its 600-year-old castle. Arrive in Exeter, Devon's cathedral city, by early evening. Overnight in Exeter."
+    },
+    {
+      "num": 8,
+      "title": "Exeter to Bournemouth via Jurassic Coast",
+      "overnight": "Overnight: Bournemouth",
+      "desc": "Explore Exeter's nearly 1,000-year-old cathedral before heading to the Jurassic Coast, a UNESCO World Heritage Site. Hunt for fossils at Lyme Regis, then see the dramatic natural arch of Durdle Door and the horseshoe bay of Lulworth Cove. Arrive in Bournemouth by evening. Overnight in Bournemouth."
+    },
+    {
+      "num": 9,
+      "title": "Bournemouth to London via Salisbury & Stonehenge",
+      "overnight": "Overnight: Heathrow area",
+      "desc": "Drive north to Salisbury, home to Britain's tallest cathedral spire (123m) and one of only four surviving original copies of the Magna Carta. Continue to Stonehenge, the 5,000-year-old prehistoric stone circle, then on through Windsor before reaching your hotel near Heathrow. Overnight near Heathrow."
+    },
+    {
+      "num": 10,
+      "title": "Departure",
+      "overnight": "Departure day",
+      "desc": "Check out and return your rental car to Heathrow Airport for your homeward flight."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "1 Night",
+      "h3": "ibis London Shepherds Bush – Hammersmith",
+      "h4": "Novotel London West"
+    },
+    {
+      "city": "Cheltenham",
+      "nights": "1 Night",
+      "h3": "Premier Inn Cheltenham North West",
+      "h4": "Leonardo Hotel Cheltenham"
+    },
+    {
+      "city": "Barnstaple",
+      "nights": "1 Night",
+      "h3": "Premier Inn Barnstaple",
+      "h4": "The Park Hotel"
+    },
+    {
+      "city": "Truro",
+      "nights": "2 Nights",
+      "h3": "Premier Inn Truro",
+      "h4": "The Alverton"
+    },
+    {
+      "city": "Plymouth",
+      "nights": "1 Night",
+      "h3": "Premier Inn Plymouth City",
+      "h4": "Crowne Plaza Plymouth"
+    },
+    {
+      "city": "Exeter",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Exeter – City Centre",
+      "h4": "Mercure Exeter Southgate Hotel"
+    },
+    {
+      "city": "Bournemouth",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Bournemouth",
+      "h4": "The Cumberland Hotel"
+    },
+    {
+      "city": "London Heathrow area",
+      "nights": "1 Night",
+      "h3": "Premier Inn Heathrow Airport – M4/J4",
+      "h4": "Hyatt Place London Heathrow Airport"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for the best chance of dry weather on the coastal drives and outdoor sights like the Minack Theatre and Jurassic Coast walks; the Minack itself is closed November–February."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild maritime climate: summer highs around 18–22°C, rarely dropping below freezing in winter, but rain is possible year-round, especially in Cornwall and Devon."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "The Pound Sterling (£) is the local currency. The UK is not in the Schengen Area, so check current entry requirements for your passport separately from any Schengen visa."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Narrow Cornish lanes",
+      "body": "Roads in North Cornwall around Tintagel, Boscastle and Port Isaac are single-track with passing places — allow extra time and drive cautiously, especially in summer traffic."
+    },
+    {
+      "title": "Stonehenge timed entry",
+      "body": "Stonehenge requires advance timed-entry booking, particularly in summer — book ahead of arrival rather than relying on same-day tickets."
+    },
+    {
+      "title": "Tidal access",
+      "body": "St Michael's Mount is only reachable on foot at low tide via the causeway — check tide times before planning that stop."
+    },
+    {
+      "title": "What to pack",
+      "body": "Waterproofs and layers for coastal weather that can shift quickly; comfortable shoes for cliff paths and cobbled harbour towns."
+    },
+    {
+      "title": "Tipping",
+      "body": "10–12.5% is standard in restaurants, sometimes already added as a service charge — check the bill before tipping twice."
+    }
+  ],
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 1
+      },
+      {
+        "lat": 51.8994,
+        "lng": -2.0783,
+        "label": "Cheltenham",
+        "nights": 1
+      },
+      {
+        "lat": 51.0803,
+        "lng": -4.0588,
+        "label": "Barnstaple",
+        "nights": 1
+      },
+      {
+        "lat": 50.2632,
+        "lng": -5.051,
+        "label": "Truro",
+        "nights": 2
+      },
+      {
+        "lat": 50.3755,
+        "lng": -4.1427,
+        "label": "Plymouth",
+        "nights": 1
+      },
+      {
+        "lat": 50.7184,
+        "lng": -3.5339,
+        "label": "Exeter",
+        "nights": 1
+      },
+      {
+        "lat": 50.7192,
+        "lng": -1.8808,
+        "label": "Bournemouth",
+        "nights": 1
+      }
+    ],
+    "closeLoop": false
+  },
+  "region": "uk-ireland",
+  "pricesFile": "prices/cotswolds-devon-cornwall-2026.json",
+  "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ]
+}

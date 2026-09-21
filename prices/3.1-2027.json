@@ -1,0 +1,121 @@
+{
+  "validFrom": "1 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "currency": "€",
+  "variants": {
+    "trains": {
+      "3": {
+        "winter": {
+          "single": 1236,
+          "twin": 862,
+          "child": 366
+        },
+        "summer": {
+          "single": 1288,
+          "twin": 898,
+          "child": 381
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1632,
+          "twin": 1060,
+          "child": 443
+        },
+        "summer": {
+          "single": 1700,
+          "twin": 1104,
+          "child": 461
+        }
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    },
+    "private": {
+      "paxTiers": {
+        "winter": [
+          {
+            "pax": 8,
+            "3star": 1435,
+            "4star": 1633
+          },
+          {
+            "pax": 10,
+            "3star": 1235,
+            "4star": 1433
+          },
+          {
+            "pax": 12,
+            "3star": 1102,
+            "4star": 1300
+          },
+          {
+            "pax": 14,
+            "3star": 1007,
+            "4star": 1205
+          },
+          {
+            "pax": 16,
+            "3star": 935,
+            "4star": 1133
+          }
+        ],
+        "summer": [
+          {
+            "pax": 8,
+            "3star": 1495,
+            "4star": 1701
+          },
+          {
+            "pax": 10,
+            "3star": 1287,
+            "4star": 1493
+          },
+          {
+            "pax": 12,
+            "3star": 1148,
+            "4star": 1354
+          },
+          {
+            "pax": 14,
+            "3star": 1049,
+            "4star": 1255
+          },
+          {
+            "pax": 16,
+            "3star": 974,
+            "4star": 1180
+          }
+        ]
+      },
+      "validity": {
+        "winter": {
+          "from": "1 Nov 2026",
+          "to": "31 Mar 2027"
+        },
+        "summer": {
+          "from": "1 Apr 2027",
+          "to": "30 Nov 2027"
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Rome - Colosseum admission ticket",
+      "price": 36
+    },
+    {
+      "name": "Rome - Vatican Museum admission ticket",
+      "price": 46
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sardinia Discovery. | Europe Incoming FIT Packages</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1733;--navy-tile:#132347;--gold:#F2B91D;--gold-hover:#E5AC12;
+--ink:#1A1D2E;--body:#3A3D4D;--muted:#6B7080;--line:#E5E7EC;--line-light:#EFF0F3;
+--control-border:#D8DAE1;--surface:#F5F5F3;--surface-hover:#EDEDEA;
+--taste-bg:#F2B91D;--exp-bg:#EDEDEA;--shop-bg:#F5F5F3;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','Open Sans',sans-serif;color:var(--ink);background:#fff;line-height:1.55;padding-top:56px;}
+a{color:inherit;}
+.pkg-wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+.pkg-topbar{position:fixed;top:0;left:0;right:0;height:56px;background:#fff;border-bottom:1px solid var(--line);z-index:300;}
+.pkg-topbar-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.pkg-topbar-left{display:flex;align-items:center;gap:20px;}
+.pkg-logo{height:24px;width:auto;display:block;}
+.pkg-back-link{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-decoration:none;}
+.pkg-back-link .pkg-back-circle{width:26px;height:26px;border:2px solid var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:400;}
+.pkg-back-link:hover{color:var(--gold);}
+.pkg-back-link:hover .pkg-back-circle{border-color:var(--gold);}
+.pkg-topbar-right{display:flex;align-items:center;gap:16px;}
+.pkg-trade{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.pkg-trade a{color:var(--navy);text-decoration:none;}
+.pkg-trade a:hover{color:var(--gold);}
+.pkg-dl-btn{background:var(--navy);color:#fff;border:none;border-radius:0;padding:10px 18px;font-family:'Segoe UI','Open Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
+.pkg-dl-btn:hover{background:var(--gold);color:var(--navy);}
+.pkg-title-row{padding:26px 40px 0;display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;}
+.pkg-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-bottom:10px;}
+.pkg-hero-title{font-weight:300;font-size:56px;letter-spacing:-0.02em;line-height:1;margin:0;color:var(--navy);}
+.pkg-hero{padding:14px 40px 0;display:flex;gap:0;flex-wrap:wrap;}
+.pkg-hero-img{flex:1;min-width:320px;min-height:380px;background:var(--navy) center/cover no-repeat;position:relative;overflow:hidden;}
+.pkg-hero-facts{width:280px;flex-shrink:0;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box;}
+.pkg-hero-fact-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.pkg-hero-fact-value{font-weight:300;font-size:24px;line-height:1.1;}
+.pkg-hero-fact-value.small{font-size:13px;font-weight:400;color:rgba(255,255,255,.78);line-height:1.5;}
+.pkg-hero-price-block{margin-top:auto;background:var(--gold);color:var(--navy);padding:14px 16px;}
+.pkg-hero-price-block .pkg-hero-fact-label{color:var(--navy);margin-bottom:2px;}
+.pkg-hero-price{font-weight:300;font-size:34px;line-height:1;}
+.pkg-hero-price-unit{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.pkg-variantbar{position:sticky;top:56px;z-index:290;background:#fff;border-bottom:1px solid var(--line);}
+.pkg-variantbar-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.pkg-variantbar-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.pkg-variant-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.pkg-pills{display:flex;gap:4px;flex-wrap:wrap;}
+.pkg-pill{font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:0;border:2px solid var(--control-border);background:transparent;color:var(--navy);cursor:pointer;}
+.pkg-pill.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.pkg-variant-blurb{font-size:13px;color:var(--muted);text-align:right;}
+.pkg-body{max-width:1200px;margin:0 auto;padding:32px 40px 0;display:flex;gap:40px;align-items:flex-start;box-sizing:border-box;}
+.pkg-main{flex:1;min-width:0;}
+.pkg-sidebar{width:300px;flex-shrink:0;position:sticky;top:76px;}
+.pkg-section-label{font-weight:300;font-size:34px;color:var(--navy);margin:0 0 4px;}
+.pkg-section-sub{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.pkg-section{margin-bottom:36px;}
+.pkg-day{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);}
+.pkg-day-num-lbl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.pkg-day-num{font-weight:300;font-size:40px;line-height:1;color:var(--gold);}
+.pkg-day-title{font-weight:600;font-size:19px;color:var(--navy);margin-bottom:2px;}
+.pkg-day-overnight{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.pkg-day-desc{font-size:14px;line-height:1.7;color:var(--body);margin-bottom:12px;}
+.pkg-pill-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-top:6px;}
+.pkg-tag{flex-shrink:0;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;white-space:nowrap;}
+.pkg-tag-inc{background:var(--navy);color:#fff;}
+.pkg-tag-taste{background:var(--taste-bg);color:var(--navy);}
+.pkg-tag-exp{background:var(--exp-bg);color:var(--navy);}
+.pkg-tag-shop{background:var(--shop-bg);color:var(--muted);}
+.pkg-tag-text{flex:1 1 220px;min-width:0;font-size:13px;color:var(--body);}
+.pkg-inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;}
+.pkg-inc-item{font-size:13.5px;color:var(--body);padding:9px 0 9px 22px;border-bottom:1px solid var(--line-light);position:relative;}
+.pkg-check{position:absolute;left:0;color:var(--gold);font-weight:700;font-size:12px;}
+.pkg-hotels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.pkg-hotel-card{background:var(--surface);padding:18px 20px;}
+.pkg-hotel-city{font-weight:300;font-size:22px;color:var(--navy);line-height:1.1;}
+.pkg-hotel-nights{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.pkg-hotel-cat{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--gold);}
+.pkg-hotel-name{font-size:12.5px;color:var(--body);margin-bottom:8px;line-height:1.4;}
+.pkg-rate-toggles{display:flex;gap:24px;margin-bottom:16px;flex-wrap:wrap;}
+.pkg-seg-group-labeled{display:flex;align-items:center;gap:10px;}
+.pkg-seg-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.pkg-seg-group{display:inline-flex;gap:4px;}
+.pkg-seg{font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:0;border:2px solid var(--control-border);background:transparent;color:var(--navy);cursor:pointer;}
+.pkg-seg.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.pkg-rate-table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+.pkg-rate-table th{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:left;padding:12px 16px;}
+.pkg-rate-table td{padding:12px 16px;font-size:13.5px;border-bottom:1px solid var(--line-light);color:var(--ink);}
+.pkg-rate-table td:last-child{text-align:right;font-weight:300;font-size:22px;color:var(--navy);}
+.pkg-pax-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:8px;}
+.pkg-pax-season-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.pkg-pax-table{width:100%;border-collapse:collapse;}
+.pkg-pax-table th{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:8px 12px;}
+.pkg-pax-table td{padding:8px 12px;font-size:13px;border-bottom:1px solid var(--line-light);}
+.pkg-pax-table td:not(:first-child){text-align:right;font-weight:600;color:var(--navy);}
+.pkg-rate-note{font-size:12px;color:var(--muted);}
+@media(max-width:960px){.pkg-pax-grid{grid-template-columns:1fr;}}
+.pkg-opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pkg-opt-item{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;padding:14px 18px;background:var(--surface);}
+.pkg-opt-name{color:var(--body);}
+.pkg-opt-price{font-weight:300;font-size:22px;color:var(--navy);white-space:nowrap;}
+.pkg-opt-price .pkg-opt-pp{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.pkg-gtk-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.pkg-gtk-card{background:var(--navy);color:#fff;padding:18px 20px;}
+.pkg-gtk-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.pkg-gtk-body{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;}
+.pkg-tc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:none;border-radius:0;padding:14px 18px;font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);cursor:pointer;}
+.pkg-tc-btn:hover{background:var(--surface-hover);}
+.pkg-tc-body{display:none;padding:16px 20px;}
+.pkg-tc-body.open{display:block;}
+.pkg-tc-body li{font-size:12.5px;color:var(--body);padding:7px 0 7px 16px;list-style:none;border-bottom:1px solid var(--line-light);position:relative;line-height:1.55;}
+.pkg-tc-body li::before{content:'\00b7';position:absolute;left:2px;color:var(--gold);}
+.pkg-sb-card{background:var(--surface);padding:20px;margin-bottom:8px;}
+.pkg-sb-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.pkg-map-box{position:relative;height:180px;overflow:hidden;margin-bottom:14px;background:var(--surface);cursor:zoom-in;}
+.pkg-map-box #pkgMapSmall{pointer-events:none;height:100%;}
+.pkg-map-enlarge{position:absolute;right:0;bottom:0;z-index:10;background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:0;cursor:zoom-in;border:none;font-family:'Segoe UI','Open Sans',sans-serif;pointer-events:none;}
+.pkg-fact-row{padding:9px 0;border-top:1px solid var(--line);}
+.pkg-fact-title{font-size:13px;font-weight:600;color:var(--navy);}
+.pkg-fact-body{font-size:12px;color:var(--muted);margin-top:2px;}
+.pkg-sb-quote{background:var(--gold);color:var(--navy);}
+.pkg-sb-quote .pkg-sb-title{color:var(--navy);}
+.pkg-sb-quote-body{font-size:13px;color:rgba(11,23,51,.85);margin-bottom:14px;line-height:1.6;}
+.pkg-sb-quote-btn{display:block;text-align:center;width:100%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 0;border-radius:0;text-decoration:none;}
+.pkg-sb-footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:12px;padding:20px 40px;text-align:left;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.pkg-sb-footer a{color:var(--gold);text-decoration:none;}
+.pkg-badge-icon{background:transparent;border:none;}
+.pkg-badge{background:var(--gold);color:var(--navy);text-align:center;font-weight:700;box-sizing:border-box;}
+.pkg-quiet-icon{background:transparent;border:none;}
+.pkg-quiet-dot{background:var(--navy);box-sizing:border-box;}
+.leaflet-tooltip.pkg-map-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-family:'Segoe UI','Open Sans',sans-serif;font-size:9px;font-weight:600;color:var(--navy);white-space:nowrap;padding:0!important;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;}
+.leaflet-tooltip.pkg-map-tip::before{display:none!important;}
+.pkg-map-modal{display:none;position:fixed;inset:0;background:rgba(11,23,51,.85);z-index:1000;align-items:center;justify-content:center;padding:40px;}
+.pkg-map-modal.open{display:flex;}
+.pkg-map-modal-panel{background:#fff;border-radius:0;width:min(960px,100%);height:min(640px,100%);display:flex;flex-direction:column;overflow:hidden;}
+.pkg-map-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--navy);}
+.pkg-map-modal-header h3{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;}
+.pkg-map-modal-close{background:none;border:none;font-size:16px;color:var(--gold);cursor:pointer;line-height:1;padding:6px;}
+.pkg-map-modal-canvas{flex:1;}
+.print-only-block{display:none;}
+.pkg-rate-print-wrap{display:none;}
+.pkg-rate-print{width:100%;border-collapse:collapse;margin-bottom:8px;}
+.pkg-rate-print th{background:var(--navy);color:#fff;font-weight:700;text-transform:uppercase;text-align:center;border-right:1px solid rgba(255,255,255,.25);}
+.pkg-rate-print th:first-child{text-align:left;}
+.pkg-rate-print th:last-child{border-right:none;}
+.pkg-rate-print td{border-bottom:1px solid var(--line-light);border-right:1px solid var(--line-light);color:var(--ink);text-align:right;}
+.pkg-rate-print td:first-child{text-align:left;color:var(--ink);}
+.pkg-rate-print td:last-child{border-right:none;}
+@media(max-width:960px){
+  .pkg-body{flex-direction:column;}
+  .pkg-sidebar{width:100%;position:static;}
+  .pkg-hero-title{font-size:38px;}
+  .pkg-inc-grid,.pkg-opt-grid,.pkg-gtk-grid,.pkg-hotels-grid{grid-template-columns:1fr;}
+}
+@page{margin:12mm 14mm;}
+@media print{
+  .no-print{display:none!important;}
+  .print-only-block{display:block!important;}
+  .pkg-rate-print-wrap.pkg-rate-print-active{display:block!important;}
+  body{padding-top:0;font-size:13px;}
+  .pkg-body{display:block;padding:0;max-width:none;}
+  .pkg-print-header{background:var(--navy);padding:10px 14px;margin-bottom:10px;}
+  .pkg-print-header img{height:32px;width:auto;display:block;}
+  .pkg-title-row{padding:0 0 4px;}
+  .pkg-hero-title{font-size:26px;}
+  .pkg-hero{padding:6px 0 0;}
+  #pkgHeroImg{display:none!important;}
+  .pkg-hero-facts{width:100%;}
+  .pkg-inc-grid,.pkg-opt-grid{grid-template-columns:1fr 1fr;}
+  .pkg-hotels-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+  .pkg-section{margin-bottom:14px;}
+  .pkg-section-label{font-size:16px;margin:10px 0 2px;page-break-after:avoid;break-after:avoid;}
+  .pkg-section-sub{margin-bottom:6px;page-break-after:avoid;break-after:avoid;}
+  .pkg-day{grid-template-columns:32px 1fr;gap:10px;padding:6px 0;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-day-num{font-size:16px;}
+  .pkg-day-title{font-size:12px;margin-bottom:1px;}
+  .pkg-day-overnight{margin-bottom:3px;}
+  .pkg-day-desc{font-size:10px;line-height:1.35;margin-bottom:4px;}
+  .pkg-tag{font-size:8px;padding:2px 6px;}
+  .pkg-tag-text{font-size:9.5px;}
+  .pkg-inc-item{font-size:10px;padding:4px 0 4px 16px;}
+  .pkg-hotel-card{padding:8px 10px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-hotel-city{font-size:14px;}
+  .pkg-hotel-nights{margin-bottom:4px;}
+  .pkg-hotel-cat{font-size:9px;}
+  .pkg-hotel-name{font-size:9.5px;margin-bottom:4px;}
+  #pkgRateTable{display:none!important;}
+  .pkg-rate-note{font-size:9px;margin:0 0 10px;}
+  .pkg-rate-print th,.pkg-rate-print td{padding:6px 10px;}
+  .pkg-rate-print th{font-size:8px;}
+  .pkg-rate-print td{font-size:10px;}
+  .pkg-opt-item{padding:8px 10px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-opt-name{font-size:10.5px;}
+  .pkg-opt-price{font-size:14px;}
+  .pkg-tc-body{display:block!important;padding:6px 0 0;}
+  .pkg-tc-btn{pointer-events:none;background:none!important;padding:0!important;font-weight:300!important;text-transform:none!important;letter-spacing:0!important;color:var(--navy)!important;page-break-after:avoid;break-after:avoid;}
+  #pkgTcArrow{display:none!important;}
+  .pkg-tc-body li{font-size:9px;padding:4px 0 4px 14px;page-break-inside:avoid;break-inside:avoid;}
+  .pkg-sb-footer{padding:8px 0;font-size:8.5px;margin-top:10px;}
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-04BZKH6574"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-04BZKH6574');</script>
+</head>
+<body>
+<script>
+(async function(){try{const r=await fetch('https://api.country.is/');const d=await r.json();
+if(['US','CA','AU','NZ'].includes(d.country)){document.body.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#f5f5f5;text-align:center"><h1 style="font-size:48px">🌍</h1><h2>Service Not Available</h2><p style="color:#757575">This site is not available in your region.</p></div>';}
+}catch(e){}}
+)();</script>
+<div class="pkg-print-header print-only-block"><img src="../../assets/logo-print.png" alt="Europe Incoming"></div>
+<div class="pkg-topbar no-print"><div class="pkg-topbar-inner">
+  <div class="pkg-topbar-left">
+    <a href="../../"><img class="pkg-logo" src="../../logo.png" alt="Europe Incoming"></a>
+    <a class="pkg-back-link" href="./"><span class="pkg-back-circle">←</span> All packages</a>
+  </div>
+  <div class="pkg-topbar-right">
+    <div class="pkg-trade"><a href="mailto:fitsales@europeincoming.com">Trade enquiries</a></div>
+    <button class="pkg-dl-btn" id="pkgDownloadBtn">Download PDF</button>
+  </div>
+</div></div>
+
+<div class="pkg-title-row">
+  <h1 class="pkg-hero-title" id="pkgHeroTitle"></h1>
+  <div class="pkg-eyebrow" id="pkgEyebrow"></div>
+</div>
+
+<div class="pkg-hero">
+  <div class="pkg-hero-img" id="pkgHeroImg"></div>
+  <div class="pkg-hero-facts">
+    <div>
+      <div class="pkg-hero-fact-label">Duration</div>
+      <div class="pkg-hero-fact-value" id="pkgHeroNights"></div>
+    </div>
+    <div>
+      <div class="pkg-hero-fact-label">Route</div>
+      <div class="pkg-hero-fact-value small" id="pkgHeroRoute"></div>
+    </div>
+    <div class="pkg-hero-price-block">
+      <div class="pkg-hero-fact-label">From</div>
+      <div class="pkg-hero-price" id="pkgHeroPrice"></div>
+      <div class="pkg-hero-price-unit">per person</div>
+    </div>
+  </div>
+</div>
+
+<div class="pkg-variantbar no-print"><div class="pkg-variantbar-inner">
+  <div class="pkg-variantbar-left">
+    <div class="pkg-variant-label">Travel style</div>
+    <div class="pkg-pills" id="pkgVariantPills"></div>
+  </div>
+  <div class="pkg-variant-blurb" id="pkgVariantBlurb"></div>
+</div></div>
+
+<div class="pkg-body">
+  <div class="pkg-main">
+    <div class="pkg-section">
+      <div class="pkg-section-label">Day by day</div>
+      <div class="pkg-section-sub" id="pkgDaySub"></div>
+      <div id="pkgDays"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label">Package includes</div>
+      <div class="pkg-section-sub" id="pkgIncludesSub"></div>
+      <div class="pkg-inc-grid" id="pkgIncludes"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label" style="margin-bottom:14px">Sample hotels</div>
+      <div class="pkg-hotels-grid" id="pkgHotels"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label">Package rates</div>
+      <div class="pkg-section-sub" id="pkgRateSub"></div>
+      <div class="pkg-rate-toggles no-print">
+        <div class="pkg-seg-group-labeled">
+          <div class="pkg-seg-label">Rate year</div>
+          <div class="pkg-seg-group" id="pkgYearToggle"></div>
+        </div>
+      </div>
+      <div class="pkg-rate-toggles no-print" id="pkgRateToggles">
+        <div class="pkg-seg-group" id="pkgCatToggle"></div>
+        <div class="pkg-seg-group" id="pkgSeasonToggle"></div>
+      </div>
+      <table class="pkg-rate-table" id="pkgRateTable">
+        <thead><tr><th>Occupancy</th><th style="text-align:right" id="pkgRateColHeading"></th></tr></thead>
+        <tbody id="pkgRatesBody"></tbody>
+      </table>
+      <div class="pkg-pax-grid" id="pkgPaxRates"></div>
+      <div class="pkg-rate-print-wrap" id="pkgRateTablePrintWrap">
+        <table class="pkg-rate-print">
+          <thead>
+            <tr>
+              <th rowspan="2">Occupancy</th>
+              <th colspan="2">3 star</th>
+              <th colspan="2">4 star</th>
+            </tr>
+            <tr><th>Apr–Oct</th><th>Nov–Mar</th><th>Apr–Oct</th><th>Nov–Mar</th></tr>
+          </thead>
+          <tbody id="pkgRatesPrintBody"></tbody>
+        </table>
+      </div>
+      <div class="pkg-rate-note" id="pkgRateNote"></div>
+    </div>
+    <div class="pkg-section">
+      <div class="pkg-section-label" style="margin-bottom:14px">Optional tours &amp; extras</div>
+      <div class="pkg-opt-grid" id="pkgOptionals"></div>
+    </div>
+    <div class="pkg-section no-print">
+      <div class="pkg-section-label" style="margin-bottom:14px">Good to know</div>
+      <div class="pkg-gtk-grid" id="pkgGoodToKnow"></div>
+    </div>
+    <div class="pkg-section pkg-tc-wrap">
+      <button class="pkg-tc-btn" id="pkgTcBtn"><span>Terms &amp; conditions</span><span id="pkgTcArrow">▼</span></button>
+      <div class="pkg-tc-body" id="pkgTcBody"><ul id="pkgTerms"></ul></div>
+    </div>
+  </div>
+
+  <div class="pkg-sidebar no-print">
+    <div class="pkg-sb-card">
+      <div class="pkg-sb-title">About this tour</div>
+      <div class="pkg-map-box" id="pkgMapBox">
+        <div id="pkgMapSmall" style="height:100%;"></div>
+        <button class="pkg-map-enlarge" id="pkgMapEnlarge">⤢ ENLARGE</button>
+      </div>
+      <div class="pkg-fact-row">
+        <div class="pkg-fact-title" id="pkgAboutDuration"></div>
+        <div class="pkg-fact-body" id="pkgAboutRoute"></div>
+      </div>
+      <div id="pkgAboutFacts"></div>
+    </div>
+    <div class="pkg-sb-card pkg-sb-quote">
+      <div class="pkg-sb-title">Ready to quote?</div>
+      <div class="pkg-sb-quote-body">Get in touch with the FIT team for availability and a tailored quotation.</div>
+      <a class="pkg-sb-quote-btn" href="mailto:fitsales@europeincoming.com?subject=Quote request — Sardinia Discovery.">Email the FIT team</a>
+    </div>
+  </div>
+</div>
+
+<div class="pkg-sb-footer">Europe Incoming Holdings Ltd · Company Reg. England &amp; Wales 07053949 · <a href="mailto:fitsales@europeincoming.com" style="color:inherit">fitsales@europeincoming.com</a></div>
+
+<div class="pkg-map-modal no-print" id="pkgMapModal">
+  <div class="pkg-map-modal-panel">
+    <div class="pkg-map-modal-header">
+      <h3 id="pkgMapModalTitle"></h3>
+      <button class="pkg-map-modal-close" id="pkgMapModalClose">✕</button>
+    </div>
+    <div class="pkg-map-modal-canvas" id="pkgMapModalCanvas"></div>
+  </div>
+</div>
+
+<script>
+window.PRODUCT = {"id": "3.3", "title": "Sardinia Discovery.", "styles": {"selfdrive": {"name": "Self Drive", "blurb": "A rental car and Sardinia's best coastal roads \u2014 white-sand coves, the Gulf of Orosei by boat, and Neptune's Grotto beneath the Capo Caccia cliffs.", "nights": "7 nights \u00b7 8 days", "route": "Cagliari (2N) \u2192 Cala Gonone (2N) \u2192 Alghero (2N) \u2192 Olbia (1N)", "aboutNights": "7 nights across 4 stays", "transport": {"1": "Rental car pickup at Cagliari Airport (one-way fee payable locally, approx. \u20ac75).", "3": "Self-drive along the SS125 coastal road via Arbatax to Cala Gonone.", "5": "Self-drive west via Bosa to Alghero.", "7": "Self-drive north along the Costa Smeralda to Olbia.", "8": "Return the rental car at Olbia Airport."}, "inclusions": ["7 nights accommodation including breakfast", "Rental car (standard sedan/SUV class), Day 1 10am to Day 8 2pm"]}}, "days": [{"num": 1, "title": "Arrival in Cagliari", "overnight": "Overnight: Cagliari", "desc": "Welcome to Sardinia. Pick up your rental car at Cagliari airport and spend the afternoon in the capital's historic Castello district, high above the city, with views from the Bastione Saint Remy terraces down to the harbour. Overnight in Cagliari.", "taste": "Sardinian cuisine and a glass of Cannonau wine at one of the waterfront caf\u00e9s lining the harbour."}, {"num": 2, "title": "Day trip to Villasimius", "overnight": "Overnight: Cagliari", "desc": "Drive southeast to Villasimius, gateway to some of Sardinia's most spectacular beaches. Spend the afternoon on Cala Sinzias or Punta Molentis, where white sand meets turquoise water, before returning to Cagliari for the evening. Overnight in Cagliari.", "experience": "A boat excursion in the Marine Park of Villasimius (3 hrs) explores protected coves and marine life along this stretch of coast."}, {"num": 3, "title": "Cagliari to Cala Gonone via Coastal Route", "overnight": "Overnight: Cala Gonone", "desc": "One of Sardinia's most spectacular drives along the SS125, where rugged cliffs plunge into the sea. Stop at Arbatax to see the Rocce Rosse (Red Rocks) and the Baunei viewpoint, before arriving in Cala Gonone, a seaside village nestled between mountains and water. Overnight in Cala Gonone."}, {"num": 4, "title": "Cala Gonone \u2014 Day at Leisure", "overnight": "Overnight: Cala Gonone", "desc": "Explore the Cala Gonone area at your own pace \u2014 the secluded beaches of Cala Fuili or Cala Cartoe, or the mountain village of Dorgali, known for traditional Sardinian crafts and ceramics. Overnight in Cala Gonone.", "experience": "A 7-hour boat excursion to the Gulf of Orosei reaches the beaches of Cala Luna, Cala Mariolu and the UNESCO-listed Cala Goloritz\u00e8, all accessible only by sea."}, {"num": 5, "title": "Cala Gonone to Alghero via Bosa", "overnight": "Overnight: Alghero", "desc": "West along the coast through Bosa, stopping at the Bronze Age Nuraghe Nuraddeo and the pastel-hued riverside town of Bosa itself, before arriving in Alghero, where Catalan Gothic architecture recalls centuries of Spanish rule. Overnight in Alghero.", "taste": "Alghero's Catalan heritage shows on the menu too \u2014 look for aragosta alla catalana (Catalan-style lobster) in the old town's seafood restaurants."}, {"num": 6, "title": "Alghero \u2014 Day at Leisure", "overnight": "Overnight: Alghero", "desc": "Visit Neptune's Grotto (Grotta di Nettuno), one of the Mediterranean's most spectacular cave systems at the base of the Capo Caccia cliffs \u2014 reached by descending the 654-step stairway, or by boat from the harbour. Overnight in Alghero.", "experience": "June\u2013September only: a dolphin-watching and snorkelling boat tour (4 hrs) runs along this stretch of coast."}, {"num": 7, "title": "Alghero to Olbia via Costa Smeralda", "overnight": "Overnight: Olbia", "desc": "North along Sardinia's legendary coastline, stopping at the cliff-top fortress town of Castelsardo, then through the Costa Smeralda (Emerald Coast) past Porto Cervo's yacht-lined harbour. Swim at Spiaggia del Principe or Capriccioli before arriving in Olbia. Overnight in Olbia."}, {"num": 8, "title": "Depart Olbia", "overnight": "Departure day", "desc": "Make your way to Olbia airport at leisure, returning your rental car at the airport office to conclude your Sardinian adventure."}], "hotels": [{"city": "Cagliari", "nights": "2 Nights", "h4": "Holiday Inn Cagliari by IHG"}, {"city": "Cala Gonone", "nights": "2 Nights", "h4": "Club Esse Cala Gonone Beach Village"}, {"city": "Alghero", "nights": "2 Nights", "h4": "Hotel Catalunya"}, {"city": "Olbia", "nights": "1 Night", "h4": "Hotel Martini Olbia"}], "about": [{"title": "Best season", "body": "May\u2013September for warm, dry weather and calm seas for the Gulf of Orosei boat trips; July\u2013August is peak season on the Costa Smeralda \u2014 late spring or September is quieter and cooler."}, {"title": "Weather", "body": "Mediterranean climate: hot, dry summers around 28\u201332\u00b0C on the coast, mild winters; the interior around Dorgali can be noticeably cooler than the coast."}, {"title": "Currency & docs", "body": "Sardinia is part of Italy, using the Euro (\u20ac) and the Schengen Area \u2014 no separate visa is needed for Schengen visa holders."}], "goodToKnow": [{"title": "One-way car rental fee", "body": "Picking up in Cagliari and dropping off in Olbia carries a one-way fee, payable locally at pickup (approx. \u20ac75) \u2014 factor this into on-the-ground costs."}, {"title": "Boat excursions", "body": "The Gulf of Orosei and Neptune's Grotto boat trips are weather-dependent and best booked locally a day or two ahead rather than far in advance."}, {"title": "Coastal roads", "body": "The SS125 and the Bosa coast road are scenic but narrow with frequent bends \u2014 allow more time than the distance suggests, especially in peak summer traffic."}, {"title": "What to pack", "body": "Swimwear, reef shoes for rocky coves, and good walking shoes for the 654-step descent to Neptune's Grotto."}, {"title": "Tipping", "body": "Rounding up is appreciated in restaurants; a service charge (coperto) is often already added to the bill in Italy."}], "map": {"points": [{"lat": 39.2238, "lng": 9.1217, "label": "Cagliari", "nights": 2}, {"lat": 40.2833, "lng": 9.6167, "label": "Cala Gonone", "nights": 2}, {"lat": 40.5594, "lng": 8.3197, "label": "Alghero", "nights": 2}, {"lat": 40.9167, "lng": 9.5, "label": "Olbia", "nights": 1}], "closeLoop": false}, "region": "italy", "pricesFile": "prices/3.3-2026.json", "heroImage": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80", "eyebrow": "Europe Incoming \u00b7 FIT Packages \u00b7 2026\u201327", "terms": ["All rates are net and per person for the package.", "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.", "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.", "Rates are not applicable during trade fair periods, major European public holidays, and other major events.", "City taxes are not included in the price.", "If certain attractions are closed during specific periods, alternative options will be arranged.", "All bookings must be confirmed at least 60 working days prior to arrival.", "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.", "Vouchers will be issued after receipt of full payment."]};
+window.PRICES_BY_YEAR = {"2026-27": {"validFrom": "1 Nov 2026", "validTo": "30 Nov 2027", "currency": "\u20ac", "variants": {"selfdrive": {"3": {"winter": {"single": 0, "twin": 0, "child": 0}, "summer": {"single": 0, "twin": 0, "child": 0}}, "4": {"winter": {"single": 1397, "twin": 698, "child": 272}, "summer": {"single": 1455, "twin": 727, "child": 284}}, "validity": {"winter": {"from": "1 Nov 2026", "to": "31 Mar 2027"}, "summer": {"from": "1 Apr 2027", "to": "30 Nov 2027"}}}}, "optionalTours": [{"name": "Ex-Villasimius - Boat excursion in the Marine Park of Villasimius, 3 hrs", "price": 78}, {"name": "Ex-Cala Gonone - Boat excursion to Gulf of Orosei, 7 hr", "price": 118}, {"name": "Alghero ticket (includes admission to 13 attractions, including Neptune's cave)", "price": 41}, {"name": "Ex-Alghero - Dolphin watching a nd snorkeling boat tour, 4 hrs (June-Sept only)", "price": 77}]}};
+window.DEFAULT_RATE_YEAR = "2026-27";
+</script>
+<script src="../../assets/package-page.js"></script>
+</body></html>

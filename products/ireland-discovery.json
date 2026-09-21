@@ -1,0 +1,241 @@
+{
+  "id": "ireland-discovery",
+  "title": "Ireland Discovery.",
+  "eyebrow": "Europe Incoming · FIT Packages · 2026–27",
+  "heroImage": "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1600&q=80",
+  "pricesFile": "prices/ireland-discovery-2026.json",
+  "map": {
+    "points": [
+      {
+        "lat": 53.3498,
+        "lng": -6.2603,
+        "label": "Dublin",
+        "nights": 3
+      },
+      {
+        "lat": 52.9715,
+        "lng": -9.4262,
+        "label": "Cliffs of Moher",
+        "nights": 0
+      },
+      {
+        "lat": 52.6638,
+        "lng": -8.6267,
+        "label": "Limerick",
+        "nights": 3
+      },
+      {
+        "lat": 52.0599,
+        "lng": -9.5044,
+        "label": "Killarney",
+        "nights": 0
+      },
+      {
+        "lat": 52.6541,
+        "lng": -7.2448,
+        "label": "Kilkenny",
+        "nights": 0
+      }
+    ],
+    "closeLoop": true
+  },
+  "styles": {
+    "trains": {
+      "name": "Trains & Taxi Transfers",
+      "blurb": "Scheduled rail between cities, private taxi transfers at each end.",
+      "nights": "6 nights · 7 days",
+      "route": "Dublin (2N) → Limerick (3N) → Dublin (1N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Dublin airport to Dublin hotel private transfer.",
+        "3": "Dublin to Limerick direct train, II Class (approx. 2h 15m).",
+        "6": "Limerick to Dublin train via Kilkenny connection, II Class.",
+        "7": "Dublin hotel to Dublin airport private transfer."
+      },
+      "inclusions": [
+        "Dublin airport–hotel private transfers on arrival and departure",
+        "Dublin to Limerick train ticket, II Class",
+        "Limerick to Dublin train ticket, II Class",
+        "Dublin Hop-On Hop-Off 1-day ticket",
+        "Cliffs of Moher tour from Limerick, 7 hrs regular coach",
+        "6 nights accommodation with daily breakfast"
+      ]
+    },
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "Rental car from arrival to departure — explore at your own pace.",
+      "nights": "6 nights · 7 days",
+      "route": "Dublin (2N) → Limerick (3N) → Dublin Airport (1N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Pick up rental car at Dublin airport — SUV class, Nissan Qashqai or similar.",
+        "3": "Drive Dublin → Cliffs of Moher → Limerick at your own pace (self-guided route notes provided).",
+        "6": "Drive Limerick → Kilkenny → Dublin. Suggested stops en route.",
+        "7": "Return rental car at Dublin airport before departure."
+      },
+      "inclusions": [
+        "Rental car for 7 days, SUV class Nissan Qashqai or similar",
+        "Fully comprehensive insurance & unlimited mileage",
+        "Self-guided route notes with recommended stops",
+        "Dublin Hop-On Hop-Off 1-day ticket",
+        "Cliffs of Moher admission tickets",
+        "6 nights accommodation with daily breakfast"
+      ]
+    },
+    "private": {
+      "name": "Private Exclusive Coach",
+      "blurb": "Private minivan or coach with driver — ideal for families and small groups.",
+      "nights": "6 nights · 7 days",
+      "route": "Dublin (2N) → Limerick (3N) → Dublin (1N)",
+      "aboutNights": "6 nights across 3 stays",
+      "transport": {
+        "1": "Dublin airport to Dublin hotel private transfer. Private vehicle on disposal Day 3–6.",
+        "2": "Dublin panoramic tour, 3 hrs with private vehicle.",
+        "3": "Private transfer Dublin → Cliffs of Moher → Limerick with photo stops.",
+        "6": "Private transfer Limerick → Kilkenny → Dublin with guided stop.",
+        "7": "Dublin hotel to Dublin airport private transfer."
+      },
+      "inclusions": [
+        "Private minivan on disposal from Day 3 till Day 6",
+        "Dublin airport–hotel private transfers on arrival and departure",
+        "Dublin panoramic tour, 3 hrs",
+        "Private Dublin – Cliffs of Moher – Limerick transfer",
+        "Private Limerick – Kilkenny – Dublin transfer",
+        "6 nights accommodation with daily breakfast"
+      ]
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "title": "Arrive Dublin",
+      "overnight": "Overnight: Dublin",
+      "desc": "Welcome to Dublin, Ireland's vibrant capital city. Begin your journey with a private transfer from Dublin airport to your hotel. Immerse yourself in Dublin's rich history, lively atmosphere, and friendly culture. Overnight in Dublin.",
+      "taste": "A first pint of stout and a bowl of Irish stew at a Victorian pub — try The Long Hall, pouring since 1766."
+    },
+    {
+      "num": 2,
+      "title": "Dublin",
+      "overnight": "Overnight: Dublin",
+      "desc": "Explore Dublin at your pace with a one-day Hop-On Hop-Off ticket, offering access to iconic landmarks and attractions. Discover the city's heritage and contemporary charm. Overnight in Dublin.",
+      "experience": "Dublin's historic pub crawl through the Temple Bar and around St. Stephen's Green — literary pubs once frequented by Joyce and Behan.",
+      "fallbackIncluded": "Dublin Hop-On Hop-Off 1-day ticket."
+    },
+    {
+      "num": 3,
+      "title": "Dublin → Cliffs of Moher → Limerick",
+      "overnight": "Overnight: Limerick",
+      "desc": "Travel by train to Limerick along the scenic River Shannon. Explore historic sites like King John's Castle. Wander through vibrant streets, such as O'Connell Street, and embrace the city's warm hospitality. Limerick, known as the \"City of Culture,\" beckons with its rich heritage. Overnight in Limerick.",
+      "taste": "Seafood chowder and brown soda bread in Doolin village, the traditional lunch stop before the cliffs."
+    },
+    {
+      "num": 4,
+      "title": "Killarney day trip",
+      "overnight": "Overnight: Limerick",
+      "desc": "Embark on a captivating 7-hour coach tour from Limerick to the stunning Cliffs of Moher, showcasing Ireland's natural beauty. Enjoy the breathtaking views and coastal splendour. Overnight in Limerick.",
+      "experience": "A jaunting-car ride through the national park with a local jarvey — Killarney's signature since the 1800s.",
+      "fallbackIncluded": "Day at leisure — optional Ring of Kerry tour available."
+    },
+    {
+      "num": 5,
+      "title": "Limerick & the Shannon",
+      "overnight": "Overnight: Limerick",
+      "desc": "Enjoy a day at leisure in Limerick. Opt for optional tours to the picturesque Ring of Kerry or the scenic Dingle Peninsula, or explore Limerick's local attractions. Overnight in Limerick.",
+      "taste": "The Milk Market for farmhouse cheeses and blaas — soft white rolls unique to this region."
+    },
+    {
+      "num": 6,
+      "title": "Limerick → Kilkenny → Dublin",
+      "overnight": "Overnight: Dublin",
+      "desc": "Travel by train from Limerick back to Dublin for your final night in the Irish capital. Reflect on your Irish adventures in Dublin. Overnight in Dublin.",
+      "shopping": "Kilkenny Design Centre in the castle stables — Irish craft, knitwear and pottery from over 200 makers."
+    },
+    {
+      "num": 7,
+      "title": "Depart Dublin",
+      "overnight": "Departure day",
+      "desc": "Conclude your tour with a private transfer from your Dublin hotel to the airport. Depart with fond memories of Ireland's beauty and hospitality."
+    }
+  ],
+  "hotels": [
+    {
+      "city": "Dublin",
+      "nights": "2 Nights",
+      "h3": "Hampton by Hilton Dublin City Centre",
+      "h4": "Riu Plaza The Gresham Dublin"
+    },
+    {
+      "city": "Limerick",
+      "nights": "3 Nights",
+      "h3": "Maldron Hotel Limerick",
+      "h4": "Limerick City Hotel"
+    },
+    {
+      "city": "Dublin",
+      "nights": "1 Night",
+      "h3": "Hampton by Hilton Dublin City Centre",
+      "h4": "Riu Plaza The Gresham Dublin"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May–September for long days; shoulder months quieter & better value."
+    },
+    {
+      "title": "Weather",
+      "body": "Mild & changeable, 12–20°C in summer. Pack a rain layer year-round."
+    },
+    {
+      "title": "Currency & docs",
+      "body": "Euro (€). Republic of Ireland — separate from the UK visa area and outside the Schengen Area."
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Tickets & timing",
+      "body": "Book Kilmainham Gaol and the Book of Kells ahead in summer — both sell out days in advance. Cliffs of Moher are quietest before 11:00."
+    },
+    {
+      "title": "Driving",
+      "body": "Ireland drives on the left. West-coast roads are narrow — allow more time than the map suggests. Parking discs needed in Limerick city centre.",
+      "styles": [
+        "selfdrive"
+      ]
+    },
+    {
+      "title": "Rail travel",
+      "body": "Seat reservations are included on inter-city trains. Dublin Heuston is the station for Limerick — 20 minutes by taxi from the city-centre hotels.",
+      "styles": [
+        "trains"
+      ]
+    },
+    {
+      "title": "Your vehicle",
+      "body": "Driver working hours are limited to 10 hrs per day by law — day-trip timings are planned around this. Luggage space fits one large case per guest.",
+      "styles": [
+        "private"
+      ]
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof in any month. Comfortable shoes for cobbles and cliff paths. No formal dress codes apply on this programme."
+    },
+    {
+      "title": "Money",
+      "body": "Cards accepted almost everywhere; a little cash is useful for markets and rural pubs. Tipping 10% in restaurants is customary, not obligatory."
+    }
+  ],
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged 2 to 11 years old. One child sharing a room with 2 adults, subject to hotel policy.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted.",
+    "Rates are not applicable during trade fair periods, major European public holidays, and other major events.",
+    "City taxes are not included in the price.",
+    "If certain attractions are closed during specific periods, alternative options will be arranged.",
+    "All bookings must be confirmed at least 60 working days prior to arrival.",
+    "100% pre-payment required by bank transfer or credit card (Visa or Mastercard). All bank transfer charges covered by the Agent.",
+    "Vouchers will be issued after receipt of full payment."
+  ],
+  "region": "uk-ireland"
+}
