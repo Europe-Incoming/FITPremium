@@ -6,26 +6,26 @@
     "selfdrive": {
       "3": {
         "winter": {
-          "single": 0,
-          "twin": 0,
-          "child": 0
+          "single": null,
+          "twin": null,
+          "child": null
         },
         "summer": {
-          "single": 0,
-          "twin": 0,
-          "child": 0
+          "single": null,
+          "twin": null,
+          "child": null
         }
       },
       "4": {
         "winter": {
-          "single": 1397,
-          "twin": 698,
-          "child": 272
+          "single": 1693,
+          "twin": 995,
+          "child": 406
         },
         "summer": {
-          "single": 1455,
-          "twin": 727,
-          "child": 284
+          "single": 1764,
+          "twin": 1036,
+          "child": 423
         }
       },
       "validity": {
