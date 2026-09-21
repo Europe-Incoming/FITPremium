@@ -49,6 +49,7 @@ CITY_COORDS = {
     'Truro':      {'lat': 50.2632,  'lng': -5.0510},
     'Barnstaple': {'lat': 51.0826,  'lng': -4.0586},
     'Bournemouth':{'lat': 50.7192,  'lng': -1.8808},
+    'Heathrow':   {'lat': 51.4700,  'lng': -0.4543},
     'Cliffs of Moher':{'lat': 52.9715,'lng': -9.4262},
     'Killarney':  {'lat': 52.0599,  'lng': -9.5044},
     'Kilkenny':   {'lat': 52.6541,  'lng': -7.2448},
@@ -258,6 +259,12 @@ def extract_pdf_full(pdf_path):
     txt = "\n".join(p.get_text() for p in doc)
     lines = [l.strip() for l in txt.split('\n') if l.strip()]
 
+    # A few source PDFs have a stray space baked into their text layer,
+    # splitting a word across two lines (e.g. "your hot el.", "in Invernes s.").
+    PDF_TYPO_FIXES = {'hot el': 'hotel', 'Invernes s': 'Inverness'}
+    for bad, good in PDF_TYPO_FIXES.items():
+        lines = [l.replace(bad, good) for l in lines]
+
     days = []
     includes = []
     sample_tours = []
@@ -265,9 +272,16 @@ def extract_pdf_full(pdf_path):
     terms = []
 
     # ── Day-by-day ──
-    day_pat = re.compile(r'^Day\s+(\d+)[,\.\s]+(.+)$', re.IGNORECASE)
-    overnight_pat = re.compile(r'Overnight(?:\s+in)?\s+([\w\s\-]+?)(?:\.|$)', re.IGNORECASE)
-    optional_pat = re.compile(r'^Optional:\s*(.+)$', re.IGNORECASE)
+    day_pat = re.compile(r'^Day\s+(\d+)[,:.\s]+(.+)$', re.IGNORECASE)
+    # Capture 1-3 consecutive Capitalized words (a proper-noun city name) after
+    # "Overnight in" rather than requiring a trailing period — some source PDFs
+    # run straight into "Optional: ..." with no period in between.
+    overnight_pat = re.compile(
+        r'(?i:overnight(?:\s+(?:in|near))?)\s+([A-Z][\w\-]*(?:\s+(?!Optional\b)[A-Z][\w\-]*){0,2})'
+    )
+    # No ^ anchor: "Optional: ..." usually falls mid-paragraph in the joined
+    # desc text, not at its start.
+    optional_pat = re.compile(r'Optional:\s*(.+)$', re.IGNORECASE)
 
     current_num = current_title = None
     current_body = []
@@ -278,8 +292,16 @@ def extract_pdf_full(pdf_path):
         body = ' '.join(current_body)
         ov_m = overnight_pat.search(body)
         overnight_city = ov_m.group(1).strip() if ov_m else ''
-        # Remove the "Overnight in X." line from desc
-        desc = re.sub(r'\s*Overnight(?:\s+in)?\s+[\w\s\-]+?\.?\s*$', '', body).strip()
+        # Remove the matched "Overnight in X" phrase (and a trailing period,
+        # if immediately present) from desc, wherever it falls in the text —
+        # it isn't always the last sentence of the day.
+        if ov_m:
+            start, end = ov_m.span()
+            if end < len(body) and body[end] == '.':
+                end += 1
+            desc = (body[:start] + body[end:]).strip()
+        else:
+            desc = body
         opt_m = optional_pat.search(desc)
         optional_text = opt_m.group(1).strip() if opt_m else ''
         if opt_m:
@@ -307,7 +329,8 @@ def extract_pdf_full(pdf_path):
                 # Start collecting includes
                 section = 'includes'
             elif current_num:
-                current_body.append(line)
+                if not FOOTER_BOILERPLATE_RE.search(line):
+                    current_body.append(line)
 
     # ── Package includes ──
     in_includes = False
@@ -392,7 +415,7 @@ PRODUCTS = {
         'style_names': {'private': 'Private Exclusive Coach'},
         'style_blurbs': {'private': 'Private vehicle with driver — full city panoramic tour, Thames cruise, Stonehenge and Bath day trip.'},
         'style_routes': {'private': 'London (3N)'},
-        'hero': 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80',
+        'hero': '',  # TODO: awaiting real photo from client
     },
     'england-scotland-10n': {
         'sheet': '1.2',
@@ -415,9 +438,9 @@ PRODUCTS = {
         },
         'style_routes': {
             'regular': 'London (3N) → Manchester (2N) → Edinburgh (2N) → Inverness (2N) → Glasgow (1N)',
-            'private': 'London (3N) → Manchester (2N) → Edinburgh (2N) → Inverness (1N) → Glasgow (1N)',
+            'private': 'London (3N) → Manchester (1N) → Edinburgh (2N) → Inverness (2N) → Glasgow (1N)',
         },
-        'hero': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80',
+        'hero': '',  # TODO: awaiting real photo from client
     },
     'london-scotland-8n': {
         'sheet': '1.3',
@@ -435,7 +458,7 @@ PRODUCTS = {
         'style_names': {'regular': 'Regular FIT'},
         'style_blurbs': {'regular': 'Trains and scheduled transfers — London to Edinburgh via the Highlands.'},
         'style_routes': {'regular': 'London (3N) → Glasgow (1N) → Inverness (2N) → Edinburgh (2N)'},
-        'hero': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80',
+        'hero': '',  # TODO: awaiting real photo from client
     },
     'scotland-6n': {
         'sheet': '1.4',
@@ -446,7 +469,7 @@ PRODUCTS = {
         'season': 'All Year Round',
         'validity': 'Valid till Nov 2027',
         'blurb': 'Edinburgh, Inverness and Fort William — castles, lochs and Highland glens by train, coach or self-drive.',
-        'route_stops': ['Edinburgh', 'Inverness', 'Fort William'],
+        'route_stops': ['Edinburgh', 'Inverness', 'Fort William', 'Glasgow'],
         'pdfs': {
             'regular': '6 nights, 7 days Scotland_Regular.pdf',
             'private': '6 nights, 7 days Scotland_Private.pdf',
@@ -459,11 +482,11 @@ PRODUCTS = {
             'selfdrive': 'Rental car from Edinburgh — freedom to stop at any viewpoint on the Highland roads.',
         },
         'style_routes': {
-            'regular': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Edinburgh (1N)',
-            'private': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Edinburgh (1N)',
-            'selfdrive': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Edinburgh (1N)',
+            'regular': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)',
+            'private': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)',
+            'selfdrive': 'Edinburgh (2N) → Inverness (2N) → Fort William (1N) → Glasgow (1N)',
         },
-        'hero': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
+        'hero': '',  # TODO: awaiting real photo from client
     },
     'ireland-6n': {
         'sheet': '1.5',
@@ -491,7 +514,7 @@ PRODUCTS = {
             'private': 'Dublin (2N) → Limerick (3N) → Dublin (1N)',
             'selfdrive': 'Dublin (2N) → Limerick (3N) → Dublin (1N)',
         },
-        'hero': 'https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1600&q=80',
+        'hero': '',  # TODO: awaiting real photo from client
     },
     'devon-cornwall-9n': {
         'sheet': '1.6',
@@ -502,14 +525,214 @@ PRODUCTS = {
         'season': 'All Year Round',
         'validity': 'Valid till Nov 2027',
         'blurb': 'London to Land\'s End by rental car — Cotswolds, Tintagel, the Lizard Peninsula and Dartmoor.',
-        'route_stops': ['London', 'Cheltenham', 'Barnstaple', 'Truro', 'Plymouth', 'Exeter', 'Bournemouth'],
+        'route_stops': ['London', 'Cheltenham', 'Barnstaple', 'Truro', 'Plymouth', 'Exeter', 'Bournemouth', 'Heathrow'],
         'pdfs': {
             'selfdrive': '9 nights, 10 days London with Devon & Cornwall_Self-drive.pdf',
         },
         'style_names': {'selfdrive': 'Self Drive'},
         'style_blurbs': {'selfdrive': 'Rental car from London — the slow route through England\'s Atlantic coast.'},
-        'style_routes': {'selfdrive': 'London (2N) → Cheltenham (1N) → Barnstaple (1N) → Truro (2N) → Plymouth (1N) → Exeter (1N) → Bournemouth (1N)'},
-        'hero': 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80',
+        'style_routes': {'selfdrive': 'London (1N) → Cheltenham (1N) → Barnstaple (1N) → Truro (2N) → Plymouth (1N) → Exeter (1N) → Bournemouth (1N) → Heathrow (1N)'},
+        'hero': '',  # TODO: awaiting real photo from client
+    },
+}
+
+# Short, single-line "Included" chip text per product → style → day number.
+# Distinct from the day's full narrative desc — this is just the logistics
+# (transfer / train / coach / self-drive leg), matched to each style's own
+# PDF. Falls back to the day's fallbackIncluded (an optional-tour note, or
+# "Day at leisure.") when a day has no entry here.
+TRANSPORT = {
+    'london-3n': {
+        'private': {
+            1: 'Private transfer from London airport to your hotel.',
+            2: '3-hour private guided city tour, London Eye ticket and Thames River cruise.',
+            3: 'Private full-day excursion to Stonehenge and Bath, with entrance tickets.',
+            4: 'Private transfer from your hotel to the airport.',
+        },
+    },
+    'england-scotland-10n': {
+        'regular': {
+            1: 'Private transfer from London airport to your hotel.',
+            2: 'London Hop-On Hop-Off 1-day pass.',
+            4: 'London to Manchester train ticket, standard class.',
+            6: 'Manchester to Edinburgh train ticket, standard class.',
+            8: 'Edinburgh to Inverness train ticket, standard class.',
+            9: 'Isle of Skye and Eilean Donan Castle full-day coach tour.',
+            10: 'Inverness to Glasgow train ticket, standard class.',
+            11: 'Private transfer from your hotel to Glasgow airport.',
+        },
+        'private': {
+            1: 'Private transfer from London airport to your hotel.',
+            2: '3-hour private guided city tour, London Eye ticket and Thames River cruise.',
+            3: 'Private full-day excursion to Stonehenge and Bath, with entrance tickets.',
+            4: 'Private transfer London to Manchester, with a stop in the Peak District.',
+            5: 'Private transfer Manchester to Edinburgh, with a stop in the Lake District.',
+            7: 'Private transfer Edinburgh to Inverness, via Loch Ness and the Highlands.',
+            8: 'Isle of Skye full-day private excursion.',
+            9: 'Private transfer Inverness to Glasgow, via Loch Lomond and Fort William.',
+            10: 'Private transfer from your hotel to Glasgow airport.',
+        },
+    },
+    'london-scotland-8n': {
+        'regular': {
+            1: 'Private transfer from London airport to your hotel.',
+            2: 'London Hop-On Hop-Off 1-day pass and a one-way Thames River cruise.',
+            4: 'London to Glasgow train ticket, standard class.',
+            5: 'Glasgow to Inverness train ticket, standard class.',
+            6: 'Isle of Skye and Eilean Donan Castle full-day excursion.',
+            7: 'Inverness to Edinburgh train ticket, standard class.',
+            9: 'Private transfer from your hotel to Edinburgh airport.',
+        },
+    },
+    'scotland-6n': {
+        'regular': {
+            1: 'Private transfer from Edinburgh airport to your hotel.',
+            3: 'Edinburgh to Inverness train ticket, II Class.',
+            4: 'Isle of Skye and Eilean Donan Castle full-day regular coach tour.',
+            5: 'Inverness to Fort William bus ticket.',
+            6: 'Fort William to Glasgow train ticket, II Class.',
+            7: 'Private transfer from your hotel to Glasgow airport.',
+        },
+        'private': {
+            1: 'Private transfer from Edinburgh airport to your hotel.',
+            3: 'Private transfer Edinburgh to Inverness, via Loch Ness and the Highlands.',
+            4: 'Isle of Skye full-day private excursion.',
+            5: 'Private transfer Inverness to Fort William.',
+            6: 'Private transfer Fort William to Glasgow, with a photo stop at Loch Lomond.',
+            7: 'Private transfer from your hotel to Glasgow airport.',
+        },
+        'selfdrive': {
+            1: 'Rental car pick-up at Edinburgh airport.',
+            3: 'Self-drive Edinburgh to Inverness through the Highlands.',
+            5: 'Self-drive Inverness to Fort William, via the Glenfinnan Viaduct.',
+            6: 'Self-drive Fort William to Glasgow, via Loch Lomond.',
+            7: 'Return your rental car at Glasgow Airport.',
+        },
+    },
+    'ireland-6n': {
+        'regular': {
+            1: 'Private transfer from Dublin airport to your hotel.',
+            3: 'Dublin to Limerick train ticket, II Class.',
+            4: 'Cliffs of Moher full-day regular coach tour.',
+            6: 'Limerick to Dublin train ticket, II Class.',
+            7: 'Private transfer from your hotel to Dublin airport.',
+        },
+        'private': {
+            1: 'Private transfer from Dublin airport to your hotel.',
+            2: 'Private panoramic city drive, including Trinity College and St Patrick’s Cathedral.',
+            3: 'Private transfer Dublin to Limerick, via the Cliffs of Moher.',
+            4: 'Killarney National Park full-day private excursion.',
+            5: 'Doolin and Dingle Peninsula full-day private excursion.',
+            6: 'Private transfer Limerick to Dublin, via Kilkenny.',
+            7: 'Private transfer from your hotel to Dublin airport.',
+        },
+        'selfdrive': {
+            1: 'Rental car pick-up at Dublin airport.',
+            3: 'Self-drive Dublin to Limerick, via the Cliffs of Moher.',
+            4: 'Self-drive excursion to Killarney and the Ring of Kerry.',
+            5: 'Self-drive excursion to Doolin and the Dingle Peninsula.',
+            6: 'Self-drive Limerick to Dublin, via Kilkenny.',
+            7: 'Return your rental car at Dublin Airport.',
+        },
+    },
+    'devon-cornwall-9n': {
+        'selfdrive': {
+            1: 'Private transfer from London airport to your hotel.',
+            2: 'Rental car pick-up in London; self-drive to the Cotswolds.',
+            3: 'Self-drive Cotswolds to Barnstaple, via Bath.',
+            4: 'Self-drive the North Cornwall coast, via Tintagel Castle.',
+            6: 'Self-drive Truro to Plymouth, via Dartmoor National Park.',
+            7: 'Self-drive Plymouth to Exeter, along the South Devon coast.',
+            8: 'Self-drive Exeter to Bournemouth, along the Jurassic Coast.',
+            9: 'Self-drive to Heathrow, via Salisbury Cathedral and Stonehenge.',
+            10: 'Return your rental car at Heathrow Airport.',
+        },
+    },
+}
+
+# One local-colour tag per day (at most), keyed the same way as TRANSPORT
+# (product → style → day number) since day numbers don't line up across
+# styles when one itinerary skips or merges a day (e.g. england-scotland-10n:
+# 11 days regular vs 10 days private, diverging from day 5 on). Grounded in
+# the actual stops on each itinerary; kept to well-known, safe generalities
+# rather than specific unverifiable claims (exact pub names, founding dates).
+_SCOTLAND_6N_EXTRAS = {
+    1: {'taste': 'A dram of single malt Scotch at a historic Royal Mile pub.'},
+    2: {'experience': 'Climb Arthur’s Seat for a view over the whole city, or descend into the Real Mary King’s Close beneath the Royal Mile.'},
+    3: {'experience': 'The train skirts the Cairngorms and follows the shore of Loch Ness.'},
+    5: {'experience': 'Ben Nevis, the UK’s highest peak, rises straight from Fort William’s edge.'},
+    6: {'taste': 'Fresh seafood or a hearty plate of stovies in one of Glasgow’s Merchant City restaurants.'},
+}
+_IRELAND_6N_EXTRAS = {
+    1: {'taste': 'A pint of stout and a bowl of Irish stew at a traditional Dublin pub.'},
+    2: {'experience': 'Temple Bar’s cobbled lanes and traditional live-music pubs come alive after dark.'},
+    3: {'experience': 'The train follows the River Shannon, Ireland’s longest river, for much of the journey.'},
+    4: {'experience': 'A jaunting-car ride through Killarney National Park with a local driver.'},
+    5: {'taste': 'The Milk Market in Limerick for farmhouse cheese and freshly baked soda bread.'},
+    6: {'shopping': 'Kilkenny Design Centre, in the castle’s old stables, for Irish craft and knitwear.'},
+}
+
+DAY_EXTRAS = {
+    'london-3n': {
+        'private': {
+            1: {'taste': 'Fish and chips at a classic London pub, or a cream tea if you’d rather start gently.'},
+            2: {'experience': 'Ride the London Eye at dusk for the skyline lit up along the Thames.'},
+            3: {'taste': 'A Bath bun and a pot of tea in one of the city’s Georgian tea rooms.'},
+        },
+    },
+    'england-scotland-10n': {
+        'regular': {
+            1: {'taste': 'A classic London pub dinner — fish and chips, or a Sunday roast if the day fits.'},
+            2: {'experience': 'Ride the top deck past Big Ben and the Houses of Parliament as the sun goes down.'},
+            3: {'shopping': 'Oxford Street and Covent Garden’s covered market for an afternoon of browsing.'},
+            4: {'taste': 'A Manchester tart — custard and raspberry jam — from one of the city’s bakeries.'},
+            5: {'experience': 'An optional day trip into the Peak District’s limestone dales, a short hop from the city.'},
+            7: {'taste': 'A dram of single malt Scotch at a historic Royal Mile pub.'},
+            8: {'experience': 'The train climbs past the Cairngorms and skirts Loch Ness on the way north.'},
+            10: {'shopping': 'Glasgow’s Buchanan Street and the Barras market for an afternoon of browsing.'},
+        },
+        # Private is 10 days, not 11 — it merges the two Manchester nights
+        # into one, so day numbers from 5 onward shift back by one vs regular.
+        'private': {
+            1: {'taste': 'A classic London pub dinner — fish and chips, or a Sunday roast if the day fits.'},
+            2: {'experience': 'Glide past Big Ben and the Houses of Parliament on a private Thames cruise.'},
+            3: {'taste': 'A Bath bun and a pot of tea in one of the city’s Georgian tea rooms.'},
+            4: {'experience': 'A stop in the Peak District’s limestone dales en route to Manchester.'},
+            6: {'taste': 'A dram of single malt Scotch at a historic Royal Mile pub.'},
+            7: {'experience': 'The drive north passes Loch Ness on the way into the Highlands.'},
+            9: {'shopping': 'Glasgow’s Buchanan Street for an afternoon of browsing before dinner.'},
+        },
+    },
+    'london-scotland-8n': {
+        'regular': {
+            1: {'taste': 'Fish and chips at a classic London pub.'},
+            2: {'experience': 'A one-way Thames cruise past the Tower of London and Tower Bridge.'},
+            3: {'shopping': 'Covent Garden’s covered market and Oxford Street for an afternoon of browsing.'},
+            6: {'experience': 'Eilean Donan Castle, framed by three lochs — one of Scotland’s most photographed sights.'},
+            8: {'taste': 'A dram of single malt Scotch at a historic Royal Mile pub.'},
+        },
+    },
+    'scotland-6n': {
+        'regular': _SCOTLAND_6N_EXTRAS,
+        'private': _SCOTLAND_6N_EXTRAS,
+        'selfdrive': _SCOTLAND_6N_EXTRAS,
+    },
+    'ireland-6n': {
+        'regular': _IRELAND_6N_EXTRAS,
+        'private': _IRELAND_6N_EXTRAS,
+        'selfdrive': _IRELAND_6N_EXTRAS,
+    },
+    'devon-cornwall-9n': {
+        'selfdrive': {
+            1: {'taste': 'Fresh produce and international flavours at Borough Market, one of London’s oldest food markets.'},
+            2: {'experience': 'Honey-coloured stone villages like Bourton-on-the-Water and Bibury’s Arlington Row cottages.'},
+            3: {'experience': 'The Roman Baths, where natural hot springs have drawn visitors for 2,000 years.'},
+            4: {'taste': 'Fresh Cornish seafood or a traditional pasty in foodie haven Padstow.'},
+            5: {'experience': 'St Ives’ golden beaches and the Tate St Ives gallery, or St Michael’s Mount at Penzance.'},
+            6: {'experience': 'Plymouth Hoe and the cobbled Barbican quarter, where the Mayflower set sail in 1620.'},
+            7: {'experience': 'Dartmouth’s historic harbour, overlooked by a 600-year-old castle.'},
+            8: {'experience': 'Durdle Door’s natural limestone arch on the UNESCO World Heritage Jurassic Coast.'},
+        },
     },
 }
 
@@ -587,10 +810,12 @@ def build_product_json(slug, product_def):
         else:
             print(f"  WARNING: PDF not found: {pdf_name}")
 
-    # Use first available style's data for days/hotels/terms
+    # Use first available style's data for hotels/terms — these are
+    # consistent across styles for these products (same hotels, same T&Cs).
+    # Day-by-day itineraries are NOT shared: each style has its own PDF and,
+    # for at least one product, its own day count/sequence (see DAY_EXTRAS).
     primary_style = p['genuine_styles'][0]
     primary_data = style_data.get(primary_style, {})
-    days = primary_data.get('days', [])
     hotels_raw = primary_data.get('hotels', [])
     terms = primary_data.get('terms', STANDARD_TERMS) or STANDARD_TERMS
 
@@ -606,22 +831,26 @@ def build_product_json(slug, product_def):
             'nights': 0,
         })
 
-    # Build styles.
-    # Note: we don't have clean, short transfer-only sentences per day (only
-    # full itinerary paragraphs from the PDF), so 'transport' is left empty
-    # and the day chip falls back to fallbackIncluded ("Day at leisure." or
-    # an optional-tour note) instead of duplicating the day description.
+    # Build styles. 'transport' is a short, single-line logistics note per day
+    # (curated in TRANSPORT — PDF prose doesn't give us this cleanly), used
+    # for the day-by-day "Included" chip; falls back to fallbackIncluded.
+    # 'days' is per-style: each style's own PDF gives its own day sequence.
     styles = {}
     for style in p['genuine_styles']:
         sd = style_data.get(style, {})
+        style_extras = DAY_EXTRAS.get(slug, {}).get(style, {})
         styles[style] = {
             'name': p['style_names'][style],
             'blurb': p['style_blurbs'][style],
             'nights': p['nights'],
             'route': p['style_routes'][style],
             'aboutNights': p['nights'],
-            'transport': {},
+            'transport': TRANSPORT.get(slug, {}).get(style, {}),
             'inclusions': sd.get('includes', []),
+            'days': [{'num': d['num'], 'title': d['title'], 'overnight': d['overnight'],
+                      'desc': d['desc'],
+                      'fallbackIncluded': d.get('optional', '') or 'Day at leisure.',
+                      **style_extras.get(d['num'], {})} for d in sd.get('days', [])],
         }
 
     # Hotels — Excel Component-Hotels section is structured and reliable;
@@ -662,9 +891,6 @@ def build_product_json(slug, product_def):
         'pricesFile': f'prices/{slug}.json',
         'map': {'points': map_points, 'closeLoop': False},
         'styles': styles,
-        'days': [{'num': d['num'], 'title': d['title'], 'overnight': d['overnight'],
-                  'desc': d['desc'],
-                  'fallbackIncluded': d.get('optional', '') or 'Day at leisure.'} for d in days],
         'hotels': hotels,
         'about': about,
         'goodToKnow': good_to_know,
@@ -829,7 +1055,7 @@ function initMap(mapId, points, closeLoop) {
     zoomControl: false, scrollWheelZoom: false,
     dragging: false, attributionControl: false,
   });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {maxZoom: 13}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: ''}).addTo(map);
 
   const latlngs = points.map(p => [p.lat, p.lng]);
   if (latlngs.length > 1) {
@@ -947,10 +1173,10 @@ body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--i
 .page-h1{font-weight:300;font-size:56px;letter-spacing:-0.02em;color:var(--navy);line-height:1;}
 
 /* Hero row */
-.hero-row{display:flex;align-items:stretch;margin:24px 40px 0;gap:0;}
-.hero-img{flex:1;min-width:320px;min-height:380px;background:var(--navy);overflow:hidden;}
+.hero-row{display:flex;align-items:stretch;height:300px;margin:24px 40px 0;gap:0;}
+.hero-img{flex:1;min-width:320px;background:var(--navy);overflow:hidden;}
 .hero-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.facts-panel{width:280px;flex-shrink:0;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;}
+.facts-panel{width:280px;flex-shrink:0;overflow:auto;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;}
 .facts-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
 .facts-value{font-weight:300;font-size:24px;margin-top:2px;}
 .facts-route{font-size:13px;color:rgba(255,255,255,0.78);}
@@ -989,6 +1215,7 @@ body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--i
 .tag-included{background:var(--navy);color:#fff;}
 .tag-taste{background:var(--gold);color:var(--navy);}
 .tag-exp{background:#EDEDEA;color:var(--navy);}
+.tag-shop{background:#EDEDEA;color:var(--navy);}
 
 /* Package includes */
 .includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:40px;}
@@ -1246,8 +1473,9 @@ if (!productFile) {
       document.getElementById('page-title').textContent = prod.title;
       document.getElementById('eyebrow').textContent = prod.eyebrow || '';
       document.getElementById('pkg-title').textContent = prod.title;
-      document.getElementById('hero-img').src = prod.heroImage || '';
-      document.getElementById('hero-img').alt = prod.title;
+      const heroImg = document.getElementById('hero-img');
+      if (prod.heroImage) { heroImg.src = prod.heroImage; heroImg.alt = prod.title; }
+      else { heroImg.remove(); }
       buildStyleSwitcher();
       const firstStyle = params.get('style') || Object.keys(prod.styles)[0];
       setStyle(firstStyle);
@@ -1302,8 +1530,12 @@ function buildDays(styleKey) {
   const transport = s.transport || {};
   const container = document.getElementById('days-container');
   container.innerHTML = '';
-  (PRODUCT.days || []).forEach(d => {
+  (s.days || []).forEach(d => {
     const inc = transport[String(d.num)] || d.fallbackIncluded || '';
+    const flavor = d.taste ? {label: 'Local Taste', cls: 'tag-taste', text: d.taste}
+      : d.experience ? {label: 'Local Experience', cls: 'tag-exp', text: d.experience}
+      : d.shopping ? {label: 'Local Shopping', cls: 'tag-shop', text: d.shopping}
+      : null;
     const row = document.createElement('div');
     row.className = 'day-row';
     row.innerHTML = `
@@ -1315,7 +1547,10 @@ function buildDays(styleKey) {
         <div class="day-title">${d.title}</div>
         <div class="day-overnight">${d.overnight || ''}</div>
         <div class="day-desc">${d.desc || ''}</div>
-        ${inc ? `<div class="day-tags"><span class="tag tag-included">${inc}</span></div>` : ''}
+        <div class="day-tags">
+          ${inc ? `<span class="tag tag-included">${inc}</span>` : ''}
+          ${flavor ? `<span class="tag ${flavor.cls}">${flavor.label}: ${flavor.text}</span>` : ''}
+        </div>
       </div>
     `;
     container.appendChild(row);
@@ -1477,7 +1712,7 @@ function buildSidebarMap() {
   if (!el || !PRODUCT) return;
   const pts = PRODUCT.map?.points || [];
   sidebarMap = L.map(el, {zoomControl:false,scrollWheelZoom:false,dragging:false,attributionControl:false});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:13}).addTo(sidebarMap);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(sidebarMap);
   if (pts.length > 1) {
     const lls = pts.map(p => [p.lat,p.lng]);
     const route = PRODUCT.map?.closeLoop ? [...lls,lls[0]] : lls;
@@ -1509,7 +1744,7 @@ function openMapModal() {
     const el = document.getElementById('modal-map');
     const pts = PRODUCT.map?.points || [];
     modalMap = L.map(el,{zoomControl:true,scrollWheelZoom:true,dragging:true,attributionControl:false});
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:15}).addTo(modalMap);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:''}).addTo(modalMap);
     if (pts.length > 1) {
       const lls = pts.map(p => [p.lat,p.lng]);
       L.polyline(PRODUCT.map?.closeLoop?[...lls,lls[0]]:lls,{color:'#0B1733',weight:2}).addTo(modalMap);

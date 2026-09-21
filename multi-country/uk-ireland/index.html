@@ -112,7 +112,7 @@ function initMap(mapId, points, closeLoop) {
     zoomControl: false, scrollWheelZoom: false,
     dragging: false, attributionControl: false,
   });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {maxZoom: 13}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: ''}).addTo(map);
 
   const latlngs = points.map(p => [p.lat, p.lng]);
   if (latlngs.length > 1) {

@@ -2,7 +2,7 @@
   "id": "devon-cornwall-9n",
   "title": "London, Devon & Cornwall",
   "eyebrow": "UK & Ireland \u00b7 FIT Packages \u00b7 2026\u201327",
-  "heroImage": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80",
+  "heroImage": "",
   "pricesFile": "prices/devon-cornwall-9n.json",
   "map": {
     "points": [
@@ -47,6 +47,12 @@
         "lng": -1.8808,
         "label": "Bournemouth",
         "nights": 0
+      },
+      {
+        "lat": 51.47,
+        "lng": -0.4543,
+        "label": "Heathrow",
+        "nights": 0
       }
     ],
     "closeLoop": false
@@ -56,17 +62,106 @@
       "name": "Self Drive",
       "blurb": "Rental car from London \u2014 the slow route through England's Atlantic coast.",
       "nights": "9 nights / 10 days",
-      "route": "London (2N) \u2192 Cheltenham (1N) \u2192 Barnstaple (1N) \u2192 Truro (2N) \u2192 Plymouth (1N) \u2192 Exeter (1N) \u2192 Bournemouth (1N)",
+      "route": "London (1N) \u2192 Cheltenham (1N) \u2192 Barnstaple (1N) \u2192 Truro (2N) \u2192 Plymouth (1N) \u2192 Exeter (1N) \u2192 Bournemouth (1N) \u2192 Heathrow (1N)",
       "aboutNights": "9 nights / 10 days",
-      "transport": {},
+      "transport": {
+        "1": "Private transfer from London airport to your hotel.",
+        "2": "Rental car pick-up in London; self-drive to the Cotswolds.",
+        "3": "Self-drive Cotswolds to Barnstaple, via Bath.",
+        "4": "Self-drive the North Cornwall coast, via Tintagel Castle.",
+        "6": "Self-drive Truro to Plymouth, via Dartmoor National Park.",
+        "7": "Self-drive Plymouth to Exeter, along the South Devon coast.",
+        "8": "Self-drive Exeter to Bournemouth, along the Jurassic Coast.",
+        "9": "Self-drive to Heathrow, via Salisbury Cathedral and Stonehenge.",
+        "10": "Return your rental car at Heathrow Airport."
+      },
       "inclusions": [
         "9 nights\u2019 accommodation including breakfast.",
         "Rental car (Standard sedan / SUV class) from Day 2, 10 AM till Day 10, 2 PM. **Actual vehicle model depends on availability at the time of pick-up. ** Rental terms and policies will be available after booking the rental car.",
         "Private transfer from Heathrow airport to your hotel in London"
+      ],
+      "days": [
+        {
+          "num": 1,
+          "title": "Arrival in London",
+          "overnight": "Overnight: London",
+          "desc": "Welcome to England! Upon arrival at London airport, enjoy a seamless private transfer to your hotel in the vibrant capital. Spend the afternoon exploring London at your own pace \u2013 the city's efficient Tube network makes it easy to navigate. Discover the atmospheric Borough Market, one of London's oldest food markets brimming with artisan vendors and international flavours, or stroll along the South Bank taking in iconic Thames-side views of Tower Bridge and the London Eye.",
+          "fallbackIncluded": "Day at leisure.",
+          "taste": "Fresh produce and international flavours at Borough Market, one of London\u2019s oldest food markets."
+        },
+        {
+          "num": 2,
+          "title": "London to Cotswolds",
+          "overnight": "Overnight: Cheltenham",
+          "desc": "Check out and make your way to the car rental office via the Tube to collect your vehicle. Once on the road, drive northwest to the enchanting Cotswolds, England's quintessential countryside region. Arrive by early afternoon to explore honey-coloured stone villages like Bourton-on-the-Water with its low bridges and riverside walks, or Bibury with the iconic Arlington Row cottages. If visiting on a Sunday, savour a traditional Sunday roast at a historic country pub \u2013 Yorkshire pudding, roast beef, and all the trimmings.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "Honey-coloured stone villages like Bourton-on-the-Water and Bibury\u2019s Arlington Row cottages."
+        },
+        {
+          "num": 3,
+          "title": "Cotswolds to Barnstaple via Bath",
+          "overnight": "Overnight: Barnstaple",
+          "desc": "Check out and drive south to the elegant Georgian city of Bath. Explore the remarkably preserved Roman Baths, where natural hot springs have drawn visitors for 2,000 years, and admire the stunning Bath Abbey and Royal Crescent. Continue west along the scenic A39, stopping briefly in mystical Glastonbury to see the legendary Tor rising above the Somerset Levels. Arrive in Barnstaple, North Devon's historic market town, by early evening.",
+          "fallbackIncluded": "Roman Bath admission ticket & Glastonbury Abbey admission ticket",
+          "experience": "The Roman Baths, where natural hot springs have drawn visitors for 2,000 years."
+        },
+        {
+          "num": 4,
+          "title": "Barnstaple to Truro via North Cornwall Coast drive",
+          "overnight": "Overnight: Truro",
+          "desc": "Check out and embark on a spectacular coastal drive. First stop: Tintagel Castle, the legendary birthplace of King Arthur, perched dramatically on rugged cliffs. Explore the atmospheric medieval ruins and striking footbridge. Continue to Boscastle, a picturesque harbour village tucked into a narrow valley. Stop at Port Isaac, the charming fishing village famous as \"Portwenn\" in Doc Martin, with colourful cottages tumbling down to the sea. Arrive in foodie haven Padstow - Rick Stein's culinary capital \u2013 sample fresh Cornish seafood or a traditional Cornish pasty. Drive south to Truro.",
+          "fallbackIncluded": "Tintagel Castle admission ticket.",
+          "taste": "Fresh Cornish seafood or a traditional pasty in foodie haven Padstow."
+        },
+        {
+          "num": 5,
+          "title": "Truro to West Cornwall - St Ives or Penzance",
+          "overnight": "Overnight: Truro",
+          "desc": "Spend the day exploring West Cornwall's stunning coastline and charming towns. St Ives, the iconic artist's haven, beckons with golden beaches, the Tate St Ives gallery, and harbourside caf\u00e9s serving Cornish cream teas \u2013 perfect for a leisurely morning stroll through cobbled streets. Alternatively, base your day around Penzance to explore the region's dramatic highlights. Visit the enchanting St Michael's Mount, a medieval castle on a tidal island accessible by causeway at low tide. Continue to the theatrical Minack Theatre, an open-air amphitheatre carved into granite cliffs 100 feet above the sea \u2013 one of Britain's most spectacular venues. Drive to Land's End, mainland Britain's most westerly point, where rugged cliffs meet the Atlantic. End your day at the Lizard Peninsula \u2013 stop at turquoise Kynance Cove with its serpentine rock formations, then watch the sunset at Lizard Point, England's most southerly tip. Return to Truro for the evening.",
+          "fallbackIncluded": "Polgoon Vineyard wine tasting tour (Thursday, Friday & Saturday only).",
+          "experience": "St Ives\u2019 golden beaches and the Tate St Ives gallery, or St Michael\u2019s Mount at Penzance."
+        },
+        {
+          "num": 6,
+          "title": "Truro to Plymouth via Dartmoor",
+          "overnight": "Overnight: Plymouth",
+          "desc": "Check out and drive northeast towards Dartmoor National Park, the wild moorland immortalised in Conan Doyle's The Hound of the Baskervilles. Stop in charming Tavistock or enjoy a traditional Devonshire cream tea at Two Bridges amidst dramatic granite tors. Continue to historic Plymouth, where Sir Francis Drake departed to circumnavigate the globe. Stroll Plymouth Hoe with sweeping views over the Sound, then explore the atmospheric Barbican quarter - cobbled streets where the Pilgrim Fathers boarded the Mayflower in 1620 bound for the New World.",
+          "fallbackIncluded": "Alder Vineyard tour and tasting near Dartmoor, or Plymouth Gin Distillery tour in the historic Barbican.",
+          "experience": "Plymouth Hoe and the cobbled Barbican quarter, where the Mayflower set sail in 1620."
+        },
+        {
+          "num": 7,
+          "title": "Plymouth to Exeter via South Devon Coast",
+          "overnight": "Overnight: Exeter",
+          "desc": "Check out and drive east along the scenic A379 coastal route through South Devon. Stop at Slapton Sands, where a Sherman tank memorial commemorates the 946 American soldiers who died during Exercise Tiger in 1944 - a tragic D-Day rehearsal that remained classified for decades. Continue to elegant Dartmouth, a historic harbour town crowned by the Royal Naval College and 600-year-old Dartmouth Castle guarding the River Dart estuary. If time permits, visit Buckfast Abbey, a working Benedictine monastery with stunning gardens. Arrive in Exeter, Devon's historic cathedral city, by early evening.",
+          "fallbackIncluded": "Day at leisure.",
+          "experience": "Dartmouth\u2019s historic harbour, overlooked by a 600-year-old castle."
+        },
+        {
+          "num": 8,
+          "title": "Exeter to Bournemouth via Jurassic Coast",
+          "overnight": "Overnight: Bournemouth",
+          "desc": "Check out and explore Exeter at your leisure. The magnificent Exeter Cathedral, nearly 1,000 years old, boasts the longest unbroken Gothic ceiling in the world and intricate medieval stonework \u2013 well worth a visit. Depart for the Jurassic Coast, a UNESCO World Heritage Site spanning 185 million years of geological history. Stop in Lyme Regis to hunt for fossils on Monmouth Beach and walk the iconic Cobb harbour wall. Continue east to the dramatic Durdle Door, a natural limestone arch jutting into turquoise waters \u2013 one of England's most photographed landmarks. Stroll to nearby Lulworth Cove, a perfect horseshoe bay carved by erosion. Arrive in Bournemouth by evening.",
+          "fallbackIncluded": "Exeter Cathedral guided tour.",
+          "experience": "Durdle Door\u2019s natural limestone arch on the UNESCO World Heritage Jurassic Coast."
+        },
+        {
+          "num": 9,
+          "title": "Bournemouth to London via Salisbury & Stonehenge",
+          "overnight": "Overnight: Heathrow",
+          "desc": "Check out and drive north to Salisbury, home to one of Britain's finest medieval cathedrals. Salisbury Cathedral boasts the tallest church spire in the United Kingdom (123 metres), houses one of only four surviving original copies of the Magna Carta (1215) - the cornerstone of English democracy and constitutional law - and features Britain's oldest working clock dating from 1386. Continue to the mystical Stonehenge, Britain's most iconic prehistoric monument. This 5,000-year-old stone circle continues to captivate visitors with its astronomical precision and enduring mysteries. Drive onwards through Windsor - if time permits, stop for a riverside walk or traditional pub dinner in this charming Thames-side town overlooked by Windsor Castle. Arrive at your hotel near Heathrow Airport by evening.",
+          "fallbackIncluded": "Salisbury Cathedral admission and Stonehenge timed entry tickets (advance booking required for Stonehenge)."
+        },
+        {
+          "num": 10,
+          "title": "Departure",
+          "overnight": "Departure day",
+          "desc": "Check out from your hotel and return your rental car to Heathrow Airport. Depart on your homeward flight.",
+          "fallbackIncluded": "Day at leisure."
+        }
       ]
     }
   },
-  "days": [],
   "hotels": [
     {
       "city": "London",
