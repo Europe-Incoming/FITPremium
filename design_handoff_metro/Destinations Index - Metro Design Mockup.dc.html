@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    body{margin:0;background:#FFFFFF;}
+    a{color:#0B1733;} a:hover{color:#F2B91D;}
+    .leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-family:'Segoe UI','Open Sans',sans-serif;font-size:9px;font-weight:600;color:#0B1733;white-space:nowrap;padding:0;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;}
+    .leaflet-tooltip.city-tip::before{display:none!important;}
+  </style>
+</helmet>
+
+<div style="font-family:'Segoe UI','Open Sans',sans-serif;color:#1A1D2E;font-size:15px;line-height:1.5;background:#FFFFFF;min-height:100vh">
+
+  <div style="background:#F2B91D;color:#0B1733;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 40px">Windows Metro — mockup exploration</div>
+
+  <div style="display:flex;align-items:center;gap:28px;padding:26px 40px 0">
+    <img src="assets/logo-europe-incoming.png" alt="Europe Incoming" style="height:32px;width:auto;display:block">
+    <div style="flex:1;max-width:360px">
+      <input type="text" value="{{ search }}" onInput="{{ onSearch }}" placeholder="search packages" style="width:100%;padding:9px 14px;font-size:13px;font-family:'Segoe UI','Open Sans',sans-serif;border:2px solid #D8DAE1;border-radius:0;background:#FFFFFF;box-sizing:border-box;outline:none;color:#1A1D2E">
+    </div>
+    <a href="mailto:fitsales@europeincoming.com" style="margin-left:auto;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0B1733;text-decoration:none">Trade enquiries</a>
+  </div>
+
+  <div style="padding:36px 40px 22px;display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap">
+    <h1 style="font-weight:300;font-size:64px;letter-spacing:-0.02em;line-height:1;color:#0B1733;margin:0">UK &amp; Ireland</h1>
+    <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;padding-bottom:12px">Multi-country · FIT</div>
+  </div>
+  <div style="padding:0 40px 30px;max-width:640px;font-weight:300;font-size:19px;color:#6B7080">FIT packages across the UK and Ireland — self drive, rail and private coach.</div>
+
+  <div style="padding:0 40px 80px">
+    <sc-if value="{{ hasResults }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px">
+        <sc-for list="{{ cards }}" as="card" hint-placeholder-count="0">
+          <a href="{{ card.href }}" style="display:flex;align-items:stretch;text-decoration:none;color:inherit;background:{{ card.tileBg }};min-height:240px;transition:opacity 180ms linear" style-hover="opacity:.86">
+            <div style="flex:1;min-width:0;padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:{{ card.metaColor }}">{{ card.nights }} · {{ card.season }}</div>
+              <div style="font-weight:300;font-size:30px;line-height:1.1;color:{{ card.titleColor }}">{{ card.title }}</div>
+              <p style="font-size:13px;line-height:1.55;color:{{ card.bodyColor }};margin:0">{{ card.blurb }}</p>
+              <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:{{ card.metaColor }}">{{ card.routeLine }}</div>
+              <div style="margin-top:auto;display:flex;align-items:baseline;gap:8px;padding-top:10px">
+                <span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:{{ card.metaColor }}">From</span>
+                <span style="font-weight:300;font-size:34px;line-height:1;color:{{ card.titleColor }}">{{ card.currency }}{{ card.fromPrice }}</span>
+                <span style="font-size:11px;color:{{ card.metaColor }}">{{ card.priceNote }}</span>
+              </div>
+              <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:{{ card.metaColor }}">{{ card.validity }}</div>
+            </div>
+            <div style="width:190px;flex-shrink:0;position:relative;background:#F5F5F3">
+              <div id="{{ card.mapId }}" style="position:absolute;inset:0"></div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ noResults }}" hint-placeholder-val="{{ true }}">
+      <div style="padding:80px 0;color:#6B7080;font-weight:300;font-size:22px">No packages match this search yet.</div>
+    </sc-if>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { search: '', products: [] };
+  _drawnMaps = {};
+
+  componentDidMount() {
+    fetch('products/index.json').then(r => r.json()).then(data => {
+      this.setState({ products: data.products || [] });
+    }).catch(() => {});
+    this._mapTimer = setInterval(() => this.drawPendingMaps(), 250);
+  }
+
+  componentWillUnmount() { clearInterval(this._mapTimer); }
+
+  drawPendingMaps() {
+    if (!window.L) return;
+    (this._pendingMaps || []).forEach(({ id, cfg }) => {
+      const el = document.getElementById(id);
+      if (!el || this._drawnMaps[id]) return;
+      this._drawnMaps[id] = true;
+      const pts = cfg.points;
+      const lats = pts.map(p => p.lat), lngs = pts.map(p => p.lng), pad = 0.35;
+      const map = L.map(id, { zoomControl: false, scrollWheelZoom: false, dragging: false, attributionControl: false });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 13 }).addTo(map);
+      map.fitBounds([[Math.min(...lats) - pad, Math.min(...lngs) - pad], [Math.max(...lats) + pad, Math.max(...lngs) + pad]], { padding: [10, 10] });
+      const route = pts.map(p => [p.lat, p.lng]);
+      if (cfg.closeLoop) route.push([pts[0].lat, pts[0].lng]);
+      L.polyline(route, { color: '#0B1733', weight: 1.5, dashArray: '4,4' }).addTo(map);
+      pts.forEach(p => {
+        if (p.nights > 0) {
+          L.marker([p.lat, p.lng], { icon: L.divIcon({
+            className: '', iconSize: [10, 10], iconAnchor: [5, 5],
+            html: '<div style="width:10px;height:10px;background:#F2B91D;box-sizing:border-box"></div>'
+          }) }).addTo(map).bindTooltip(p.label, { permanent: true, direction: 'top', className: 'city-tip', offset: [0, -6] });
+        } else {
+          L.marker([p.lat, p.lng], { icon: L.divIcon({
+            className: '', iconSize: [6, 6], iconAnchor: [3, 3],
+            html: '<div style="width:6px;height:6px;background:#6B7080"></div>'
+          }) }).addTo(map).bindTooltip(p.label, { permanent: true, direction: 'top', className: 'city-tip', offset: [0, -4] });
+        }
+      });
+    });
+  }
+
+  renderVals() {
+    const { search, products } = this.state;
+    const q = search.trim().toLowerCase();
+    const filtered = products.filter(p => !q || p.title.toLowerCase().includes(q) || p.region.toLowerCase().includes(q));
+
+    const pending = [];
+    const cards = filtered.map((p, i) => {
+      const mapId = `metromap-${p.id}`;
+      if (p.map) pending.push({ id: mapId, cfg: p.map });
+      const gold = i % 3 === 1;
+      return {
+        title: p.title,
+        nights: p.nights,
+        season: p.season,
+        validity: p.validity,
+        blurb: p.blurb,
+        routeLine: (p.routeStops || []).join(' · '),
+        currency: p.currency,
+        fromPrice: p.fromPrice,
+        priceNote: p.priceNote,
+        mapId,
+        tileBg: gold ? '#F2B91D' : '#132347',
+        titleColor: gold ? '#0B1733' : '#FFFFFF',
+        bodyColor: gold ? 'rgba(11,23,51,0.8)' : 'rgba(255,255,255,0.72)',
+        metaColor: gold ? 'rgba(11,23,51,0.65)' : '#F2B91D',
+        href: `Package Page - Metro Design Mockup.dc.html?product=${encodeURIComponent(p.productFile)}`
+      };
+    });
+    this._pendingMaps = pending;
+
+    return {
+      cards, search,
+      onSearch: e => this.setState({ search: e.target.value }),
+      hasResults: cards.length > 0,
+      noResults: products.length > 0 && cards.length === 0
+    };
+  }
+}
+</script>
+</body>
+</html>

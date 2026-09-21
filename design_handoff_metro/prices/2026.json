@@ -1,0 +1,29 @@
+{
+  "year": "2026-27",
+  "currency": "€",
+  "validFrom": "1 Apr 2026",
+  "validTo": "31 Mar 2027",
+  "note": "Only this file changes each year. All rates net, per person.",
+  "variants": {
+    "trains": {
+      "3": { "summer": { "single": 1245, "twin": 985, "child": 690 }, "winter": { "single": 1120, "twin": 875, "child": 615 } },
+      "4": { "summer": { "single": 1490, "twin": 1180, "child": 795 }, "winter": { "single": 1340, "twin": 1055, "child": 710 } }
+    },
+    "selfdrive": {
+      "3": { "summer": { "single": 1385, "twin": 1050, "child": 720 }, "winter": { "single": 1240, "twin": 930, "child": 640 } },
+      "4": { "summer": { "single": 1630, "twin": 1245, "child": 825 }, "winter": { "single": 1465, "twin": 1110, "child": 735 } }
+    },
+    "private": {
+      "3": { "summer": { "single": 1890, "twin": 1495, "child": 980 }, "winter": { "single": 1710, "twin": 1350, "child": 885 } },
+      "4": { "summer": { "single": 2135, "twin": 1690, "child": 1085 }, "winter": { "single": 1935, "twin": 1525, "child": 975 } }
+    }
+  },
+  "optionalTours": [
+    { "name": "Guinness Storehouse skip-the-line entry", "price": 32 },
+    { "name": "Ring of Kerry full-day tour from Limerick", "price": 68 },
+    { "name": "Bunratty Castle & Folk Park entry", "price": 24 },
+    { "name": "Traditional Irish evening with dinner, Dublin", "price": 75 },
+    { "name": "Kilkenny Castle guided visit", "price": 18 },
+    { "name": "Aran Islands day trip from Doolin", "price": 55 }
+  ]
+}

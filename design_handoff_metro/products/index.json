@@ -1,0 +1,30 @@
+{
+  "note": "Card metadata for the destinations index. One entry per product JSON — one card per brochure. Travel-style variants (self drive, coach, train) live on the product page as a toggle, not as separate cards here.",
+  "products": [
+    {
+      "id": "ireland-discovery",
+      "productFile": "products/ireland-discovery.json",
+      "title": "Ireland Discovery",
+      "region": "Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          { "lat": 53.3498, "lng": -6.2603, "label": "Dublin", "nights": 3 },
+          { "lat": 52.9715, "lng": -9.4262, "label": "Cliffs of Moher", "nights": 0 },
+          { "lat": 52.6638, "lng": -8.6267, "label": "Limerick", "nights": 3 },
+          { "lat": 52.0599, "lng": -9.5044, "label": "Killarney", "nights": 0 },
+          { "lat": 52.6541, "lng": -7.2448, "label": "Kilkenny", "nights": 0 }
+        ],
+        "closeLoop": true
+      },
+      "routeStops": ["Dublin", "Cliffs of Moher", "Limerick", "Kilkenny"],
+      "nights": "6 nights / 7 days",
+      "season": "All Year Round",
+      "validity": "Valid till Oct 2026",
+      "blurb": "Dublin, the Cliffs of Moher and Limerick — by train, self-drive or private coach.",
+      "fromPrice": 810,
+      "currency": "€",
+      "priceNote": "pp (twin)"
+    }
+  ]
+}

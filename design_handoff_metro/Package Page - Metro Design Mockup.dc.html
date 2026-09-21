@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    body{margin:0;background:#FFFFFF;}
+    a{color:#0B1733;} a:hover{color:#F2B91D;}
+    .leaflet-tooltip.city-tip{background:transparent!important;border:none!important;box-shadow:none!important;font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:600;color:#0B1733;white-space:nowrap;padding:0;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;}
+    .leaflet-tooltip.city-tip::before{display:none!important;}
+    .print-only{display:none;}
+    .print-only-block{display:none;}
+    @media print{
+      .no-print{display:none!important;}
+      .print-hide{display:none!important;}
+      .print-only{display:table!important;}
+      .print-only-block{display:block!important;}
+      .pp-tc-btn{pointer-events:none!important;cursor:default!important;background:none!important;padding:0!important;font-weight:300!important;text-transform:none!important;letter-spacing:0!important;color:#0B1733!important;break-after:avoid!important;}
+      .pp-tc-arrow{display:none!important;}
+      .pp-term{break-inside:avoid!important;}
+      .print-block{display:block!important;padding:0!important;}
+      .print-full{padding:0!important;}
+      .pp-pad{padding-left:0!important;padding-right:0!important;}
+      .pp-title-row{padding-top:0!important;gap:10px!important;}
+      .pp-h1{font-size:26px!important;}
+      .pp-hero-row{padding-top:6px!important;gap:0!important;}
+      .pp-hero-img-wrap{min-height:130px!important;}
+      .pp-price-box{width:170px!important;padding:12px 14px!important;gap:6px!important;}
+      .pp-price-num{font-size:20px!important;}
+      .pp-h2{font-size:16px!important;margin:12px 0 2px!important;break-after:avoid!important;}
+      .pp-kicker{margin-bottom:6px!important;}
+      .pp-day-row{padding:6px 0!important;gap:10px!important;grid-template-columns:32px 1fr!important;break-inside:avoid;}
+      .pp-day-num{font-size:16px!important;}
+      .pp-day-title{font-size:12px!important;margin-bottom:1px!important;}
+      .pp-day-overnight{margin-bottom:3px!important;}
+      .pp-day-desc{font-size:10px!important;line-height:1.35!important;margin:0 0 4px!important;}
+      .pp-day-pill{font-size:8px!important;padding:2px 6px!important;}
+      .pp-day-pill-text{font-size:9.5px!important;}
+      .pp-inclusion{font-size:10px!important;padding:4px 0 4px 16px!important;}
+      .pp-hotel-card{padding:8px 10px!important;}
+      .pp-hotel-city{font-size:14px!important;}
+      .pp-hotel-meta{margin-bottom:4px!important;}
+      .pp-hotel-star{font-size:9px!important;}
+      .pp-hotel-h{font-size:9.5px!important;margin-bottom:4px!important;}
+      .pp-tour-card{padding:8px 10px!important;}
+      .pp-tour-name{font-size:10.5px!important;}
+      .pp-tour-price{font-size:14px!important;}
+      .pp-term{font-size:9px!important;padding:4px 0 4px 14px!important;}
+      .pp-rate-note{font-size:9px!important;margin:0 0 10px!important;}
+      .pp-rate-th{padding:6px 10px!important;font-size:8px!important;}
+      .pp-rate-td{padding:6px 10px!important;font-size:10px!important;}
+      .pp-rate-price{font-size:12px!important;}
+      .pp-footer-bar{padding:8px 0!important;font-size:8.5px!important;margin-top:10px!important;}
+      .pp-section-gap{margin-bottom:14px!important;}
+    }
+  </style>
+</helmet>
+
+<div style="font-family:'Segoe UI','Open Sans',sans-serif;color:#1A1D2E;font-size:15px;line-height:1.55;background:#FFFFFF">
+
+  <div class="print-only-block" style="padding:0 40px">
+    <img src="assets/logo-europe-incoming.png" alt="Europe Incoming" style="height:20px;width:auto;display:block">
+  </div>
+
+  <div class="no-print" style="background:#F2B91D;color:#0B1733;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 40px">Windows Metro — mockup exploration</div>
+
+  <div class="no-print" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 40px 0">
+    <div style="display:flex;align-items:center;gap:24px">
+      <img src="assets/logo-europe-incoming.png" alt="Europe Incoming" style="height:24px;width:auto;display:block">
+      <a href="Destinations Index - Metro Design Mockup.dc.html" style="display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1733;text-decoration:none">
+        <span style="width:26px;height:26px;border:2px solid #0B1733;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:400">&#8592;</span>
+        All packages
+      </a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="mailto:fitsales@europeincoming.com" style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1733;text-decoration:none">Trade enquiries</a>
+      <button onClick="{{ printPdf }}" style="background:#0B1733;color:#FFFFFF;border:none;border-radius:0;padding:10px 18px;font-family:'Segoe UI','Open Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer" style-hover="background:#F2B91D;color:#0B1733">Download PDF</button>
+    </div>
+  </div>
+
+  <div class="pp-pad pp-title-row" style="padding:26px 40px 0;display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap">
+    <h1 class="pp-h1" style="font-weight:300;font-size:56px;letter-spacing:-0.02em;line-height:1;margin:0;color:#0B1733">{{ title }}</h1>
+    <div class="pp-kicker" style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;padding-bottom:10px">{{ eyebrow }}</div>
+  </div>
+
+  <div class="pp-pad pp-hero-row" style="padding:14px 40px 0;display:flex;gap:0;flex-wrap:wrap">
+    <div class="pp-hero-img-wrap" style="position:relative;flex:1;min-width:320px;min-height:{{ heroHeight }};background:#0B1733;overflow:hidden">
+      <div style="position:absolute;inset:0">{{ heroImgEl }}</div>
+    </div>
+    <div class="pp-price-box" style="width:280px;background:#0B1733;color:#FFFFFF;padding:24px 26px;display:flex;flex-direction:column;gap:14px;box-sizing:border-box">
+      <div>
+        <div class="pp-kicker" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:4px">Duration</div>
+        <div style="font-weight:300;font-size:24px;line-height:1.1">{{ heroNights }}</div>
+      </div>
+      <div>
+        <div class="pp-kicker" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:4px">Route</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.78);line-height:1.5">{{ heroRoute }}</div>
+      </div>
+      <div style="margin-top:auto;background:#F2B91D;color:#0B1733;padding:14px 16px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px">From</div>
+        <div class="pp-price-num" style="font-weight:300;font-size:34px;line-height:1">{{ fromPrice }}</div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">per person</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-print" style="padding:22px 40px 0;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+    <span style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7080">Travel style</span>
+    <div style="display:flex;gap:4px">
+      <sc-for list="{{ styleOptions }}" as="opt" hint-placeholder-count="3">
+        <button onClick="{{ opt.select }}" style="{{ opt.style }}">{{ opt.label }}</button>
+      </sc-for>
+    </div>
+    <span style="font-size:13px;color:#6B7080">{{ styleBlurb }}</span>
+  </div>
+
+  <div class="print-block" style="display:flex;align-items:flex-start;gap:40px;padding:32px 40px 0;box-sizing:border-box">
+    <div class="print-full" style="flex:1;min-width:0;padding-top:24px">
+
+      <div class="pp-h2 pp-section-gap" style="font-weight:300;font-size:34px;color:#0B1733;margin:0 0 4px">Day by day</div>
+      <div class="pp-kicker" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:18px">{{ styleName }}</div>
+      <sc-for list="{{ days }}" as="day" hint-placeholder-count="7">
+        <div class="pp-day-row" style="display:grid;grid-template-columns:64px 1fr;gap:20px;padding:22px 0;border-top:1px solid #E5E7EC">
+          <div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7080">Day</div>
+            <div class="pp-day-num" style="font-weight:300;font-size:40px;line-height:1;color:#F2B91D">{{ day.num }}</div>
+          </div>
+          <div>
+            <div class="pp-day-title" style="font-weight:600;font-size:19px;color:#0B1733;margin-bottom:2px">{{ day.title }}</div>
+            <div class="pp-day-overnight" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7080;margin-bottom:10px">{{ day.overnight }}</div>
+            <p class="pp-day-desc" style="font-size:14px;line-height:1.7;color:#3A3D4D;margin:0 0 12px">{{ day.desc }}</p>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="display:flex;gap:10px;align-items:baseline">
+                <span class="pp-day-pill" style="flex-shrink:0;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;background:#0B1733;padding:4px 10px">Included</span>
+                <span class="pp-day-pill-text" style="font-size:13px;color:#3A3D4D">{{ day.included }}</span>
+              </div>
+              <sc-for list="{{ day.extras }}" as="ex" hint-placeholder-count="0">
+                <div style="display:flex;gap:10px;align-items:baseline">
+                  <span class="pp-day-pill" style="{{ ex.pillStyle }}">{{ ex.label }}</span>
+                  <span class="pp-day-pill-text" style="font-size:13px;color:#3A3D4D">{{ ex.text }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+
+      <div class="pp-h2" style="font-weight:300;font-size:34px;color:#0B1733;margin:36px 0 4px">Package includes</div>
+      <div class="pp-kicker" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:14px">{{ styleName }}</div>
+      <div class="pp-section-gap" style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:36px">
+        <sc-for list="{{ inclusions }}" as="inc" hint-placeholder-count="6">
+          <div class="pp-inclusion" style="font-size:13.5px;color:#3A3D4D;padding:9px 0 9px 22px;border-bottom:1px solid #EFF0F3;position:relative"><span style="position:absolute;left:0;color:#F2B91D;font-weight:700;font-size:12px">&#10003;</span>{{ inc }}</div>
+        </sc-for>
+      </div>
+
+      <div class="pp-h2" style="font-weight:300;font-size:34px;color:#0B1733;margin:0 0 14px">Sample hotels</div>
+      <div class="pp-section-gap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:36px">
+        <sc-for list="{{ hotels }}" as="h" hint-placeholder-count="3">
+          <div class="pp-hotel-card" style="background:#F5F5F3;padding:18px 20px">
+            <div class="pp-hotel-city" style="font-weight:300;font-size:22px;color:#0B1733;line-height:1.1">{{ h.city }}</div>
+            <div class="pp-hotel-meta" style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B7080;margin-bottom:12px">{{ h.nights }}</div>
+            <div class="pp-hotel-star" style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#F2B91D">3 star</div>
+            <div class="pp-hotel-h" style="font-size:12.5px;color:#3A3D4D;margin-bottom:8px;line-height:1.4">{{ h.h3 }}</div>
+            <div class="pp-hotel-star" style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#F2B91D">4 star</div>
+            <div class="pp-hotel-h" style="font-size:12.5px;color:#3A3D4D;line-height:1.4">{{ h.h4 }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div class="pp-h2" style="font-weight:300;font-size:34px;color:#0B1733;margin:0 0 4px">Package rates</div>
+      <div class="pp-kicker" style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:16px">Per person · {{ styleName }} · Valid {{ validity }}</div>
+      <div class="no-print" style="display:flex;gap:24px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B7080">Hotel category</span>
+          <div style="display:flex;gap:4px">
+            <button onClick="{{ pick3 }}" style="{{ cat3Style }}">3 star</button>
+            <button onClick="{{ pick4 }}" style="{{ cat4Style }}">4 star</button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B7080">Season</span>
+          <div style="display:flex;gap:4px">
+            <button onClick="{{ pickSummer }}" style="{{ summerStyle }}">Apr–Oct</button>
+            <button onClick="{{ pickWinter }}" style="{{ winterStyle }}">Nov–Mar</button>
+          </div>
+        </div>
+      </div>
+      <table class="no-print" style="width:100%;border-collapse:collapse;margin-bottom:8px">
+        <thead>
+          <tr>
+            <th style="background:#0B1733;color:#FFFFFF;padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:left">Occupancy</th>
+            <th style="background:#0B1733;color:#FFFFFF;padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:right">Rate — {{ rateHeading }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ rateRows }}" as="row" hint-placeholder-count="3">
+            <tr>
+              <td style="padding:12px 16px;font-size:13.5px;border-bottom:1px solid #EFF0F3;color:#1A1D2E">{{ row.label }}</td>
+              <td style="padding:12px 16px;font-weight:300;font-size:22px;border-bottom:1px solid #EFF0F3;text-align:right;color:#0B1733">{{ row.price }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+      <table class="print-only" style="width:100%;border-collapse:collapse;margin-bottom:8px">
+        <thead>
+          <tr>
+            <th class="pp-rate-th" rowspan="2" style="background:#0B1733;color:#FFFFFF;padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left;border-right:1px solid rgba(255,255,255,0.25)">Occupancy</th>
+            <th class="pp-rate-th" colspan="2" style="background:#0B1733;color:#FFFFFF;padding:8px 16px 4px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:center;border-right:1px solid rgba(255,255,255,0.25)">3 star</th>
+            <th class="pp-rate-th" colspan="2" style="background:#0B1733;color:#FFFFFF;padding:8px 16px 4px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:center">4 star</th>
+          </tr>
+          <tr>
+            <th class="pp-rate-th" style="background:#0B1733;color:rgba(255,255,255,0.75);padding:2px 16px 8px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:right;border-right:1px solid rgba(255,255,255,0.25)">Apr–Oct</th>
+            <th class="pp-rate-th" style="background:#0B1733;color:rgba(255,255,255,0.75);padding:2px 16px 8px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:right;border-right:1px solid rgba(255,255,255,0.25)">Nov–Mar</th>
+            <th class="pp-rate-th" style="background:#0B1733;color:rgba(255,255,255,0.75);padding:2px 16px 8px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:right;border-right:1px solid rgba(255,255,255,0.25)">Apr–Oct</th>
+            <th class="pp-rate-th" style="background:#0B1733;color:rgba(255,255,255,0.75);padding:2px 16px 8px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:right">Nov–Mar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ printRateRows }}" as="prow" hint-placeholder-count="3">
+            <tr>
+              <td class="pp-rate-td" style="padding:12px 16px;font-size:13.5px;border-bottom:1px solid #EFF0F3;color:#1A1D2E;border-right:1px solid #EFF0F3">{{ prow.label }}</td>
+              <td class="pp-rate-td pp-rate-price" style="padding:12px 16px;font-weight:300;font-size:20px;border-bottom:1px solid #EFF0F3;border-right:1px solid #EFF0F3;text-align:right;color:#0B1733">{{ prow.c3s }}</td>
+              <td class="pp-rate-td pp-rate-price" style="padding:12px 16px;font-weight:300;font-size:20px;border-bottom:1px solid #EFF0F3;border-right:1px solid #EFF0F3;text-align:right;color:#0B1733">{{ prow.c3w }}</td>
+              <td class="pp-rate-td pp-rate-price" style="padding:12px 16px;font-weight:300;font-size:20px;border-bottom:1px solid #EFF0F3;border-right:1px solid #EFF0F3;text-align:right;color:#0B1733">{{ prow.c4s }}</td>
+              <td class="pp-rate-td pp-rate-price" style="padding:12px 16px;font-weight:300;font-size:20px;border-bottom:1px solid #EFF0F3;text-align:right;color:#0B1733">{{ prow.c4w }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+      <p class="pp-rate-note" style="font-size:12px;color:#6B7080;margin:0 0 36px">All rates in €, net, per person. Twin/double occupancy unless stated. Child 2–11 yrs sharing with 2 adults.</p>
+
+      <div class="pp-h2" style="font-weight:300;font-size:34px;color:#0B1733;margin:0 0 14px">Optional tours &amp; extras</div>
+      <div class="pp-section-gap" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:36px">
+        <sc-for list="{{ optionalTours }}" as="t" hint-placeholder-count="6">
+          <div class="pp-tour-card" style="background:#F5F5F3;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <span class="pp-tour-name" style="font-size:13px;color:#3A3D4D">{{ t.name }}</span>
+            <span class="pp-tour-price" style="font-weight:300;font-size:22px;color:#0B1733;white-space:nowrap">{{ t.priceLabel }} <span style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B7080">pp</span></span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div class="print-hide">
+        <div class="pp-h2" style="font-weight:300;font-size:34px;color:#0B1733;margin:0 0 14px">Good to know</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:36px">
+          <sc-for list="{{ goodToKnow }}" as="g" hint-placeholder-count="4">
+            <div style="background:#0B1733;color:#FFFFFF;padding:18px 20px">
+              <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B91D;margin-bottom:6px">{{ g.title }}</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.8);line-height:1.6">{{ g.body }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="margin-bottom:44px">
+        <button class="pp-h2 pp-tc-btn" onClick="{{ toggleTc }}" style="width:100%;background:#F5F5F3;border:none;border-radius:0;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Segoe UI','Open Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1733;text-align:left" style-hover="background:#EDEDEA"><span>Terms &amp; conditions</span><span class="pp-tc-arrow">{{ tcArrow }}</span></button>
+        <sc-if value="{{ tcOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:16px 20px">
+            <sc-for list="{{ terms }}" as="t" hint-placeholder-count="5">
+              <div class="pp-term" style="font-size:12.5px;color:#3A3D4D;padding:7px 0 7px 16px;border-bottom:1px solid #EFF0F3;position:relative;line-height:1.55"><span style="position:absolute;left:2px;color:#F2B91D">·</span>{{ t }}</div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div class="no-print" style="width:300px;flex-shrink:0;position:sticky;top:20px">
+      <div style="background:#F5F5F3;padding:20px;margin-bottom:8px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B7080;margin-bottom:12px">About this tour</div>
+        <div onClick="{{ openMap }}" style="position:relative;cursor:zoom-in;margin-bottom:14px">
+          <div id="route-map" style="height:180px;overflow:hidden;pointer-events:none"></div>
+          <div style="position:absolute;right:0;bottom:0;background:#0B1733;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px">Enlarge</div>
+        </div>
+        <div style="padding:9px 0;border-top:1px solid #E5E7EC"><div style="font-size:13px;font-weight:600;color:#0B1733">{{ aboutNights }}</div><div style="font-size:12px;color:#6B7080">{{ aboutRoute }}</div></div>
+        <sc-for list="{{ aboutItems }}" as="a" hint-placeholder-count="3">
+          <div style="padding:9px 0;border-top:1px solid #E5E7EC"><div style="font-size:13px;font-weight:600;color:#0B1733">{{ a.title }}</div><div style="font-size:12px;color:#6B7080">{{ a.body }}</div></div>
+        </sc-for>
+      </div>
+      <div style="background:#F2B91D;color:#0B1733;padding:20px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px">Ready to quote?</div>
+        <div style="font-size:13px;line-height:1.6;margin-bottom:14px;color:rgba(11,23,51,0.85)">Send us your dates and party size — we respond within one working day.</div>
+        <a href="mailto:fitsales@europeincoming.com" style="display:block;text-align:center;background:#0B1733;color:#FFFFFF;padding:12px 0;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none">Email the FIT team</a>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ mapOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="no-print" onClick="{{ closeMap }}" style="position:fixed;inset:0;z-index:1000;background:rgba(11,23,51,0.85);display:flex;align-items:center;justify-content:center;padding:40px">
+      <div onClick="{{ stopClick }}" style="position:relative;background:#FFFFFF;width:min(960px,100%);height:min(640px,100%);display:flex;flex-direction:column;overflow:hidden">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#0B1733">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF">Route map — {{ title }}</div>
+          <button onClick="{{ closeMap }}" aria-label="Close map" style="background:none;border:none;cursor:pointer;font-size:16px;line-height:1;color:#F2B91D;padding:6px">&#10005;</button>
+        </div>
+        <div id="route-map-large" style="flex:1"></div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div class="pp-pad pp-footer-bar" style="background:#0B1733;color:rgba(255,255,255,0.55);padding:20px 40px;font-size:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:20px">
+    <span>Europe Incoming Holdings Ltd · Reg. England &amp; Wales 07053949</span>
+    <span><a href="mailto:fitsales@europeincoming.com" style="color:#F2B91D;text-decoration:none">fitsales@europeincoming.com</a> · +44 208 994 5001</span>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { style: null, cat: '3', season: 'summer', tcOpen: false, mapOpen: false, product: null, prices: null };
+
+  productFile() { return new URLSearchParams(window.location.search).get('product') || this.props.productFile || 'products/ireland-discovery.json'; }
+
+  componentDidMount() {
+    fetch(this.productFile()).then(r => r.json()).then(product => {
+      const qStyle = new URLSearchParams(window.location.search).get('style');
+      this.setState({ product, style: (qStyle && product.styles[qStyle]) ? qStyle : Object.keys(product.styles)[0] });
+      return fetch(product.pricesFile).then(r => r.json()).then(prices => this.setState({ prices }));
+    }).catch(() => {});
+    this._mapTimer = setInterval(() => {
+      if (window.L && document.getElementById('route-map') && this.state.product && !this._map) {
+        clearInterval(this._mapTimer);
+        this._map = this.drawMap('route-map', false);
+      }
+    }, 200);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._mapTimer);
+    if (this._escHandler) document.removeEventListener('keydown', this._escHandler);
+  }
+
+  drawMap(elId, interactive) {
+    const cfg = this.state.product.map;
+    const pts = cfg.points;
+    const lats = pts.map(p => p.lat), lngs = pts.map(p => p.lng), pad = 0.4;
+    const map = L.map(elId, interactive
+      ? { zoomControl: true, scrollWheelZoom: true, attributionControl: false }
+      : { zoomControl: false, scrollWheelZoom: false, dragging: false, attributionControl: false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 13 }).addTo(map);
+    map.fitBounds([[Math.min(...lats) - pad, Math.min(...lngs) - pad], [Math.max(...lats) + pad, Math.max(...lngs) + pad]], { padding: [14, 14] });
+    const route = pts.map(p => [p.lat, p.lng]);
+    if (cfg.closeLoop) route.push([pts[0].lat, pts[0].lng]);
+    L.polyline(route, { color: '#0B1733', weight: 1.5, dashArray: '4,4' }).addTo(map);
+    pts.forEach(p => {
+      if (p.nights > 0) {
+        const size = interactive ? 20 : 16;
+        L.marker([p.lat, p.lng], { icon: L.divIcon({
+          className: '', iconSize: [size, size], iconAnchor: [size / 2, size / 2],
+          html: '<div style="width:' + size + 'px;height:' + size + 'px;background:#F2B91D;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:Segoe UI,Open Sans,sans-serif;font-size:' + (interactive ? 10 : 9) + 'px;font-weight:700;color:#0B1733">' + p.nights + '</div>'
+        }) }).addTo(map)
+          .bindTooltip(p.label + ' · ' + p.nights + 'N', { permanent: true, direction: 'top', className: 'city-tip', offset: [0, -size / 2] });
+      } else {
+        L.marker([p.lat, p.lng], { icon: L.divIcon({
+          className: '', iconSize: [8, 8], iconAnchor: [4, 4],
+          html: '<div style="width:8px;height:8px;background:#0B1733"></div>'
+        }) }).addTo(map).bindTooltip(p.label, { permanent: true, direction: 'top', className: 'city-tip', offset: [0, -5] });
+      }
+    });
+    return map;
+  }
+
+  openMapPopup() {
+    this.setState({ mapOpen: true }, () => {
+      if (!this._escHandler) {
+        this._escHandler = e => { if (e.key === 'Escape') this.closeMapPopup(); };
+        document.addEventListener('keydown', this._escHandler);
+      }
+      setTimeout(() => {
+        if (window.L && document.getElementById('route-map-large')) {
+          this._largeMap = this.drawMap('route-map-large', true);
+        }
+      }, 50);
+    });
+  }
+
+  closeMapPopup() {
+    if (this._largeMap) { this._largeMap.remove(); this._largeMap = null; }
+    if (this._escHandler) { document.removeEventListener('keydown', this._escHandler); this._escHandler = null; }
+    this.setState({ mapOpen: false });
+  }
+
+  renderVals() {
+    const { cat, season, tcOpen, mapOpen, product, prices } = this.state;
+    const eur = n => '\u20AC' + n.toLocaleString('en-GB');
+    const heroHeight = (this.props.heroHeight ?? 380) + 'px';
+
+    if (!product) {
+      return { heroHeight, heroImgEl: null, title: '', eyebrow: '', heroNights: '', heroRoute: '', fromPrice: '…',
+        styleOptions: [], styleBlurb: '', styleName: '', days: [], inclusions: [], hotels: [], rateRows: [], printRateRows: [],
+        validity: '', rateHeading: '', optionalTours: [], goodToKnow: [], terms: [], aboutNights: '', aboutRoute: '',
+        aboutItems: [], tcOpen: false, mapOpen: false, tcArrow: '▼',
+        pick3: () => {}, pick4: () => {}, pickSummer: () => {}, pickWinter: () => {},
+        cat3Style: {}, cat4Style: {}, summerStyle: {}, winterStyle: {},
+        toggleTc: () => {}, openMap: () => {}, closeMap: () => {}, stopClick: () => {}, printPdf: () => {} };
+    }
+
+    const styleKeys = Object.keys(product.styles);
+    const style = this.state.style ?? this.props.defaultStyle ?? styleKeys[0];
+    const cur = product.styles[style];
+
+    const metroBtn = on => ({
+      background: on ? '#0B1733' : 'transparent', color: on ? '#FFFFFF' : '#0B1733',
+      border: on ? '2px solid #0B1733' : '2px solid #D8DAE1', borderRadius: 0,
+      padding: '8px 16px', fontFamily: "'Segoe UI','Open Sans',sans-serif", fontSize: '10px',
+      fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', cursor: 'pointer'
+    });
+
+    const styleOptions = styleKeys.map(key => ({
+      label: product.styles[key].name,
+      select: () => this.setState({ style: key }),
+      style: metroBtn(key === style)
+    }));
+
+    const p = prices && prices.variants[style] && prices.variants[style][cat] && prices.variants[style][cat][season];
+    const rateRows = p ? [
+      { label: 'Single', price: eur(p.single) },
+      { label: 'Twin / Double', price: eur(p.twin) },
+      { label: 'Child (2–11)', price: eur(p.child) }
+    ] : [{ label: 'Loading rates…', price: '' }];
+
+    const combo = (c, s) => (prices && prices.variants[style] && prices.variants[style][c] && prices.variants[style][c][s]) || null;
+    const g3s = combo('3', 'summer'), g3w = combo('3', 'winter'), g4s = combo('4', 'summer'), g4w = combo('4', 'winter');
+    const fmt = v => (v != null ? eur(v) : '—');
+    const printRateRows = [
+      { label: 'Single', c3s: fmt(g3s && g3s.single), c3w: fmt(g3w && g3w.single), c4s: fmt(g4s && g4s.single), c4w: fmt(g4w && g4w.single) },
+      { label: 'Twin / Double', c3s: fmt(g3s && g3s.twin), c3w: fmt(g3w && g3w.twin), c4s: fmt(g4s && g4s.twin), c4w: fmt(g4w && g4w.twin) },
+      { label: 'Child (2–11)', c3s: fmt(g3s && g3s.child), c3w: fmt(g3w && g3w.child), c4s: fmt(g4s && g4s.child), c4w: fmt(g4w && g4w.child) }
+    ];
+
+    let fromPrice = '…';
+    if (prices && prices.variants[style]) {
+      const all = [];
+      Object.values(prices.variants[style]).forEach(c => Object.values(c).forEach(s => all.push(s.twin)));
+      fromPrice = eur(Math.min(...all));
+    }
+
+    const pill = (color, bg) => ({ flexShrink: 0, fontFamily: "'Segoe UI','Open Sans',sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color, background: bg, padding: '4px 10px' });
+    const showFood = this.props.showFoodTips ?? true;
+    const days = product.days.map(d => {
+      const extras = [];
+      if (d.taste && showFood) extras.push({ label: 'Local taste', text: d.taste, pillStyle: pill('#0B1733', '#F2B91D') });
+      if (d.experience) extras.push({ label: 'Local experience', text: d.experience, pillStyle: pill('#0B1733', '#EDEDEA') });
+      if (d.shopping) extras.push({ label: 'Shopping', text: d.shopping, pillStyle: pill('#6B7080', '#F5F5F3') });
+      return { ...d, extras, included: cur.transport[String(d.num)] || d.fallbackIncluded || 'Day at leisure.' };
+    });
+
+    return {
+      heroHeight,
+      heroImgEl: React.createElement('img', { src: product.heroImage, alt: product.title, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } }),
+      title: product.title,
+      eyebrow: product.eyebrow,
+      heroNights: cur.nights,
+      heroRoute: cur.route,
+      aboutNights: cur.aboutNights,
+      aboutRoute: cur.route,
+      aboutItems: product.about,
+      styleName: cur.name,
+      styleBlurb: cur.blurb,
+      styleOptions,
+      days,
+      inclusions: cur.inclusions,
+      hotels: product.hotels,
+      rateRows,
+      printRateRows,
+      fromPrice,
+      validity: prices ? prices.validFrom + ' – ' + prices.validTo : '',
+      rateHeading: (cat === '3' ? '3 star' : '4 star') + ' · ' + (season === 'summer' ? 'Apr–Oct' : 'Nov–Mar'),
+      pick3: () => this.setState({ cat: '3' }),
+      pick4: () => this.setState({ cat: '4' }),
+      pickSummer: () => this.setState({ season: 'summer' }),
+      pickWinter: () => this.setState({ season: 'winter' }),
+      cat3Style: metroBtn(cat === '3'),
+      cat4Style: metroBtn(cat === '4'),
+      summerStyle: metroBtn(season === 'summer'),
+      winterStyle: metroBtn(season === 'winter'),
+      optionalTours: (prices ? prices.optionalTours : []).map(t => ({ name: t.name, priceLabel: eur(t.price) })),
+      goodToKnow: product.goodToKnow.filter(g => !g.styles || g.styles.includes(style)),
+      terms: product.terms,
+      tcOpen, mapOpen,
+      openMap: () => this.openMapPopup(),
+      closeMap: () => this.closeMapPopup(),
+      stopClick: e => e.stopPropagation(),
+      tcArrow: tcOpen ? '▲' : '▼',
+      toggleTc: () => this.setState(s => ({ tcOpen: !s.tcOpen })),
+      printPdf: () => { this.setState({ tcOpen: true }, () => setTimeout(() => window.print(), 150)); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
