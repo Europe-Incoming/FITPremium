@@ -143,6 +143,7 @@ function displaySearchResults(results) {
     const resultsHTML = results.map(pkg => {
         const citiesList = pkg.cities && pkg.cities.length ? pkg.cities.join(', ') : '—';
         const pdfUrl = depth + pkg.folder + '/' + pkg.filename;
+        const isPdf = pkg.filename && pkg.filename.toLowerCase().endsWith('.pdf');
         const priceStr = pkg.price_twin ? `From ${pkg.currency || '€'}${pkg.price_twin.toLocaleString()} pp` : '';
         const typeStr = pkg.type || '';
         const durationStr = pkg.duration || '';
@@ -151,7 +152,7 @@ function displaySearchResults(results) {
             <a href="${pdfUrl}" class="search-result-card" target="_blank">
                 <div class="result-header">
                     <h4>${pkg.name}</h4>
-                    <span class="pdf-badge">PDF</span>
+                    <span class="pdf-badge">${isPdf ? 'PDF' : 'VIEW'}</span>
                 </div>
                 <div class="result-details">
                     <span class="result-region">${pkg.region}</span>
