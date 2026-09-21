@@ -11,7 +11,17 @@ markup multipliers) sit side by side on every route sheet; only the column
 group differs.
 A style's day-by-day Excel section that is blank (no Day #/component text) is
 treated as a copy-paste relic with no real product behind it and is skipped,
-even if the Menu sheet's checkbox or a computed rate table says otherwise.
+even if the Menu sheet's checkbox or a computed rate table says otherwise -
+but a relic section still has its own real, populated rate table sitting in
+the sheet, so every rate table is looked up strictly within its own style's
+row range rather than assigned by sheet-wide position (see
+find_season_table_in_range).
+
+A category (3-star or 4-star) with no rate at all in the shared Component -
+Hotels table is not sold, whatever its own style's rate table shows -
+including a non-null value there, which can be a hardcoded 0 or a small
+non-zero leftover from unrelated land-cost components (see
+hotel_star_availability).
 
 This script does not touch products/*.json — every existing route's set of
 travel styles already matches the workbook's populated (non-relic) sections
@@ -28,14 +38,6 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = sys.argv[1] if len(sys.argv) > 1 else None
 
 STYLE_MAP = {"Regular FIT": "trains", "Private tour": "private", "Self Drive": "selfdrive"}
-
-# The 8 Finland/Norway/Sweden winter & Xmas route sheets whose Regular FIT
-# Start/End date *cells* are a full year ahead of every other sheet (a stale
-# copy-paste - confirmed against each sheet's own Self Drive block and every
-# other route, which all agree on Nov 2026 - Nov 2027). Only 5 of the 8 have
-# a live product page today; the date-shift correction below applies to
-# whichever of these are actually parsed.
-NORDIC_CORRUPTED_DATE_ROUTES = {"10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "11.1", "11.2"}
 
 # These Arctic-winter routes (Tromso, Kiruna, Rovaniemi) only ever run in
 # winter - the "summer" row present in their Regular FIT season table is a
@@ -59,15 +61,6 @@ PRIVATE_TOUR_WINDOWS = {
 
 def fmt_date(dt):
     return dt.strftime("%-d %b %Y")
-
-
-def shift_years(dt, years):
-    if years == 0:
-        return dt
-    try:
-        return dt.replace(year=dt.year + years)
-    except ValueError:
-        return dt.replace(month=2, day=28, year=dt.year + years)
 
 # Excel sheet name -> repo product id (only "1.5"/"1.6" differ from the sheet
 # number: repo files are ireland-discovery / cotswolds-devon-cornwall).
@@ -152,19 +145,6 @@ def parse_paxtier_table(ws, header_row, minpax_col):
     return rows
 
 
-def find_all_season_premium_tables(ws):
-    """All PREMIUM-market season (Start/End) tables in the sheet, in row order."""
-    out = []
-    for r in range(1, ws.max_row + 1):
-        for c in range(1, ws.max_column + 1):
-            if cellstr(ws, r, c) == "Start" and cellstr(ws, r, c + 1) == "End":
-                if nearest_tier_marker(ws, r, c) == "PREMIUM MARKET":
-                    rows = parse_season_table(ws, r, c)
-                    if rows:
-                        out.append((r, rows))
-    return out
-
-
 def nearest_tier_marker(ws, r, c):
     """Classify column c as belonging to whichever of PREMIUM/STANDARD MARKET
     sits at the largest marker-column <= c, searching nearby rows above r.
@@ -184,14 +164,61 @@ def nearest_tier_marker(ws, r, c):
     return None
 
 
-def find_all_paxtier_premium_tables(ws):
-    out = []
-    for r in range(1, ws.max_row + 1):
+def find_season_table_in_range(ws, r0, r1, market):
+    """The PREMIUM-market season (Start/End) table strictly within a single
+    style's own component row range [r0, r1). Earlier versions of this
+    script searched the whole sheet and zipped the tables found, in row
+    order, onto whichever styles were live - which silently mis-assigns a
+    style's rates from a *different*, non-live "relic" component's table
+    whenever a relic section (blank itinerary, but a real, populated rate
+    table left over from a copy-paste) sits before the actual live style's
+    own section. Scoping the search to the style's own row range makes that
+    misassignment structurally impossible."""
+    for r in range(r0, r1):
+        for c in range(1, ws.max_column + 1):
+            if cellstr(ws, r, c) == "Start" and cellstr(ws, r, c + 1) == "End":
+                if nearest_tier_marker(ws, r, c) == market:
+                    rows = parse_season_table(ws, r, c)
+                    if rows:
+                        return rows
+    return None
+
+
+def find_paxtier_table_in_range(ws, r0, r1, market):
+    for r in range(r0, r1):
         for c in range(1, ws.max_column + 1):
             if cellstr(ws, r, c) == "Min Pax":
-                if nearest_tier_marker(ws, r, c) == "PREMIUM MARKET":
-                    out.append((r, parse_paxtier_table(ws, r, c)))
-    return out
+                if nearest_tier_marker(ws, r, c) == market:
+                    return parse_paxtier_table(ws, r, c)
+    return None
+
+
+def hotel_star_availability(ws):
+    """Whether the route's shared Component - Hotels table has any 3*/4*
+    rate at all. Some routes (e.g. a hotel only ever booked at 4-star) show
+    a non-null "3 Star package rate" in a style's own rate table anyway -
+    sometimes a hardcoded 0, sometimes a small non-zero leftover (the
+    land-only cost components still summed even though the accommodation
+    leg they'd normally be added to doesn't exist for that category). The
+    Hotels table - shared across every style for the route - is the one
+    reliable signal for whether a category is a real, sellable option."""
+    hotels_row = None
+    for r in range(1, ws.max_row + 1):
+        if cellstr(ws, r, 2) == "Component - Hotels":
+            hotels_row = r
+            break
+    if hotels_row is None:
+        return True, True
+    has3 = has4 = False
+    for r in range(hotels_row + 1, ws.max_row + 1):
+        b = cellstr(ws, r, 2)
+        if isinstance(b, str) and b.startswith("Component - "):
+            break
+        if isinstance(ws.cell(r, 4).value, (int, float)):
+            has3 = True
+        if isinstance(ws.cell(r, 5).value, (int, float)):
+            has4 = True
+    return has3, has4
 
 
 def route_currency(ws):
@@ -207,27 +234,27 @@ def route_currency(ws):
 def parse_route(ws, sheet_name):
     comp_rows, opt_row = find_component_sections(ws)
     ext = comp_rows + [(opt_row or ws.max_row + 1, None)]
+    has3, has4 = hotel_star_availability(ws)
 
-    live_styles = []  # (style_key, kind) in document order
+    live = []  # (style_key, r0, r1) in document order
     for i, (r0, label) in enumerate(comp_rows):
         r1 = ext[i + 1][0]
         if section_has_itinerary(ws, r0, r1):
-            live_styles.append(STYLE_MAP[label])
+            live.append((STYLE_MAP[label], r0, r1))
+    live_styles = [style for style, _, _ in live]
 
-    season_tables = [rows for (_r, rows) in find_all_season_premium_tables(ws)]
-    paxtier_tables = [rows for (_r, rows) in find_all_paxtier_premium_tables(ws)]
-
-    date_shift_years = -1 if sheet_name in NORDIC_CORRUPTED_DATE_ROUTES else 0
     drop_summer = sheet_name in WINTER_ONLY_ROUTES
+
+    def mask(d, has):
+        return d if has else {k: None for k in d}
 
     variants = {}
     all_windows = []  # (start, end) across every season kept, for the route-level bounds
-    season_i = 0
-    for style in live_styles:
+    for style, r0, r1 in live:
         if style == "private":
-            if not paxtier_tables:
-                raise ValueError("private is live but no paxtier premium table found")
-            rows = paxtier_tables[0]
+            rows = find_paxtier_table_in_range(ws, r0, r1, "PREMIUM MARKET")
+            if rows is None:
+                raise ValueError(f"{sheet_name}: private is live but no paxtier premium table found in its own section")
             validity = {
                 season: {"from": fmt_date(start), "to": fmt_date(end)}
                 for season, (start, end) in PRIVATE_TOUR_WINDOWS.items()
@@ -235,31 +262,29 @@ def parse_route(ws, sheet_name):
             all_windows.extend(PRIVATE_TOUR_WINDOWS.values())
             variants["private"] = {
                 "paxTiers": {
-                    "winter": [{"pax": t["pax"], "3star": money(t["window1"]["3star"]), "4star": money(t["window1"]["4star"])} for t in rows],
-                    "summer": [{"pax": t["pax"], "3star": money(t["window2"]["3star"]), "4star": money(t["window2"]["4star"])} for t in rows],
+                    "winter": [{"pax": t["pax"], "3star": money(t["window1"]["3star"]) if has3 else None, "4star": money(t["window1"]["4star"]) if has4 else None} for t in rows],
+                    "summer": [{"pax": t["pax"], "3star": money(t["window2"]["3star"]) if has3 else None, "4star": money(t["window2"]["4star"]) if has4 else None} for t in rows],
                 },
                 "validity": validity,
             }
         else:
-            if season_i >= len(season_tables):
-                raise ValueError(f"{style} is live but no season premium table left to assign")
-            rows = season_tables[season_i]
-            season_i += 1
+            rows = find_season_table_in_range(ws, r0, r1, "PREMIUM MARKET")
+            if rows is None:
+                raise ValueError(f"{sheet_name}: {style} is live but no season premium table found in its own section")
             variant = {"3": {}, "4": {}}
             validity = {}
             for row in rows:
-                start = shift_years(row["start"], date_shift_years)
-                end = shift_years(row["end"], date_shift_years)
+                start, end = row["start"], row["end"]
                 # winter window starts in Nov, summer window starts in Apr
                 season = "winter" if start.month in (10, 11, 12) else "summer"
                 if season == "summer" and drop_summer:
                     continue
-                for cat in ("3", "4"):
-                    variant[cat][season] = {
+                for cat, has in (("3", has3), ("4", has4)):
+                    variant[cat][season] = mask({
                         "single": money(row[cat]["single"]),
                         "twin": money(row[cat]["twin"]),
                         "child": money(row[cat]["child"]),
-                    }
+                    }, has)
                 validity[season] = {"from": fmt_date(start), "to": fmt_date(end)}
                 all_windows.append((start, end))
             variant["validity"] = validity
