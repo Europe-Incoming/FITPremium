@@ -1,0 +1,163 @@
+{
+  "id": "devon-cornwall-9n",
+  "title": "London, Devon & Cornwall",
+  "eyebrow": "UK & Ireland \u00b7 FIT Packages \u00b7 2026\u201327",
+  "heroImage": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=80",
+  "pricesFile": "prices/devon-cornwall-9n.json",
+  "map": {
+    "points": [
+      {
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "label": "London",
+        "nights": 0
+      },
+      {
+        "lat": 51.8994,
+        "lng": -2.0783,
+        "label": "Cheltenham",
+        "nights": 0
+      },
+      {
+        "lat": 51.0826,
+        "lng": -4.0586,
+        "label": "Barnstaple",
+        "nights": 0
+      },
+      {
+        "lat": 50.2632,
+        "lng": -5.051,
+        "label": "Truro",
+        "nights": 0
+      },
+      {
+        "lat": 50.3755,
+        "lng": -4.1427,
+        "label": "Plymouth",
+        "nights": 0
+      },
+      {
+        "lat": 50.7184,
+        "lng": -3.5339,
+        "label": "Exeter",
+        "nights": 0
+      },
+      {
+        "lat": 50.7192,
+        "lng": -1.8808,
+        "label": "Bournemouth",
+        "nights": 0
+      }
+    ],
+    "closeLoop": false
+  },
+  "styles": {
+    "selfdrive": {
+      "name": "Self Drive",
+      "blurb": "Rental car from London \u2014 the slow route through England's Atlantic coast.",
+      "nights": "9 nights / 10 days",
+      "route": "London (2N) \u2192 Cheltenham (1N) \u2192 Barnstaple (1N) \u2192 Truro (2N) \u2192 Plymouth (1N) \u2192 Exeter (1N) \u2192 Bournemouth (1N)",
+      "aboutNights": "9 nights / 10 days",
+      "transport": {},
+      "inclusions": [
+        "9 nights\u2019 accommodation including breakfast.",
+        "Rental car (Standard sedan / SUV class) from Day 2, 10 AM till Day 10, 2 PM. **Actual vehicle model depends on availability at the time of pick-up. ** Rental terms and policies will be available after booking the rental car.",
+        "Private transfer from Heathrow airport to your hotel in London"
+      ]
+    }
+  },
+  "days": [],
+  "hotels": [
+    {
+      "city": "London",
+      "nights": "2 Nights",
+      "h3": "ibis London Shepherds Bush \u2013 Hammersmith",
+      "h4": "Novotel London West"
+    },
+    {
+      "city": "Cheltenham",
+      "nights": "1 Night",
+      "h3": "Premier Inn Cheltenham North West",
+      "h4": "Leonardo Hotel Cheltenham"
+    },
+    {
+      "city": "Barnstaple",
+      "nights": "1 Night",
+      "h3": "Premier Inn Barnstaple",
+      "h4": "The Park Hotel"
+    },
+    {
+      "city": "Truro",
+      "nights": "2 Nights",
+      "h3": "Premier Inn Truro",
+      "h4": "The Alverton"
+    },
+    {
+      "city": "Plymouth",
+      "nights": "1 Night",
+      "h3": "Premier Inn Plymouth City",
+      "h4": "Crowne Plaza Plymouth"
+    },
+    {
+      "city": "Exeter",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Express Exeter - City Centre",
+      "h4": "Mercure Exeter Southgate Hotel"
+    },
+    {
+      "city": "Bournemouth",
+      "nights": "1 Night",
+      "h3": "Holiday Inn Bournemouth",
+      "h4": "The Cumberland Hotel"
+    },
+    {
+      "city": "London Heathrow area",
+      "nights": "1 Night",
+      "h3": "Premier Inn Heathrow Airport - M4/J4",
+      "h4": "Hyatt Place London Heathrow Airport"
+    }
+  ],
+  "about": [
+    {
+      "title": "Best season",
+      "body": "May\u2013September for long days; shoulder months quieter and better value"
+    },
+    {
+      "title": "Weather",
+      "body": "Mild and changeable. 12\u201320\u00b0C in summer. Pack a rain layer year-round"
+    }
+  ],
+  "goodToKnow": [
+    {
+      "title": "Best season",
+      "body": "April\u2013September for long days and best weather; shoulder months quieter and often better value."
+    },
+    {
+      "title": "Currency & documents",
+      "body": "England/Scotland use \u00a3 GBP. Ireland uses \u20ac EUR. Both are Schengen-free \u2014 check your entry requirements."
+    },
+    {
+      "title": "What to pack",
+      "body": "Layers and a waterproof in any month. Comfortable shoes for cobbles and coastal paths."
+    },
+    {
+      "title": "Driving",
+      "body": "Drive on the left. Rural roads can be narrow \u2014 allow extra time. Petrol stations sparse in Highland areas.",
+      "styles": [
+        "selfdrive"
+      ]
+    }
+  ],
+  "terms": [
+    "All rates are net and per person for the package.",
+    "Child rates apply for children aged from 2 to 11 years old. 1 child sharing a room with 2 adults (depending on hotel policy). If the hotel doesn\u2019t have availability for family rooms, adult rates will apply.",
+    "All rates are subject to availability at the time of booking. Europe Incoming will endeavour to match the rates quoted in the packages.",
+    "Rates quoted are not applicable during trade fair periods, major European Holidays and other major events.",
+    "City taxes are not included in the price.",
+    "If certain entrances are closed during certain periods, alternative entrances will be provided.",
+    "All bookings have to be confirmed at least 60 working days prior to arrival date by the Agent. Early bookings increase the chances of achieving the quoted package rate.",
+    "The prices we quote are indicative, but we always try to confirm the prices offered in this document.",
+    "We require 100% pre-payment either by bank transfer or by credit card (VISA or Mastercard). All charges for bank transfers need to be covered by the Agent.",
+    "Vouchers will be issued after receipt of the full payment in our bank account."
+  ]
+}

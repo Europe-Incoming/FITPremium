@@ -1,0 +1,106 @@
+{
+  "year": "2026-27",
+  "currency": "EUR",
+  "validFrom": "01 Nov 2026",
+  "validTo": "30 Nov 2027",
+  "note": "Premium market rates. Net, per person.",
+  "variants": {
+    "regular": {
+      "3": {
+        "winter": {
+          "single": 1412,
+          "twin": 874,
+          "child": 361
+        },
+        "summer": {
+          "single": 1470,
+          "twin": 910,
+          "child": 376
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1597,
+          "twin": 967,
+          "child": 397
+        },
+        "summer": {
+          "single": 1663,
+          "twin": 1007,
+          "child": 414
+        }
+      }
+    },
+    "private": {
+      "minPax": [
+        {
+          "pax": 8,
+          "w3": 1398,
+          "w4": 1491,
+          "s3": 1456,
+          "s4": 1553
+        },
+        {
+          "pax": 10,
+          "w3": 1316,
+          "w4": 1409,
+          "s3": 1371,
+          "s4": 1468
+        },
+        {
+          "pax": 12,
+          "w3": 1262,
+          "w4": 1354,
+          "s3": 1314,
+          "s4": 1411
+        },
+        {
+          "pax": 14,
+          "w3": 1223,
+          "w4": 1315,
+          "s3": 1274,
+          "s4": 1370
+        },
+        {
+          "pax": 16,
+          "w3": 1194,
+          "w4": 1286,
+          "s3": 1243,
+          "s4": 1340
+        }
+      ]
+    },
+    "selfdrive": {
+      "3": {
+        "winter": {
+          "single": 1520,
+          "twin": 983,
+          "child": 410
+        },
+        "summer": {
+          "single": 1584,
+          "twin": 1024,
+          "child": 427
+        }
+      },
+      "4": {
+        "winter": {
+          "single": 1706,
+          "twin": 1075,
+          "child": 446
+        },
+        "summer": {
+          "single": 1777,
+          "twin": 1120,
+          "child": 465
+        }
+      }
+    }
+  },
+  "optionalTours": [
+    {
+      "name": "Dublin: Guinness Storehouse, standard ticket with a pint, 90 mins",
+      "price": 25.75
+    }
+  ]
+}

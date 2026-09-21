@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title id="page-title">Package | Europe Incoming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--navy:#0B1733;--navy-tile:#132347;--gold:#F2B91D;--ink:#1A1D2E;--body-grey:#3A3D4D;--muted:#6B7080;--line:#E5E7EC;--line-light:#EFF0F3;--ctrl-border:#D8DAE1;--surface:#F5F5F3;--surface-hover:#EDEDEA;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Open Sans','Segoe UI',sans-serif;background:#fff;color:var(--ink);}
+
+/* Header */
+.site-header{display:flex;align-items:center;gap:20px;padding:20px 40px 0;no-print:true;}
+.back-link{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--navy);}
+.back-arrow{width:26px;height:26px;border:2px solid var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.back-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.dl-btn{margin-left:auto;background:var(--navy);color:#fff;border:none;border-radius:0;padding:10px 18px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
+.dl-btn:hover{background:var(--gold);color:var(--navy);}
+
+/* Title block */
+.title-block{padding:32px 40px 0;}
+.title-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.page-h1{font-weight:300;font-size:56px;letter-spacing:-0.02em;color:var(--navy);line-height:1;}
+
+/* Hero row */
+.hero-row{display:flex;align-items:stretch;margin:24px 40px 0;gap:0;}
+.hero-img{flex:1;min-width:320px;min-height:380px;background:var(--navy);overflow:hidden;}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.facts-panel{width:280px;flex-shrink:0;background:var(--navy);color:#fff;padding:24px 26px;display:flex;flex-direction:column;gap:14px;}
+.facts-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+.facts-value{font-weight:300;font-size:24px;margin-top:2px;}
+.facts-route{font-size:13px;color:rgba(255,255,255,0.78);}
+.facts-price-block{margin-top:auto;border-top:1px solid rgba(255,255,255,0.15);padding-top:14px;}
+.facts-from{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.facts-amount{font-weight:300;font-size:34px;line-height:1;color:#fff;}
+.facts-pp{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+
+/* Body layout */
+.body-wrap{display:flex;gap:40px;padding:40px 40px 80px;align-items:flex-start;}
+.content-col{flex:1;min-width:0;}
+.sidebar-col{width:300px;flex-shrink:0;position:sticky;top:20px;}
+
+/* Style switcher */
+.switcher-row{margin-bottom:28px;}
+.switcher-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.switcher-btns{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;}
+.sw-btn{border-radius:0;padding:8px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:inherit;border:2px solid var(--ctrl-border);background:transparent;color:var(--navy);}
+.sw-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.sw-blurb{font-size:13px;color:var(--muted);}
+
+/* Section heading */
+.section-heading{font-weight:300;font-size:34px;color:var(--navy);margin-bottom:4px;}
+.section-sub{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+
+/* Day rows */
+.day-row{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);}
+.day-num-col{text-align:left;}
+.day-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.day-number{font-weight:300;font-size:40px;line-height:1;color:var(--gold);}
+.day-title{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:4px;}
+.day-overnight{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.day-desc{font-size:14px;line-height:1.7;color:var(--body-grey);margin-bottom:8px;}
+.day-tags{display:flex;flex-direction:column;gap:6px;}
+.tag{display:inline-block;padding:4px 10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:0;}
+.tag-included{background:var(--navy);color:#fff;}
+.tag-taste{background:var(--gold);color:var(--navy);}
+.tag-exp{background:#EDEDEA;color:var(--navy);}
+
+/* Package includes */
+.includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-bottom:40px;}
+.include-row{position:relative;padding:9px 0 9px 22px;border-bottom:1px solid var(--line-light);font-size:13px;color:var(--body-grey);}
+.include-row::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700;}
+
+/* Hotels grid */
+.hotels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:40px;}
+.hotel-card{background:var(--surface);padding:18px 20px;}
+.hotel-city{font-weight:300;font-size:22px;color:var(--navy);}
+.hotel-nights{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.hotel-star{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:6px;}
+.hotel-name{font-size:12.5px;color:var(--body-grey);}
+
+/* Rates table */
+.rates-table{width:100%;border-collapse:collapse;margin-bottom:16px;}
+.rates-table th{background:var(--navy);color:#fff;padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}
+.rates-table th:first-child{text-align:left;}
+.rates-table th:not(:first-child){text-align:right;}
+.rates-table td{padding:10px 16px;border-bottom:1px solid var(--line-light);}
+.rates-table td:first-child{font-size:13.5px;}
+.rates-table td:not(:first-child){font-weight:300;font-size:22px;text-align:right;}
+.rates-footnote{font-size:12px;color:var(--muted);margin-top:8px;margin-bottom:40px;}
+
+/* Min-pax table */
+.minpax-table{width:100%;border-collapse:collapse;margin-bottom:16px;}
+.minpax-table th{background:var(--navy);color:#fff;padding:10px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:right;}
+.minpax-table th:first-child{text-align:left;}
+.minpax-table td{padding:8px 16px;border-bottom:1px solid var(--line-light);font-size:13px;}
+.minpax-table td:not(:first-child){font-weight:300;font-size:20px;text-align:right;}
+
+/* Optional tours */
+.optionals-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:40px;}
+.optional-card{background:var(--surface);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;}
+.optional-name{font-size:13px;color:var(--body-grey);}
+.optional-price{font-weight:300;font-size:22px;color:var(--navy);}
+.optional-pp{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+
+/* Good to know */
+.gtk-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:40px;}
+.gtk-card{background:var(--navy);padding:18px 20px;}
+.gtk-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.gtk-body{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.55;}
+
+/* T&C */
+.tc-btn{width:100%;background:var(--surface);border:none;border-radius:0;padding:14px 18px;text-align:left;cursor:pointer;font-family:inherit;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;margin-bottom:2px;}
+.tc-btn:hover{background:var(--surface-hover);}
+.tc-body{background:var(--surface);padding:0 18px;max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;}
+.tc-body.open{max-height:1000px;padding:14px 18px;}
+.tc-item{padding:9px 0 9px 16px;border-bottom:1px solid var(--line-light);font-size:12.5px;color:var(--body-grey);position:relative;}
+.tc-item::before{content:'·';position:absolute;left:0;color:var(--gold);font-weight:700;}
+
+/* Sidebar */
+.sidebar-about{background:var(--surface);padding:20px;margin-bottom:12px;}
+.sb-map-wrap{width:100%;height:180px;position:relative;cursor:zoom-in;margin-bottom:12px;}
+.sb-map{width:100%;height:100%;}
+.sb-enlarge{position:absolute;bottom:0;right:0;background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:0;}
+.sb-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;}
+.sb-key{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.sb-val{color:var(--ink);}
+.quote-card{background:var(--gold);padding:20px;}
+.quote-heading{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px;}
+.quote-body{font-size:13px;color:var(--navy);line-height:1.55;margin-bottom:16px;}
+.quote-btn{display:block;width:100%;text-align:center;background:var(--navy);color:#fff;text-decoration:none;padding:12px 0;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-family:inherit;}
+
+/* Map modal */
+.modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(11,23,51,0.85);display:none;align-items:center;justify-content:center;padding:40px;}
+.modal-overlay.open{display:flex;}
+.modal-panel{background:#fff;width:min(960px,100%);height:min(640px,100%);display:flex;flex-direction:column;}
+.modal-title-bar{background:var(--navy);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+.modal-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;}
+.modal-close{background:none;border:none;color:var(--gold);font-size:20px;cursor:pointer;line-height:1;}
+.modal-map{flex:1;}
+
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,0.55);padding:20px 40px;font-size:12px;display:flex;justify-content:space-between;align-items:center;}
+footer a{color:var(--gold);text-decoration:none;}
+
+/* Season / star switchers */
+.rate-controls{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.rate-control-group{display:flex;flex-direction:column;gap:6px;}
+
+/* Print styles */
+@media print {
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;color-adjust:exact!important;}
+  .site-header,.dl-btn,.switcher-row,.sidebar-col,.modal-overlay,.no-print{display:none!important;}
+  .body-wrap{display:block;padding:0;}
+  .content-col{width:100%;}
+  .hero-row{margin:12px 0 0;}
+  .hero-img{min-height:130px!important;height:130px!important;}
+  .facts-panel{width:200px;}
+  .page-h1{font-size:32px;}
+  .section-heading{font-size:16px;}
+  .day-number{font-size:24px;}
+  .day-row{padding:12px 0;}
+  .hotels-grid{grid-template-columns:repeat(3,1fr);}
+  .rates-table td{font-size:16px;}
+  .tc-body{max-height:none!important;padding:14px 18px!important;}
+  .tc-btn .tc-caret{display:none;}
+  .gtk-grid,.optionals-grid{grid-template-columns:1fr 1fr;}
+  body{font-size:11px;}
+  .includes-grid{grid-template-columns:1fr 1fr;}
+  .package-includes-section{break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header no-print">
+  <a href="../../logo.png" style="display:block">
+    <img src="../../logo.png" alt="Europe Incoming" style="height:24px">
+  </a>
+  <a class="back-link" href="index.html">
+    <span class="back-arrow">←</span>
+    <span class="back-label">All packages</span>
+  </a>
+  <a class="dl-btn" id="dl-btn" href="#" download>Download PDF</a>
+</header>
+
+<!-- Title block -->
+<div class="title-block">
+  <div class="title-eyebrow" id="eyebrow"></div>
+  <h1 class="page-h1" id="pkg-title">…</h1>
+</div>
+
+<!-- Hero row -->
+<div class="hero-row">
+  <div class="hero-img"><img id="hero-img" src="" alt=""></div>
+  <div class="facts-panel">
+    <div>
+      <div class="facts-label">Duration</div>
+      <div class="facts-value" id="facts-duration">…</div>
+    </div>
+    <div>
+      <div class="facts-label">Route</div>
+      <div class="facts-route" id="facts-route">…</div>
+    </div>
+    <div class="facts-price-block">
+      <div class="facts-from">From</div>
+      <div class="facts-amount" id="facts-price">…</div>
+      <div class="facts-pp">per person</div>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="body-wrap">
+  <div class="content-col">
+
+    <!-- Style switcher -->
+    <div class="switcher-row no-print">
+      <div class="switcher-label">Travel style</div>
+      <div class="switcher-btns" id="style-btns"></div>
+      <div class="sw-blurb" id="style-blurb"></div>
+    </div>
+
+    <!-- Day by day -->
+    <div class="section-heading" id="days-heading">Itinerary</div>
+    <div class="section-sub" id="days-sub"></div>
+    <div id="days-container"></div>
+
+    <!-- Package includes -->
+    <div class="package-includes-section">
+      <div class="section-heading">Package includes</div>
+      <div class="section-sub" id="includes-sub"></div>
+      <div class="includes-grid" id="includes-container"></div>
+    </div>
+
+    <!-- Sample hotels -->
+    <div class="section-heading">Sample hotels</div>
+    <div class="section-sub">Representative hotels — subject to availability</div>
+    <div class="hotels-grid" id="hotels-container"></div>
+
+    <!-- Rates -->
+    <div class="section-heading">Rates</div>
+    <div class="section-sub" id="rates-sub"></div>
+    <div id="rates-container"></div>
+    <p class="rates-footnote" id="rates-footnote"></p>
+
+    <!-- Optional tours -->
+    <div id="optionals-section" style="display:none">
+      <div class="section-heading">Optional tours &amp; extras</div>
+      <div class="section-sub">Bookable at an additional cost</div>
+      <div class="optionals-grid" id="optionals-container"></div>
+    </div>
+
+    <!-- Good to know -->
+    <div id="gtk-section" style="display:none">
+      <div class="section-heading">Good to know</div>
+      <div class="section-sub" id="gtk-sub"></div>
+      <div class="gtk-grid" id="gtk-container"></div>
+    </div>
+
+    <!-- T&C -->
+    <button class="tc-btn" onclick="toggleTC()">
+      <span>Terms &amp; Conditions</span>
+      <span class="tc-caret" id="tc-caret">▼</span>
+    </button>
+    <div class="tc-body" id="tc-body"></div>
+
+  </div><!-- .content-col -->
+
+  <!-- Sidebar -->
+  <aside class="sidebar-col no-print">
+    <div class="sidebar-about">
+      <div class="sb-map-wrap" onclick="openMapModal()">
+        <div class="sb-map" id="sidebar-map" style="pointer-events:none"></div>
+        <span class="sb-enlarge">Enlarge</span>
+      </div>
+      <div id="sb-rows"></div>
+    </div>
+    <div class="quote-card">
+      <div class="quote-heading">Ready to quote?</div>
+      <p class="quote-body">Send us your dates and party size — we respond within one working day.</p>
+      <a class="quote-btn" href="mailto:fitsales@europeincoming.com">Email the FIT team</a>
+    </div>
+  </aside>
+</div><!-- .body-wrap -->
+
+<footer>
+  <span>Europe Incoming Holdings Ltd · Unit 11-12 Turnham Green Terrace Mews, London W4 1QU</span>
+  <span><a href="mailto:fitsales@europeincoming.com">fitsales@europeincoming.com</a> &nbsp;·&nbsp; +44 208 994 5001</span>
+</footer>
+
+<!-- Map modal -->
+<div class="modal-overlay" id="map-modal">
+  <div class="modal-panel">
+    <div class="modal-title-bar">
+      <span class="modal-title" id="modal-title"></span>
+      <button class="modal-close" onclick="closeMapModal()">✕</button>
+    </div>
+    <div class="modal-map" id="modal-map"></div>
+  </div>
+</div>
+
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+let PRODUCT = null, PRICES = null;
+let activeStyle = null, activeCat = '3', activeSeason = 'summer';
+let sidebarMap = null, modalMap = null;
+
+// ── Boot ─────────────────────────────────────────────────────────────────────
+const params = new URLSearchParams(location.search);
+const productFile = params.get('product');
+const productSlug = productFile ? productFile.replace(/^products\//, '').replace(/\.json$/, '') : '';
+if (!productFile) {
+  document.body.innerHTML = '<p style="padding:40px;color:#c00">No product specified.</p>';
+} else {
+  fetch(productFile)
+    .then(r => r.json())
+    .then(prod => {
+      PRODUCT = prod;
+      document.title = prod.title + ' | Europe Incoming';
+      document.getElementById('page-title').textContent = prod.title;
+      document.getElementById('eyebrow').textContent = prod.eyebrow || '';
+      document.getElementById('pkg-title').textContent = prod.title;
+      document.getElementById('hero-img').src = prod.heroImage || '';
+      document.getElementById('hero-img').alt = prod.title;
+      buildStyleSwitcher();
+      const firstStyle = params.get('style') || Object.keys(prod.styles)[0];
+      setStyle(firstStyle);
+      buildHotels();
+      buildTC();
+      fetch(prod.pricesFile).then(r => r.json()).then(prices => {
+        PRICES = prices;
+        updateRates();
+        updateFactsPrice();
+      });
+      setTimeout(buildSidebarMap, 100);
+    });
+}
+
+// ── Style switcher ───────────────────────────────────────────────────────────
+function buildStyleSwitcher() {
+  const container = document.getElementById('style-btns');
+  container.innerHTML = '';
+  Object.entries(PRODUCT.styles).forEach(([key, s]) => {
+    const btn = document.createElement('button');
+    btn.className = 'sw-btn';
+    btn.textContent = s.name;
+    btn.dataset.style = key;
+    btn.onclick = () => setStyle(key);
+    container.appendChild(btn);
+  });
+}
+
+function setStyle(styleKey) {
+  if (!PRODUCT || !PRODUCT.styles[styleKey]) styleKey = Object.keys(PRODUCT.styles)[0];
+  activeStyle = styleKey;
+  const s = PRODUCT.styles[styleKey];
+  document.querySelectorAll('.sw-btn').forEach(b => b.classList.toggle('active', b.dataset.style === styleKey));
+  document.getElementById('style-blurb').textContent = s.blurb || '';
+  document.getElementById('facts-duration').textContent = s.nights || '';
+  document.getElementById('facts-route').textContent = s.route || '';
+  document.getElementById('days-sub').textContent = s.name;
+  document.getElementById('includes-sub').textContent = s.name;
+  document.getElementById('rates-sub').textContent = s.name;
+  document.getElementById('gtk-sub').textContent = s.name;
+  const dlBtn = document.getElementById('dl-btn');
+  if (dlBtn) dlBtn.href = `pdfs/${productSlug}-${styleKey}.pdf`;
+  buildDays(styleKey);
+  buildIncludes(styleKey);
+  if (PRICES) { updateRates(); updateFactsPrice(); }
+  updateGTK();
+}
+
+// ── Days ─────────────────────────────────────────────────────────────────────
+function buildDays(styleKey) {
+  const s = PRODUCT.styles[styleKey];
+  const transport = s.transport || {};
+  const container = document.getElementById('days-container');
+  container.innerHTML = '';
+  (PRODUCT.days || []).forEach(d => {
+    const inc = transport[String(d.num)] || d.fallbackIncluded || '';
+    const row = document.createElement('div');
+    row.className = 'day-row';
+    row.innerHTML = `
+      <div class="day-num-col">
+        <div class="day-label">Day</div>
+        <div class="day-number">${d.num}</div>
+      </div>
+      <div>
+        <div class="day-title">${d.title}</div>
+        <div class="day-overnight">${d.overnight || ''}</div>
+        <div class="day-desc">${d.desc || ''}</div>
+        ${inc ? `<div class="day-tags"><span class="tag tag-included">${inc}</span></div>` : ''}
+      </div>
+    `;
+    container.appendChild(row);
+  });
+}
+
+// ── Includes ─────────────────────────────────────────────────────────────────
+function buildIncludes(styleKey) {
+  const s = PRODUCT.styles[styleKey];
+  const items = s.inclusions || [];
+  const container = document.getElementById('includes-container');
+  container.innerHTML = items.map(i => `<div class="include-row">${i}</div>`).join('');
+}
+
+// ── Hotels ───────────────────────────────────────────────────────────────────
+function buildHotels() {
+  const container = document.getElementById('hotels-container');
+  container.innerHTML = (PRODUCT.hotels || []).map(h => `
+    <div class="hotel-card">
+      <div class="hotel-city">${h.city}</div>
+      <div class="hotel-nights">${h.nights}</div>
+      ${h.h3 ? `<div class="hotel-star">3 STAR</div><div class="hotel-name">${h.h3}</div>` : ''}
+      ${h.h4 ? `<div class="hotel-star">4 STAR</div><div class="hotel-name">${h.h4}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+// ── Rates ────────────────────────────────────────────────────────────────────
+function updateRates() {
+  if (!PRICES || !activeStyle) return;
+  const container = document.getElementById('rates-container');
+  const variants = PRICES.variants || {};
+  const styleRates = variants[activeStyle];
+  const cur = PRICES.currency === 'GBP' ? '£' : '€';
+
+  // Optionals
+  const opts = PRICES.optionalTours || [];
+  document.getElementById('optionals-section').style.display = opts.length ? '' : 'none';
+  if (opts.length) {
+    document.getElementById('optionals-container').innerHTML = opts.map(o =>
+      `<div class="optional-card"><div class="optional-name">${o.name}</div><div><div class="optional-price">${cur}${o.price}</div><div class="optional-pp">pp</div></div></div>`
+    ).join('');
+  }
+
+  if (!styleRates) { container.innerHTML = '<p style="color:var(--muted);font-size:13px">Rates not available for this travel style.</p>'; return; }
+
+  // Min-Pax style (private)
+  if (styleRates.minPax) {
+    const rows = styleRates.minPax;
+    container.innerHTML = `
+      <table class="minpax-table">
+        <thead><tr>
+          <th style="text-align:left">Min Pax</th>
+          <th>3★ Winter</th><th>4★ Winter</th>
+          <th>3★ Summer</th><th>4★ Summer</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(r => `<tr>
+            <td>${r.pax}+ guests</td>
+            <td>${r.w3 ? cur+r.w3 : '—'}</td>
+            <td>${r.w4 ? cur+r.w4 : '—'}</td>
+            <td>${r.s3 ? cur+r.s3 : '—'}</td>
+            <td>${r.s4 ? cur+r.s4 : '—'}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    `;
+    document.getElementById('rates-footnote').textContent =
+      `All rates in ${cur}, net, per person per adult. Child (2–11 yrs) sharing with 2 adults — contact us for child rate.`;
+    return;
+  }
+
+  // Season/star table — show ALL 4 combos for print
+  const combos = [
+    {star:'3', season:'winter', label:'3★ · Nov–Mar'},
+    {star:'3', season:'summer', label:'3★ · Apr–Oct'},
+    {star:'4', season:'winter', label:'4★ · Nov–Mar'},
+    {star:'4', season:'summer', label:'4★ · Apr–Oct'},
+  ];
+
+  let html = '';
+  combos.forEach(c => {
+    const rates = (styleRates[c.star] || {})[c.season];
+    if (!rates) return;
+    html += `
+      <div style="margin-bottom:20px">
+        <table class="rates-table">
+          <thead><tr>
+            <th>Occupancy</th>
+            <th colspan="1">Rate — ${c.label}</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Single</td><td>${cur}${rates.single || '—'}</td></tr>
+            <tr><td>Twin / Double</td><td>${cur}${rates.twin || '—'}</td></tr>
+            <tr><td>Child (2–11)</td><td>${cur}${rates.child || '—'}</td></tr>
+          </tbody>
+        </table>
+      </div>`;
+  });
+  container.innerHTML = html || '<p style="color:var(--muted);font-size:13px">No rates loaded.</p>';
+  document.getElementById('rates-footnote').textContent =
+    `All rates in ${cur}, net, per person. Twin/double occupancy unless stated. Child 2–11 yrs sharing with 2 adults.`;
+}
+
+function updateFactsPrice() {
+  if (!PRICES || !activeStyle) return;
+  const variants = PRICES.variants || {};
+  const styleRates = variants[activeStyle];
+  const cur = PRICES.currency === 'GBP' ? '£' : '€';
+  let minPrice = Infinity;
+  if (!styleRates) { document.getElementById('facts-price').textContent = '—'; return; }
+  if (styleRates.minPax) {
+    styleRates.minPax.forEach(r => {
+      [r.w3, r.w4, r.s3, r.s4].forEach(v => { if (v && v < minPrice) minPrice = v; });
+    });
+  } else {
+    ['3','4'].forEach(star => {
+      ['summer','winter'].forEach(s => {
+        const t = (styleRates[star] || {})[s]?.twin;
+        if (t && t < minPrice) minPrice = t;
+      });
+    });
+  }
+  document.getElementById('facts-price').textContent = minPrice < Infinity ? cur + minPrice.toLocaleString() : '—';
+}
+
+// ── Good to know ─────────────────────────────────────────────────────────────
+function updateGTK() {
+  const items = (PRODUCT.goodToKnow || []).filter(g =>
+    !g.styles || g.styles.includes(activeStyle)
+  );
+  const section = document.getElementById('gtk-section');
+  section.style.display = items.length ? '' : 'none';
+  document.getElementById('gtk-container').innerHTML = items.map(g =>
+    `<div class="gtk-card"><div class="gtk-title">${g.title}</div><div class="gtk-body">${g.body}</div></div>`
+  ).join('');
+}
+
+// ── Terms ────────────────────────────────────────────────────────────────────
+function buildTC() {
+  document.getElementById('tc-body').innerHTML = (PRODUCT.terms || [])
+    .map(t => `<div class="tc-item">${t}</div>`).join('');
+}
+function toggleTC() {
+  const body = document.getElementById('tc-body');
+  const open = body.classList.toggle('open');
+  document.getElementById('tc-caret').textContent = open ? '▲' : '▼';
+}
+
+// ── Sidebar map ──────────────────────────────────────────────────────────────
+function squareMarker(size, color) {
+  return L.divIcon({
+    className: '', html: `<div style="width:${size}px;height:${size}px;background:${color}"></div>`,
+    iconSize: [size, size], iconAnchor: [size/2, size/2],
+  });
+}
+function buildSidebarMap() {
+  const el = document.getElementById('sidebar-map');
+  if (!el || !PRODUCT) return;
+  const pts = PRODUCT.map?.points || [];
+  sidebarMap = L.map(el, {zoomControl:false,scrollWheelZoom:false,dragging:false,attributionControl:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:13}).addTo(sidebarMap);
+  if (pts.length > 1) {
+    const lls = pts.map(p => [p.lat,p.lng]);
+    const route = PRODUCT.map?.closeLoop ? [...lls,lls[0]] : lls;
+    L.polyline(route,{color:'#0B1733',weight:1.5,dashArray:'4,4'}).addTo(sidebarMap);
+  }
+  pts.forEach(p => {
+    L.marker([p.lat,p.lng],{icon:squareMarker(p.nights>0?10:6,p.nights>0?'#F2B91D':'#6B7080')}).addTo(sidebarMap)
+      .bindTooltip(p.label,{permanent:true,direction:'top',offset:[0,-8],className:'city-tip'});
+  });
+  if (pts.length) {
+    const b = L.latLngBounds(pts.map(p=>[p.lat,p.lng]));
+    sidebarMap.fitBounds(b,{padding:[10,10]});
+  }
+  // Sidebar rows
+  const s = PRODUCT.styles[activeStyle] || {};
+  document.getElementById('sb-rows').innerHTML = `
+    <div class="sb-row"><span class="sb-key">Nights</span><span class="sb-val">${s.nights||''}</span></div>
+    <div class="sb-row"><span class="sb-key">Route</span><span class="sb-val">${s.route||''}</span></div>
+    ${(PRODUCT.about||[]).map(a=>`<div class="sb-row"><span class="sb-key">${a.title}</span><span class="sb-val">${a.body}</span></div>`).join('')}
+  `;
+}
+
+// ── Map modal ────────────────────────────────────────────────────────────────
+function openMapModal() {
+  document.getElementById('map-modal').classList.add('open');
+  document.getElementById('modal-title').textContent = PRODUCT.title;
+  setTimeout(() => {
+    if (modalMap) { modalMap.invalidateSize(); return; }
+    const el = document.getElementById('modal-map');
+    const pts = PRODUCT.map?.points || [];
+    modalMap = L.map(el,{zoomControl:true,scrollWheelZoom:true,dragging:true,attributionControl:false});
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:15}).addTo(modalMap);
+    if (pts.length > 1) {
+      const lls = pts.map(p => [p.lat,p.lng]);
+      L.polyline(PRODUCT.map?.closeLoop?[...lls,lls[0]]:lls,{color:'#0B1733',weight:2}).addTo(modalMap);
+    }
+    pts.forEach(p => {
+      L.marker([p.lat,p.lng],{icon:squareMarker(p.nights>0?20:8,p.nights>0?'#F2B91D':'#0B1733')}).addTo(modalMap)
+        .bindTooltip(`${p.label}${p.nights>0?' ('+p.nights+'N)':''}`,{permanent:true,direction:'top'});
+    });
+    if (pts.length) modalMap.fitBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{padding:[30,30]});
+  }, 50);
+}
+function closeMapModal() {
+  document.getElementById('map-modal').classList.remove('open');
+  if (modalMap) { modalMap.remove(); modalMap = null; }
+}
+document.getElementById('map-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeMapModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMapModal(); });
+
+</script>
+</body>
+</html>

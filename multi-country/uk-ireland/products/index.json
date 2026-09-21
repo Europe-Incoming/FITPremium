@@ -1,0 +1,305 @@
+{
+  "products": [
+    {
+      "id": "london-3n",
+      "productFile": "products/london-3n.json",
+      "title": "London City Break",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 51.5074,
+            "lng": -0.1278,
+            "label": "London",
+            "nights": 0
+          },
+          {
+            "lat": 51.3781,
+            "lng": -2.3597,
+            "label": "Bath",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "London",
+        "Bath"
+      ],
+      "nights": "3 nights / 4 days",
+      "season": "All Year Round",
+      "validity": "Valid till Oct 2027",
+      "blurb": "Classic London \u2014 panoramic tour, Thames cruise, Stonehenge and Bath with a private vehicle.",
+      "fromPrice": 443,
+      "currency": "\u00a3",
+      "priceNote": "pp (twin)"
+    },
+    {
+      "id": "england-scotland-10n",
+      "productFile": "products/england-scotland-10n.json",
+      "title": "England & Scotland Grand Tour",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 51.5074,
+            "lng": -0.1278,
+            "label": "London",
+            "nights": 0
+          },
+          {
+            "lat": 53.4808,
+            "lng": -2.2426,
+            "label": "Manchester",
+            "nights": 0
+          },
+          {
+            "lat": 55.9533,
+            "lng": -3.1883,
+            "label": "Edinburgh",
+            "nights": 0
+          },
+          {
+            "lat": 57.4778,
+            "lng": -4.2247,
+            "label": "Inverness",
+            "nights": 0
+          },
+          {
+            "lat": 55.8642,
+            "lng": -4.2518,
+            "label": "Glasgow",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "London",
+        "Manchester",
+        "Edinburgh",
+        "Inverness",
+        "Glasgow"
+      ],
+      "nights": "10 nights / 11 days",
+      "season": "All Year Round",
+      "validity": "Valid till Nov 2027",
+      "blurb": "London to Glasgow \u2014 Peak District, Edinburgh's Old Town, Loch Ness and the Highland wilderness.",
+      "fromPrice": 1297,
+      "currency": "\u00a3",
+      "priceNote": "pp (twin)"
+    },
+    {
+      "id": "london-scotland-8n",
+      "productFile": "products/london-scotland-8n.json",
+      "title": "London & Scotland Highlights",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 51.5074,
+            "lng": -0.1278,
+            "label": "London",
+            "nights": 0
+          },
+          {
+            "lat": 55.8642,
+            "lng": -4.2518,
+            "label": "Glasgow",
+            "nights": 0
+          },
+          {
+            "lat": 57.4778,
+            "lng": -4.2247,
+            "label": "Inverness",
+            "nights": 0
+          },
+          {
+            "lat": 55.9533,
+            "lng": -3.1883,
+            "label": "Edinburgh",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "London",
+        "Glasgow",
+        "Inverness",
+        "Edinburgh"
+      ],
+      "nights": "8 nights / 9 days",
+      "season": "All Year Round",
+      "validity": "Valid till Nov 2027",
+      "blurb": "London to Edinburgh via Glasgow \u2014 city sights, Highland wilderness and Loch Ness.",
+      "fromPrice": 1114,
+      "currency": "\u00a3",
+      "priceNote": "pp (twin)"
+    },
+    {
+      "id": "scotland-6n",
+      "productFile": "products/scotland-6n.json",
+      "title": "Scotland Discovery",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 55.9533,
+            "lng": -3.1883,
+            "label": "Edinburgh",
+            "nights": 0
+          },
+          {
+            "lat": 57.4778,
+            "lng": -4.2247,
+            "label": "Inverness",
+            "nights": 0
+          },
+          {
+            "lat": 56.8201,
+            "lng": -5.1057,
+            "label": "Fort William",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "Edinburgh",
+        "Inverness",
+        "Fort William"
+      ],
+      "nights": "6 nights / 7 days",
+      "season": "All Year Round",
+      "validity": "Valid till Nov 2027",
+      "blurb": "Edinburgh, Inverness and Fort William \u2014 castles, lochs and Highland glens by train, coach or self-drive.",
+      "fromPrice": 861,
+      "currency": "\u00a3",
+      "priceNote": "pp (twin)"
+    },
+    {
+      "id": "ireland-6n",
+      "productFile": "products/ireland-6n.json",
+      "title": "Ireland Discovery",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 53.3498,
+            "lng": -6.2603,
+            "label": "Dublin",
+            "nights": 0
+          },
+          {
+            "lat": 52.9715,
+            "lng": -9.4262,
+            "label": "Cliffs of Moher",
+            "nights": 0
+          },
+          {
+            "lat": 52.6638,
+            "lng": -8.6267,
+            "label": "Limerick",
+            "nights": 0
+          },
+          {
+            "lat": 52.6541,
+            "lng": -7.2448,
+            "label": "Kilkenny",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "Dublin",
+        "Cliffs of Moher",
+        "Limerick",
+        "Kilkenny"
+      ],
+      "nights": "6 nights / 7 days",
+      "season": "All Year Round",
+      "validity": "Valid till Nov 2027",
+      "blurb": "Dublin, the Cliffs of Moher and Limerick \u2014 by train, private coach or self-drive.",
+      "fromPrice": 874,
+      "currency": "\u20ac",
+      "priceNote": "pp (twin)"
+    },
+    {
+      "id": "devon-cornwall-9n",
+      "productFile": "products/devon-cornwall-9n.json",
+      "title": "London, Devon & Cornwall",
+      "region": "UK & Ireland",
+      "serviceLine": "FIT",
+      "map": {
+        "points": [
+          {
+            "lat": 51.5074,
+            "lng": -0.1278,
+            "label": "London",
+            "nights": 0
+          },
+          {
+            "lat": 51.8994,
+            "lng": -2.0783,
+            "label": "Cheltenham",
+            "nights": 0
+          },
+          {
+            "lat": 51.0826,
+            "lng": -4.0586,
+            "label": "Barnstaple",
+            "nights": 0
+          },
+          {
+            "lat": 50.2632,
+            "lng": -5.051,
+            "label": "Truro",
+            "nights": 0
+          },
+          {
+            "lat": 50.3755,
+            "lng": -4.1427,
+            "label": "Plymouth",
+            "nights": 0
+          },
+          {
+            "lat": 50.7184,
+            "lng": -3.5339,
+            "label": "Exeter",
+            "nights": 0
+          },
+          {
+            "lat": 50.7192,
+            "lng": -1.8808,
+            "label": "Bournemouth",
+            "nights": 0
+          }
+        ],
+        "closeLoop": false
+      },
+      "routeStops": [
+        "London",
+        "Cheltenham",
+        "Barnstaple",
+        "Truro",
+        "Plymouth",
+        "Exeter",
+        "Bournemouth"
+      ],
+      "nights": "9 nights / 10 days",
+      "season": "All Year Round",
+      "validity": "Valid till Nov 2027",
+      "blurb": "London to Land's End by rental car \u2014 Cotswolds, Tintagel, the Lizard Peninsula and Dartmoor.",
+      "fromPrice": 1372,
+      "currency": "\u00a3",
+      "priceNote": "pp (twin)"
+    }
+  ]
+}
