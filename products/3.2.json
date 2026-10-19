@@ -28,20 +28,30 @@
       "name": "Private Exclusive Coach",
       "blurb": "A private coach and driver at your disposal for the whole journey, with guided tours in Rome and Venice.",
       "nights": "10 nights · 11 days",
-      "route": "Rome (2N) → Naples (2N) → Florence (2N) → Venice (2N) → Milan (2N)",
+      "route": "Naples (2N) → Rome (2N) → Florence (2N) → Venice (2N) → Milan (2N)",
       "aboutNights": "10 nights across 5 stays",
       "transport": {
-        "1": "Rome Airport to Rome hotel, private transfer. Private coach at your disposal from Day 1 until Day 11.",
-        "4": "Guided city tour, 3 hrs, with your private vehicle (no entrances included).",
-        "8": "Venice - private guided walking tour, 1.5 hrs."
+        "1": "Rome or Naples airport to Naples hotel, private transfer. Private coach at your disposal from Day 1 until Day 11.",
+        "4": "Rome guided city tour, 3 hrs, with your private coach (no entrances included).",
+        "8": "Venice - private guided walking tour, 1.5 hrs.",
+        "2": "Amalfi Coast day trip by private coach, with the option to visit Pompeii on the return.",
+        "3": "Naples panoramic tour, then private coach transfer to Rome.",
+        "5": "Private coach transfer, Rome to Florence, with a stop in Siena.",
+        "6": "Florence panoramic tour and visit to Pisa by private coach (no entrances included).",
+        "7": "Private coach transfer, Florence to Venice (Mestre), with a stop at Modena (Ferrari) or Bologna.",
+        "9": "Private coach transfer, Venice to Milan, with a photo stop in Verona.",
+        "10": "Lake Como day trip by private coach, with an optional boat ride.",
+        "11": "Milan hotel to Milan airport private transfer."
       },
       "inclusions": [
         "Private coach at your disposal from Day 1 until Day 11",
-        "Rome airport to hotel private transfer on arrival",
-        "Guided city tour, 3 hrs, with your private vehicle (no entrances)",
-        "Private transfer Rome to Naples",
-        "Private transfers linking Naples, Florence, Venice and Milan with your dedicated vehicle",
+        "Rome or Naples airport to Naples hotel private transfer on arrival",
+        "Amalfi Coast day trip, with the option to visit Pompeii",
+        "Naples panoramic tour",
+        "Rome guided city tour, 3 hrs, with your private vehicle (no entrances)",
+        "Florence panoramic tour and Pisa visit (no entrances)",
         "Venice private guided walking tour, 1.5 hrs",
+        "Private transfers linking Naples, Rome, Florence, Venice and Milan, with en route stops as per itinerary",
         "10 nights accommodation with daily breakfast",
         "Milan hotel to airport private transfer on departure"
       ]
@@ -53,7 +63,15 @@
       "title": "Arrive Rome",
       "overnight": "Overnight: Rome",
       "desc": "Arrive at Rome Airport and enjoy a private transfer to your hotel. Known as the \"Eternal City,\" Rome is a treasure trove of ancient history, stunning architecture, and vibrant street life. Spend your first evening exploring the charming streets and piazzas of this historic city. Overnight in Rome.",
-      "taste": "An evening in Trastevere for classic Roman cucina povera — cacio e pepe, carbonara and a carafe of house wine, in the cobbled lanes around Piazza Santa Maria."
+      "taste": "An evening in Trastevere for classic Roman cucina povera — cacio e pepe, carbonara and a carafe of house wine, in the cobbled lanes around Piazza Santa Maria.",
+      "byStyle": {
+        "private": {
+          "title": "Arrive Naples",
+          "overnight": "Overnight: Naples",
+          "desc": "Begin your Italian journey with a private transfer from the airport in Rome or Naples to your Naples hotel. Naples, a city with a vibrant street life and rich history, is the gateway to the Amalfi coast and famous for its culinary delights. Overnight in Naples.",
+          "taste": "Naples is the birthplace of pizza — L'Antica Pizzeria da Michele has served only two varieties, margherita and marinara, from its wood-fired oven since 1870."
+        }
+      }
     },
     {
       "num": 2,
@@ -61,14 +79,31 @@
       "overnight": "Overnight: Rome",
       "desc": "Discover Rome's imperial past with a 2.5-hour small group walking tour. Visit the iconic Colosseum, witness the grandeur of ancient Rome and explore the historical ruins. The afternoon is free for you to stroll through Rome's bustling streets and piazzas. Overnight in Rome.",
       "experience": "Standing inside the Colosseum's arena-level galleries, imagining the roar of the crowd nearly two thousand years ago.",
-      "fallbackIncluded": "Rome small-group walking tour of Imperial Rome, 2.5 hrs."
+      "fallbackIncluded": "Rome small-group walking tour of Imperial Rome, 2.5 hrs.",
+      "byStyle": {
+        "private": {
+          "title": "Naples & the Amalfi Coast",
+          "overnight": "Overnight: Naples",
+          "desc": "Journey along the Amalfi Coast's serpentine roads, taking in breathtaking views of seaside villages perched above the sparkling Mediterranean. On your return to Naples, consider exploring the haunting ruins of Pompeii. Overnight in Naples.",
+          "experience": null,
+          "taste": "Caffè Gambrinus on Piazza Trieste e Trento, a Neapolitan institution since 1860, for an espresso and a sfogliatella pastry."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Rome → Naples",
       "overnight": "Overnight: Naples",
       "desc": "Travel to Naples by train. Naples, a city rich in history and culture, is famous for its historic center, vibrant markets, and as the birthplace of pizza. Spend the afternoon exploring Naples' picturesque streets, the famous Spaccanapoli, or the panoramic seafront. Overnight in Naples.",
-      "taste": "Naples is the birthplace of pizza — L'Antica Pizzeria da Michele has served only two varieties, margherita and marinara, from its wood-fired oven since 1870."
+      "taste": "Naples is the birthplace of pizza — L'Antica Pizzeria da Michele has served only two varieties, margherita and marinara, from its wood-fired oven since 1870.",
+      "byStyle": {
+        "private": {
+          "title": "Naples → Rome",
+          "overnight": "Overnight: Rome",
+          "desc": "Start with a panoramic tour of Naples, capturing its dynamic landscapes and cultural vibrancy. Then set off for Rome, the storied capital rich in ancient history and architectural masterpieces. Unwind and prepare to tread the cobblestones of time. Overnight in Rome.",
+          "taste": "An evening in Trastevere for classic Roman cucina povera — cacio e pepe, carbonara and a carafe of house wine, in the cobbled lanes around Piazza Santa Maria."
+        }
+      }
     },
     {
       "num": 4,
@@ -76,14 +111,28 @@
       "overnight": "Overnight: Naples",
       "desc": "Enjoy a free day in Naples. Opt for an optional tour or explore the city's renowned attractions like the Royal Palace and the Castel dell'Ovo. Stroll along the Bay of Naples for mesmerizing views and a taste of local street food. Overnight in Naples.",
       "taste": "Caffè Gambrinus on Piazza Trieste e Trento, a Neapolitan institution since 1860, for an espresso and a sfogliatella pastry.",
-      "fallbackIncluded": "Day at leisure — optional Pompeii or Amalfi Coast excursion available."
+      "fallbackIncluded": "Day at leisure — optional Pompeii or Amalfi Coast excursion available.",
+      "byStyle": {
+        "private": {
+          "title": "Rome",
+          "overnight": "Overnight: Rome",
+          "desc": "Delve into Rome's grandeur on a guided city tour, enveloping you in a tapestry of historic wonders over three enlightening hours. Meander through the city's diverse epochs, from the majestic Colosseum to the ornate Trevi Fountain, all while soaking in the vibrant street life. Overnight in Rome.",
+          "taste": null
+        }
+      }
     },
     {
       "num": 5,
       "title": "Naples → Florence",
       "overnight": "Overnight: Florence",
       "desc": "Depart Naples for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" boasts an array of Renaissance art and architecture. Wander through its charming streets, visit the iconic Duomo, or explore the historic Ponte Vecchio. Overnight in Florence.",
-      "taste": "A first taste of Tuscan cuisine — ribollita or pappa al pomodoro paired with a glass of Chianti."
+      "taste": "A first taste of Tuscan cuisine — ribollita or pappa al pomodoro paired with a glass of Chianti.",
+      "byStyle": {
+        "private": {
+          "title": "Rome → Florence",
+          "desc": "Journey from the Eternal City to the Birthplace of the Renaissance. Travel through Tuscany’s picturesque countryside, with a brief interlude in the historic city of Siena. Anticipate the artistic and architectural marvels that await you in Florence. Overnight in Florence."
+        }
+      }
     },
     {
       "num": 6,
@@ -91,14 +140,24 @@
       "overnight": "Overnight: Florence",
       "desc": "Travel through Chianti to Siena for a guided tour, highlighting the Piazza del Campo and Gothic Cathedral. Enjoy free time in Siena, then savor a three-course lunch at a San Gimignano wine estate. Explore San Gimignano’s medieval streets and artisan shops. End the day at Pisa's Square of Miracles, with views of the iconic Leaning Tower. Return to Florence at sunset. Overnight in Florence.",
       "shopping": "The San Lorenzo market and the boutiques of Via de' Tornabuoni for Florentine leather goods.",
-      "taste": "Bistecca alla Fiorentina, the city's celebrated T-bone steak, served simply grilled."
+      "taste": "Bistecca alla Fiorentina, the city's celebrated T-bone steak, served simply grilled.",
+      "byStyle": {
+        "private": {
+          "desc": "Savor a panoramic tour of Florence, the cradle of the Renaissance, admiring its artistic glory. Later, travel to Pisa to witness the architectural marvel of the Leaning Tower and the grandeur of the surrounding monuments. Return to the enchanting ambiance of Florence for the night. Overnight in Florence."
+        }
+      }
     },
     {
       "num": 7,
       "title": "Florence → Venice",
       "overnight": "Overnight: Venice (Mestre)",
       "desc": "Travel to Venice by train. Venice, known for its enchanting canals and historic architecture, offers a unique experience. Spend the evening exploring the city's narrow alleys, famous bridges, and bustling squares like Piazza San Marco. Overnight in Venice Mestre.",
-      "taste": "Cicchetti and a glass of Prosecco at a Venetian bacaro — Cantina Do Mori, tucked near the Rialto Market and pouring since 1462, is the oldest of its kind."
+      "taste": "Cicchetti and a glass of Prosecco at a Venetian bacaro — Cantina Do Mori, tucked near the Rialto Market and pouring since 1462, is the oldest of its kind.",
+      "byStyle": {
+        "private": {
+          "desc": "Travel from Florence's Renaissance beauty to Venice's canal-woven charm. Along the way, choose between Modena's Ferrari allure, with its sleek designs and racing legacy, or Bologna's historic arcades and gastronomic delights. Your evening arrival in Venice Mestre promises a change of pace. Overnight in Venice Mestre."
+        }
+      }
     },
     {
       "num": 8,
@@ -106,14 +165,24 @@
       "overnight": "Overnight: Venice (Mestre)",
       "desc": "Discover Venice's charm with a 1.5-hour small group walking tour. Visit renowned landmarks and uncover the city's artistic heritage. The afternoon is free for you to explore Venice's myriad of canals, quaint cafes, and artisan shops. Overnight in Venice Mestre.",
       "experience": "A private guided walking tour through Venice's historic sestieri, away from the busiest routes.",
-      "shopping": "The glass-blowing workshops of Murano, where Venice moved its furnaces in 1291 to protect the city from fire — still the source of the city's finest glassware."
+      "shopping": "The glass-blowing workshops of Murano, where Venice moved its furnaces in 1291 to protect the city from fire — still the source of the city's finest glassware.",
+      "byStyle": {
+        "private": {
+          "desc": "Discover Venice's timeless allure during a private 1.5-hour guided walking tour, delving into its labyrinthine streets, iconic canals, and historic landmarks. Immerse yourself in the city's artistic legacy and architectural marvels. Overnight in Venice Mestre."
+        }
+      }
     },
     {
       "num": 9,
       "title": "Venice → Milan",
       "overnight": "Overnight: Milan",
       "desc": "Depart for Milan by train. Milan, Italy's fashion capital, is also renowned for its impressive architecture and art. Spend the afternoon exploring Milan's elegant streets, visiting the iconic Duomo, or enjoying the vibrant Navigli district. Overnight in Milan.",
-      "taste": "An aperitivo in the Navigli district, or a Negroni at Camparino in Galleria, the historic bar beside the Duomo that has poured aperitivi since 1867."
+      "taste": "An aperitivo in the Navigli district, or a Negroni at Camparino in Galleria, the historic bar beside the Duomo that has poured aperitivi since 1867.",
+      "byStyle": {
+        "private": {
+          "desc": "Journey from Venice to Milan, pausing in Verona for a photo opportunity. Verona, renowned for its Shakespearean connections and ancient amphitheater, exudes a romantic aura. Upon arrival in Milan, revel in the city's fashion and design scene, characterized by historical landmarks like the magnificent Duomo. Overnight in Milan."
+        }
+      }
     },
     {
       "num": 10,
@@ -122,7 +191,12 @@
       "desc": "Embark on a captivating 10-hour coach excursion to the mesmerizing Lake Como and enchanting Bellagio. Discover the serene beauty of these iconic Italian lake regions, characterized by stunning landscapes and quaint villages. Return to Milan for the evening. Overnight in Milan.",
       "shopping": "The Quadrilatero della Moda, Milan's designer fashion district around Via Montenapoleone.",
       "taste": "Risotto alla milanese, coloured gold with saffron and traditionally served alongside ossobuco, is the city's signature dish.",
-      "fallbackIncluded": "Day at leisure — optional Last Supper visit available (advance booking required)."
+      "fallbackIncluded": "Day at leisure — optional Last Supper visit available (advance booking required).",
+      "byStyle": {
+        "private": {
+          "desc": "Indulge in a mesmerising day trip to Lake Como, an epitome of Italian elegance. Opt for a boat ride to experience the serene vistas, explore lakeside villas adorned with captivating gardens, and embrace the tranquility of this picturesque setting. Lake Como, nestled in the embrace of surrounding mountains, exudes an undeniable charm. Return to Milan for a peaceful evening. Overnight in Milan."
+        }
+      }
     },
     {
       "num": 11,

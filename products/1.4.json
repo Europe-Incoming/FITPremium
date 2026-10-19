@@ -55,7 +55,7 @@
         "1": "Edinburgh airport to Edinburgh hotel private transfer.",
         "2": "Edinburgh panoramic tour, 3 hrs, with private vehicle.",
         "3": "Private transfer Edinburgh to Inverness, en route Loch Ness and the Highlands. Vehicle on disposal from today until Day 6.",
-        "4": "Skye excursion by private vehicle, via Eilean Donan Castle.",
+        "4": "Skye excursion by private vehicle.",
         "5": "Private transfer Inverness to Fort William via Fort Augustus and the Great Glen, using the vehicle on disposal.",
         "6": "Private transfer Fort William to Glasgow, en route Glencoe and Loch Lomond.",
         "7": "Glasgow hotel to Glasgow airport private transfer."
@@ -85,28 +85,48 @@
       "title": "Edinburgh",
       "overnight": "Overnight: Edinburgh",
       "desc": "Enjoy a leisurely day in Edinburgh, exploring its historic sites, wandering along the Royal Mile, or visiting the majestic Edinburgh Castle. Delight in the city's cultural offerings at your own pace. Overnight in Edinburgh.",
-      "experience": "Descend into the Real Mary King's Close, the hidden 17th-century Old Town streets sealed beneath the modern city."
+      "experience": "Descend into the Real Mary King's Close, the hidden 17th-century Old Town streets sealed beneath the modern city.",
+      "byStyle": {
+        "private": {
+          "desc": "Discover Edinburgh at your pace with a self-guided city tour. Traverse its historic streets, marvel at architectural wonders, and immerse yourself in the city's captivating ambiance. Explore the majestic Edinburgh Castle, vibrant Princes Street, and more. Overnight in Edinburgh."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Edinburgh → Inverness",
       "overnight": "Overnight: Inverness",
       "desc": "Travel by train to Inverness, the gateway to the Scottish Highlands. Explore this charming city, nestled by the River Ness, known for its historic sites like Inverness Castle and the Caledonian Canal. Prepare for Highland adventures. Overnight in Inverness.",
-      "taste": "The route passes close to Glenturret Distillery near Crieff, licensed since 1763 and generally regarded as Scotland's oldest working distillery, now home to the Famous Grouse Experience."
+      "taste": "The route passes close to Glenturret Distillery near Crieff, licensed since 1763 and generally regarded as Scotland's oldest working distillery, now home to the Famous Grouse Experience.",
+      "byStyle": {
+        "private": {
+          "desc": "Travel from Edinburgh to Inverness, passing through the legendary Loch Ness and the breathtaking Highlands. Nestled by the River Ness, Inverness, the Highland capital, boasts historic sites like Inverness Castle and the serene Caledonian Canal. Overnight in Inverness."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Skye Excursion",
       "overnight": "Overnight: Inverness",
       "desc": "Embark on a full-day coach tour from Inverness, exploring the mesmerizing Isle of Skye and the iconic Eilean Donan Castle. Immerse yourself in Scotland's stunning landscapes and historic landmarks. Return for a tranquil evening in Inverness. Overnight in Inverness.",
-      "taste": "Skye is home to the Talisker distillery, the island's only whisky maker, founded in 1830 on the shores of Loch Harport."
+      "taste": "Skye is home to the Talisker distillery, the island's only whisky maker, founded in 1830 on the shores of Loch Harport.",
+      "byStyle": {
+        "private": {
+          "desc": "Immerse yourself in a captivating journey to the Isle of Skye from Inverness. Discover the island's natural beauty, rugged landscapes, and ancient castles. Traverse iconic sites like the Old Man of Storr and the picturesque Fairy Pools. Return for a serene evening in Inverness. Overnight in Inverness."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Inverness → Fort William",
       "overnight": "Overnight: Fort William",
       "desc": "Travel by bus to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels. Overnight in Fort William.",
-      "taste": "Fort William is home to Ben Nevis Distillery, founded at the foot of the mountain in 1825 and one of the oldest licensed distilleries in the Highlands."
+      "taste": "Fort William is home to Ben Nevis Distillery, founded at the foot of the mountain in 1825 and one of the oldest licensed distilleries in the Highlands.",
+      "byStyle": {
+        "private": {
+          "desc": "After breakfast, check out and proceed to Fort William, a scenic town nestled at the foot of Ben Nevis, the UK's highest peak. Fort William is a gateway to outdoor adventures, offering stunning landscapes and access to hiking trails. Prepare for mountainous marvels. Overnight in Fort William."
+        }
+      }
     },
     {
       "num": 6,
@@ -114,7 +134,12 @@
       "overnight": "Overnight: Glasgow",
       "desc": "Board the train to Glasgow, Scotland's largest city renowned for its vibrant arts scene, rich architectural heritage, and bustling city life. Embrace cultural diversity and explore the city's museums, galleries, and lively atmosphere. Overnight in Glasgow.",
       "taste": "Glasgow lays a well-known claim to inventing chicken tikka masala in one of its Asian restaurants in the 1970s — still a fixture on menus across the city's curry houses.",
-      "shopping": "Glasgow's Buchanan Street and the Style Mile make it the UK's second-largest shopping destination after London's West End."
+      "shopping": "Glasgow's Buchanan Street and the Style Mile make it the UK's second-largest shopping destination after London's West End.",
+      "byStyle": {
+        "private": {
+          "desc": "Travel from Fort William to Glasgow, pausing for a picturesque photo stop at Loch Lomond, Scotland's largest lake. Arrive in Glasgow by late afternoon, Scotland's vibrant cultural hub, boasts architectural marvels, a thriving arts scene, and rich industrial history. Overnight in Glasgow."
+        }
+      }
     },
     {
       "num": 7,

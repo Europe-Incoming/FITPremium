@@ -36,15 +36,19 @@
       "aboutNights": "8 nights across 4 stays",
       "transport": {
         "1": "Private coach transfer from Madrid airport to your hotel; the vehicle remains at your disposal from Day 1 through Day 9.",
-        "4": "Private guided visit to the Alhambra & Generalife Gardens, with entrance tickets included.",
+        "4": "Alhambra & Generalife entrance tickets included, visit at your own pace.",
         "7": "Private transfer to the station and Seville to Barcelona train ticket, with station transfers included.",
         "8": "Private Barcelona city tour with a Montserrat excursion, 8 hrs with guide, including Montserrat admission tickets.",
-        "9": "Private transfer from your Barcelona hotel to the airport for departure, as part of the vehicle on disposal through Day 9."
+        "9": "Private transfer from your Barcelona hotel to the airport for departure, as part of the vehicle on disposal through Day 9.",
+        "2": "Madrid panoramic tour by private coach (no guide), then a visit to Toledo.",
+        "3": "Private coach transfer from Madrid to Granada, en route Consuegra and Almagro.",
+        "5": "Private coach transfer from Granada to Seville, en route Córdoba (Roman Bridge).",
+        "6": "Seville panoramic tour by private coach (no guide)."
       },
       "inclusions": [
         "Private coach on disposal from Day 1 through Day 9",
         "Madrid airport to hotel private transfer on arrival",
-        "Private entrance tickets to the Alhambra & Generalife Gardens",
+        "Entrance tickets to the Alhambra & Generalife",
         "Private transfer and train ticket, Seville to Barcelona, with station transfers",
         "Private Barcelona city tour with Montserrat excursion, 8 hrs with guide",
         "Montserrat admission tickets",
@@ -65,42 +69,72 @@
       "title": "Madrid",
       "overnight": "Overnight: Madrid",
       "desc": "Embark on a grand 4.5-hour city tour of Madrid, featuring the opulent Royal Palace. Immerse yourself in the regal history and architectural splendor of this majestic city. Let the allure of Madrid unfold as you explore its iconic landmarks. Overnight in Madrid.",
-      "experience": "Corral de la Morería, the world's longest continuously running flamenco tablao and open since 1956, is the classic way to spend a Madrid evening."
+      "experience": "Corral de la Morería, the world's longest continuously running flamenco tablao and open since 1956, is the classic way to spend a Madrid evening.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a panoramic tour of Madrid without a guide, cruising through iconic tourist districts. Admire landmarks such as the Royal Palace and Plaza Mayor from the comfort of your minicoach. In the afternoon, delve into the historical charm of Toledo. Explore the enchanting streets and immerse yourself in the cultural richness. Overnight in Madrid."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Madrid → Granada",
       "overnight": "Overnight: Granada",
       "desc": "Bid farewell to Madrid and board a train to the enchanting city of Granada. Nestled at the foothills of the Sierra Nevada, Granada is known as the \"Pearl of Andalusia\" and is celebrated for the iconic Alhambra Palace. Let the allure of Granada captivate you as you step into a realm of Moorish splendor. Overnight in Granada.",
-      "taste": "Granada is one of the few Spanish cities where a free tapa still arrives with every drink — Calle Navas, just off Plaza del Carmen, is the classic street to try it."
+      "taste": "Granada is one of the few Spanish cities where a free tapa still arrives with every drink — Calle Navas, just off Plaza del Carmen, is the classic street to try it.",
+      "byStyle": {
+        "private": {
+          "desc": "Say farewell to Madrid as you embark on a scenic minicoach journey to Granada. Traverse the breathtaking landscapes of Castilla-La Mancha, passing through iconic spots like Consuegra with its windmills and charming towns like Almagro. Revel in the beauty of the Spanish countryside en route to the captivating city of Granada. Overnight in Granada."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Alhambra & Generalife",
       "overnight": "Overnight: Granada",
       "desc": "Embark on a guided 3-hour walking tour through the awe-inspiring Alhambra and Generalife Gardens. Immerse yourself in the intricate beauty of Moorish architecture and the tranquility of the gardens. Let the tales of Granada's history unfold in this enchanting fortress. Overnight in Granada.",
-      "experience": "Zambra María la Canastera, a cave venue in Sacromonte run by the same family since the 1940s, is a genuine Granada flamenco tradition."
+      "experience": "Zambra María la Canastera, a cave venue in Sacromonte run by the same family since the 1940s, is a genuine Granada flamenco tradition.",
+      "byStyle": {
+        "private": {
+          "desc": "Discover the treasures of Granada at your own pace. Immerse yourself in the enchanting Alhambra and Generalife with included tickets. Wander through the intricate architecture and lush gardens, savoring the beauty of this Moorish masterpiece. Let Granada captivate you with its historic charm. Overnight in Granada."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Granada → Seville",
       "overnight": "Overnight: Seville",
       "desc": "Bid adieu to Granada and journey by train to the vibrant city of Seville. Known as the \"City of Flamenco\" and celebrated for its passionate culture, Seville invites you into a world of lively festivities and architectural wonders. Discover the essence of Seville as you explore its charming streets. Overnight in Seville.",
-      "shopping": "Cerámica Santa Ana, trading in Triana since 1870, is the workshop most associated with Seville's hand-painted azulejo tiles."
+      "shopping": "Cerámica Santa Ana, trading in Triana since 1870, is the workshop most associated with Seville's hand-painted azulejo tiles.",
+      "byStyle": {
+        "private": {
+          "desc": "Check out from Granada and embark on a scenic minicoach journey to Seville. Enroute, explore the historic city of Cordoba, known for its Roman Bridge among other marvels. Immerse yourself in the charm of this ancient city before continuing your picturesque drive to Seville. Overnight in Seville."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Seville",
       "overnight": "Overnight: Seville",
       "desc": "Embark on a 2-hour walking tour of historic Seville, delving into its rich tapestry of culture and architecture. Explore the magnificent Royal Alcazar, a testament to Moorish and Mudejar craftsmanship. Let Seville's history and beauty captivate your senses. Overnight in Seville.",
-      "taste": "Bar Las Teresas, serving salmorejo and fried fish in Santa Cruz since the 1870s, is among Seville's most celebrated tapas bars."
+      "taste": "Bar Las Teresas, serving salmorejo and fried fish in Santa Cruz since the 1870s, is among Seville's most celebrated tapas bars.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a panoramic minicoach tour in and around Seville. Witness the grandeur of the city as you pass through iconic tourist areas. Marvel at landmarks such as the Plaza de España and the historic neighborhoods of Triana and Santa Cruz. Let the scenic beauty and cultural richness of Seville unfold before your eyes. Overnight in Seville."
+        }
+      }
     },
     {
       "num": 7,
       "title": "Seville → Barcelona",
       "overnight": "Overnight: Barcelona",
       "desc": "Bid farewell to Seville and board a train to the vibrant city of Barcelona. Nestled on the northeastern coast, Barcelona is known as the \"City of Gaudi\" and captivates with its unique architecture and artistic flair. Discover the creative spirit and cultural gems that define Barcelona. Overnight in Barcelona.",
-      "taste": "El Xampanyet, pouring cava and plates of pan con tomate in the Born since 1934, is Barcelona's classic evening ritual."
+      "taste": "El Xampanyet, pouring cava and plates of pan con tomate in the Born since 1934, is Barcelona's classic evening ritual.",
+      "byStyle": {
+        "private": {
+          "desc": "Bid farewell to Seville and transfer to the train station. Board a train bound for the vibrant city of Barcelona. Relish the scenic views and relax during your comfortable train journey. Nestled on the northeastern coast, Barcelona is known as the \"City of Gaudi\" and captivates with its unique architecture and artistic flair. Overnight in Barcelona."
+        }
+      }
     },
     {
       "num": 8,
@@ -108,7 +142,12 @@
       "overnight": "Overnight: Barcelona",
       "desc": "Savor a day of freedom in Barcelona, exploring the city at your own pace. Alternatively, opt for one of the enticing optional tours to enhance your experience. Whether wandering through iconic neighborhoods or indulging in unique activities, let Barcelona unveil its diverse treasures. Overnight in Barcelona.",
       "experience": "Gaudí's Park Güell and Casa Batlló showcase the modernist architecture that defines the city.",
-      "shopping": "Passeig de Gràcia is Barcelona's flagship shopping avenue, home to both high fashion and Gaudí landmarks."
+      "shopping": "Passeig de Gràcia is Barcelona's flagship shopping avenue, home to both high fashion and Gaudí landmarks.",
+      "byStyle": {
+        "private": {
+          "desc": "Begin your day with a morning city tour of Barcelona guided by a local expert. Explore scenic spots such as the Gothic Quarter, wander down iconic streets like La Rambla, and soak in the atmosphere of the bustling Plaça de Catalunya. In the afternoon, venture to the mystical Montserrat with a knowledgeable guide. Discover the awe-inspiring mountain and its cultural treasures. Overnight in Barcelona."
+        }
+      }
     },
     {
       "num": 9,

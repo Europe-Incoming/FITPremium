@@ -58,11 +58,11 @@
         "1": "Paris airport to Paris hotel private transfer, coach on disposal for 6 hrs.",
         "2": "Paris city tour with local guide, 3 hrs, private coach on disposal for 10 hrs.",
         "3": "Paris to Avignon by train, II Class, with private station transfers at each end.",
-        "4": "Private coach on disposal for sightseeing in and around Avignon.",
-        "5": "Private coach transfer from Avignon to Aix-en-Provence.",
-        "6": "Private coach on disposal for sightseeing in and around Aix-en-Provence.",
-        "7": "Private coach transfer from Aix-en-Provence to Nice.",
-        "8": "Private coach on disposal for sightseeing in and around Nice.",
+        "4": "Avignon panoramic tour (no guide) and visit to Pont du Gard by private coach, with an optional Châteauneuf-du-Pape vineyard visit.",
+        "5": "Private coach transfer from Avignon to Aix-en-Provence, en route Luberon villages, with an optional wine tasting.",
+        "6": "Aix-en-Provence panoramic tour (no guide), then a visit to Marseille and Cassis by private coach, with an optional boat tour.",
+        "7": "Private coach transfer from Aix-en-Provence to Nice, en route Saint-Tropez, Grimaud and Cannes.",
+        "8": "Nice panoramic tour and visit to Monaco and Monte Carlo by private coach.",
         "9": "Nice hotel to Nice airport private transfer by private coach."
       },
       "inclusions": [
@@ -71,6 +71,7 @@
         "Paris city tour with local guide, 3 hrs",
         "Seine river cruise, 1 hr",
         "Paris to Avignon train ticket, II Class, with private station transfers",
+        "Pont du Gard admission ticket",
         "Private coach transfers linking Avignon, Aix-en-Provence and Nice",
         "8 nights accommodation with daily breakfast"
       ]
@@ -89,14 +90,24 @@
       "title": "Paris",
       "overnight": "Overnight: Paris",
       "desc": "Discover the allure of Paris as you explore at your own pace or opt for curated optional tours. From strolling along the Seine to marveling at iconic landmarks, the day is yours to savor. Overnight in Paris.",
-      "experience": "A Bateaux Mouches cruise past Notre-Dame and the Eiffel Tower, run from the same Pont de l'Alma landing stage since 1949, is the classic way to see the city lit up from the water."
+      "experience": "A Bateaux Mouches cruise past Notre-Dame and the Eiffel Tower, run from the same Pont de l'Alma landing stage since 1949, is the classic way to see the city lit up from the water.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a 3-hour Paris city tour with a local guide, discovering iconic landmarks like the Champs-Élysées and Trocadéro. Later, unwind with a scenic one-hour Seine River cruise, soaking in the beauty of Paris. Conclude your day with an overnight stay in the heart of the city. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Paris → Avignon",
       "overnight": "Overnight: Avignon",
       "desc": "Check out from Paris and embark on a scenic train journey to Avignon. Known as the \"City of Popes,\" Avignon boasts historic charm and the iconic Palais des Papes. Explore the medieval bridge, Pont Saint-Bénézet, and immerse yourself in the city's rich history. Overnight in Avignon.",
-      "taste": "A glass of Côtes du Rhône is the natural choice on arrival in Provence's wine country."
+      "taste": "A glass of Côtes du Rhône is the natural choice on arrival in Provence's wine country.",
+      "byStyle": {
+        "private": {
+          "desc": "Check out from Paris and proceed to train station by private transfer. Embark on a scenic train journey to Avignon. Known as the \"City of Popes,\" Avignon boasts historic charm and the iconic Palais des Papes. Explore the medieval bridge, Pont Saint-Bénézet, and immerse yourself in the city's rich history. Overnight in Avignon."
+        }
+      }
     },
     {
       "num": 4,
@@ -104,28 +115,48 @@
       "overnight": "Overnight: Avignon",
       "desc": "Discover Avignon at your leisure or opt for optional adventures. Choose between Saint-Remy and Les Baux de Provence with Pont du Gard or explore Châteauneuf-du-Pape wineries. Overnight in Avignon.",
       "taste": "Les Halles d'Avignon, the covered market on Place Pie, is the place to try berlingots — the striped boiled sweets made in the city since the 1850s.",
-      "fallbackIncluded": "Day at leisure — optional guided tour of the Palais des Papes available."
+      "fallbackIncluded": "Day at leisure — optional guided tour of the Palais des Papes available.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a panoramic tour of Avignon without a guide, taking in the city's scenic views. Journey to the iconic Pont du Gard and explore its historical significance. Optionally, visit a vineyard in the Châteauneuf-du-Pape region. Return Avignon by evening. Overnight in Avignon."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Avignon → Aix-en-Provence",
       "overnight": "Overnight: Aix-en-Provence",
       "desc": "Check out from Avignon and hop on a train to Aix en Provence. Famous for its artistic heritage and elegant architecture, Aix en Provence is known as the \"City of a Thousand Fountains.\" Explore charming squares, like Place de l'Hotel de Ville, and immerse yourself in the city's vibrant cultural scene. Overnight in Aix en Provence.",
-      "experience": "Follow the Cézanne trail through the old town to his studio, the Atelier des Lauves, preserved much as he left it."
+      "experience": "Follow the Cézanne trail through the old town to his studio, the Atelier des Lauves, preserved much as he left it.",
+      "byStyle": {
+        "private": {
+          "desc": "Check out from Avignon and travel by road to Aix en Provence, exploring enchanting Luberon villages en route. Optionally, visit a vineyard for a delightful wine tasting experience. Famous for its artistic heritage and elegant architecture, Aix en Provence is known as the \"City of a Thousand Fountains.\" Explore charming squares, like Place de l'Hotel de Ville, and immerse yourself in the city's vibrant cultural scene. Overnight in Aix en Provence."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Aix-en-Provence",
       "overnight": "Overnight: Aix-en-Provence",
       "desc": "Explore Aix en Provence at your own pace, wandering through charming streets like Cours Mirabeau, lined with cafes and fountains. Stroll through the historic Old Town, visit the vibrant markets of Place Richelme, or discover the artistic flair of Quartier Mazarin. Optionally, choose from curated tours. Overnight in Aix en Provence.",
-      "shopping": "Aix's Saturday market and the boutiques along Cours Mirabeau are known for Provençal linens, soaps and lavender products."
+      "shopping": "Aix's Saturday market and the boutiques along Cours Mirabeau are known for Provençal linens, soaps and lavender products.",
+      "byStyle": {
+        "private": {
+          "desc": "Start your day with a panoramic tour of Aix en Provence, exploring its charming streets and fountains. Venture to Marseilles, a vibrant coastal city known for its historic Old Port and diverse cultural influences. Continue to Cassis, a picturesque fishing village with stunning Calanques. Optionally, embark on a boat tour in Marseilles to witness the city's coastal beauty. Overnight in Aix en Provence."
+        }
+      }
     },
     {
       "num": 7,
       "title": "Aix-en-Provence → Nice",
       "overnight": "Overnight: Nice",
       "desc": "Check out from Aix en Provence and board a scenic train to Nice. Nestled on the French Riviera, Nice is known as the \"Queen of the Riviera.\" Famous for its stunning Promenade des Anglais, vibrant markets, and captivating Old Town, Nice invites you to explore its Mediterranean charm. Overnight in Nice.",
-      "taste": "Socca, a chickpea-flour pancake sold from street stalls, is Nice's most typical snack."
+      "taste": "Socca, a chickpea-flour pancake sold from street stalls, is Nice's most typical snack.",
+      "byStyle": {
+        "private": {
+          "desc": "Check out and embark on a scenic road journey to Nice. Enroute, explore the glamour of St Tropez and the medieval charm of Grimaud. Continue to Cannes, renowned for its film festival and the iconic Croisette. Arrive in Nice by early evening. Nestled on the French Riviera, Nice is known as the \"Queen of the Riviera.\" Famous for its stunning Promenade des Anglais, vibrant markets, and captivating Old Town, Nice invites you to explore its Mediterranean charm. Overnight in Nice."
+        }
+      }
     },
     {
       "num": 8,

@@ -35,7 +35,9 @@
         "3": "Private vehicle at your disposal for the day.",
         "4": "Private vehicle transfer from Paris to Lucerne.",
         "7": "Private vehicle to Zurich via the Rhine Falls.",
-        "8": "Private transfer from your Zurich hotel to Zurich Airport."
+        "8": "Private transfer from your Zurich hotel to Zurich Airport.",
+        "5": "Mount Titlis excursion by private vehicle, cable car ticket included.",
+        "6": "Grindelwald and Interlaken day trip by private vehicle."
       },
       "inclusions": [
         "7 nights accommodation including breakfast",
@@ -60,47 +62,84 @@
       "title": "Paris",
       "overnight": "Overnight: Paris",
       "desc": "A 4-hour tour of Paris includes an hour-long Seine River cruise past iconic landmarks and admission to the Eiffel Tower's 2nd floor for panoramic city views. Overnight in Paris.",
-      "experience": "The Eiffel Tower's 2nd floor sits at 115 metres — high enough for sweeping views without the queues for the summit."
+      "experience": "The Eiffel Tower's 2nd floor sits at 115 metres — high enough for sweeping views without the queues for the summit.",
+      "byStyle": {
+        "private": {
+          "desc": "Experience the allure of Paris with a captivating panoramic tour led by an English-speaking guide. Delve into the city's charm and iconic landmarks while exploring in the comfort of a private vehicle. Later, embark on a delightful 1-hour Seine River cruise, soaking in breathtaking views of Paris's architectural marvels from the tranquil waters. Overnight in Paris.",
+          "experience": null
+        }
+      }
     },
     {
       "num": 3,
       "title": "Paris — Day at Leisure",
       "overnight": "Overnight: Paris",
       "desc": "A day to explore Parisian wonders at your own pace, or head further afield to Disneyland Paris or the opulent Palace of Versailles on an optional excursion. Overnight in Paris.",
-      "shopping": "The Marais district, on the Right Bank, mixes centuries-old buildings with independent boutiques and vintage shops."
+      "shopping": "The Marais district, on the Right Bank, mixes centuries-old buildings with independent boutiques and vintage shops.",
+      "byStyle": {
+        "private": {
+          "desc": "Enjoy a day tailored to your preferences with private vehicle service at your disposal. Customize your Parisian experience, exploring the city's gems at your pace. Opt to visit the opulent Palace of Versailles or indulge in the enchanting world of Disneyland Paris, both accessible via your private vehicle. Embrace the freedom to curate your Paris adventure. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Paris to Lucerne",
       "overnight": "Overnight: Lucerne",
-      "desc": "Check out and travel on to Switzerland, arriving in Lucerne, a city framed by mountains and set on the shores of Lake Lucerne. Overnight in Lucerne."
+      "desc": "Check out and travel on to Switzerland, arriving in Lucerne, a city framed by mountains and set on the shores of Lake Lucerne. Overnight in Lucerne.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Paris, setting off on a scenic journey to Lucerne, Switzerland, in your private vehicle. Switzerland, renowned for its breathtaking landscapes and Alpine charm, welcomes you to Lucerne, a city nestled amid stunning mountainous surroundings and pristine lakes. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Lucerne — Mount Titlis",
       "overnight": "Overnight: Lucerne",
       "desc": "Explore Mount Titlis, a genuine Alpine experience with snow activities and the revolving Titlis Rotair gondola. Round off the day with a cruise on Lake Lucerne's calm waters. Overnight in Lucerne.",
-      "experience": "The Titlis Cliff Walk, Europe's highest suspension bridge, crosses a ridge at 3,000 metres with sheer drops on either side."
+      "experience": "The Titlis Cliff Walk, Europe's highest suspension bridge, crosses a ridge at 3,000 metres with sheer drops on either side.",
+      "byStyle": {
+        "private": {
+          "desc": "Enjoy an exhilarating day at Mount Titlis, renowned for its iconic cable car ride and the panoramic Ice Flyer chairlift. Delight in snow-based activities and awe-inspiring vistas. Wander through Engelberg, a charming town nestled at the foothills, savoring its quaint allure and embracing the Swiss ambiance. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Lucerne — Grindelwald & Interlaken",
       "overnight": "Overnight: Lucerne",
       "desc": "A day trip into the Bernese Oberland to see Grindelwald and Interlaken, both known for their dramatic mountain scenery. Overnight in Lucerne.",
-      "experience": "Grindelwald First's cliff walk and First Flyer zipline are optional add-ons for those wanting a more active day among the peaks."
+      "experience": "Grindelwald First's cliff walk and First Flyer zipline are optional add-ons for those wanting a more active day among the peaks.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on an enchanting day trip to Grindelwald and Interlaken, voyaging comfortably in your private vehicle. Opt for an optional visit to Grindelwald First for awe-inspiring panoramas and exhilarating activities. Explore the picturesque landscapes and captivating charm of Interlaken. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 7,
       "title": "Lucerne to Zurich",
       "overnight": "Overnight: Zurich",
       "desc": "Travel on to Zurich, a city that blends financial-hub modernity with a well-preserved old town. Overnight in Zurich.",
-      "experience": "An optional side trip to Schaffhausen brings you to the Rhine Falls, Europe's largest waterfall by volume."
+      "experience": "An optional side trip to Schaffhausen brings you to the Rhine Falls, Europe's largest waterfall by volume.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Lucerne to visit the majestic Rhine Falls, traveling comfortably in your private vehicle. Opt for a boat ride to witness the falls' sheer magnificence up close. Later, arrive in Zurich, a vibrant city pulsating with culture and modernity. Explore Zurich's blend of contemporary amenities and historic charm. Overnight in Zurich.",
+          "experience": "The Rhine Falls near Schaffhausen are Europe's largest waterfall by volume; an optional boat ride takes you right up close to the falls."
+        }
+      }
     },
     {
       "num": 8,
       "title": "Departure",
       "overnight": "Departure day",
-      "desc": "Your Paris-Swiss tour concludes today with onward travel from Zurich Airport."
+      "desc": "Your Paris-Swiss tour concludes today with onward travel from Zurich Airport.",
+      "byStyle": {
+        "private": {
+          "desc": "Your tour culminates today. Enjoy a private transfer from your Zurich hotel to Zurich Airport, concluding your memorable Swiss-Paris expedition."
+        }
+      }
     }
   ],
   "hotels": [
