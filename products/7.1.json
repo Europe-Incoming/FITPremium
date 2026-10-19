@@ -35,7 +35,10 @@
         "1": "Private minivan or coach transfer from Prague Airport to your hotel.",
         "3": "Private coach transfer from Prague to Vienna, with a scenic photostop in Český Krumlov.",
         "5": "Private coach transfer from Vienna to Budapest, with a scenic photostop in Bratislava.",
-        "7": "Private transfer from your hotel to Budapest Airport."
+        "7": "Private transfer from your hotel to Budapest Airport.",
+        "2": "Prague guided city tour, 4 hrs, including Prague Castle basic circuit admission, with your private minivan.",
+        "4": "Vienna guided city tour, 4 hrs, including Schönbrunn Palace admission, with your private minivan.",
+        "6": "Budapest guided city tour, 3 hrs, plus a 1-hour Danube river cruise, with your private minivan."
       },
       "inclusions": [
         "6 nights accommodation including breakfast",
@@ -54,7 +57,12 @@
       "title": "Arrival in Prague",
       "overnight": "Overnight: Prague",
       "desc": "Begin your journey in Prague, the “City of a Hundred Spires”, renowned for its medieval charm, stunning architecture and rich history. Unwind and prepare for a captivating stay. Overnight in Prague.",
-      "taste": "A Czech Pilsner and svičková (marinated beef in cream sauce) at one of the pubs around Old Town Square — Prague's beer halls have been pouring since long before the city became a tourist draw."
+      "taste": "A Czech Pilsner and svičková (marinated beef in cream sauce) at one of the pubs around Old Town Square — Prague's beer halls have been pouring since long before the city became a tourist draw.",
+      "byStyle": {
+        "private": {
+          "desc": "Begin your journey with a private minivan or coach transfer from Prague Airport to your hotel. Prague, often called the \"City of a Hundred Spires,\" is renowned for its medieval charm, stunning architecture, and rich history. Unwind and prepare for a captivating stay in this enchanting city. Overnight in Prague."
+        }
+      }
     },
     {
       "num": 2,
@@ -62,35 +70,61 @@
       "overnight": "Overnight: Prague",
       "desc": "A guided tour reveals Prague Castle and the historic districts of Hradčany and Malá Strana, taking in St Vitus Cathedral, Golden Lane and the Old Royal Palace. The day closes with a leisurely cruise on the River Vltava, taking in the city's skyline from the water. Overnight in Prague.",
       "experience": "A 1-hour River Vltava cruise beneath Charles Bridge, with Prague Castle floodlit above the water as evening falls.",
-      "shopping": "Parizska Street, running from Old Town Square toward the river, is Prague's boutique strip — alongside Bohemian crystal and garnet jewellery shops in the surrounding lanes."
+      "shopping": "Parizska Street, running from Old Town Square toward the river, is Prague's boutique strip — alongside Bohemian crystal and garnet jewellery shops in the surrounding lanes.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating 4-hour guided tour, revealing the allure of Prague's historic districts. Wander through the medieval lanes of Hradčany and the charming Malá Strana, absorbing the city's unique atmosphere. With an exclusive admission ticket, delve into the iconic Prague Castle's basic circuit, discovering the opulent St. Vitus Cathedral, picturesque Golden Lane, and the historic Old Royal Palace. Immerse yourself in Prague's rich history, architectural splendors, and cultural tapestry. Overnight in Prague.",
+          "experience": null
+        }
+      }
     },
     {
       "num": 3,
       "title": "Prague to Vienna",
       "overnight": "Overnight: Vienna",
       "desc": "Check out from Prague and continue on to Vienna, the “City of Music”, known for its imperial palaces, classical heritage and vibrant cultural scene. Overnight in Vienna.",
-      "taste": "A slice of Sachertorte and a mélange (Vienna's take on a cappuccino) at one of the grand coffeehouses that have anchored Viennese social life since the 19th century."
+      "taste": "A slice of Sachertorte and a mélange (Vienna's take on a cappuccino) at one of the grand coffeehouses that have anchored Viennese social life since the 19th century.",
+      "byStyle": {
+        "private": {
+          "desc": "After checking out of Prague, embark on a coach transfer to Vienna. Enroute, enjoy a picturesque photostop in Cesky Krumlov. In Cesky Krumlov, wander the charming streets, explore the historic castle, or indulge in local cuisine. Arrive in Vienna, the \"City of Music,\" known for its imperial palaces, classical heritage, and vibrant cultural scene. Overnight in Vienna."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Vienna",
       "overnight": "Overnight: Vienna",
       "desc": "A guided tour uncovers Vienna's imperial legacy, with a visit to the opulent Schönbrunn Palace, a UNESCO World Heritage site, and its formal gardens. The tour continues through the elegant Innere Stadt, taking in the grandeur of Austria's capital. Overnight in Vienna.",
-      "experience": "Schönbrunn Palace's formal gardens are free to walk even outside the palace tour hours — the Gloriette terrace above them gives one of Vienna's best skyline views."
+      "experience": "Schönbrunn Palace's formal gardens are free to walk even outside the palace tour hours — the Gloriette terrace above them gives one of Vienna's best skyline views.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a comprehensive 4-hour guided tour in Vienna, unveiling the city's majestic history and cultural treasures. Enjoy exclusive admission to the opulent Schönbrunn Palace, a UNESCO World Heritage site. Stroll through the lavish rooms and picturesque gardens, indulging in the imperial legacy. Explore the elegant streets of Innere Stadt, absorbing Vienna's grandeur and architectural opulence. Immerse yourself in the enchanting blend of history and elegance. Overnight in Vienna."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Vienna to Budapest",
       "overnight": "Overnight: Budapest",
       "desc": "Check out from Vienna and continue to Budapest, the “Queen of the Danube”, known for its thermal baths, striking architecture and the historic Buda Castle. Overnight in Budapest.",
-      "taste": "Goolyás (goulash soup) and a glass of Hungarian Tokaji or Egri Bikavér, best enjoyed in one of the bistros around Váci utca."
+      "taste": "Goolyás (goulash soup) and a glass of Hungarian Tokaji or Egri Bikavér, best enjoyed in one of the bistros around Váci utca.",
+      "byStyle": {
+        "private": {
+          "desc": "After checking out of Vienna, embark on a coach transfer to Budapest with a scenic photostop in Bratislava. Admire Bratislava's Old Town charm and iconic landmarks. Upon arrival in Budapest, the \"Queen of the Danube,\" explore vibrant streets like Váci utca and districts like Buda Castle or enjoy the thermal baths. Overnight in Budapest."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Budapest",
       "overnight": "Overnight: Budapest",
       "desc": "A guided city tour takes in Budapest's iconic landmarks — the Hungarian Parliament, Buda Castle, Matthias Church and the Fishermen's Bastion — before crossing into Pest to see the Central Market Hall, Europe's largest synagogue and Heroes' Square. Overnight in Budapest.",
-      "experience": "Széchenyi Thermal Bath, one of Europe's largest spa complexes, is a short taxi ride from the centre and open into the evening — a properly Hungarian way to end the tour."
+      "experience": "Széchenyi Thermal Bath, one of Europe's largest spa complexes, is a short taxi ride from the centre and open into the evening — a properly Hungarian way to end the tour.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating 3-hour guided city tour, unveiling Budapest's iconic landmarks. Traverse the historic streets, exploring the enchanting districts of Pest and Buda. Later, immerse yourself in the city's beauty with a serene 1-hour Danube River cruise. Relish the panoramic views as Budapest unfolds its charm. Overnight in Budapest."
+        }
+      }
     },
     {
       "num": 7,

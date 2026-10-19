@@ -36,22 +36,23 @@
       "aboutNights": "8 nights across 4 stays",
       "transport": {
         "1": "Amsterdam airport to Amsterdam hotel private transfer.",
-        "2": "Private coach canal cruise combined with Volendam and Marken villages, approx. 5 hrs.",
-        "3": "Private coach transfer from Amsterdam to Paris (vehicle on disposal from today).",
+        "2": "Amsterdam canal cruise and countryside excursion (Zaanse Schans windmills and Volendam) by private coach, approx. 5 hrs.",
+        "3": "Private coach transfer from Amsterdam to Paris, with a panoramic stop in Brussels (vehicle on disposal from today).",
         "4": "Paris panoramic tour with an English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise.",
         "5": "Private coach transfer from Paris to Lucerne.",
-        "6": "Private coach excursion to Titlis and Engelberg.",
-        "8": "Private coach transfer from Lucerne to Zurich, the final day of the vehicle on disposal.",
-        "9": "Zurich hotel to Zurich airport private transfer."
+        "6": "Private coach excursion to Titlis and Engelberg, Mount Titlis cable car ticket included.",
+        "8": "Private coach transfer from Lucerne to Zurich via the Rhine Falls, the final day of the vehicle on disposal.",
+        "9": "Zurich hotel to Zurich airport private transfer.",
+        "7": "Grindelwald and Interlaken day trip by private vehicle."
       },
       "inclusions": [
         "Private coach on disposal for 5 hrs on Day 2, and 8 hrs daily from Day 3 to Day 8",
         "Amsterdam airport to hotel private transfer on arrival",
-        "Canal cruise combined with Volendam and Marken villages",
+        "Amsterdam canal cruise and countryside excursion (Zaanse Schans windmills and Volendam)",
         "Paris panoramic tour with English-speaking guide, 3 hrs",
         "Seine river cruise, 1 hour",
         "Private transfers linking Paris, Lucerne and Zurich",
-        "Titlis and Engelberg excursion",
+        "Titlis and Engelberg excursion, including Mount Titlis cable car ticket",
         "Zurich hotel to airport private transfer on departure"
       ]
     }
@@ -70,14 +71,26 @@
       "overnight": "Overnight: Amsterdam",
       "desc": "Embark on a 5.5-hour coach tour exploring the Dutch countryside from Amsterdam. Admire the iconic windmills of Zaanse Schans and taste authentic Dutch cheese at the Volendam Cheese Factory. Witness the crafting of wooden shoes with an antique steam engine. Overnight in Amsterdam.",
       "experience": "Traditional clog-making demonstration at Zaanse Schans, a craft still practised on site.",
-      "taste": "Smoked eel sold straight from the barrel at Volendam's harbourside stalls, a local speciality of the old Zuiderzee fishing fleet."
+      "taste": "Smoked eel sold straight from the barrel at Volendam's harbourside stalls, a local speciality of the old Zuiderzee fishing fleet.",
+      "byStyle": {
+        "private": {
+          "title": "Canal Cruise, Windmills & Volendam",
+          "desc": "Begin your Amsterdam adventure with a delightful one-hour canal cruise, unveiling the city's picturesque waterways and historic architecture. Later, journey into the enchanting countryside, exploring the iconic Windmills of Zaanse Schans and experiencing the art of cheese-making at the Volendam cheese factory. Return to Amsterdam by evening. Overnight in Amsterdam."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Amsterdam to Paris",
       "overnight": "Overnight: Paris",
       "desc": "Depart Amsterdam by train for Paris, the City of Lights. Paris is renowned for its artistic heritage, captivating landmarks like the Eiffel Tower, and the historical charm of Montmartre. Wander along the Seine River or explore the vibrant streets of Le Marais for an evening of enchantment. Overnight in Paris.",
-      "taste": "Steak-frites and a carafe of house red at a Marais bistro, the classic first-night dinner for arrivals in Paris."
+      "taste": "Steak-frites and a carafe of house red at a Marais bistro, the classic first-night dinner for arrivals in Paris.",
+      "byStyle": {
+        "private": {
+          "title": "Amsterdam to Paris via Brussels",
+          "desc": "Embark on a captivating journey from the Dutch capital to Brussels, the thriving Belgian capital known for its historic grandeur and delectable chocolates. Enjoy a panoramic tour, exploring the city's iconic landmarks. Later, continue your journey to Paris, the enchanting French capital famous for its romantic allure and exquisite cuisine. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 4,
@@ -85,13 +98,23 @@
       "overnight": "Overnight: Paris",
       "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
       "taste": "Macarons at Ladurée, the Paris confectioner trading on the Champs-Élysées since 1862, or an onion soup gratinée for dinner.",
-      "shopping": "Galeries Lafayette on Boulevard Haussmann, its 1912 stained-glass dome presiding over one of the world's most famous department stores."
+      "shopping": "Galeries Lafayette on Boulevard Haussmann, its 1912 stained-glass dome presiding over one of the world's most famous department stores.",
+      "byStyle": {
+        "private": {
+          "desc": "Experience the allure of Paris with a captivating panoramic tour led by an English-speaking guide. Delve into the city's charm and iconic landmarks while exploring in the comfort of a private vehicle. Later, embark on a delightful 1-hour Seine River cruise, soaking in breathtaking views of Paris's architectural marvels from the tranquil waters. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Paris to Lucerne",
       "overnight": "Overnight: Lucerne",
-      "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne."
+      "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Paris, setting off on a scenic journey to Lucerne, Switzerland, in your private vehicle. Switzerland, renowned for its breathtaking landscapes and Alpine charm, welcomes you to Lucerne, a city nestled amid stunning mountainous surroundings and pristine lakes. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 6,
@@ -99,7 +122,12 @@
       "overnight": "Overnight: Lucerne",
       "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
       "experience": "The Titlis Cliff Walk, Europe's highest suspension bridge, spanning a ridge just below the summit.",
-      "taste": "Cheese fondue in a lakeside Stübli back in Lucerne after the descent from the glacier."
+      "taste": "Cheese fondue in a lakeside Stübli back in Lucerne after the descent from the glacier.",
+      "byStyle": {
+        "private": {
+          "desc": "Enjoy an exhilarating day at Mount Titlis, renowned for its iconic cable car ride and the panoramic Ice Flyer chairlift. Delight in snow-based activities and awe-inspiring vistas. Wander through Engelberg, a charming town nestled at the foothills, savoring its quaint allure and embracing the Swiss ambiance. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 7,
@@ -107,20 +135,37 @@
       "overnight": "Overnight: Lucerne",
       "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
       "taste": "Kirschtorte and pralines at Confiserie Bachmann, Lucerne's own confectioner and bakery since 1938.",
-      "fallbackIncluded": "Day at leisure — optional excursions available."
+      "fallbackIncluded": "Day at leisure — optional excursions available.",
+      "byStyle": {
+        "private": {
+          "title": "Lucerne — Grindelwald & Interlaken",
+          "desc": "Embark on an enchanting day trip to Grindelwald and Interlaken, voyaging comfortably in your private vehicle. Opt for an optional visit to Grindelwald First for awe-inspiring panoramas and exhilarating activities. Explore the picturesque landscapes and captivating charm of Interlaken. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 8,
       "title": "Lucerne to Zurich",
       "overnight": "Overnight: Zurich",
       "desc": "Travel from Lucerne to Zurich using your Swiss Travel Pass, exploring the vibrant city of Zurich upon arrival. Zurich, a financial hub, blends modernity with history, offering a plethora of cultural attractions. Optionally, venture further to Schaffhausen by train to witness the majestic Rhine Falls, Europe's largest waterfall. Overnight Zurich.",
-      "taste": "Luxemburgerli macarons and hot chocolate at Confiserie Sprüngli on Paradeplatz, trading since 1836."
+      "taste": "Luxemburgerli macarons and hot chocolate at Confiserie Sprüngli on Paradeplatz, trading since 1836.",
+      "byStyle": {
+        "private": {
+          "title": "Lucerne to Zurich via Rhine Falls",
+          "desc": "Depart from Lucerne to visit the majestic Rhine Falls, traveling comfortably in your private vehicle. Opt for a boat ride to witness the falls' sheer magnificence up close. Later, arrive in Zurich, a vibrant city pulsating with culture and modernity. Explore Zurich's blend of contemporary amenities and historic charm. Overnight in Zurich."
+        }
+      }
     },
     {
       "num": 9,
       "title": "Depart Zurich",
       "overnight": "Departure day",
-      "desc": "Your unforgettable Paris-Swiss tour concludes today. Make your way to Zurich Airport for your return journey home, carrying beautiful memories of Parisian elegance and the mesmerizing Swiss landscapes."
+      "desc": "Your unforgettable Paris-Swiss tour concludes today. Make your way to Zurich Airport for your return journey home, carrying beautiful memories of Parisian elegance and the mesmerizing Swiss landscapes.",
+      "byStyle": {
+        "private": {
+          "desc": "Your tour culminates today. Enjoy a private transfer from your Zurich hotel to Zurich Airport, concluding your memorable journey through Western Europe."
+        }
+      }
     }
   ],
   "hotels": [

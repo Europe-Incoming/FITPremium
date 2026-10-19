@@ -37,19 +37,21 @@
         "1": "Paris airport to Paris hotel private transfer.",
         "2": "Private Paris city tour with English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise.",
         "3": "Private transfer Paris to Lucerne; vehicle now on disposal for 8 hrs daily through Day 11.",
-        "4": "Private excursion to Titlis and Engelberg.",
-        "6": "Private transfer Lucerne to Venice (Mestre).",
+        "4": "Private excursion to Titlis and Engelberg, Mount Titlis cable car ticket included.",
+        "6": "Private transfer Lucerne to Venice (Mestre), with a stop in the Lugano-Chiasso area.",
         "7": "Venice walking tour, 2 hrs with English-speaking guide.",
-        "8": "Private transfer Venice (Mestre) to Florence.",
-        "9": "Private transfer Florence to Rome.",
-        "10": "Rome city tour with English-speaking guide, 3 hrs."
+        "8": "Private transfer Venice (Mestre) to Florence, with a photo stop in Pisa.",
+        "9": "Private transfer Florence to Rome, with stops in Siena and Monteriggioni.",
+        "10": "Rome city tour with English-speaking guide, 3 hrs.",
+        "5": "Grindelwald and Interlaken day trip by private vehicle.",
+        "11": "Rome hotel to Rome airport private transfer."
       },
       "inclusions": [
         "Paris airport to hotel private transfer on arrival",
         "Private vehicle on disposal for 8 hrs daily, Day 3 through Day 11",
         "Private Paris city tour with English-speaking guide, 3 hrs",
         "Seine river cruise, 1 hour",
-        "Private excursion to Titlis and Engelberg",
+        "Private excursion to Titlis and Engelberg, including Mount Titlis cable car ticket",
         "Venice walking tour, 2 hrs with English-speaking guide",
         "Rome city tour with English-speaking guide, 3 hrs",
         "10 nights accommodation across 5 cities with daily breakfast"
@@ -69,34 +71,61 @@
       "title": "Paris City Tour & Eiffel Tower",
       "overnight": "Overnight: Paris",
       "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
-      "shopping": "The Champs-Élysées and the grand department stores of Boulevard Haussmann, Galeries Lafayette and Printemps, are Paris's classic shopping stretches."
+      "shopping": "The Champs-Élysées and the grand department stores of Boulevard Haussmann, Galeries Lafayette and Printemps, are Paris's classic shopping stretches.",
+      "byStyle": {
+        "private": {
+          "title": "Paris City Tour & Seine Cruise",
+          "desc": "Experience the allure of Paris with a captivating panoramic tour led by an English-speaking guide. Delve into the city's charm and iconic landmarks while exploring in the comfort of a private vehicle. Later, embark on a delightful 1-hour Seine River cruise, soaking in breathtaking views of Paris's architectural marvels from the tranquil waters. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Paris → Lucerne",
       "overnight": "Overnight: Lucerne",
       "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
-      "shopping": "Kapellplatz and the arcaded lanes of the old town are lined with Swiss watch and chocolate specialists, including the long-established Bucherer flagship."
+      "shopping": "Kapellplatz and the arcaded lanes of the old town are lined with Swiss watch and chocolate specialists, including the long-established Bucherer flagship.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Paris, setting off on a scenic journey to Lucerne, Switzerland, in your private vehicle. Switzerland, renowned for its breathtaking landscapes and Alpine charm, welcomes you to Lucerne, a city nestled amid stunning mountainous surroundings and pristine lakes. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Mount Titlis Excursion",
       "overnight": "Overnight: Lucerne",
       "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
-      "taste": "Swiss chocolate and a wheel of melted raclette or a pot of cheese fondue are the classic warming treats after a day on the mountain."
+      "taste": "Swiss chocolate and a wheel of melted raclette or a pot of cheese fondue are the classic warming treats after a day on the mountain.",
+      "byStyle": {
+        "private": {
+          "desc": "Enjoy an exhilarating day at Mount Titlis, renowned for its iconic cable car ride and the panoramic Ice Flyer chairlift. Delight in snow-based activities and awe-inspiring vistas. Wander through Engelberg, a charming town nestled at the foothills, savoring its quaint allure and embracing the Swiss ambiance. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Lucerne at Leisure",
       "overnight": "Overnight: Lucerne",
       "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
-      "fallbackIncluded": "Day at leisure in Lucerne — optional excursions such as Mount Pilatus available."
+      "fallbackIncluded": "Day at leisure in Lucerne — optional excursions such as Mount Pilatus available.",
+      "byStyle": {
+        "private": {
+          "title": "Lucerne — Grindelwald & Interlaken",
+          "desc": "Embark on an enchanting day trip to Grindelwald and Interlaken, voyaging comfortably in your private vehicle. Opt for an optional visit to Grindelwald First for awe-inspiring panoramas and exhilarating activities. Explore the picturesque landscapes and captivating charm of Interlaken. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Lucerne → Venice",
       "overnight": "Overnight: Venice (Mestre)",
-      "desc": "Depart Lucerne by train, with two interchanges, en route to Venice Mestre. Venice is known for picturesque canals, iconic gondolas, and enchanting architecture of St. Mark's Square and the Doge's Palace. Delve into the romantic allure of Italy's floating city. Overnight stay in Venice Mestre."
+      "desc": "Depart Lucerne by train, with two interchanges, en route to Venice Mestre. Venice is known for picturesque canals, iconic gondolas, and enchanting architecture of St. Mark's Square and the Doge's Palace. Delve into the romantic allure of Italy's floating city. Overnight stay in Venice Mestre.",
+      "byStyle": {
+        "private": {
+          "desc": "Check-out from Lucerne and embark on a private transfer to Venice Mestre. En route, enjoy a stop in the Lugano-Chiasso area, soaking in the scenic beauty along the way. Arrive in Venice by evening. Known as the \"City of Canals\" and the \"Queen of the Adriatic,\" Venice allures with its mesmerizing waterways, historic architecture, and vibrant culture. Overnight in Mestre."
+        }
+      }
     },
     {
       "num": 7,
@@ -104,7 +133,12 @@
       "overnight": "Overnight: Venice (Mestre)",
       "desc": "Explore Venice's intricate streets, elegant palaces, and captivating churches with a Small Group Walking Tour. Starting at the iconic Piazza San Marco, uncover the secrets and history of St. Mark's Basilica, the Doge's Palace, and the Bell Tower. Traverse Campo SS. Giovanni e Paolo, Marco Polo’s House, and the Mercerie for a glimpse into Venice's rich history, art, and architecture. Overnight stay in Venice.",
       "experience": "A gondola glide along the smaller canals away from the crowds is the classic Venetian experience, best taken in the early evening light.",
-      "taste": "The Bellini — prosecco and white peach purée — was invented at Harry's Bar near St Mark's Square in the 1930s and remains Venice's signature aperitif."
+      "taste": "The Bellini — prosecco and white peach purée — was invented at Harry's Bar near St Mark's Square in the 1930s and remains Venice's signature aperitif.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating 2-hour walking tour of Venice accompanied by an English-speaking guide. Delve into the city's enchanting allure, exploring its maze of narrow streets and charming squares. Optionally, experience the timeless beauty of Venice with a gondola ride along its picturesque canals. Overnight in Venice."
+        }
+      }
     },
     {
       "num": 8,
@@ -112,13 +146,23 @@
       "overnight": "Overnight: Florence",
       "desc": "Depart Venice for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" is famed for its historic art and cultural richness. Marvel at the iconic Duomo, Ponte Vecchio, and the vibrant streets of Florence. Immerse yourself in its artistry and history. Overnight stay in Florence.",
       "taste": "A Florentine bistecca alla fiorentina, a thick T-bone steak grilled rare, paired with a glass of Chianti Classico.",
-      "shopping": "Ponte Vecchio's jewellers have traded from the same bridge-top workshops since the 16th century, when the Medici replaced its butchers' stalls with goldsmiths."
+      "shopping": "Ponte Vecchio's jewellers have traded from the same bridge-top workshops since the 16th century, when the Medici replaced its butchers' stalls with goldsmiths.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Venice towards Pisa, renowned for its iconic Leaning Tower, a remarkable architectural feat. Enjoy a photo stop and some leisure time in Pisa. Continuing on to Florence, revel in the city known as the birthplace of the Renaissance, boasting awe-inspiring art, architecture, and captivating streets like the famed Ponte Vecchio. Overnight in Florence."
+        }
+      }
     },
     {
       "num": 9,
       "title": "Florence → Rome",
       "overnight": "Overnight: Rome",
-      "desc": "Depart Florence for Rome by train. Rome, known as the \"Eternal City,\" boasts iconic landmarks like the Trevi Fountain and the Spanish Steps. Immerse yourself in its rich history, from the Colosseum to Vatican City. Enjoy the timeless allure of Rome's ancient and modern marvels. Overnight stay in Rome."
+      "desc": "Depart Florence for Rome by train. Rome, known as the \"Eternal City,\" boasts iconic landmarks like the Trevi Fountain and the Spanish Steps. Immerse yourself in its rich history, from the Colosseum to Vatican City. Enjoy the timeless allure of Rome's ancient and modern marvels. Overnight stay in Rome.",
+      "byStyle": {
+        "private": {
+          "desc": "Travel through the Tuscan countryside from Florence to Rome, stopping at the historical towns of Siena and Monteriggioni. Each town offers a unique glimpse into medieval Tuscany, with well-preserved monuments and tranquil charm. Arrive in Rome and immerse yourself in the city known as the Eternal City, famed for its ancient history and world-renowned landmarks such as the Spanish Steps and Trevi Fountain. Overnight in Rome."
+        }
+      }
     },
     {
       "num": 10,
@@ -126,7 +170,13 @@
       "overnight": "Overnight: Rome",
       "desc": "Embark on an immersive Colosseum and Roman Forum walking tour, delving into the ancient heart of the Eternal City. Unravel the history of Rome with a local guide, uncovering stories of emperors, gladiators, and the city's captivating past. Explore the monumental Colosseum, an emblem of ancient grandeur, and the evocative ruins of the Roman Forum, where echoes of a glorious past linger. Overnight in Rome.",
       "experience": "Standing inside the Colosseum, where gladiators once fought before 50,000 spectators, remains one of Europe's most powerful historical experiences.",
-      "taste": "Cacio e pepe or carbonara in a Trastevere trattoria, with a carafe of chilled Frascati, is the classic Roman meal after a day among the ruins."
+      "taste": "Cacio e pepe or carbonara in a Trastevere trattoria, with a carafe of chilled Frascati, is the classic Roman meal after a day among the ruins.",
+      "byStyle": {
+        "private": {
+          "desc": "Enjoy a panoramic 3-hour guided tour of Rome, observing iconic landmarks like the Colosseum and Roman Forum from outside. Immerse yourself in Rome's rich history as you explore the city's treasures. Overnight in Rome.",
+          "experience": null
+        }
+      }
     },
     {
       "num": 11,

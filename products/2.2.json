@@ -36,17 +36,18 @@
         "2": "Paris city tour with English-speaking guide, 3 hrs, plus a 1-hour Seine river cruise. Private vehicle on disposal from Day 3.",
         "3": "Private transfer Paris to Lucerne with the vehicle on disposal for 8 hrs.",
         "4": "Titlis and Engelberg excursion by private vehicle.",
-        "6": "Private transfer Lucerne to Innsbruck.",
-        "7": "Swarovski Crystal Worlds entrance and visit by private vehicle.",
-        "8": "Private transfer Innsbruck to Vienna.",
+        "6": "Private transfer Lucerne to Innsbruck, with a photo stop in Vaduz, Liechtenstein.",
+        "7": "Innsbruck panoramic tour (no guide) and Swarovski Crystal Worlds entrance, by private vehicle.",
+        "8": "Private transfer Innsbruck to Vienna, with a stop in Salzburg.",
         "9": "Vienna city tour with English-speaking guide, 3 hrs, including Schönbrunn Palace tickets.",
-        "10": "Vienna hotel to Vienna airport private transfer, concluding the vehicle's disposal."
+        "10": "Vienna hotel to Vienna airport private transfer, concluding the vehicle's disposal.",
+        "5": "Grindelwald and Interlaken day trip by private vehicle."
       },
       "inclusions": [
         "Private coach for 3 hrs on Day 2, then on disposal for 8 hrs daily from Day 3 to Day 10",
         "Paris airport–hotel and Vienna hotel–airport private transfers",
         "Paris city tour with English-speaking guide, 3 hrs, and Seine river cruise",
-        "Titlis and Engelberg excursion",
+        "Titlis and Engelberg excursion, including Mount Titlis cable car ticket",
         "Swarovski Crystal Worlds entrance",
         "Vienna city tour with English-speaking guide, 3 hrs, and Schönbrunn Palace tickets",
         "9 nights accommodation with daily breakfast"
@@ -66,21 +67,38 @@
       "title": "Paris City Tour, Seine Cruise & Eiffel Tower",
       "overnight": "Overnight: Paris",
       "desc": "Embark on a captivating 4-hour coach tour of Paris, immersing yourself in its timeless beauty. Cruise along the Seine River for an hour, admiring iconic landmarks from a unique perspective. Ascend to the Eiffel Tower's second floor, embracing panoramic views of the city's splendour. Overnight in Paris.",
-      "shopping": "The grand boulevards around the Opéra Garnier and the Champs-Élysées are Paris's classic shopping mile, from flagship couture houses to department stores like Galeries Lafayette."
+      "shopping": "The grand boulevards around the Opéra Garnier and the Champs-Élysées are Paris's classic shopping mile, from flagship couture houses to department stores like Galeries Lafayette.",
+      "byStyle": {
+        "private": {
+          "title": "Paris City Tour & Seine Cruise",
+          "desc": "Experience the allure of Paris with a captivating panoramic tour led by an English-speaking guide. Delve into the city's charm and iconic landmarks while exploring in the comfort of a private vehicle. Later, embark on a delightful 1-hour Seine River cruise, soaking in breathtaking views of Paris's architectural marvels from the tranquil waters. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Paris → Lucerne",
       "overnight": "Overnight: Lucerne",
       "desc": "Check out and board the train to Basel or Zurich, commencing your Swiss adventure. Upon arrival in Switzerland, utilize the Swiss Travel Pass for your onward journey to Lucerne. The Pass covers seamless travel across the Swiss Travel System, enjoying unlimited travel on trains, boats, trams, and buses. Overnight in Lucerne.",
-      "taste": "Try a hearty plate of Lucerne-style Chügelipastete or a Swiss fondue in one of the old town's lakeside restaurants."
+      "taste": "Try a hearty plate of Lucerne-style Chügelipastete or a Swiss fondue in one of the old town's lakeside restaurants.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Paris, setting off on a scenic journey to Lucerne, Switzerland, in your private vehicle. Switzerland, renowned for its breathtaking landscapes and Alpine charm, welcomes you to Lucerne, a city nestled amid stunning mountainous surroundings and pristine lakes. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Mount Titlis & Lake Lucerne Cruise",
       "overnight": "Overnight: Lucerne",
       "desc": "Utilize your Swiss Travel Pass to explore Mount Titlis, a breathtaking alpine experience. Revel in the stunning vistas, engage in snow activities, and relish the revolving Titlis Rotair gondola. Later, you can take a cruise on Lake Lucerne, enjoying the serene waters and picturesque surroundings. Overnight in Lucerne.",
-      "experience": "Cross the glacier's suspension bridge, the Titlis Cliff Walk, one of the highest of its kind in Europe."
+      "experience": "Cross the glacier's suspension bridge, the Titlis Cliff Walk, one of the highest of its kind in Europe.",
+      "byStyle": {
+        "private": {
+          "title": "Mount Titlis & Engelberg",
+          "desc": "Enjoy an exhilarating day at Mount Titlis, renowned for its iconic cable car ride and the panoramic Ice Flyer chairlift. Delight in snow-based activities and awe-inspiring vistas. Wander through Engelberg, a charming town nestled at the foothills, savoring its quaint allure and embracing the Swiss ambiance. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 5,
@@ -88,14 +106,25 @@
       "overnight": "Overnight: Lucerne",
       "desc": "Enjoy the freedom to explore Switzerland at your leisure using the Swiss Travel Pass. Delve into the scenic wonders of Grindelwald and Interlaken, known for their stunning landscapes. Optionally, consider a visit to Grindelwald First for panoramic views and thrilling activities. Overnight in Lucerne.",
       "shopping": "Bucherer's flagship on Schwanenplatz, the Swiss watch and jewellery house founded in Lucerne in 1888, is the natural stop for a Swiss timepiece.",
-      "fallbackIncluded": "Day at leisure — optional Mount Pilatus or Interlaken excursion available."
+      "fallbackIncluded": "Day at leisure — optional Mount Pilatus or Interlaken excursion available.",
+      "byStyle": {
+        "private": {
+          "title": "Lucerne — Grindelwald & Interlaken",
+          "desc": "Embark on an enchanting day trip to Grindelwald and Interlaken, voyaging comfortably in your private vehicle. Opt for an optional visit to Grindelwald First for awe-inspiring panoramas and exhilarating activities. Explore the picturesque landscapes and captivating charm of Interlaken. Return to Lucerne by early evening. Overnight in Lucerne."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Lucerne → Innsbruck",
       "overnight": "Overnight: Innsbruck",
       "desc": "Depart from Lucerne via train using the Swiss Travel Pass, connecting through Zurich, and continuing onwards to Innsbruck. Nestled in Tyrol, Austria, Innsbruck boasts stunning Alpine vistas and rich Austrian heritage. Overnight in Innsbruck",
-      "taste": "Tyrolean Knödel and apple strudel at the Goldener Adler, a guesthouse on the Altstadt's main square that has been serving guests since 1390."
+      "taste": "Tyrolean Knödel and apple strudel at the Goldener Adler, a guesthouse on the Altstadt's main square that has been serving guests since 1390.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Lucerne for Innsbruck via a private transfer, with a delightful photo stop in Vaduz, Liechtenstein. Capture the scenic beauty of this charming principality. Arrive in Innsbruck, nestled in the Tyrolean region of Austria, renowned for its alpine landscapes and cultural heritage. Overnight in Innsbruck."
+        }
+      }
     },
     {
       "num": 7,
@@ -104,14 +133,24 @@
       "desc": "Immerse yourself in the enchanting Swarovski Crystal World, accessible via a convenient shuttle bus. Optionally, indulge in a visit to Nordkette for breathtaking views. Overnight in Innsbruck",
       "experience": "Swarovski Crystal Worlds in nearby Wattens is one of Austria's most visited attractions, a museum of crystal art and installations built around a giant crystal-faced giant.",
       "shopping": "Maria-Theresien-Straße, running south from the Altstadt with the Nordkette as a backdrop, is Innsbruck's principal shopping street.",
-      "fallbackIncluded": "Day at leisure — optional Swarovski Crystal Worlds visit available."
+      "fallbackIncluded": "Day at leisure — optional Swarovski Crystal Worlds visit available.",
+      "byStyle": {
+        "private": {
+          "desc": "Explore Innsbruck's beauty with a panoramic tour, enjoying the sights at your own pace. Later, immerse yourself in the enchanting Swarovski Crystal World with entrance included, indulging in a world of artistry and innovation. Overnight in Innsbruck."
+        }
+      }
     },
     {
       "num": 8,
       "title": "Innsbruck → Vienna",
       "overnight": "Overnight: Vienna",
       "desc": "Bid adieu to Innsbruck and embark on a scenic train journey to Vienna. Discover Vienna's grandeur, steeped in imperial history and musical heritage, as you explore this cultural gem. Overnight in Vienna",
-      "taste": "A slice of Sachertorte with a Wiener Melange is the essential first taste of Vienna — Café Sacher, beside the State Opera, has served the original recipe since 1876."
+      "taste": "A slice of Sachertorte with a Wiener Melange is the essential first taste of Vienna — Café Sacher, beside the State Opera, has served the original recipe since 1876.",
+      "byStyle": {
+        "private": {
+          "desc": "Depart from Innsbruck towards Vienna in a private transfer, pausing en route for a visit to Salzburg, a city known for its rich musical heritage and baroque architecture. Upon arrival in Vienna, Austria's capital, revel in its imperial grandeur and cultural vibrancy. Overnight in Vienna."
+        }
+      }
     },
     {
       "num": 9,
@@ -119,7 +158,12 @@
       "overnight": "Overnight: Vienna",
       "desc": "Delve into Vienna's landmarks along Ringstrasse via coach, highlighting the State Opera, Hofburg Palace, Parliament, and City Hall. Explore Schönbrunn Palace's historic rooms and gardens. Wrap up at the Vienna State Opera after this 3.5-hour immersive experience. Overnight in Vienna.",
       "experience": "An evening at the Vienna State Opera or a Strauss concert is a fitting way to experience the city's musical heritage.",
-      "fallbackIncluded": "Day at leisure — optional Vienna city tour and Schönbrunn Palace visit available."
+      "fallbackIncluded": "Day at leisure — optional Vienna city tour and Schönbrunn Palace visit available.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a comprehensive city tour of Vienna guided by an English-speaking expert, absorbing the historical marvels and vibrant culture for 3 hours. Later, delve into the opulence of Schönbrunn Palace, a UNESCO World Heritage site, with its rich history and stunning architecture. Overnight in Vienna."
+        }
+      }
     },
     {
       "num": 10,

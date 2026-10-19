@@ -121,13 +121,27 @@
   }
 
   // ─────────────────────────── DAY BY DAY ─────────────────────────
+  // A day can carry byStyle.<styleKey> overrides (title, overnight, desc,
+  // taste, experience, shopping) for travel styles whose day genuinely differs
+  // from the shared text - e.g. a private coach day vs the same day by train.
+  // A null override removes that field for the style.
+  function effectiveDay(day, styleKey) {
+    var o = (day.byStyle || {})[styleKey];
+    if (!o) return day;
+    var out = {};
+    Object.keys(day).forEach(function (k) { out[k] = day[k]; });
+    Object.keys(o).forEach(function (k) { if (o[k] === null) delete out[k]; else out[k] = o[k]; });
+    return out;
+  }
+
   function renderDays() {
     var style = PRODUCT.styles[state.style] || {};
     var transport = style.transport || {};
     $("pkgDaySub").textContent = style.name || "";
     var wrap = $("pkgDays");
     wrap.innerHTML = "";
-    (PRODUCT.days || []).forEach(function (day) {
+    (PRODUCT.days || []).forEach(function (baseDay) {
+      var day = effectiveDay(baseDay, state.style);
       var el = document.createElement("div");
       el.className = "pkg-day";
       var included = transport[String(day.num)] || day.fallbackIncluded || "Day at leisure.";

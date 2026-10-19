@@ -51,10 +51,12 @@
       "transport": {
         "1": "Paris airport to Paris hotel private transfer. Private coach on disposal from Day 1 through Day 7.",
         "2": "Paris city tour with local guide, 3 hrs, followed by a 1-hour Seine river cruise.",
-        "3": "Private coach transfer from Paris to Bayeux through the Normandy countryside.",
-        "5": "Private coach transfer from Bayeux to Tours via the Loire Valley.",
-        "7": "Private coach transfer from Tours back to Paris.",
-        "8": "Paris hotel to Paris airport private transfer."
+        "3": "Private coach transfer from Paris to Bayeux, en route Honfleur and a trail walk along the Étretat cliffs.",
+        "5": "Private coach transfer from Bayeux to Tours, en route Mont-Saint-Michel (Abbey entrance optional).",
+        "7": "Private coach transfer from Tours back to Paris, with a stop in Orléans.",
+        "8": "Paris hotel to Paris airport private transfer.",
+        "4": "D-Day beaches and WWII sights around Bayeux by private coach.",
+        "6": "Tours panoramic tour and Loire Valley sightseeing by private coach, with an optional vineyard visit and Chinon Castle."
       },
       "inclusions": [
         "Private coach on disposal from Day 1 to Day 7",
@@ -81,14 +83,24 @@
       "desc": "Discover the allure of Paris as you explore at your own pace or opt for curated optional tours. From strolling along the Seine to marveling at iconic landmarks, the day is yours to savor. Overnight in Paris.",
       "experience": "A one-hour Seine river cruise past the Eiffel Tower, Musée d'Orsay and Notre-Dame.",
       "taste": "Mont Blanc pastry and hot chocolate at Angelina on the Rue de Rivoli, a Paris institution since 1903.",
-      "shopping": "The grand boulevards around the Opéra Garnier, including the Galeries Lafayette department store beneath its stained-glass dome."
+      "shopping": "The grand boulevards around the Opéra Garnier, including the Galeries Lafayette department store beneath its stained-glass dome.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating 3-hour private city tour with a local guide, immersing yourself in the allure of Champs-Élysées and enjoying panoramic views of the Eiffel Tower from Trocadéro. Glide along the Seine on a 1-hour cruise, and explore the enchanting districts of Paris at your own pace. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 3,
       "title": "Paris → Bayeux",
       "overnight": "Overnight: Bayeux",
       "desc": "Check out from Paris and embark on a scenic train journey to Bayeux. Nestled in the heart of Normandy, Bayeux is a town steeped in history, known for its enchanting medieval streets and, most notably, the Bayeux Tapestry. Immerse yourself in the rich heritage of this captivating region. Overnight in Bayeux.",
-      "taste": "Normandy specialities on arrival — Camembert cheese (named for the nearby village), farmhouse cider and Calvados apple brandy, often served with andouille de Vire."
+      "taste": "Normandy specialities on arrival — Camembert cheese (named for the nearby village), farmhouse cider and Calvados apple brandy, often served with andouille de Vire.",
+      "byStyle": {
+        "private": {
+          "desc": "Bid adieu to Paris and embark on a picturesque road journey to Bayeux. Enroute, soak in the coastal charm of Honfleur and embrace the breathtaking Etretat cliffs with a trail walk. Immerse yourself in the natural wonders of the journey. Arrive in Bayeux by evening. Overnight in Bayeux."
+        }
+      }
     },
     {
       "num": 4,
@@ -96,14 +108,24 @@
       "overnight": "Overnight: Bayeux",
       "desc": "Discover the charm of Bayeux at your own pace or opt for an enriching experience. Choose between the poignant D-Day U.S. Sector & Omaha Beach half-day tour, unraveling the history of World War II, or embark on a full-day exploration of the iconic Mont Saint-Michel Village & Abbey. Capture the essence of Bayeux's diverse offerings. Overnight in Bayeux.",
       "experience": "Arromanches-les-Bains, where sections of the artificial Mulberry Harbour towed across the Channel for the invasion still sit in the bay beside the town's D-Day museum.",
-      "fallbackIncluded": "Day at leisure — optional D-Day beaches and landing museums tour available."
+      "fallbackIncluded": "Day at leisure — optional D-Day beaches and landing museums tour available.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a poignant exploration of the D-Day beaches and WWII sights in the Bayeux region. Visit historic landmarks, reflect on the sacrifices made, and immerse yourself in the profound history of this significant chapter. Overnight in Bayeux."
+        }
+      }
     },
     {
       "num": 5,
       "title": "Bayeux → Tours",
       "overnight": "Overnight: Tours",
       "desc": "Check out from Bayeux and board a train to Tours. Nestled in the heart of the Loire Valley, Tours is renowned for its picturesque landscapes, historic architecture, and its role as the gateway to the enchanting châteaux of the region. Uncover the essence of Tours, a city rich in cultural heritage and culinary delights. Overnight in Tours.",
-      "taste": "A Loire Valley wine tasting along the way — a crisp Vouvray white or a Chinon red, both from appellations the route passes directly through."
+      "taste": "A Loire Valley wine tasting along the way — a crisp Vouvray white or a Chinon red, both from appellations the route passes directly through.",
+      "byStyle": {
+        "private": {
+          "desc": "Bid farewell to Bayeux and embark on a scenic road journey to Tours. Enroute, marvel at the iconic Mont St Michel, optionally exploring its majestic Abbey. Tours, nestled in the Loire Valley, beckons with its historic charm and is renowned for being a gateway to the region's splendid châteaux. Immerse yourself in Tours' cultural richness. Overnight in Tours."
+        }
+      }
     },
     {
       "num": 6,
@@ -111,7 +133,12 @@
       "overnight": "Overnight: Tours",
       "desc": "Embark on a personal exploration of Tours or choose an optional tour. Delight in a half-day Loire Valley Wine Tour to Vouvray, savoring exquisite local wines, or opt for a full-day adventure exploring the grandeur of Chenonceau & Chambord Castles. Tours invites you to tailor your experience. Overnight in Tours.",
       "taste": "Tarte Tatin, the caramelised upside-down apple tart said to have been created by the Tatin sisters at their hotel in the nearby Sologne, still served across the region.",
-      "fallbackIncluded": "Day at leisure — optional Loire Valley chateaux tour available."
+      "fallbackIncluded": "Day at leisure — optional Loire Valley chateaux tour available.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating panoramic tour around Tours, exploring its hidden gems. Venture into the enchanting Loire Valley, where options abound. Choose to visit a renowned Loire Valley vineyard, savoring exquisite wines, and explore the storied Chinon Castle. Overnight in Tours."
+        }
+      }
     },
     {
       "num": 7,
@@ -119,7 +146,12 @@
       "overnight": "Overnight: Paris",
       "desc": "Bid adieu to Tours and board a train back to the radiant city of Paris for your final night. Reflect on the memories created in the Loire Valley as you return to the enchanting atmosphere of Paris. Overnight in Paris.",
       "taste": "A last Left Bank coffee at Café de Flore or Les Deux Magots in Saint-Germain-des-Prés, historic haunts of Sartre, de Beauvoir and Hemingway.",
-      "shopping": "The Marais district for boutiques, vintage shops and galleries."
+      "shopping": "The Marais district for boutiques, vintage shops and galleries.",
+      "byStyle": {
+        "private": {
+          "desc": "Check out from Tours and embark on a delightful road trip to Paris. Enroute, pause in the historic city of Orleans and visit the Royal Cathedral-Basilica of St. Croix. Immerse yourself in the cultural richness of this stopover. Continue your journey to Paris for final night. Overnight in Paris."
+        }
+      }
     },
     {
       "num": 8,

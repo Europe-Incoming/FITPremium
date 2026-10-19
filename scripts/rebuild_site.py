@@ -1617,8 +1617,24 @@ def _pdf_day_card_html(day, style):
 {callouts_html}</div>"""
 
 
-def _pdf_days_columns_html(product, style):
-    left, right = _pdf_split_half(product.get("days", []))
+def _effective_day(day, style_key):
+    """Mirror of effectiveDay() in assets/package-page.js: byStyle.<style>
+    overrides on top of the shared day, a None value removing the field."""
+    over = (day.get("byStyle") or {}).get(style_key)
+    if not over:
+        return day
+    out = dict(day)
+    for k, v in over.items():
+        if v is None:
+            out.pop(k, None)
+        else:
+            out[k] = v
+    return out
+
+
+def _pdf_days_columns_html(product, style, style_key):
+    days = [_effective_day(d, style_key) for d in product.get("days", [])]
+    left, right = _pdf_split_half(days)
     left_html = "".join(_pdf_day_card_html(d, style) for d in left)
     right_html = "".join(_pdf_day_card_html(d, style) for d in right)
     return f'<div class="pdf-day-columns"><div class="pdf-day-col">{left_html}</div><div class="pdf-day-col">{right_html}</div></div>'
@@ -1755,7 +1771,7 @@ def build_pdf_html(product, prices, style_key, logo_data_uri):
 </div>
 
 <div class="pdf-section-label">Day by Day</div>
-{_pdf_days_columns_html(product, style)}
+{_pdf_days_columns_html(product, style, style_key)}
 
 <div class="pdf-includes-head">
 <div class="pdf-section-label">Package Includes — {_pdf_esc(style.get('name', '').upper())}</div>

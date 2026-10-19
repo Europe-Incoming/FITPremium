@@ -37,9 +37,9 @@
       "transport": {
         "1": "Venice to Mestre hotel private transfer.",
         "2": "Venice walking tour, 2 hrs with English-speaking guide.",
-        "3": "Private coach transfer, Mestre to Florence (private coach on disposal Day 3 to Day 7).",
-        "4": "Full-day private coach excursion to Tuscany, Siena and San Gimignano.",
-        "5": "Private coach transfer, Florence to Rome.",
+        "3": "Private coach transfer, Mestre to Florence, with a detour to Modena (Ferrari Museum) or Bologna (private coach on disposal Day 3 to Day 7).",
+        "4": "Florence and Pisa panoramic tour with your private coach (no entrances included).",
+        "5": "Private coach transfer, Florence to Rome, with stops in Siena and Monteriggioni.",
         "6": "Rome city tour, 3 hrs with English-speaking guide, no entrances.",
         "7": "Rome hotel to Rome airport private transfer by private coach."
       },
@@ -47,8 +47,9 @@
         "Private coach at your exclusive disposal from Day 3 to Day 7",
         "Venice to Mestre hotel private transfer",
         "Venice walking tour, 2 hrs with English-speaking guide",
-        "Full-day private coach excursion to Tuscany, Siena and San Gimignano",
-        "Private coach transfer, Florence to Rome",
+        "Private coach transfer, Mestre to Florence, with a detour to Modena (Ferrari Museum) or Bologna",
+        "Florence and Pisa panoramic tour with your private coach (no entrances)",
+        "Private coach transfer, Florence to Rome, with stops in Siena and Monteriggioni",
         "Rome city tour, 3 hrs with English-speaking guide",
         "Rome hotel–airport private transfer",
         "6 nights accommodation with daily breakfast"
@@ -69,7 +70,12 @@
       "overnight": "Overnight: Mestre",
       "desc": "Explore Venice's intricate streets, elegant palaces, and captivating churches with a Small Group Walking Tour. Starting at the iconic Piazza San Marco, uncover the secrets and history of St. Mark's Basilica, the Doge's Palace, and the Bell Tower. Traverse Marco Polo’s House, and the Mercerie for a glimpse into Venice's rich history, art, and architecture. Overnight in Venice Mestre.",
       "experience": "A gondola glide along the smaller canals away from the crowds is the classic Venetian experience.",
-      "taste": "Coffee at Caffè Florian in St. Mark's Square, open since 1720 and reckoned to be the oldest coffee house in continuous operation in the world."
+      "taste": "Coffee at Caffè Florian in St. Mark's Square, open since 1720 and reckoned to be the oldest coffee house in continuous operation in the world.",
+      "byStyle": {
+        "private": {
+          "desc": "Embark on a captivating 2-hour walking tour of Venice accompanied by an English-speaking guide. Delve into the city's enchanting allure, exploring its maze of narrow streets and charming squares. Optionally, experience the timeless beauty of Venice with a gondola ride along its picturesque canals. Overnight in Venice."
+        }
+      }
     },
     {
       "num": 3,
@@ -77,14 +83,26 @@
       "overnight": "Overnight: Florence",
       "desc": "Depart Venice for Florence by train. Florence, known as the \"Cradle of the Renaissance,\" is famed for its historic art and cultural richness. Marvel at the iconic Duomo, Ponte Vecchio, and the vibrant streets of Florence. Immerse yourself in its artistry and history. Overnight stay in Florence.",
       "taste": "Lampredotto — a Florentine tripe sandwich sold from street carts for generations — or fresh pasta at the Mercato Centrale food hall near San Lorenzo.",
-      "shopping": "The leather workshops around Santa Croce and the stalls of the Mercato di San Lorenzo are famous for handmade goods."
+      "shopping": "The leather workshops around Santa Croce and the stalls of the Mercato di San Lorenzo are famous for handmade goods.",
+      "byStyle": {
+        "private": {
+          "desc": "As you transfer from Venice's waterways to Florence's artistic streets, enjoy an en route detour to Modena for a visit to the iconic Ferrari Museum or a leisurely stroll in Bologna's historic center. Whichever option you choose, it will add a unique flavor to your Italian tour. Overnight in Florence."
+        }
+      }
     },
     {
       "num": 4,
       "title": "Tuscany: Siena & San Gimignano",
       "overnight": "Overnight: Florence",
       "desc": "Embark on a picturesque journey through Tuscany, visiting Siena and San Gimignano. Marvel at Siena's stunning medieval architecture and the iconic Piazza del Campo. Explore San Gimignano's timeless beauty with its ancient towers. Enjoy a delectable Tuscan lunch and wine tasting amidst scenic vineyards. Return to Florence by evening. Overnight in Florence.",
-      "taste": "A tasting of Chianti and Vernaccia di San Gimignano wines paired with local Tuscan cured meats and pecorino cheese."
+      "taste": "A tasting of Chianti and Vernaccia di San Gimignano wines paired with local Tuscan cured meats and pecorino cheese.",
+      "byStyle": {
+        "private": {
+          "title": "Florence & Pisa",
+          "desc": "Experience the wonders of Florence and a panoramic Pisa tour. Witness the striking contrast between Florence's Renaissance artistry and Pisa's architectural ingenuity, with the leaning tower providing a perfect photo opportunity. These Tuscan treasures will captivate your senses. Overnight in Florence.",
+          "taste": null
+        }
+      }
     },
     {
       "num": 5,
@@ -92,14 +110,25 @@
       "overnight": "Overnight: Rome",
       "desc": "Depart Florence for Rome by train. Rome, known as the \"Eternal City,\" boasts iconic landmarks like the Trevi Fountain and the Spanish Steps. Enjoy the timeless allure of Rome's ancient and modern marvels. Overnight in Rome.",
       "experience": "Tossing a coin into the Trevi Fountain is said to guarantee a return visit to Rome.",
-      "taste": "Carciofi alla giudia — Roman-Jewish deep-fried artichokes — in the Jewish Ghetto, a recipe served there since the 16th century."
+      "taste": "Carciofi alla giudia — Roman-Jewish deep-fried artichokes — in the Jewish Ghetto, a recipe served there since the 16th century.",
+      "byStyle": {
+        "private": {
+          "desc": "Travel through the Tuscan countryside from Florence to Rome, stopping at the historical towns of Siena and Monteriggioni. Each town offers a unique glimpse into medieval Tuscany, with well-preserved monuments and tranquil charm. Overnight in Rome."
+        }
+      }
     },
     {
       "num": 6,
       "title": "Rome: Imperial Rome",
       "overnight": "Overnight: Rome",
       "desc": "Embark on an immersive Colosseum and Roman Forum walking tour, delving into the ancient heart of the Eternal City. Unravel the history of Rome with a local guide, uncovering stories of emperors, gladiators, and the city's captivating past. Explore the monumental Colosseum, an emblem of ancient grandeur, and the evocative ruins of the Roman Forum, where echoes of a glorious past linger. Overnight in Rome.",
-      "taste": "A classic Roman cacio e pepe or carbonara in the trattorias of the Monti or Trastevere neighbourhoods."
+      "taste": "A classic Roman cacio e pepe or carbonara in the trattorias of the Monti or Trastevere neighbourhoods.",
+      "byStyle": {
+        "private": {
+          "title": "Rome",
+          "desc": "A comprehensive 3-hour tour of Rome with an English-speaking guide awaits. Traverse the eternal city, soaking in the vibrant history and bustling piazzas, marveling at the ancient Colosseum and Roman Forum from outside their walls. Overnight in Rome."
+        }
+      }
     },
     {
       "num": 7,
